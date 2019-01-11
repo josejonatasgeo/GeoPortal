@@ -1,0 +1,26 @@
+{% extends "documents/document_base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Deleting" %} {{ document.title }} — {{ block.super }}{% endblock %}
+
+{% block body %}
+<div class="page-header">
+  <h2 class="page-title">{% trans "Remover Documento" %}</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <p class="lead">
+        {% blocktrans with document.title as document_title %}
+          Você tem certeza que irá remover <a href="{{ document.get_absolute_url }}">{{ document_title }}</a>?
+        {% endblocktrans %}
+      </p>
+    <form action="{% url "document_remove" document.id %}" method="POST">
+      {% csrf_token %}
+      <div class="form-actions">
+        <input type="submit" value="{% trans "Sim, eu quero remover" %}" class="btn btn-danger" />
+        <a href="{{ document.get_absolute_url }}" class="btn btn-default">{% trans "Não,não remover" %}</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

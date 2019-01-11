@@ -1,0 +1,84 @@
+{% load i18n %}
+<style>
+
+.map-tab-bar
+    {
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 50;
+    }
+.layerNav 
+{
+    padding: 0 15px;
+}
+
+.layerNav > li > a i
+{
+    
+    color: #337ab7;
+ 
+}
+.layerNav > li > a
+{
+    border: none;
+    border-radius: 0;
+    margin-right: -1px;
+    padding: 12px 14px;
+    color: #777777;
+    border-width: 0 0 0 3px;
+    border-color: #000;
+}
+.layerNav > li.active > a, .layerNav > li.active > a:focus, .layerNav > li.active > a:hover
+{
+    border-width: 3px 0 0;
+    border-color: #f2555b;
+    color: rgb(68, 68, 68);
+    background-color: #ffffff;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+
+}
+.layerNav > li.active > a i
+{
+  color: #15ac4f;
+
+}
+.layerNav > li > a:focus, .layerNav > li > a:hover
+{
+    background: none;
+    color: #000;
+}
+.layerNav > li.active
+{
+    border-bottom: none;
+}
+.layerNav > li.active a
+{
+    padding: 11px 14px;
+}
+</style>
+<div class="panel-right" ng-app="appModule">
+    <ul class="nav nav-tabs layerNav map-tab-bar" >
+        <li style="float: right;">
+                <a href="#attributes" data-toggle="tab">
+                    <i class="fa fa-table"></i>
+                    {% trans "Atributos" %}
+                </a>
+        </li>
+        <!--<li style="float: right;">
+                <a href="#options" data-toggle="tab">
+                    <i class="fa fa-table"></i>
+                    {% trans "Opções" %}
+                </a>
+        </li>-->
+        <li class="active" style="float: right;">
+            <a href="#map" data-toggle="tab">
+                <i class="fa fa-map-o"></i>
+                {% trans "Mapa" %}
+            </a>
+        </li>
+    </ul>
+</div>
+
+

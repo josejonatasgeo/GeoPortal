@@ -1,0 +1,9 @@
+.icone{
+    padding-left: 70px;
+    background: no-repeat left center;
+    text-decoration: none;
+}
+
+.icone.teste{
+    background: url("../img/iazucar.png")
+}

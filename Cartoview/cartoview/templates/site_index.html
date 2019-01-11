@@ -1,0 +1,521 @@
+{% extends 'index.html' %}
+{% load i18n static %}
+{% load cartoview_tags %}
+
+
+{% block extra_head %}
+    {{ block.super }}
+<style>
+/* Estilos de la sección del slider */
+
+@keyframes slider {
+	0% {
+		background: url(../images/header/uno.png);
+		background-position: center;
+	}
+
+	10% {
+		background: url(../images/header/uno.png);
+		background-position: center;
+	}
+
+	20% {
+		background: url(../images/header/dos.png);
+		background-position: center;
+	}
+
+	30% {
+		background: url(../images/header/dos.png);
+		background-position: center;
+	}
+
+	40% {
+		background: url(../images/header/tres.png);
+		background-position: center;
+	}
+
+	50% {
+		background: url(../images/header/tres.png);
+		background-position: center;
+	}
+
+	60% {
+		background: url(../images/header/cuatro.png);
+		background-position: center;
+	}
+
+	70% {
+		background: url(../images/header/cuatro.png);
+		background-position: center;
+	}
+
+	80% {
+		background: url(../images/header/cinco.png);
+		background-position: center;
+	}
+
+	90% {
+		background: url(../images/header/cinco.png);
+		background-position: center;
+	}
+
+	100% {
+		background: url(../images/header/uno.png);
+		background-position: center;
+	}
+}
+
+@keyframes slider_uno {
+	0% {
+		background-position: center;
+		background: url(../static/cartoview/img/slide1.png);
+		background-repeat: no-repeat;
+		
+	}
+
+	10% {
+		background-position: center;
+		background: url(../static/cartoview/img/slide2.png);
+		background-repeat: no-repeat;
+		
+	}
+
+	25% {
+		background-position: center;
+		background: url(../static/cartoview/img/slide3.png);
+		background-repeat: no-repeat;
+		
+	}
+
+	40% {
+		background-position: center;
+		background: url(../static/cartoview/img/slide1.png);
+		background-repeat: no-repeat;
+		
+	}
+
+	50% {
+		background-position: center;
+		background: url(../static/cartoview/img/slide2.png);
+		background-repeat: no-repeat;
+		
+	}
+
+	65% {
+		background-position: center;
+		background: url(../static/cartoview/img/slide3.png);
+		background-repeat: no-repeat;
+		
+	}
+
+	75% {
+		background-position: center;
+		background: url(../static/cartoview/img/slide1.png);
+		background-repeat: no-repeat;
+		
+	}
+
+	90% {
+		background-position: center;
+		background: url(../static/cartoview/img/slide1.png);
+		background-repeat: no-repeat;
+		
+	}
+
+	100% {
+		background-position: center;
+		background: url(../static/cartoview/img/slide1.png);
+		background-repeat: no-repeat;
+		
+	}
+}
+
+
+.slider,
+.slider2,
+.slider1,
+.slider3,
+.slider4,
+.slider5 {
+	padding: 80px 0 150px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation-name: slider;
+	animation-duration: 60s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	min-height: 550px;
+}
+
+.slider1 {
+	animation-name: slider_uno;
+	min-height: 400px;
+	padding: 80px 0 0 0;
+}
+
+.slider2 {
+	animation-name: slider_dos;
+	min-height: 400px;
+	padding: 80px 0 0 0;
+}
+
+.slider3 {
+	animation-name: slider_tres;
+	min-height: 400px;
+	padding: 80px 0 0 0;
+}
+
+.slider4 {
+	animation-name: slider_cuatro;
+	min-height: 400px;
+	padding: 80px 0 0 0;
+}
+
+.slider5 {
+	animation-name: slider_cinco;
+	min-height: 400px;
+	padding: 80px 0 0 0;
+}
+
+.slider h1,
+.slider2 h1,
+.slider1 h1,
+.slider3 h1,
+.slider4 h1,
+.slider5 h1 {
+	font-size: 3em;
+	font-weight: 700;
+	width: 60%;
+	position: relative;
+	color: #fff;
+}
+
+.slider2 h1,
+.slider1 h1,
+.slider3 h1,
+.slider4 h1,
+.slider5 h1 {
+	width: 80%;
+	font-size: 2.5em;
+	text-shadow: 0px 0px 5px black;
+}
+
+.slider2 h1,
+.slider1 h1,
+.slider3 h1,
+.slider4 h1,
+.slider5 h1 {
+	top: -20px;
+}
+
+.slider h1::before {
+	content: '';
+	animation-name: textos;
+	animation-duration: 60s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	text-shadow: 0px 0px 5px black;
+}
+
+/*
+.slider h1::before {
+	content: '';
+	display: inline-block;
+	width: 25px;
+	height: 8px;
+	background: #F7B33F;
+	position: absolute;
+	top: 40px;
+	left: -35px;
+}*/
+
+#cbp-bislideshow {
+	display: none;
+}
+
+.slider a,
+.slider2 a,
+.slider1 a,
+.slider3 a,
+.slider4 a,
+.slider5 a {
+	display: inline-block;
+	margin-top: 30px;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 1.1em;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 15px 30px;
+	transition: all 2s;
+}
+
+.slider a:hover,
+.slider2 a:hover,
+.slider1 a:hover,
+.slider3 a:hover,
+.slider4 a:hover,
+.slider5 a:hover {
+	background: #fff;
+	color: #7a7a7a;
+}
+
+.slider2 p a,
+.slider1 p a,
+.slider3 p a,
+.slider4 p a,
+.slider5 p a {
+	border: none;
+	font-weight: 700;
+	padding: 0;
+	text-transform: none;
+	position: relative;
+    top: -30px;
+}
+
+.slider,
+.slider2,
+.slider1,
+.slider3,
+.slider4,
+.slider5 {
+	position: relative;
+}
+
+.slider .bajar {
+	display: block;
+	width: 35px;
+	height: 35px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: calc(50% - 15px);
+	bottom: 30px;
+	text-align: center;
+}
+
+.slider .bajar i {
+	color: #fff;
+	font-size: 1.5em;
+}
+
+/* Estilos de todos los h2 */
+
+h2 {
+	font-weight: bold;
+	color: #7A7A7A;
+	position: relative;
+	font-size: 1.8em;
+	margin-bottom: 40px;
+}
+
+h2::before {
+	content: '';
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	/*background: #F7B33F;*/
+	background-image: url('../images/logo_titulos.png');
+	background-size: 100%;
+	position: relative;
+	top: 5px;
+    left: 0;
+    margin-right: 10px;
+}
+
+/* Estilos de quienes somos */
+
+.quienes {
+	padding: 50px 0;
+}
+
+.quienes ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+.quienes ul li {
+	text-align: center;
+}
+
+.quienes ul li img {
+	margin-bottom: 20px;
+	position: relative;
+    top: 0;
+    transition: all 3s;
+}
+
+.quienes ul li:hover img {
+	top: -10px;
+}
+
+.quienes ul li h3 {
+	color: #337966;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+/* Estilos de negocios */
+
+.negocios {
+	background: #ECECEC;
+	padding: 50px 0;
+}
+
+.negocios ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+.negocios ul li {
+    width: 18%;
+    text-align: center;
+    margin: 0 10px;
+    flex: 1;
+    position: relative;
+    min-height: 485px;
+    overflow: hidden;
+    border-radius: 0 0 50px 0;
+}
+
+.negocios ul li div {
+    position: absolute;
+    bottom: 0;
+    transition: all 5s;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.negocios ul li div img {
+	width: 60px;
+	opacity: 1;
+	transition: all 5s;
+}
+
+.negocios ul li div h3 {
+	padding: 20px 10px;
+	color: #fff;
+	font-weight: 300;
+	font-size: 1em;
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+	transition: all 3s;
+}
+
+.negocios ul li:hover div img {
+	opacity: 0;
+}
+
+.negocios ul li:hover div h3 {
+	opacity: 1;
+}
+
+.negocios ul li a {
+    display: block;
+    height: 100%;
+}
+
+.negocios ul li a > img {
+	position: absolute;
+	left: 0;
+	top: 0;
+    height: 100%;
+    width: 100%;
+	transition: all 5s;
+}
+
+.negocios ul li:hover a > img {
+	filter: brightness(0.6);
+}
+
+.negocios ul li:first-child div {
+	background: #B0633B;
+}
+
+.negocios ul li:nth-child(3) div {
+	background: #259FD9;
+}
+
+.negocios ul li:nth-child(2) div {
+	background: #D3932B;
+}
+
+.negocios ul li:nth-child(4) div {
+	background: #3CB54A;
+}
+
+.negocios ul li:last-child div {
+	background: #C83E27;
+}
+</style>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
+
+{% endblock %}
+
+
+{% block middle %}
+    {#    {{ block.super }}#}
+    {% block hero %}
+	<div style="height: 62px; width: 100%;"></div>
+
+	<section  class="slider1" id="section_slider">
+		<div class="container" data-aos="fade-right" data-aos-delay="300">
+			<h1 style="font-size:60px" >GeoPortal</h1>
+        </div>
+	</section>
+
+	<div>
+		<ul id="cbp-bislideshow" class="cbp-bislideshow">
+			<div class="active"><img src="{{ STATIC_URL }}geonode/img/slide1.png"></div>
+			<li><img src="../static/cartoview/img/slide2.png"></li>
+			<li><img src="{{ STATIC_URL }}geonode/img/banner_azucar_3.png"></li>
+		</ul>
+    </div>
+
+    {% endblock %}
+
+    {% block mainbody %}
+        {% block bigsearch %}
+            {{ block.super }}
+        {% endblock %}
+
+        {% block datasets %}
+            {{ block.super }}
+
+        {% endblock %}
+
+
+    {% endblock mainbody %}
+
+{% endblock middle %}
+
+
+
+{% block extra_script %}
+    {{ block.super }}
+    <script>
+        $('.count').each(function () {
+            var $this = $(this);
+            $({counter: 0}).animate({counter: $this.text()}, {
+                duration: 1000,
+                easing: 'swing',
+                step: function () {
+                    $this.text(Math.ceil(this.counter));
+                }
+            });
+        });
+    </script>
+    <script src="{% static 'cartoview/slider/dist/AppSlider.bundle.js' %}?v={{ CARTOVIEW_VERSION }}" ></script>
+{% endblock %}

@@ -1,0 +1,513 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.services.migrations package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.services.migrations package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0025_harvestjob">geonode.services.migrations.0025_harvestjob module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0026_auto_20171130_0600">geonode.services.migrations.0026_auto_20171130_0600 module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0027_harvestjob_details">geonode.services.migrations.0027_harvestjob_details module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0028_auto_20171201_0640">geonode.services.migrations.0028_auto_20171201_0640 module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0029_auto_20171203_1624">geonode.services.migrations.0029_auto_20171203_1624 module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0030_auto_20171212_0518">geonode.services.migrations.0030_auto_20171212_0518 module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0031_auto_20180301_1947">geonode.services.migrations.0031_auto_20180301_1947 module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0031_service_proxy_base">geonode.services.migrations.0031_service_proxy_base module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0032_auto_20180302_0430">geonode.services.migrations.0032_auto_20180302_0430 module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0033_merge">geonode.services.migrations.0033_merge module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0034_auto_20180309_0917">geonode.services.migrations.0034_auto_20180309_0917 module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0035_auto_20180327_0846">geonode.services.migrations.0035_auto_20180327_0846 module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.0036_auto_20180331_1039">geonode.services.migrations.0036_auto_20180331_1039 module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations.24_initial">geonode.services.migrations.24_initial module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.services.migrations package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.services.migrations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-services-migrations-package">
+<h1>geonode.services.migrations package<a class="headerlink" href="#geonode-services-migrations-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.services.migrations.0025_harvestjob">
+<span id="geonode-services-migrations-0025-harvestjob-module"></span><h2>geonode.services.migrations.0025_harvestjob module<a class="headerlink" href="#module-geonode.services.migrations.0025_harvestjob" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0025_harvestjob.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0025_harvestjob.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0025_harvestjob.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0025_harvestjob.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'24_initial')]</em><a class="headerlink" href="#geonode.services.migrations.0025_harvestjob.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0025_harvestjob.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'resource_id', &lt;django.db.models.fields.CharField&gt;), (u'status', &lt;django.db.models.fields.CharField&gt;), (u'service', &lt;django.db.models.fields.related.OneToOneField&gt;)], name=u'HarvestJob'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0025_harvestjob.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0026_auto_20171130_0600">
+<span id="geonode-services-migrations-0026-auto-20171130-0600-module"></span><h2>geonode.services.migrations.0026_auto_20171130_0600 module<a class="headerlink" href="#module-geonode.services.migrations.0026_auto_20171130_0600" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0026_auto_20171130_0600.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0026_auto_20171130_0600.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0026_auto_20171130_0600.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0026_auto_20171130_0600.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0025_harvestjob')]</em><a class="headerlink" href="#geonode.services.migrations.0026_auto_20171130_0600.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0026_auto_20171130_0600.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AlterField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'service', model_name=u'harvestjob'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0026_auto_20171130_0600.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0027_harvestjob_details">
+<span id="geonode-services-migrations-0027-harvestjob-details-module"></span><h2>geonode.services.migrations.0027_harvestjob_details module<a class="headerlink" href="#module-geonode.services.migrations.0027_harvestjob_details" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0027_harvestjob_details.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0027_harvestjob_details.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0027_harvestjob_details.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0027_harvestjob_details.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0026_auto_20171130_0600')]</em><a class="headerlink" href="#geonode.services.migrations.0027_harvestjob_details.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0027_harvestjob_details.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.TextField&gt;, name=u'details', model_name=u'harvestjob'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0027_harvestjob_details.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0028_auto_20171201_0640">
+<span id="geonode-services-migrations-0028-auto-20171201-0640-module"></span><h2>geonode.services.migrations.0028_auto_20171201_0640 module<a class="headerlink" href="#module-geonode.services.migrations.0028_auto_20171201_0640" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0028_auto_20171201_0640.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0028_auto_20171201_0640.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0028_auto_20171201_0640.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0028_auto_20171201_0640.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0027_harvestjob_details')]</em><a class="headerlink" href="#geonode.services.migrations.0028_auto_20171201_0640.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0028_auto_20171201_0640.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;RemoveField  name=u'description', model_name=u'servicelayer'&gt;, &lt;RemoveField  name=u'styles', model_name=u'servicelayer'&gt;, &lt;RemoveField  name=u'title', model_name=u'servicelayer'&gt;, &lt;RemoveField  name=u'typename', model_name=u'servicelayer'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0028_auto_20171201_0640.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0029_auto_20171203_1624">
+<span id="geonode-services-migrations-0029-auto-20171203-1624-module"></span><h2>geonode.services.migrations.0029_auto_20171203_1624 module<a class="headerlink" href="#module-geonode.services.migrations.0029_auto_20171203_1624" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0029_auto_20171203_1624.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0029_auto_20171203_1624.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0029_auto_20171203_1624.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0029_auto_20171203_1624.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0028_auto_20171201_0640')]</em><a class="headerlink" href="#geonode.services.migrations.0029_auto_20171203_1624.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0029_auto_20171203_1624.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;RemoveField  name=u'layer', model_name=u'servicelayer'&gt;, &lt;RemoveField  name=u'service', model_name=u'servicelayer'&gt;, &lt;DeleteModel  name=u'ServiceLayer'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0029_auto_20171203_1624.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0030_auto_20171212_0518">
+<span id="geonode-services-migrations-0030-auto-20171212-0518-module"></span><h2>geonode.services.migrations.0030_auto_20171212_0518 module<a class="headerlink" href="#module-geonode.services.migrations.0030_auto_20171212_0518" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0030_auto_20171212_0518.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0030_auto_20171212_0518.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0030_auto_20171212_0518.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0030_auto_20171212_0518.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0029_auto_20171203_1624')]</em><a class="headerlink" href="#geonode.services.migrations.0030_auto_20171212_0518.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0030_auto_20171212_0518.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;RemoveField  name=u'service', model_name=u'webserviceharvestlayersjob'&gt;, &lt;DeleteModel  name=u'WebServiceRegistrationJob'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.CharField&gt;, name=u'status', model_name=u'harvestjob'&gt;, &lt;DeleteModel  name=u'WebServiceHarvestLayersJob'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0030_auto_20171212_0518.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0031_auto_20180301_1947">
+<span id="geonode-services-migrations-0031-auto-20180301-1947-module"></span><h2>geonode.services.migrations.0031_auto_20180301_1947 module<a class="headerlink" href="#module-geonode.services.migrations.0031_auto_20180301_1947" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0031_auto_20180301_1947.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0031_auto_20180301_1947.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0031_auto_20180301_1947.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0031_auto_20180301_1947.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0030_auto_20171212_0518')]</em><a class="headerlink" href="#geonode.services.migrations.0031_auto_20180301_1947.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0031_auto_20180301_1947.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AlterModelManagers  managers=[(u'objects', &lt;django.db.models.manager.Manager object&gt;), (u'base_objects', &lt;django.db.models.manager.Manager object&gt;)], name=u'service'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0031_auto_20180301_1947.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0031_service_proxy_base">
+<span id="geonode-services-migrations-0031-service-proxy-base-module"></span><h2>geonode.services.migrations.0031_service_proxy_base module<a class="headerlink" href="#module-geonode.services.migrations.0031_service_proxy_base" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0031_service_proxy_base.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0031_service_proxy_base.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0031_service_proxy_base.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0031_service_proxy_base.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0030_auto_20171212_0518')]</em><a class="headerlink" href="#geonode.services.migrations.0031_service_proxy_base.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0031_service_proxy_base.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.URLField&gt;, name=u'proxy_base', model_name=u'service'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0031_service_proxy_base.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0032_auto_20180302_0430">
+<span id="geonode-services-migrations-0032-auto-20180302-0430-module"></span><h2>geonode.services.migrations.0032_auto_20180302_0430 module<a class="headerlink" href="#module-geonode.services.migrations.0032_auto_20180302_0430" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0032_auto_20180302_0430.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0032_auto_20180302_0430.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0032_auto_20180302_0430.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0032_auto_20180302_0430.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0031_auto_20180301_1947')]</em><a class="headerlink" href="#geonode.services.migrations.0032_auto_20180302_0430.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0032_auto_20180302_0430.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AlterModelManagers  managers=[], name=u'service'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0032_auto_20180302_0430.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0033_merge">
+<span id="geonode-services-migrations-0033-merge-module"></span><h2>geonode.services.migrations.0033_merge module<a class="headerlink" href="#module-geonode.services.migrations.0033_merge" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0033_merge.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0033_merge.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0033_merge.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0033_merge.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0031_service_proxy_base'), (u'services', u'0032_auto_20180302_0430')]</em><a class="headerlink" href="#geonode.services.migrations.0033_merge.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0033_merge.Migration.operations">
+<code class="descname">operations</code><em class="property"> = []</em><a class="headerlink" href="#geonode.services.migrations.0033_merge.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0034_auto_20180309_0917">
+<span id="geonode-services-migrations-0034-auto-20180309-0917-module"></span><h2>geonode.services.migrations.0034_auto_20180309_0917 module<a class="headerlink" href="#module-geonode.services.migrations.0034_auto_20180309_0917" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0034_auto_20180309_0917.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0034_auto_20180309_0917.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0034_auto_20180309_0917.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0034_auto_20180309_0917.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0033_merge')]</em><a class="headerlink" href="#geonode.services.migrations.0034_auto_20180309_0917.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0034_auto_20180309_0917.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AlterField  field=&lt;django.db.models.fields.TextField&gt;, name=u'details', model_name=u'harvestjob'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0034_auto_20180309_0917.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0035_auto_20180327_0846">
+<span id="geonode-services-migrations-0035-auto-20180327-0846-module"></span><h2>geonode.services.migrations.0035_auto_20180327_0846 module<a class="headerlink" href="#module-geonode.services.migrations.0035_auto_20180327_0846" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0035_auto_20180327_0846.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0035_auto_20180327_0846.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0035_auto_20180327_0846.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0035_auto_20180327_0846.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0034_auto_20180309_0917')]</em><a class="headerlink" href="#geonode.services.migrations.0035_auto_20180327_0846.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0035_auto_20180327_0846.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AlterField  field=&lt;django.db.models.fields.CharField&gt;, name=u'type', model_name=u'service'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0035_auto_20180327_0846.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.0036_auto_20180331_1039">
+<span id="geonode-services-migrations-0036-auto-20180331-1039-module"></span><h2>geonode.services.migrations.0036_auto_20180331_1039 module<a class="headerlink" href="#module-geonode.services.migrations.0036_auto_20180331_1039" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.0036_auto_20180331_1039.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.0036_auto_20180331_1039.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.0036_auto_20180331_1039.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.0036_auto_20180331_1039.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'services', u'0035_auto_20180327_0846')]</em><a class="headerlink" href="#geonode.services.migrations.0036_auto_20180331_1039.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.0036_auto_20180331_1039.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AlterField  field=&lt;django.db.models.fields.CharField&gt;, name=u'type', model_name=u'service'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.0036_auto_20180331_1039.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations.24_initial">
+<span id="geonode-services-migrations-24-initial-module"></span><h2>geonode.services.migrations.24_initial module<a class="headerlink" href="#module-geonode.services.migrations.24_initial" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.migrations.24_initial.Migration">
+<em class="property">class </em><code class="descclassname">geonode.services.migrations.24_initial.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.migrations.24_initial.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.migrations.24_initial.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'people', u'__first__'), (u'base', u'__first__'), (u'layers', u'__first__')]</em><a class="headerlink" href="#geonode.services.migrations.24_initial.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.migrations.24_initial.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;CreateModel  fields=[(u'resourcebase_ptr', &lt;django.db.models.fields.related.OneToOneField&gt;), (u'type', &lt;django.db.models.fields.CharField&gt;), (u'method', &lt;django.db.models.fields.CharField&gt;), (u'base_url', &lt;django.db.models.fields.URLField&gt;), (u'version', &lt;django.db.models.fields.CharField&gt;), (u'name', &lt;django.db.models.fields.CharField&gt;), (u'description', &lt;django.db.models.fields.CharField&gt;), (u'online_resource', &lt;django.db.models.fields.URLField&gt;), (u'fees', &lt;django.db.models.fields.CharField&gt;), (u'access_constraints', &lt;django.db.models.fields.CharField&gt;), (u'connection_params', &lt;django.db.models.fields.TextField&gt;), (u'username', &lt;django.db.models.fields.CharField&gt;), (u'password', &lt;django.db.models.fields.CharField&gt;), (u'api_key', &lt;django.db.models.fields.CharField&gt;), (u'workspace_ref', &lt;django.db.models.fields.URLField&gt;), (u'store_ref', &lt;django.db.models.fields.URLField&gt;), (u'resources_ref', &lt;django.db.models.fields.URLField&gt;), (u'created', &lt;django.db.models.fields.DateTimeField&gt;), (u'last_updated', &lt;django.db.models.fields.DateTimeField&gt;), (u'first_noanswer', &lt;django.db.models.fields.DateTimeField&gt;), (u'noanswer_retries', &lt;django.db.models.fields.PositiveIntegerField&gt;), (u'external_id', &lt;django.db.models.fields.IntegerField&gt;), (u'parent', &lt;django.db.models.fields.related.ForeignKey&gt;)], bases=(u'base.resourcebase',), options={u'abstract': False}, name=u'Service'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'typename', &lt;django.db.models.fields.CharField&gt;), (u'title', &lt;django.db.models.fields.CharField&gt;), (u'description', &lt;django.db.models.fields.TextField&gt;), (u'styles', &lt;django.db.models.fields.TextField&gt;), (u'layer', &lt;django.db.models.fields.related.ForeignKey&gt;), (u'service', &lt;django.db.models.fields.related.ForeignKey&gt;)], name=u'ServiceLayer'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'role', &lt;django.db.models.fields.CharField&gt;), (u'profiles', &lt;django.db.models.fields.related.ForeignKey&gt;), (u'service', &lt;django.db.models.fields.related.ForeignKey&gt;)], name=u'ServiceProfileRole'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'status', &lt;django.db.models.fields.CharField&gt;), (u'service', &lt;django.db.models.fields.related.OneToOneField&gt;)], name=u'WebServiceHarvestLayersJob'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'base_url', &lt;django.db.models.fields.URLField&gt;), (u'type', &lt;django.db.models.fields.CharField&gt;), (u'status', &lt;django.db.models.fields.CharField&gt;)], name=u'WebServiceRegistrationJob'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ManyToManyField&gt;, name=u'profiles', model_name=u'service'&gt;]</em><a class="headerlink" href="#geonode.services.migrations.24_initial.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.migrations">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.services.migrations" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

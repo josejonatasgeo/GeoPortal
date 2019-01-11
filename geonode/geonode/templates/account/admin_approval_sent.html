@@ -1,0 +1,14 @@
+{% extends "geonode_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Contas com pedencia de aprovação" %}{% endblock %}
+
+{% block body %}
+
+<div class="page-header">
+  <h2>{% trans "Contas com pedencia de aprovação" %}</h2>
+</div>
+
+    <p>{% blocktrans %}Enviamos aos administradores um aviso para aprovar sua conta associada a <b>{{ email }}</b>. Se a conta for aprovada, você receberá um aviso de confirmação.{% endblocktrans %}</p>
+{% endblock %}

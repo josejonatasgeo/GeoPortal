@@ -1,0 +1,19 @@
+{% load i18n %}
+{% load avatar_tags %}
+{% load relationship_tags %}
+<h3>{% trans "Seguindo" %}</h3>
+{% if profile.user.relationships.following %}
+    {% for u in profile.user.relationships.following %}
+        <a href="{% url "profile_detail" u.username %}">{% avatar u 65 %}</a>
+    {% endfor %}
+{% else %}
+    {% trans "Este usuário não está seguindo ninguem" %}
+{% endif %}
+<h3>{% trans "Seguidores" %}</h3>
+{% if profile.user.relationships.followers %}
+    {% for u in profile.user.relationships.followers %}
+        <a href="{% url "profile_detail" u.username %}">{% avatar u 65 %}</a>
+    {% endfor %}
+{% else %}
+    {% trans "Ninguem está seguindo este usuário" %}
+{% endif %}

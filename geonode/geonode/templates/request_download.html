@@ -1,0 +1,26 @@
+<script type="text/javascript">
+if($("#request-download").length){
+  $("#request-download").click(function () {
+    $.ajax(
+      {
+        type: "POST",
+        url: "{% url 'request_permissions' %}",
+        dataType: 'json',
+        data: { uuid: "{{ resource.uuid }}" },
+        success: function(data) {
+          $('#status-message-text').text('Sucesso!');
+          $('#status-message-text-body').text('Permissão para baixar o recurso solicitado ao proprietário do recurso.');
+          $('#status-message').addClass('alert-success').removeClass('alert-danger');
+          $('#status-message').show();
+        },
+        error: function(data) {
+          $('#status-message-text').text('Erro!');
+          $('#status-message-text-body').text('A permissão para baixar o recurso não pôde ser solicitada ao proprietário do recurso devido a um erro.');
+          $('#status-message').addClass('alert-danger').removeClass('alert-success');
+          $('#status-message').show();
+        }
+      }
+    );
+  });
+}
+</script>

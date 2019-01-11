@@ -1,0 +1,18 @@
+[{
+	"fields": {
+		"date_joined": "2011-06-09 15:15:27",
+		"email": "ad@m.in",
+		"first_name": "",
+		"groups": [],
+		"is_active": true,
+		"is_staff": true,
+		"is_superuser": true,
+		"last_login": "2011-06-09 15:45:34",
+		"last_name": "",
+		"password": "pbkdf2_sha256$20000$ohXGibaWn0Mz$5Vw6WYP0qdNIPlQ+IdebkRXFIcOQ0eSzMfF8XcI4UZQ=",
+		"user_permissions": [],
+		"username": "admin"
+	},
+	"model": "people.Profile",
+	"pk": 1000
+}]

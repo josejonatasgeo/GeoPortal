@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.security package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.security package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.security.middleware">geonode.security.middleware module</a></li>
+<li><a class="reference internal" href="#module-geonode.security.models">geonode.security.models module</a></li>
+<li><a class="reference internal" href="#module-geonode.security.tests">geonode.security.tests module</a></li>
+<li><a class="reference internal" href="#module-geonode.security.urls">geonode.security.urls module</a></li>
+<li><a class="reference internal" href="#module-geonode.security.utils">geonode.security.utils module</a></li>
+<li><a class="reference internal" href="#module-geonode.security.views">geonode.security.views module</a></li>
+<li><a class="reference internal" href="#module-geonode.security">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.security package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.security.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-security-package">
+<h1>geonode.security package<a class="headerlink" href="#geonode-security-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.security.middleware">
+<span id="geonode-security-middleware-module"></span><h2>geonode.security.middleware module<a class="headerlink" href="#module-geonode.security.middleware" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.security.middleware.LoginRequiredMiddleware">
+<em class="property">class </em><code class="descclassname">geonode.security.middleware.</code><code class="descname">LoginRequiredMiddleware</code><a class="headerlink" href="#geonode.security.middleware.LoginRequiredMiddleware" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Requires a user to be logged in to access any page that is not white-listed.</p>
+<dl class="method">
+<dt id="geonode.security.middleware.LoginRequiredMiddleware.process_request">
+<code class="descname">process_request</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.middleware.LoginRequiredMiddleware.process_request" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.security.middleware.LoginRequiredMiddleware.redirect_to">
+<code class="descname">redirect_to</code><em class="property"> = u'/account/login/'</em><a class="headerlink" href="#geonode.security.middleware.LoginRequiredMiddleware.redirect_to" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.security.middleware.LoginRequiredMiddleware.white_list">
+<code class="descname">white_list</code><em class="property"> = [&lt;_sre.SRE_Pattern object&gt;, &lt;_sre.SRE_Pattern object&gt;, &lt;_sre.SRE_Pattern object&gt;, &lt;_sre.SRE_Pattern object&gt;, &lt;_sre.SRE_Pattern object&gt;, &lt;_sre.SRE_Pattern object&gt;, &lt;_sre.SRE_Pattern object&gt;, &lt;_sre.SRE_Pattern object&gt;, &lt;_sre.SRE_Pattern object&gt;, &lt;_sre.SRE_Pattern object&gt;, &lt;_sre.SRE_Pattern object&gt;]</em><a class="headerlink" href="#geonode.security.middleware.LoginRequiredMiddleware.white_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.security.middleware.LoginRequiredMiddleware.white_list_paths">
+<code class="descname">white_list_paths</code><em class="property"> = (u'/account/login/', u'/people/forgotname', u'/help/', u'/jsi18n/', u'/lang.js', u'/gs/acls', u'/layers/acls', u'/gs/resolve_user', u'/layers/resolve_user', '/account/(?!.*(?:signup))', '/static/*')</em><a class="headerlink" href="#geonode.security.middleware.LoginRequiredMiddleware.white_list_paths" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.security.models">
+<span id="geonode-security-models-module"></span><h2>geonode.security.models module<a class="headerlink" href="#module-geonode.security.models" title="Link permanente para este título">¶</a></h2>
+<dl class="exception">
+<dt id="geonode.security.models.PermissionLevelError">
+<em class="property">exception </em><code class="descclassname">geonode.security.models.</code><code class="descname">PermissionLevelError</code><a class="headerlink" href="#geonode.security.models.PermissionLevelError" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.security.models.PermissionLevelMixin">
+<em class="property">class </em><code class="descclassname">geonode.security.models.</code><code class="descname">PermissionLevelMixin</code><a class="headerlink" href="#geonode.security.models.PermissionLevelMixin" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Mixin for adding “Permission Level” methods
+to a model class – eg role systems where a
+user has exactly one assigned role with respect to
+an object representing an “access level”</p>
+<dl class="method">
+<dt id="geonode.security.models.PermissionLevelMixin.get_all_level_info">
+<code class="descname">get_all_level_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.models.PermissionLevelMixin.get_all_level_info" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.models.PermissionLevelMixin.get_self_resource">
+<code class="descname">get_self_resource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.models.PermissionLevelMixin.get_self_resource" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.models.PermissionLevelMixin.set_default_permissions">
+<code class="descname">set_default_permissions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.models.PermissionLevelMixin.set_default_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Remove all the permissions except for the owner and assign the
+view permission to the anonymous group</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.models.PermissionLevelMixin.set_permissions">
+<code class="descname">set_permissions</code><span class="sig-paren">(</span><em>perm_spec</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.models.PermissionLevelMixin.set_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Sets an object’s the permission levels based on the perm_spec JSON.</p>
+<p>the mapping looks like:
+{</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>‘users’: {</dt>
+<dd>‘AnonymousUser’: [‘view’],
+&lt;username&gt;: [‘perm1’,’perm2’,’perm3’],
+&lt;username2&gt;: [‘perm1’,’perm2’,’perm3’]
+…</dd>
+</dl>
+<p>}
+‘groups’: [</p>
+<blockquote>
+<div>&lt;groupname&gt;: [‘perm1’,’perm2’,’perm3’],
+&lt;groupname2&gt;: [‘perm1’,’perm2’,’perm3’],
+…
+]</div></blockquote>
+</div></blockquote>
+<p>}</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.security.tests">
+<span id="geonode-security-tests-module"></span><h2>geonode.security.tests module<a class="headerlink" href="#module-geonode.security.tests" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.security.tests.BulkPermissionsTests">
+<em class="property">class </em><code class="descclassname">geonode.security.tests.</code><code class="descname">BulkPermissionsTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.BulkPermissionsTests" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.test.ResourceTestCaseMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="attribute">
+<dt id="geonode.security.tests.BulkPermissionsTests.fixtures">
+<code class="descname">fixtures</code><em class="property"> = ['initial_data.json', 'bobby']</em><a class="headerlink" href="#geonode.security.tests.BulkPermissionsTests.fixtures" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.BulkPermissionsTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.BulkPermissionsTests.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.BulkPermissionsTests.test_bobby_cannot_set_all">
+<code class="descname">test_bobby_cannot_set_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.BulkPermissionsTests.test_bobby_cannot_set_all" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that Bobby can set the permissions only only on the ones
+for which he has the right</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.BulkPermissionsTests.test_set_bulk_permissions">
+<code class="descname">test_set_bulk_permissions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.BulkPermissionsTests.test_set_bulk_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that after restrict view permissions on two layers
+bobby is unable to see them</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.security.tests.PermissionsTest">
+<em class="property">class </em><code class="descclassname">geonode.security.tests.</code><code class="descname">PermissionsTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.PermissionsTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests GeoNode permissions</p>
+<dl class="attribute">
+<dt id="geonode.security.tests.PermissionsTest.fixtures">
+<code class="descname">fixtures</code><em class="property"> = ['initial_data.json', 'bobby']</em><a class="headerlink" href="#geonode.security.tests.PermissionsTest.fixtures" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.security.tests.PermissionsTest.perm_spec">
+<code class="descname">perm_spec</code><em class="property"> = {'groups': {}, 'users': {'admin': ['change_resourcebase', 'change_resourcebase_permissions', 'view_resourcebase']}}</em><a class="headerlink" href="#geonode.security.tests.PermissionsTest.perm_spec" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.PermissionsTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.PermissionsTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.PermissionsTest.test_ajax_layer_permissions">
+<code class="descname">test_ajax_layer_permissions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.PermissionsTest.test_ajax_layer_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that the ajax_layer_permissions view is behaving as expected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.PermissionsTest.test_anonymus_permissions">
+<code class="descname">test_anonymus_permissions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.PermissionsTest.test_anonymus_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.PermissionsTest.test_layer_set_default_permissions">
+<code class="descname">test_layer_set_default_permissions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.PermissionsTest.test_layer_set_default_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that Layer.set_default_permissions is behaving as expected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.PermissionsTest.test_map_download">
+<code class="descname">test_map_download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.PermissionsTest.test_map_download" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test the correct permissions on layers on map download</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.PermissionsTest.test_not_superuser_permissions">
+<code class="descname">test_not_superuser_permissions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.PermissionsTest.test_not_superuser_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.PermissionsTest.test_perms_info">
+<code class="descname">test_perms_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.PermissionsTest.test_perms_info" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that the perms_info view is behaving as expected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.security.tests.PermissionsTest.test_set_layer_permissions">
+<code class="descname">test_set_layer_permissions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.tests.PermissionsTest.test_set_layer_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that the set_layer_permissions view is behaving as expected</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.security.urls">
+<span id="geonode-security-urls-module"></span><h2>geonode.security.urls module<a class="headerlink" href="#module-geonode.security.urls" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.security.utils">
+<span id="geonode-security-utils-module"></span><h2>geonode.security.utils module<a class="headerlink" href="#module-geonode.security.utils" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.security.utils.get_geofence_rules_count">
+<code class="descclassname">geonode.security.utils.</code><code class="descname">get_geofence_rules_count</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.utils.get_geofence_rules_count" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>invalidate GeoFence Cache Rules</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.utils.get_users_with_perms">
+<code class="descclassname">geonode.security.utils.</code><code class="descname">get_users_with_perms</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.utils.get_users_with_perms" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Override of the Guardian get_users_with_perms</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.utils.get_visible_resources">
+<code class="descclassname">geonode.security.utils.</code><code class="descname">get_visible_resources</code><span class="sig-paren">(</span><em>queryset</em>, <em>user</em>, <em>admin_approval_required=False</em>, <em>unpublished_not_visible=False</em>, <em>private_groups_not_visibile=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.utils.get_visible_resources" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.utils.remove_object_permissions">
+<code class="descclassname">geonode.security.utils.</code><code class="descname">remove_object_permissions</code><span class="sig-paren">(</span><em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.utils.remove_object_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Remove object permissions on given resource.</p>
+<p>If is a layer removes the layer specific permissions then the
+resourcebase permissions</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.utils.set_geofence_all">
+<code class="descclassname">geonode.security.utils.</code><code class="descname">set_geofence_all</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.utils.set_geofence_all" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>assign access permissions to all users</p>
+<p>This method is only relevant to Layer instances that have their
+underlying data managed by geoserver, meaning:</p>
+<ul class="simple">
+<li>layers that are not associated with a Service</li>
+<li>layers that are associated with a Service that is being CASCADED through
+geoserver</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.utils.set_geofence_group">
+<code class="descclassname">geonode.security.utils.</code><code class="descname">set_geofence_group</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.utils.set_geofence_group" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>assign access permissions to owner group</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.utils.set_geofence_invalidate_cache">
+<code class="descclassname">geonode.security.utils.</code><code class="descname">set_geofence_invalidate_cache</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.utils.set_geofence_invalidate_cache" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>invalidate GeoFence Cache Rules</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.utils.set_geofence_owner">
+<code class="descclassname">geonode.security.utils.</code><code class="descname">set_geofence_owner</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.utils.set_geofence_owner" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Assign access permissions to owner user</p>
+<p>This function uses the geoserver REST API in order to contact geofence.
+The request performs a similar function to the one in the following cURL
+snippet:</p>
+<blockquote>
+<div>curl -X POST -u {admin_user}:{admin_password}           -H “Content-Type: text/xml”           -d “&lt;Rule&gt;&lt;userName&gt;{user}&lt;/userName&gt;&lt;workspace&gt;geonode&lt;/workspace&gt;           &lt;layer&gt;{layer}&lt;/layer&gt;&lt;access&gt;ALLOW&lt;/access&gt;&lt;/Rule&gt;”           <a class="reference external" href="http:/">http:/</a>/&lt;host&gt;:&lt;port&gt;/geoserver/geofence/rest/rules</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.utils.set_owner_permissions">
+<code class="descclassname">geonode.security.utils.</code><code class="descname">set_owner_permissions</code><span class="sig-paren">(</span><em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.utils.set_owner_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>assign all admin permissions to the owner</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.security.views">
+<span id="geonode-security-views-module"></span><h2>geonode.security.views module<a class="headerlink" href="#module-geonode.security.views" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.security.views.request_permissions">
+<code class="descclassname">geonode.security.views.</code><code class="descname">request_permissions</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.views.request_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Request permission to download a resource.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.views.resource_permissions">
+<code class="descclassname">geonode.security.views.</code><code class="descname">resource_permissions</code><span class="sig-paren">(</span><em>request</em>, <em>resource_id</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.views.resource_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.views.send_email_consumer">
+<code class="descclassname">geonode.security.views.</code><code class="descname">send_email_consumer</code><span class="sig-paren">(</span><em>layer_uuid</em>, <em>user_id</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.views.send_email_consumer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.views.send_email_owner_on_view">
+<code class="descclassname">geonode.security.views.</code><code class="descname">send_email_owner_on_view</code><span class="sig-paren">(</span><em>owner</em>, <em>viewer</em>, <em>layer_id</em>, <em>geonode_email='email&#64;geo.node'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.views.send_email_owner_on_view" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.security.views.set_bulk_permissions">
+<code class="descclassname">geonode.security.views.</code><code class="descname">set_bulk_permissions</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.security.views.set_bulk_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.security">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.security" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

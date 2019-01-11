@@ -1,0 +1,145 @@
+{% extends "metadata_base.html" %}
+{% load i18n %}
+{% load bootstrap_tags %}
+{% load base_tags %}
+{% load guardian_tags %}
+
+{% block title %}{{ layer.alternate }} — {{ block.super }}{% endblock %}
+
+{% block body_class %}data{% endblock %}
+
+{% block body_outer %}
+
+{{ block.super }}
+
+<div class="page-header">
+  <a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}" class="btn btn-primary pull-right">{% trans "Explorar Camadas" %}</a>
+  <h2 class="page-title">{% trans "Editar Metadado" %}</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <p class="lead">
+      {% blocktrans with layer.alternate as layer_title %}
+        Editing details for {{ layer_title }}
+      {% endblocktrans %}
+    </p>
+    <form id="metadata_update" class="form-horizontal" action="{% url "layer_metadata" layer.service_typename %}" method="POST">
+      {% if layer.metadata_uploaded_preserve %}
+        <p class="bg-warning">{% blocktrans %}Nota: os metadados originais da camada foram preenchidos e preservados, importando um arquivo XML de metadados.
+            Esses metadados não podem ser editados.{% endblocktrans %}</p>
+      {% elif layer.metadata_uploaded %}
+        <p class="bg-warning">{% blocktrans %}Nota: os metadados originais da camada foram preenchidos com a importação de um arquivo XML de metadados.
+            A importação de metadados do GeoPortal suporta um subconjunto de elementos de metadados ISO, FGDC e Dublin Core.
+            Alguns dos seus metadados originais podem ter sido perdidos.{% endblocktrans %}</p>
+      {% endif %}
+
+      {% if layer_form.errors or attribute_form.errors or category_form.errors or author_form.errors or poc.errors %}
+    	  <p class="bg-danger">{% blocktrans %}Erro ao atualizar os metadados. Por favor, verifique os seguintes campos: {% endblocktrans %}</p>
+          <ul class="bg-danger">
+          {% if author_form.errors %}
+            <li>{% trans "Autor do Metadado" %}</li>
+            {{ author_form.errors }}
+          {% endif %}
+          {% if poc_form.errors %}
+            <li>{% trans "Pointo de Contato" %}</li>
+            {{ poc_form.errors }}
+          {% endif %}
+          {% for field in layer_form %}
+            {% if field.errors %}
+            <li>{{ field.label }}</li>
+            {% endif %}
+          {% endfor %}
+          {% if not attribute_form.is_valid %}
+            <li>{% trans "Atributos" %}</li>
+            {% for field in attribute_form %}
+            {% if field.errors %}
+            <li>{{ field.errors }}</li>
+            {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% if category_form.errors %}
+            <li>{{ category_form.errors.as_ul }}</li>
+          {% endif %}
+          </ul>
+        {% endif %}
+
+        {% if not layer.metadata_uploaded_preserve %}
+        <div class="form-actions">
+          <a href="{% url 'layer_detail' layername=resource.alternate %}" class="btn btn-primary">{% trans "Retornar a Camada" %}</a>
+          <input type="submit" id="btn_upd_md_up" class="btn btn-primary" value="{% trans "Update" %}"/>
+        </div>
+        {% endif %}
+
+        {% csrf_token %}
+        <div class="col-md-6 form-controls">
+          {{ layer_form|as_bootstrap }}
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label class="control-label required-field">{% trans "Categoria" %}</label>
+            <fieldset id="category_form">
+              {% autoescape off %}
+              {% for choice in category_form.category_choice_field.field.choices %}
+              <div class="col-md-6">
+                <label class="fancy-checkbox">
+                    <input type="radio" name="category_choice_field" value="{{ choice.0 }}"
+                      {% ifequal category_form.initial choice.0 %} checked="checked" {% endifequal %} />
+                    {{ choice.1 }}
+                </label>
+              </div>
+              <!-- div class="radio col-md-6">
+                <input type="radio" name="category_choice_field" value="{{ choice.0 }}"
+                  {% ifequal category_form.initial choice.0 %} checked="checked" {% endifequal %}>
+                  {{ choice.1 }}
+                </input>
+              </div -->
+              {% endfor %}
+              {% endautoescape %}
+            </fieldset>
+          </div>
+
+          <div class="col-md-12 grid-spacer">
+            <h5>{% trans "Atributos" %}</h5>
+            {{ attribute_form.management_form }}
+            <table class="table table-striped table-bordered table-condensed">
+              <tr>
+                <th>{% trans "Atributo" %}</th>
+                <th>{% trans "Rótulo" %}</th>
+                <th>{% trans "Descrição" %}</th>
+                <th>{% trans "Ordem de exibição" %}</th>
+              </tr>
+              {% for form in attribute_form.forms %}
+              {% if form.attribute %}
+              <tr>
+                <td><div style="display:none">{{form.id}}</div>{{form.attribute}}</td>
+                <td>{{form.attribute_label}}</td>
+                <td>{{form.description}}</td>
+                <td>{{form.display_order}}</td>
+              </tr>
+              {% endif %}
+              {% endfor %}
+            </table>
+
+            <fieldset class="form-controls modal-forms modal hide fade" id="poc_form" >
+              <h2>{% trans "Point of Contact" %}</h2>
+              {{ poc_form|as_bootstrap }}
+              <button type='button' class="modal-cloose-btn btn btn-primary">Done</button>
+            </fieldset>
+            <fieldset class="form-controls modal-forms modal hide fade" id="metadata_form">
+              <h2>{% trans "Metadata Provider" %}</h2>
+                {{ author_form|as_bootstrap }}
+              <button type='button' class="modal-cloose-btn btn btn-primary">Done</button>
+            </fieldset>
+
+            {% if not layer.metadata_uploaded_preserve %}
+            <div class="form-actions">
+              <a href="{% url 'layer_detail' layername=resource.alternate %}" class="btn btn-primary">{% trans "Retornar a Camada" %}</a>
+              <input type="submit" id="btn_upd_md_dwn" class="btn btn-primary" value="{% trans "Atualizar" %}"/>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </form>
+  </div>
+</div>
+{% endblock %}

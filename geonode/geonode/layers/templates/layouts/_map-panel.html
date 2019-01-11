@@ -1,0 +1,509 @@
+<style>
+
+    body
+    {
+        padding-bottom: 0 !important;
+    }
+
+ </style>
+<div class="navbar" style="margin: 0; padding: 0;min-height:0;" ng-cloak ng-controller="controlButtonsController">
+    <div class="navbar-inner map-toolbar" id="map-toobar">
+
+        <cursor-tooltip content="tooTipContent"></cursor-tooltip>
+        <location-search></location-search>
+        <ul class="nav">
+
+            <!-- <li draft-only>
+                        <edit-toggle-button></edit-toggle-button>
+                    </li>
+                    <li class="divider-vertical" draft-only></li>
+                    <li>
+                        <geo-location-toggle-button></geo-location-toggle-button>
+                    </li>
+                    <li class="divider-vertical" draft-only></li> -->
+            <!-- <li ng-repeat="tools in mapToolsSettings">
+                <div inject-template="[{tools.template}]"></div>
+            </li>   -->
+            <li ng-show="toolsIsVisible('navigation-history-buttons')" ng-disabled="isDisable('navigation-history-buttons')">
+                <navigation-history-buttons></navigation-history-buttons>
+            </li>
+            <li ng-show="toolsIsVisible('zoom-in-out-buttons')">
+                <zoom-in-out-buttons> </zoom-in-out-buttons>
+            </li>
+            <li ng-show="toolsIsVisible('zoom-to-max-extent-button')">
+                <zoom-to-max-extent-button></zoom-to-max-extent-button>
+            </li>
+            <li ng-show="toolsIsVisible('zoom-to-extent-button')">
+                <zoom-to-extent-button></zoom-to-extent-button>
+            </li>
+            <li class="divider-vertical" draft-only ng-if="toolsIsVisible('divider')"></li>
+            <li draft-only id="drag" ng-if="toolsIsVisible('drag')">
+                <button class="control-button icon" ng-class="{'active' : !toggleButtonsList['zoomTool'].isActive}"
+                ng-click="removeBoxZooming()" title="Drag">
+                    <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+                                </button>
+            </li>
+            <li draft-only id="toggle-feature-selection" ng-if="toolsIsVisible('toggle-feature-selection')">
+                <button class="control-button icon" ng-class="{'active' : toggleButtonsList['featureSelectionTool'].isActive}"
+                ng-click="toggleSelectFeatureTool()" title="Toggle Feature Selection">
+                    <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+                                </button>
+            </li>
+            <li ng-show="toolsIsVisible('measurement-buttons')">
+                <measurement-buttons disable-function="disableAllDependentTools" buttons="toggleButtonsList" content="tooTipContent"></measurement-buttons>
+            </li>
+            <li ng-show="toolsIsVisible('set-marker')">
+                <set-marker disable-function="disableAllDependentTools" buttons="toggleButtonsList" content="tooTipContent"></set-marker>
+            </li>
+            <li id="measurement-tools" ng-if="toolsIsVisible('measurement-tools')">
+                <div class="btn-group">
+                    <button type="button" title="Search Options" class="control-button icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <span class="caret"></span>
+                        </button>
+                    <ul class="dropdown-menu" style="width: 170px;"> 
+                        <li style="float:none" ng-class="{'active' : toggleButtonsList['radiusSearchTool'].isActive}">
+                            <a class="control-button icon" ng-click="action.drawCircle()"  title="Draw Circle"><i class="fa fa-circle-o" aria-hidden="true"></i> Radius Search</a>
+                        </li>
+                        <li style="float:none" ng-class="{'active' : toggleButtonsList['bboxSearchTool'].isActive}">
+                            <a class="control-button icon" ng-click="action.boundingBoxSearch()" title="BBOX search"><i class="fa fa-square-o" aria-hidden="true"></i>  Bounding Box Search</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li id="search" ng-show="toolsIsVisible('search')" >
+                <div class="btn-group navbar-right">
+                    <button class="control-button icon dropdown-toggle" ng-click="getLayers()"  type="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="true">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu stop-propagation" aria-labelledby="dropdownMenu1" style="height: auto;width: 380px">
+                        <form class="form-inline" style="padding: 10px">
+                            <div class="form-group" style="margin: 5px">
+                                <label for="email">Search</label>
+                                <select class="form-control" style="width: 214px;"
+                                        ng-options="item.Id as item.Name for item in layers"
+                                        ng-model="searchItemLayer"
+                                >
+                                    <option style="display: none;" value="">Select a layer</option>
+                                </select>
+
+                            </div>
+                            <div class="form-group" style="margin: 5px">
+                                <label for="pwd">from selected item of</label>
+                                <select class="form-control" style="width: 214px;"
+                                        ng-options="item.Id as item.Name for item in layers"
+                                        ng-change="clearBufferLayer(true)"
+                                        ng-model="baseLayer"
+                                >
+                                    <option style="display: none;" value="">Select a layer</option>
+                                </select>
+
+                            </div>
+
+                            <div class="form-group" style="margin: 5px">
+                                <label>within </label>
+                                <input type="number"
+                                       style="width: 131px;"
+                                       class="form-control"
+                                       ng-model="distance"
+                                       ng-model-options="{ debounce: 500 }"
+                                       ng-change="changeBufferOfAllFeatures()">
+                                <label>km buffer</label>
+                            </div>
+
+
+                            <label class="radio-inline" style="width: 75px;"><input type="radio" ng-model="isAllSelectChecked" ng-value="true" ng-change="setCrossLayerSetting()">
+                                <span class="label label-primary">Select All</span>
+                            </label>
+                            <label class="radio-inline" style="width: 75px;"><input type="radio" ng-model="isAllSelectChecked" ng-value="false" ng-change="setCrossLayerSetting()">
+                                <span class="label label-success">From Selected</span>
+                            </label>
+                            <label style="margin-left: 15px;width:75px;" ng-show="!isAllSelectChecked">
+                                <span class="label label-success">
+                                    [{selectedFeatureList.length}]
+                                </span>
+                                <span class="label" style="color: #000;">
+                                     Selected
+                                </span>
+                            </label>
+                        </form>
+                        <div class="col-md-7 col-md-offset-5" style="margin-bottom: 15px;">
+                            <button class="btn btn-primary btn-sm pull-left" style="background-color: #3896e2;width:auto"
+                                    ng-click="getCrossLayerData(searchItemLayer,baseLayer,distance)"
+                                    style="width: auto">Search Cross Layer
+                            </button><button class="btn btn-success btn-sm pull-right" ng-click="resetCrossLayer()" style="width: auto">
+                                Reset
+                            </button>
+
+                        </div>
+                        <!-- <p>
+                                Search 
+                                <select
+                                ng-options="item.Id as item.Name for item in layers"
+                                ng-model="searchItemLayer"
+                                >
+                                    <option style="display: none;" value="">Select a layer</option>
+                                </select> from selected
+                        </p>
+                        <p>
+                                item of 
+                                <select
+                                ng-options="item.Id as item.Name for item in layers"
+                                ng-model="baseLayer"
+                                >
+                                 <option style="display: none;" value="">Select a layer</option>
+                                 </select>
+                                 within
+                        </p>
+                        <p>
+                                <input type="number" ng-model="distance"> km buffer
+                        </p>
+                         -->
+
+                    </ul>
+                  </div>
+            </li>
+            <li ng-show="toolsIsVisible('nearest-configuration')">
+                <span>
+                    <nearest-configuration route-config="routeConfig"></nearest-configuration>
+                </span>
+            </li>
+
+            <li class="divider-vertical" draft-only ng-if="toolsIsVisible('divider')"></li>
+            <!-- <li draft-only>
+                <button class="control-button icon" id="close-project" ng-click="action.showCloseProjectOptions()" ng-disabled="(mapService.isEmpty() && !mapService.getMapName()) || isAttributeGridOn" title="Close Map">
+                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>                                                    
+                            </button>
+            </li> -->
+            <!-- <li draft-only>
+                <button class="control-button icon" id="browse-projects" ng-disabled="isAttributeGridOn" ng-click="action.browseProject()" remove-focus title="Browse Maps">
+                            <i class="fa fa-map-o" aria-hidden="true"></i>                                    
+                            </button>
+            </li> -->
+
+
+            <li ng-show="toolsIsVisible('over-pass-dialog')" id="over-pass-dialog" draft-only ng-init="action.showOverPassDialog=false">
+                <button class="control-button icon svg-ico-button" id="overpass-query" ng-disabled="isAttributeGridOn" ng-click="action.showOverPassDialog=true" remove-focus title="Overpass Query">
+                            
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 476.554 476.554" style="enable-background:new 0 0 476.554 476.554;" xml:space="preserve" class="svg-icon">
+                         <g>
+                           <g>
+                             <path d="M263.877,100.431c-57.108,0-104.369,47.261-104.369,105.354s47.262,105.354,104.369,105.354
+                                   c58.092,0,104.369-47.261,104.369-105.354S320.985,100.431,263.877,100.431z M263.877,290.462
+                                   c-46.277,0-84.677-38.4-84.677-85.662s38.4-85.662,84.677-85.662c47.261,0,84.677,38.4,84.677,85.662
+                                   S310.154,290.462,263.877,290.462z"/>
+                           </g>
+                         </g>
+                         <g>
+                           <g>
+                             <rect x="337.755" y="274.671" transform="matrix(0.7119 -0.7023 0.7023 0.7119 -103.8152 327.7919)" width="19.693" height="31.508"/>
+                           </g>
+                         </g>
+                         <g>
+                           <g>
+                             <path d="M375.139,275.693L330.831,320l101.415,102.4l44.308-44.308L375.139,275.693z M358.4,320l16.738-16.739l73.846,74.831
+                                   l-16.738,16.739L358.4,320z"/>
+                           </g>
+                         </g>
+                         <g>
+                           <g>
+                             <polygon points="403.692,267.815 403.692,1.969 0,1.969 0,474.585 324.923,474.585 388.923,415.508 375.139,400.739 
+                                   317.046,454.892 19.692,454.892 19.692,21.662 384,21.662 384,267.815 		"/>
+                           </g>
+                         </g>
+                         <g>
+                           <g>
+                             <rect x="59.077" y="51.2" width="128" height="19.692"/>
+                           </g>
+                         </g>
+                         <g>
+                           <g>
+                             <rect x="64" y="129.969" width="73.846" height="19.692"/>
+                           </g>
+                         </g>
+                         <g>
+                           <g>
+                             <rect x="65.969" y="341.662" width="124.062" height="19.692"/>
+                           </g>
+                         </g>
+                         <g>
+                           <g>
+                             <rect x="59.077" y="395.815" width="236.308" height="19.692"/>
+                           </g>
+                         </g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                         <g></g>
+                       </svg>
+                            
+                            </button>
+                <div class="dropBox directions" ng-if="action.showOverPassDialog" style="right: -55px;" ng-controller="OverpassApiQueryBuilderController">
+                    <div class="arrow-up" style="right: 40px;"></div>
+                    <form class="form-inline ng-pristine ng-valid" style="margin-bottom: 25px;" ng-submit="executeQuery(queryStr)">
+                        <textarea ng-required="true" ng-model="queryStr" class="form-control" rows="3" style="width: 100%;margin-bottom:10px;"></textarea>
+                        <button type="submit" class="btn btn-primary pull-right icon-btn-color" style="width: auto" target="_self">
+                                                    Submit <i class="fa fa-arrow-right" aria-hidden="true"></i>    
+                                                </button>
+                        <a href="" ng-click="action.showOverPassDialog=false; closeDialog()" class="btn btn-default pull-right" target="_self" style="margin-right: 5px;">
+                                                        Cancel <i class="fa fa-times" aria-hidden="true"></i></a>
+                        <a href="" class="btn btn-default pull-right" target="_self" style="margin-right: 5px;" data-ng-click="dragBox()" title="Drag Box">Drag Box</a>
+
+                        <a href="" class="btn btn-default pull-right" target="_self" style="margin-right: 5px;" data-ng-click="SaveAsLayer()" title="Drag Box">Save as layer</a>
+                    </form>
+                    <div></div>
+                </div>
+            </li>
+            <li draft-only id="save" ng-if="toolsIsVisible('save')">
+                <button class="control-button icon" id="save" data-ng-click="action.saveProject()" ng-disabled="!enable.saveProject()" title="Save Map">
+                            <i class="fa fa-floppy-o" aria-hidden="true"></i>                                    
+                            </button>
+            </li>
+            <li draft-only id="print" ng-if="toolsIsVisible('print')">
+                <!-- @* <button class="control-button icon icon32 icon-print" data-ng-click="action.printPreview()" title="Print">
+                                <span>Print
+                                    <br />
+                                    Map
+                                </span>
+                            </button>*@ -->
+                <button class="control-button icon" data-ng-click="action.printPreview()" title="Print Map">
+                            <i class="fa fa-print" aria-hidden="true"></i>                                    
+                               
+                            </button>
+
+            </li>
+            <li draft-only id="print" ng-if="toolsIsVisible('printModal')">
+                    <!-- @* <button class="control-button icon icon32 icon-print" data-ng-click="action.printPreview()" title="Print">
+                                    <span>Print
+                                        <br />
+                                        Map
+                                    </span>
+                                </button>*@ -->
+                    <button class="control-button icon" data-ng-click="action.printPreviewModal()" title="Print Map">
+                                <i class="fa fa-print" aria-hidden="true"></i>                                    
+                                   
+                                </button>
+    
+                </li>
+            <!-- <li class="divider-vertical" draft-only></li> -->
+            <!-- <li draft-only>
+                <button class="control-button icon" id="browse-data" ng-click="action.browseData()" ng-disabled="isAttributeGridOn" remove-focus title="Browse Data">
+                            <i class="fa fa-database" aria-hidden="true"></i>                                    
+                            </button>
+            </li> -->
+            <li class="divider-vertical" draft-only ng-if="toolsIsVisible('divider')"></li>
+
+            <!-- <li draft-only>
+                <button class="control-button icon" onclick="animating()" title="Query">
+                            <i class="fa fa-binoculars"></i>                                  
+                                </button>
+            </li> -->
+            <li draft-only id="heat-map" ng-if="toolsIsVisible('heat-map')">
+                <button class="control-button icon"
+                 ng-class="{'active' : isHeatMapVisible}"
+                ng-click="addHeatMap()" title="Toggle Analytics">
+                    <i class="fa fa-bar-chart"></i>                                 
+                                </button>
+            </li>
+            <li id="share-map" ng-if="toolsIsVisible('share-map')">
+                <button class="control-button icon" ng-click="action.shareMap()" ng-hide="action.isNewMap()" title="Share map">
+                        <i class="fa fa-share" aria-hidden="true"></i>       
+                            </button>
+            </li>
+            <li id="legend" ng-if="toolsIsVisible('legend')">
+                <button class="control-button icon"
+                        ng-class="{'active' : enableVisualizationTool}"
+                        ng-click="toggleVisualizationTool()"  title="Toggle Legend">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>                        
+                            </button>
+            </li>
+            <li id="icon-visualization" ng-if="toolsIsVisible('icon-visualization')"> 
+                <button class="icon icon-visualization" ng-click="showProperties(0)"></button>
+            </li>
+           
+        </ul>
+
+       
+
+        
+
+        <!-- /.nav-collapse -->
+
+    </div>
+    <!-- /navbar-inner -->
+
+    <div class="navbar-inner map-settings-btn">
+        <ul style="margin: 0;padding:0">
+            <li> 
+                <button class="control-button icon" ng-click="animateToolbar()"><i class="fa fa-wrench" aria-hidden="true"></i></button>
+            </li>
+        </ul>
+    </div>
+
+    <route-pop-up-directive route-config="routeConfig"></route-pop-up-directive>
+</div>
+
+
+<!-- <div class="feature-edit-button-container donot-print" ng-init="showLegend=true" ng-show="isEditing()">
+    <feature-edit-buttons></feature-edit-buttons>
+    <location-capture-buttons></location-capture-buttons>
+    <feature-redo-undo-buttons></feature-redo-undo-buttons>
+</div> -->
+<visualization-legend ng-show="enableVisualizationTool" class="visulization-legend-container" style="right: 30px !important;top:47px !important;resize: both" id="map-legend"></visualization-legend>
+
+
+<map-loading-icon></map-loading-icon>
+<zoom-level-display></zoom-level-display>
+<base-map-switcher></base-map-switcher>
+<div id="map_canvas">
+    <div id="gmap" class="map">
+    </div>
+    <div id="olmap" class="map">
+    </div>
+</div>
+
+
+<div id="panel-bottom" class="panel-bottom slideOutDown">
+
+
+    <div class="container-fluid" style="padding: 0;">
+        <div class="row">
+            <div class="col-md-4" style="padding-right: 0" id="query-grid">
+                <div class="well well-sm" style="background-color: #d9edf7;border-color: #bce8f1;color: #31708f;padding: 5px;margin-bottom: 1px;max-height: 30px">Query</div>
+                <div class="col-md-12" style="padding: 0px">
+                    <div class="col-md-12" id="query-box" style="height: 210px;overflow-y: auto;padding: 2px">
+                        <div class="row">
+                                    <sarsha-spinner name="spinner3">
+                                                <div class="donot-print ng-scope">
+                                                    <i class="fa fa-spinner fa-spin"></i>
+                                                </div>
+                                    </sarsha-spinner>
+                                </div>
+                        <input type="checkbox" checked
+                                ng-model="isBoundaryBoxEnabled"
+                                > Query by current map extent
+
+                        <div class="clearfix"></div>
+                        <query-builder layer-id="layerId" group="group"></query-builder>
+                    </div>
+
+                    <div class="col-md-12 text-right" style="max-height: 60px;height: 50px;">
+                        <a href=""
+                        ng-click="getQueryResult()"
+                        class="btn btn-gd-primary btn-sm icon-btn-color">
+                                                        Query <i class="fa fa-binoculars" style="font-size: 16px;" aria-hidden="true"></i>
+                                                    </a>
+                        <a href=""
+                        ng-click="disableQuery()"
+                        class="btn btn-default" target="_self" style="margin-right: 5px;">
+                                                            Cancel <i class="fa fa-times" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8" style="padding-left: 0px;padding-right: 0px" id="attribute-grid">
+                <div class="well well-sm" style="background-color: #d9edf7;border-color: #bce8f1;color: #31708f;padding: 5px;margin-bottom: 0px;max-height: 30px">
+                    Attribute Grid
+                    <a href="" ng-click="showAttributeGrid()" class="btn btn-default btn-sm pull-right" target="_self" style="position: absolute;right:20px;top:4px;padding:1px 6px;">
+                                    <i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-md-12" style="padding: 0px;">
+                    <attribute-grid layer-id="layerId"></attribute-grid>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#panel-bottom").resizable({
+            handles: 'n',
+            autoHide: false
+
+        }).bind("resize", function () {
+            var height = $("#panel-bottom").height();
+            $('#query-grid').css('height', height);
+            $('#attribute-grid').css('height', height);
+            $('#grid-bottom').css('height', height-80);
+            $('#query-box').css('height', height-90);
+
+        });
+
+        var total_width = $("#panel-bottom").width();
+
+        $("#query-grid").resizable({
+            grid: [1, 10000]
+        }).bind("resize", resize_other);
+
+
+        function resize_other(event, ui) {
+            var width = $("#query-grid").width();
+
+            if (width > total_width) {
+                width = total_width;
+
+                $('#query-grid').css('width', width);
+            }
+
+            $('#attribute-grid').css('width', (total_width - width));
+        }
+
+        $('.stop-propagation').on('click', function (e) {
+            e.stopPropagation();
+        });
+        $( "#map-legend" ).draggable({
+            handle: "#drag"
+        });
+    });
+    var navAnCount = 0; 
+    function naVAnimating(){
+        if(navAnCount === 0){
+            // $("#panel-bottom").slideDown();
+            // $('#panel-bottom').css("top", "");
+            document.getElementById('gd-navbar').className = 'navbar navbar-fixed-top headerSlideOutDown'; 
+            navAnCount++;
+        }else{
+            document.getElementById('gd-navbar').className = ' navbar navbar-fixed-top headerSlideInUp ';
+            // $("#panel-bottom").slideUp();
+            // $('#panel-bottom').css("top", "");
+            navAnCount--;
+            }
+    }
+
+</script>
+<style>
+    .ui-resizable-e {
+        flex: 0 0 auto;
+        width: 10px;
+        background: url("{{ STATIC_URL }}geonode/images/vsizegrip.png") center center no-repeat #d8d8d8;
+        border-left: 1px solid #c4c4c4;
+        border-right: 1px solid #c4c4c4;
+        float: right;
+        cursor: col-resize;
+    }
+
+    .ui-resizable-e:hover {
+        background: url("{{ STATIC_URL }}geonode/images/vsizegrip.png") center center no-repeat #c9c9c9;
+    }
+
+    .ui-resizable-se {
+        visibility: hidden;
+    }
+</style>

@@ -1,0 +1,40 @@
+{% extends "layers/layer_base.html" %}
+{% load i18n %}
+
+{% block title %}{{ layer.alternate }} — {{ block.super }}{% endblock %}
+
+{% block body %}
+<div class="page-header">
+  <a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}" class="btn btn-primary pull-right">{% trans "Explorar Camadas" %}</a>
+  <h2 class="page-title">{% trans "Remover Camadas" %}</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <p class="lead">
+        {% blocktrans with layer.alternate as layer_title %}
+          Você tem certeza que deseja remover? <a href="{{ layer.get_absolute_url }}">{{ layer_title }}</a>?
+        {% endblocktrans %}
+      </p>
+    <form action="{% url "layer_remove" layer.service_typename %}" method="POST">
+      {% csrf_token %}
+      <input type="hidden" value="{{ layer.service_typename }}" />
+      <div class="form-actions">
+        <input type="submit" value="{% trans "Sim,eu tenho" %}" class="btn btn-danger" />
+        <a href="{{ layer.get_absolute_url }}" class="btn btn-default">{% trans "Não,não remover" %}</a>
+      </div>
+    </form>
+  </div>
+  {% if layer.maps %}
+    <div class="col-md-4">
+    <ul class="nav nav-list">
+    <li class="nav-header">{% trans "Esta ação afeta os seguintes mapas:" %}</li>
+    {% for map_layer in layer.maps %}
+      <li><a href="{{ map_layer.map.get_absolute_url }}">{{ map_layer.map.title }}</a></li>
+    {% empty %}
+      <li>{% trans "Nenhum mapa esta usando esta camada" %}</li>
+    {% endfor %}
+    </ul>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

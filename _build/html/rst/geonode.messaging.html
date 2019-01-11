@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.messaging package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.messaging package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.messaging.consumer">geonode.messaging.consumer module</a></li>
+<li><a class="reference internal" href="#module-geonode.messaging.producer">geonode.messaging.producer module</a></li>
+<li><a class="reference internal" href="#module-geonode.messaging.queues">geonode.messaging.queues module</a></li>
+<li><a class="reference internal" href="#module-geonode.messaging.tests">geonode.messaging.tests module</a></li>
+<li><a class="reference internal" href="#module-geonode.messaging">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.messaging package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.messaging.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-messaging-package">
+<h1>geonode.messaging package<a class="headerlink" href="#geonode-messaging-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link permanente para este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="geonode.messaging.management.html">geonode.messaging.management package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.messaging.management.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.messaging.management.commands.html">geonode.messaging.management.commands package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.messaging.management.commands.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.messaging.management.commands.html#module-geonode.messaging.management.commands.purgemessaging">geonode.messaging.management.commands.purgemessaging module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.messaging.management.commands.html#module-geonode.messaging.management.commands.runmessaging">geonode.messaging.management.commands.runmessaging module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.messaging.management.commands.html#module-geonode.messaging.management.commands">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.messaging.management.html#module-geonode.messaging.management">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.messaging.consumer">
+<span id="geonode-messaging-consumer-module"></span><h2>geonode.messaging.consumer module<a class="headerlink" href="#module-geonode.messaging.consumer" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.messaging.consumer.Consumer">
+<em class="property">class </em><code class="descclassname">geonode.messaging.consumer.</code><code class="descname">Consumer</code><span class="sig-paren">(</span><em>connection</em>, <em>messages_limit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">kombu.mixins.ConsumerMixin</span></code></p>
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.get_consumers">
+<code class="descname">get_consumers</code><span class="sig-paren">(</span><em>Consumer</em>, <em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.get_consumers" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.on_consume_end">
+<code class="descname">on_consume_end</code><span class="sig-paren">(</span><em>connection</em>, <em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.on_consume_end" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.on_consume_ready">
+<code class="descname">on_consume_ready</code><span class="sig-paren">(</span><em>connection</em>, <em>channel</em>, <em>consumers</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.on_consume_ready" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.on_email_messages">
+<code class="descname">on_email_messages</code><span class="sig-paren">(</span><em>body</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.on_email_messages" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.on_geoserver_all">
+<code class="descname">on_geoserver_all</code><span class="sig-paren">(</span><em>body</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.on_geoserver_all" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.on_geoserver_catalog">
+<code class="descname">on_geoserver_catalog</code><span class="sig-paren">(</span><em>body</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.on_geoserver_catalog" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.on_geoserver_data">
+<code class="descname">on_geoserver_data</code><span class="sig-paren">(</span><em>body</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.on_geoserver_data" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.on_geoserver_messages">
+<code class="descname">on_geoserver_messages</code><span class="sig-paren">(</span><em>body</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.on_geoserver_messages" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.on_layer_viewer">
+<code class="descname">on_layer_viewer</code><span class="sig-paren">(</span><em>body</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.on_layer_viewer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.on_message">
+<code class="descname">on_message</code><span class="sig-paren">(</span><em>body</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.on_message" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.consumer.Consumer.on_notifications_messages">
+<code class="descname">on_notifications_messages</code><span class="sig-paren">(</span><em>body</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.consumer.Consumer.on_notifications_messages" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.messaging.producer">
+<span id="geonode-messaging-producer-module"></span><h2>geonode.messaging.producer module<a class="headerlink" href="#module-geonode.messaging.producer" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.messaging.producer.geoserver_upload_layer">
+<code class="descclassname">geonode.messaging.producer.</code><code class="descname">geoserver_upload_layer</code><span class="sig-paren">(</span><em>payload</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.producer.geoserver_upload_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.messaging.producer.notifications_send">
+<code class="descclassname">geonode.messaging.producer.</code><code class="descname">notifications_send</code><span class="sig-paren">(</span><em>payload</em>, <em>created=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.producer.notifications_send" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.messaging.producer.send_email_producer">
+<code class="descclassname">geonode.messaging.producer.</code><code class="descname">send_email_producer</code><span class="sig-paren">(</span><em>layer_uuid</em>, <em>user_id</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.producer.send_email_producer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.messaging.producer.sync_if_local_memory">
+<code class="descclassname">geonode.messaging.producer.</code><code class="descname">sync_if_local_memory</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.producer.sync_if_local_memory" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Runs locally, synchronous if connection is memory://
+This will create in-memory transport if messaging is
+not configured.</p>
+<p>This allows to run synchronous queue in deployments
+which don’t have external broker deployed</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.messaging.producer.viewing_layer">
+<code class="descclassname">geonode.messaging.producer.</code><code class="descname">viewing_layer</code><span class="sig-paren">(</span><em>user</em>, <em>owner</em>, <em>layer_id</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.producer.viewing_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.messaging.queues">
+<span id="geonode-messaging-queues-module"></span><h2>geonode.messaging.queues module<a class="headerlink" href="#module-geonode.messaging.queues" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.messaging.tests">
+<span id="geonode-messaging-tests-module"></span><h2>geonode.messaging.tests module<a class="headerlink" href="#module-geonode.messaging.tests" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.messaging.tests.MessagingTest">
+<em class="property">class </em><code class="descclassname">geonode.messaging.tests.</code><code class="descname">MessagingTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.tests.MessagingTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests geonode.messaging</p>
+<dl class="method">
+<dt id="geonode.messaging.tests.MessagingTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.tests.MessagingTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.messaging.tests.MessagingTest.test_consumer">
+<code class="descname">test_consumer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.messaging.tests.MessagingTest.test_consumer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.messaging">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.messaging" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,1801 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.layers package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.layers package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.admin">geonode.layers.admin module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.autocomplete_light_registry">geonode.layers.autocomplete_light_registry module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.enumerations">geonode.layers.enumerations module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.forms">geonode.layers.forms module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.metadata">geonode.layers.metadata module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.models">geonode.layers.models module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.populate_layers_data">geonode.layers.populate_layers_data module</a></li>
+<li><a class="reference internal" href="#geonode-layers-search-indexes-module">geonode.layers.search_indexes module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.tasks">geonode.layers.tasks module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.tests">geonode.layers.tests module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.translation">geonode.layers.translation module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.urls">geonode.layers.urls module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.utils">geonode.layers.utils module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers.views">geonode.layers.views module</a></li>
+<li><a class="reference internal" href="#module-geonode.layers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.layers package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.layers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-layers-package">
+<h1>geonode.layers package<a class="headerlink" href="#geonode-layers-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link permanente para este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="geonode.layers.management.html">geonode.layers.management package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.management.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.layers.management.commands.html">geonode.layers.management.commands package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.layers.management.commands.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.layers.management.commands.html#module-geonode.layers.management.commands.delete_orphaned_layers">geonode.layers.management.commands.delete_orphaned_layers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.layers.management.commands.html#module-geonode.layers.management.commands.importlayers">geonode.layers.management.commands.importlayers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.layers.management.commands.html#geonode-layers-management-commands-layer-notice-types-module">geonode.layers.management.commands.layer_notice_types module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.layers.management.commands.html#module-geonode.layers.management.commands">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.management.html#module-geonode.layers.management">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.layers.migrations.html">geonode.layers.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.migrations.html#module-geonode.layers.migrations.0027_auto_20170801_1228">geonode.layers.migrations.0027_auto_20170801_1228 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.migrations.html#module-geonode.layers.migrations.0028_auto_20171218_0249">geonode.layers.migrations.0028_auto_20171218_0249 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.migrations.html#module-geonode.layers.migrations.0029_layer_service">geonode.layers.migrations.0029_layer_service module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.migrations.html#module-geonode.layers.migrations.0030_auto_20180228_0812">geonode.layers.migrations.0030_auto_20180228_0812 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.migrations.html#module-geonode.layers.migrations.24_initial">geonode.layers.migrations.24_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.migrations.html#module-geonode.layers.migrations.24_to_26">geonode.layers.migrations.24_to_26 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.migrations.html#module-geonode.layers.migrations.26_to_27">geonode.layers.migrations.26_to_27 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.migrations.html#module-geonode.layers.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.layers.templatetags.html">geonode.layers.templatetags package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.templatetags.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.templatetags.html#module-geonode.layers.templatetags.layer_tags">geonode.layers.templatetags.layer_tags module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.layers.templatetags.html#module-geonode.layers.templatetags">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.layers.admin">
+<span id="geonode-layers-admin-module"></span><h2>geonode.layers.admin module<a class="headerlink" href="#module-geonode.layers.admin" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.layers.admin.AttributeAdmin">
+<em class="property">class </em><code class="descclassname">geonode.layers.admin.</code><code class="descname">AttributeAdmin</code><span class="sig-paren">(</span><em>model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.admin.AttributeAdmin" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.admin.AttributeAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ('id', 'layer', 'attribute', 'description', 'attribute_label', 'attribute_type', 'display_order')</em><a class="headerlink" href="#geonode.layers.admin.AttributeAdmin.list_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.AttributeAdmin.list_display_links">
+<code class="descname">list_display_links</code><em class="property"> = ('id',)</em><a class="headerlink" href="#geonode.layers.admin.AttributeAdmin.list_display_links" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.AttributeAdmin.list_filter">
+<code class="descname">list_filter</code><em class="property"> = ('layer', 'attribute_type')</em><a class="headerlink" href="#geonode.layers.admin.AttributeAdmin.list_filter" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.AttributeAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.admin.AttributeAdmin.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.AttributeAdmin.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.layers.admin.AttributeAdmin.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.layers.models.Attribute" title="geonode.layers.models.Attribute"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.models.Attribute</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.AttributeAdmin.search_fields">
+<code class="descname">search_fields</code><em class="property"> = ('attribute', 'attribute_label')</em><a class="headerlink" href="#geonode.layers.admin.AttributeAdmin.search_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.admin.AttributeInline">
+<em class="property">class </em><code class="descclassname">geonode.layers.admin.</code><code class="descname">AttributeInline</code><span class="sig-paren">(</span><em>parent_model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.admin.AttributeInline" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.TabularInline</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.admin.AttributeInline.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.admin.AttributeInline.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.AttributeInline.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.layers.admin.AttributeInline.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.layers.models.Attribute" title="geonode.layers.models.Attribute"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.models.Attribute</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.admin.LayerAdmin">
+<em class="property">class </em><code class="descclassname">geonode.layers.admin.</code><code class="descname">LayerAdmin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.admin.LayerAdmin" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="geonode.base.html#geonode.base.admin.MediaTranslationAdmin" title="geonode.base.admin.MediaTranslationAdmin"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.admin.MediaTranslationAdmin</span></code></a></p>
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.actions">
+<code class="descname">actions</code><em class="property"> = [&lt;function metadata_batch_edit&gt;]</em><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.actions" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.date_hierarchy">
+<code class="descname">date_hierarchy</code><em class="property"> = 'date'</em><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.date_hierarchy" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.filter_horizontal">
+<code class="descname">filter_horizontal</code><em class="property"> = ('contacts',)</em><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.filter_horizontal" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.form">
+<code class="descname">form</code><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.form" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.layers.admin.LayerAdminForm" title="geonode.layers.admin.LayerAdminForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">LayerAdminForm</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.inlines">
+<code class="descname">inlines</code><em class="property"> = [&lt;class 'geonode.layers.admin.AttributeInline'&gt;]</em><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.inlines" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ('id', 'alternate', 'title', 'date', 'category', 'group', 'is_approved', 'is_published', 'metadata_completeness')</em><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.list_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.list_display_links">
+<code class="descname">list_display_links</code><em class="property"> = ('id',)</em><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.list_display_links" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.list_editable">
+<code class="descname">list_editable</code><em class="property"> = ('title', 'category', 'group', 'is_approved', 'is_published')</em><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.list_editable" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.list_filter">
+<code class="descname">list_filter</code><em class="property"> = ('storeType', 'owner', 'category', 'group', 'restriction_code_type__identifier', 'date', 'date_type', 'is_approved', 'is_published')</em><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.list_filter" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.readonly_fields">
+<code class="descname">readonly_fields</code><em class="property"> = ('uuid', 'alternate', 'workspace')</em><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.readonly_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdmin.search_fields">
+<code class="descname">search_fields</code><em class="property"> = ('alternate', 'title', 'abstract', 'purpose', 'is_approved', 'is_published')</em><a class="headerlink" href="#geonode.layers.admin.LayerAdmin.search_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.admin.LayerAdminForm">
+<em class="property">class </em><code class="descclassname">geonode.layers.admin.</code><code class="descname">LayerAdminForm</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.admin.LayerAdminForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="geonode.base.html#geonode.base.admin.ResourceBaseAdminForm" title="geonode.base.admin.ResourceBaseAdminForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.admin.ResourceBaseAdminForm</span></code></a></p>
+<dl class="class">
+<dt id="geonode.layers.admin.LayerAdminForm.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.layers.admin.LayerAdminForm.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdminForm.Meta.autocomplete_registry">
+<code class="descname">autocomplete_registry</code><em class="property"> = {'DocumentAutocomplete': &lt;class 'autocomplete_light.registry.DocumentAutocomplete'&gt;, 'GroupProfileAutocomplete': &lt;class 'autocomplete_light.registry.GroupProfileAutocomplete'&gt;, 'HierarchicalKeywordAutocomplete': &lt;class 'autocomplete_light.registry.HierarchicalKeywordAutocomplete'&gt;, 'LayerAutocomplete': &lt;class 'autocomplete_light.registry.LayerAutocomplete'&gt;, 'MapAutocomplete': &lt;class 'autocomplete_light.registry.MapAutocomplete'&gt;, 'ProfileAutocomplete': &lt;class 'autocomplete_light.registry.ProfileAutocomplete'&gt;, 'RegionAutocomplete': &lt;class 'autocomplete_light.registry.RegionAutocomplete'&gt;, 'ResourceBaseAutocomplete': &lt;class 'autocomplete_light.registry.ResourceBaseAutocomplete'&gt;}</em><a class="headerlink" href="#geonode.layers.admin.LayerAdminForm.Meta.autocomplete_registry" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdminForm.Meta.fields">
+<code class="descname">fields</code><em class="property"> = '__all__'</em><a class="headerlink" href="#geonode.layers.admin.LayerAdminForm.Meta.fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdminForm.Meta.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.layers.admin.LayerAdminForm.Meta.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.models.Layer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdminForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'abstract_en': &lt;django.forms.fields.CharField object&gt;, 'alternate': &lt;django.forms.fields.CharField object&gt;, 'bbox_x0': &lt;django.forms.fields.DecimalField object&gt;, 'bbox_x1': &lt;django.forms.fields.DecimalField object&gt;, 'bbox_y0': &lt;django.forms.fields.DecimalField object&gt;, 'bbox_y1': &lt;django.forms.fields.DecimalField object&gt;, 'category': &lt;django.forms.models.ModelChoiceField object&gt;, 'charset': &lt;django.forms.fields.CharField object&gt;, 'constraints_other': &lt;django.forms.fields.CharField object&gt;, 'constraints_other_en': &lt;django.utils.deprecation.NullCharField object&gt;, 'contacts': &lt;django.forms.models.ModelMultipleChoiceField object&gt;, 'csw_anytext': &lt;django.forms.fields.CharField object&gt;, 'csw_mdsource': &lt;django.forms.fields.CharField object&gt;, 'csw_schema': &lt;django.forms.fields.CharField object&gt;, 'csw_type': &lt;django.forms.fields.TypedChoiceField object&gt;, 'csw_typename': &lt;django.forms.fields.CharField object&gt;, 'csw_wkt_geometry': &lt;django.forms.fields.CharField object&gt;, 'data_quality_statement': &lt;django.forms.fields.CharField object&gt;, 'data_quality_statement_en': &lt;django.utils.deprecation.NullCharField object&gt;, 'date': &lt;django.forms.fields.DateTimeField object&gt;, 'date_type': &lt;django.forms.fields.TypedChoiceField object&gt;, 'default_style': &lt;django.forms.models.ModelChoiceField object&gt;, 'detail_url': &lt;django.forms.fields.CharField object&gt;, 'edition': &lt;django.forms.fields.CharField object&gt;, 'elevation_regex': &lt;django.forms.fields.CharField object&gt;, 'featured': &lt;django.forms.fields.BooleanField object&gt;, 'group': &lt;django.forms.models.ModelChoiceField object&gt;, 'has_elevation': &lt;django.forms.fields.BooleanField object&gt;, 'has_time': &lt;django.forms.fields.BooleanField object&gt;, 'is_approved': &lt;django.forms.fields.BooleanField object&gt;, 'is_mosaic': &lt;django.forms.fields.BooleanField object&gt;, 'is_published': &lt;django.forms.fields.BooleanField object&gt;, 'keywords': &lt;autocomplete_light.contrib.taggit_field.TaggitField object&gt;, 'language': &lt;django.forms.fields.TypedChoiceField object&gt;, 'license': &lt;django.forms.models.ModelChoiceField object&gt;, 'maintenance_frequency': &lt;django.forms.fields.TypedChoiceField object&gt;, 'metadata_uploaded': &lt;django.forms.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;django.forms.fields.BooleanField object&gt;, 'metadata_xml': &lt;django.forms.fields.CharField object&gt;, 'name': &lt;django.forms.fields.CharField object&gt;, 'owner': &lt;django.forms.models.ModelChoiceField object&gt;, 'popular_count': &lt;django.forms.fields.IntegerField object&gt;, 'purpose': &lt;django.forms.fields.CharField object&gt;, 'purpose_en': &lt;django.utils.deprecation.NullCharField object&gt;, 'rating': &lt;django.forms.fields.IntegerField object&gt;, 'regions': &lt;django.forms.models.ModelMultipleChoiceField object&gt;, 'remote_service': &lt;django.forms.models.ModelChoiceField object&gt;, 'restriction_code_type': &lt;django.forms.models.ModelChoiceField object&gt;, 'share_count': &lt;django.forms.fields.IntegerField object&gt;, 'spatial_representation_type': &lt;django.forms.models.ModelChoiceField object&gt;, 'srid': &lt;django.forms.fields.CharField object&gt;, 'store': &lt;django.forms.fields.CharField object&gt;, 'storeType': &lt;django.forms.fields.CharField object&gt;, 'styles': &lt;django.forms.models.ModelMultipleChoiceField object&gt;, 'supplemental_information': &lt;django.forms.fields.CharField object&gt;, 'supplemental_information_en': &lt;django.forms.fields.CharField object&gt;, 'temporal_extent_end': &lt;django.forms.fields.DateTimeField object&gt;, 'temporal_extent_start': &lt;django.forms.fields.DateTimeField object&gt;, 'thumbnail_url': &lt;django.forms.fields.CharField object&gt;, 'time_regex': &lt;django.forms.fields.TypedChoiceField object&gt;, 'title': &lt;django.forms.fields.CharField object&gt;, 'title_en': &lt;django.forms.fields.CharField object&gt;, 'tkeywords': &lt;django.forms.models.ModelMultipleChoiceField object&gt;, 'typename': &lt;django.forms.fields.CharField object&gt;, 'upload_session': &lt;django.forms.models.ModelChoiceField object&gt;, 'uuid': &lt;django.forms.fields.CharField object&gt;, 'workspace': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.layers.admin.LayerAdminForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdminForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'keywords': &lt;autocomplete_light.contrib.taggit_field.TaggitField object&gt;}</em><a class="headerlink" href="#geonode.layers.admin.LayerAdminForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerAdminForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.admin.LayerAdminForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.admin.LayerFileInline">
+<em class="property">class </em><code class="descclassname">geonode.layers.admin.</code><code class="descname">LayerFileInline</code><span class="sig-paren">(</span><em>parent_model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.admin.LayerFileInline" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.TabularInline</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerFileInline.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.admin.LayerFileInline.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.LayerFileInline.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.layers.admin.LayerFileInline.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.layers.models.LayerFile" title="geonode.layers.models.LayerFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.models.LayerFile</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.admin.StyleAdmin">
+<em class="property">class </em><code class="descclassname">geonode.layers.admin.</code><code class="descname">StyleAdmin</code><span class="sig-paren">(</span><em>model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.admin.StyleAdmin" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.admin.StyleAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ('id', 'name', 'sld_title', 'workspace', 'sld_url')</em><a class="headerlink" href="#geonode.layers.admin.StyleAdmin.list_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.StyleAdmin.list_display_links">
+<code class="descname">list_display_links</code><em class="property"> = ('sld_title',)</em><a class="headerlink" href="#geonode.layers.admin.StyleAdmin.list_display_links" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.StyleAdmin.list_filter">
+<code class="descname">list_filter</code><em class="property"> = ('workspace',)</em><a class="headerlink" href="#geonode.layers.admin.StyleAdmin.list_filter" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.StyleAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.admin.StyleAdmin.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.StyleAdmin.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.layers.admin.StyleAdmin.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.layers.models.Style" title="geonode.layers.models.Style"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.models.Style</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.StyleAdmin.search_fields">
+<code class="descname">search_fields</code><em class="property"> = ('name', 'workspace')</em><a class="headerlink" href="#geonode.layers.admin.StyleAdmin.search_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.admin.UploadSessionAdmin">
+<em class="property">class </em><code class="descclassname">geonode.layers.admin.</code><code class="descname">UploadSessionAdmin</code><span class="sig-paren">(</span><em>model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.admin.UploadSessionAdmin" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.admin.UploadSessionAdmin.inlines">
+<code class="descname">inlines</code><em class="property"> = [&lt;class 'geonode.layers.admin.LayerFileInline'&gt;]</em><a class="headerlink" href="#geonode.layers.admin.UploadSessionAdmin.inlines" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.UploadSessionAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ('date', 'user', 'processed')</em><a class="headerlink" href="#geonode.layers.admin.UploadSessionAdmin.list_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.UploadSessionAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.admin.UploadSessionAdmin.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.admin.UploadSessionAdmin.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.layers.admin.UploadSessionAdmin.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.layers.models.UploadSession" title="geonode.layers.models.UploadSession"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.models.UploadSession</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.layers.autocomplete_light_registry">
+<span id="geonode-layers-autocomplete-light-registry-module"></span><h2>geonode.layers.autocomplete_light_registry module<a class="headerlink" href="#module-geonode.layers.autocomplete_light_registry" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.layers.autocomplete_light_registry.LayerAutocomplete">
+<em class="property">class </em><code class="descclassname">geonode.layers.autocomplete_light_registry.</code><code class="descname">LayerAutocomplete</code><span class="sig-paren">(</span><em>request=None</em>, <em>values=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.autocomplete_light_registry.LayerAutocomplete" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">autocomplete_light.autocomplete.shortcuts.AutocompleteModelTemplate</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.autocomplete_light_registry.LayerAutocomplete.choice_template">
+<code class="descname">choice_template</code><em class="property"> = 'autocomplete_response.html'</em><a class="headerlink" href="#geonode.layers.autocomplete_light_registry.LayerAutocomplete.choice_template" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.layers.enumerations">
+<span id="geonode-layers-enumerations-module"></span><h2>geonode.layers.enumerations module<a class="headerlink" href="#module-geonode.layers.enumerations" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.layers.forms">
+<span id="geonode-layers-forms-module"></span><h2>geonode.layers.forms module<a class="headerlink" href="#module-geonode.layers.forms" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.layers.forms.JSONField">
+<em class="property">class </em><code class="descclassname">geonode.layers.forms.</code><code class="descname">JSONField</code><span class="sig-paren">(</span><em>max_length=None</em>, <em>min_length=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.forms.JSONField" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.fields.CharField</span></code></p>
+<dl class="method">
+<dt id="geonode.layers.forms.JSONField.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.forms.JSONField.clean" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.forms.LayerAttributeForm">
+<em class="property">class </em><code class="descclassname">geonode.layers.forms.</code><code class="descname">LayerAttributeForm</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.forms.LayerAttributeForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<dl class="class">
+<dt id="geonode.layers.forms.LayerAttributeForm.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.layers.forms.LayerAttributeForm.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.layers.forms.LayerAttributeForm.Meta.exclude">
+<code class="descname">exclude</code><em class="property"> = ('attribute_type', 'count', 'min', 'max', 'average', 'median', 'stddev', 'sum', 'unique_values', 'last_stats_updated', 'objects')</em><a class="headerlink" href="#geonode.layers.forms.LayerAttributeForm.Meta.exclude" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerAttributeForm.Meta.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.layers.forms.LayerAttributeForm.Meta.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.layers.models.Attribute" title="geonode.layers.models.Attribute"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.models.Attribute</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerAttributeForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'attribute': &lt;django.forms.fields.CharField object&gt;, 'attribute_label': &lt;django.forms.fields.CharField object&gt;, 'description': &lt;django.forms.fields.CharField object&gt;, 'display_order': &lt;django.forms.fields.IntegerField object&gt;, 'layer': &lt;django.forms.models.ModelChoiceField object&gt;, 'visible': &lt;django.forms.fields.BooleanField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.LayerAttributeForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerAttributeForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#geonode.layers.forms.LayerAttributeForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerAttributeForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.forms.LayerAttributeForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.forms.LayerDescriptionForm">
+<em class="property">class </em><code class="descclassname">geonode.layers.forms.</code><code class="descname">LayerDescriptionForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.forms.LayerDescriptionForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerDescriptionForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'data_quality_statement': &lt;django.forms.fields.CharField object&gt;, 'keywords': &lt;django.forms.fields.CharField object&gt;, 'purpose': &lt;django.forms.fields.CharField object&gt;, 'supplemental_information': &lt;django.forms.fields.CharField object&gt;, 'title': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.LayerDescriptionForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerDescriptionForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'data_quality_statement': &lt;django.forms.fields.CharField object&gt;, 'keywords': &lt;django.forms.fields.CharField object&gt;, 'purpose': &lt;django.forms.fields.CharField object&gt;, 'supplemental_information': &lt;django.forms.fields.CharField object&gt;, 'title': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.LayerDescriptionForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerDescriptionForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.forms.LayerDescriptionForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.forms.LayerForm">
+<em class="property">class </em><code class="descclassname">geonode.layers.forms.</code><code class="descname">LayerForm</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.forms.LayerForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="geonode.base.html#geonode.base.forms.ResourceBaseForm" title="geonode.base.forms.ResourceBaseForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.forms.ResourceBaseForm</span></code></a></p>
+<dl class="class">
+<dt id="geonode.layers.forms.LayerForm.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.layers.forms.LayerForm.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.forms.Meta</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerForm.Meta.exclude">
+<code class="descname">exclude</code><em class="property"> = ('contacts', 'name', 'uuid', 'bbox_x0', 'bbox_x1', 'bbox_y0', 'bbox_y1', 'srid', 'category', 'csw_typename', 'csw_schema', 'csw_mdsource', 'csw_type', 'csw_wkt_geometry', 'metadata_uploaded', 'metadata_xml', 'csw_anytext', 'popular_count', 'share_count', 'thumbnail', 'charset', 'rating', 'detail_url', 'workspace', 'store', 'storeType', 'alternate', 'default_style', 'styles', 'upload_session', 'remote_service')</em><a class="headerlink" href="#geonode.layers.forms.LayerForm.Meta.exclude" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerForm.Meta.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.layers.forms.LayerForm.Meta.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.models.Layer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'abstract_en': &lt;django.forms.fields.CharField object&gt;, 'constraints_other': &lt;django.forms.fields.CharField object&gt;, 'constraints_other_en': &lt;django.utils.deprecation.NullCharField object&gt;, 'data_quality_statement': &lt;django.forms.fields.CharField object&gt;, 'data_quality_statement_en': &lt;django.utils.deprecation.NullCharField object&gt;, 'date': &lt;django.forms.fields.DateTimeField object&gt;, 'date_type': &lt;django.forms.fields.TypedChoiceField object&gt;, 'edition': &lt;django.forms.fields.CharField object&gt;, 'elevation_regex': &lt;django.forms.fields.CharField object&gt;, 'featured': &lt;django.forms.fields.BooleanField object&gt;, 'group': &lt;django.forms.models.ModelChoiceField object&gt;, 'has_elevation': &lt;django.forms.fields.BooleanField object&gt;, 'has_time': &lt;django.forms.fields.BooleanField object&gt;, 'is_approved': &lt;django.forms.fields.BooleanField object&gt;, 'is_mosaic': &lt;django.forms.fields.BooleanField object&gt;, 'is_published': &lt;django.forms.fields.BooleanField object&gt;, 'keywords': &lt;autocomplete_light.contrib.taggit_field.TaggitField object&gt;, 'language': &lt;django.forms.fields.TypedChoiceField object&gt;, 'license': &lt;django.forms.models.ModelChoiceField object&gt;, 'maintenance_frequency': &lt;django.forms.fields.TypedChoiceField object&gt;, 'metadata_author': &lt;django.forms.models.ModelChoiceField object&gt;, 'metadata_uploaded_preserve': &lt;django.forms.fields.BooleanField object&gt;, 'owner': &lt;django.forms.models.ModelChoiceField object&gt;, 'poc': &lt;django.forms.models.ModelChoiceField object&gt;, 'purpose': &lt;django.forms.fields.CharField object&gt;, 'purpose_en': &lt;django.utils.deprecation.NullCharField object&gt;, 'regions': &lt;geonode.base.forms.RegionsMultipleChoiceField object&gt;, 'restriction_code_type': &lt;django.forms.models.ModelChoiceField object&gt;, 'spatial_representation_type': &lt;django.forms.models.ModelChoiceField object&gt;, 'supplemental_information': &lt;django.forms.fields.CharField object&gt;, 'supplemental_information_en': &lt;django.forms.fields.CharField object&gt;, 'temporal_extent_end': &lt;django.forms.fields.DateTimeField object&gt;, 'temporal_extent_start': &lt;django.forms.fields.DateTimeField object&gt;, 'thumbnail_url': &lt;django.forms.fields.CharField object&gt;, 'time_regex': &lt;django.forms.fields.TypedChoiceField object&gt;, 'title': &lt;django.forms.fields.CharField object&gt;, 'title_en': &lt;django.forms.fields.CharField object&gt;, 'tkeywords': &lt;django.forms.models.ModelMultipleChoiceField object&gt;, 'typename': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.LayerForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'date': &lt;django.forms.fields.DateTimeField object&gt;, 'keywords': &lt;autocomplete_light.contrib.taggit_field.TaggitField object&gt;, 'metadata_author': &lt;django.forms.models.ModelChoiceField object&gt;, 'owner': &lt;django.forms.models.ModelChoiceField object&gt;, 'poc': &lt;django.forms.models.ModelChoiceField object&gt;, 'regions': &lt;geonode.base.forms.RegionsMultipleChoiceField object&gt;, 'temporal_extent_end': &lt;django.forms.fields.DateTimeField object&gt;, 'temporal_extent_start': &lt;django.forms.fields.DateTimeField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.LayerForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.forms.LayerForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.forms.LayerStyleUploadForm">
+<em class="property">class </em><code class="descclassname">geonode.layers.forms.</code><code class="descname">LayerStyleUploadForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.forms.LayerStyleUploadForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerStyleUploadForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'layerid': &lt;django.forms.fields.IntegerField object&gt;, 'name': &lt;django.forms.fields.CharField object&gt;, 'sld': &lt;django.forms.fields.FileField object&gt;, 'update': &lt;django.forms.fields.BooleanField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.LayerStyleUploadForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerStyleUploadForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'layerid': &lt;django.forms.fields.IntegerField object&gt;, 'name': &lt;django.forms.fields.CharField object&gt;, 'sld': &lt;django.forms.fields.FileField object&gt;, 'update': &lt;django.forms.fields.BooleanField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.LayerStyleUploadForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerStyleUploadForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.forms.LayerStyleUploadForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.forms.LayerUploadForm">
+<em class="property">class </em><code class="descclassname">geonode.layers.forms.</code><code class="descname">LayerUploadForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.forms.LayerUploadForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerUploadForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'base_file': &lt;django.forms.fields.FileField object&gt;, 'charset': &lt;django.forms.fields.CharField object&gt;, 'dbf_file': &lt;django.forms.fields.FileField object&gt;, 'metadata_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;django.forms.fields.BooleanField object&gt;, 'prj_file': &lt;django.forms.fields.FileField object&gt;, 'shx_file': &lt;django.forms.fields.FileField object&gt;, 'sld_file': &lt;django.forms.fields.FileField object&gt;, 'style_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'xml_file': &lt;django.forms.fields.FileField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.LayerUploadForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.forms.LayerUploadForm.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.forms.LayerUploadForm.clean" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerUploadForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'base_file': &lt;django.forms.fields.FileField object&gt;, 'charset': &lt;django.forms.fields.CharField object&gt;, 'dbf_file': &lt;django.forms.fields.FileField object&gt;, 'metadata_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;django.forms.fields.BooleanField object&gt;, 'prj_file': &lt;django.forms.fields.FileField object&gt;, 'shx_file': &lt;django.forms.fields.FileField object&gt;, 'sld_file': &lt;django.forms.fields.FileField object&gt;, 'style_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'xml_file': &lt;django.forms.fields.FileField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.LayerUploadForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerUploadForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.forms.LayerUploadForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.LayerUploadForm.spatial_files">
+<code class="descname">spatial_files</code><em class="property"> = ('base_file', 'dbf_file', 'shx_file', 'prj_file', 'sld_file')</em><a class="headerlink" href="#geonode.layers.forms.LayerUploadForm.spatial_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.forms.LayerUploadForm.write_files">
+<code class="descname">write_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.forms.LayerUploadForm.write_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.forms.NewLayerUploadForm">
+<em class="property">class </em><code class="descclassname">geonode.layers.forms.</code><code class="descname">NewLayerUploadForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.forms.NewLayerUploadForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.layers.forms.LayerUploadForm" title="geonode.layers.forms.LayerUploadForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.forms.LayerUploadForm</span></code></a></p>
+<dl class="attribute">
+<dt id="geonode.layers.forms.NewLayerUploadForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'base_file': &lt;django.forms.fields.FileField object&gt;, 'charset': &lt;django.forms.fields.CharField object&gt;, 'dbf_file': &lt;django.forms.fields.FileField object&gt;, 'layer_title': &lt;django.forms.fields.CharField object&gt;, 'metadata_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;django.forms.fields.BooleanField object&gt;, 'permissions': &lt;geonode.layers.forms.JSONField object&gt;, 'prj_file': &lt;django.forms.fields.FileField object&gt;, 'shx_file': &lt;django.forms.fields.FileField object&gt;, 'sld_file': &lt;django.forms.fields.FileField object&gt;, 'style_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'xml_file': &lt;django.forms.fields.FileField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.NewLayerUploadForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.NewLayerUploadForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'base_file': &lt;django.forms.fields.FileField object&gt;, 'charset': &lt;django.forms.fields.CharField object&gt;, 'dbf_file': &lt;django.forms.fields.FileField object&gt;, 'layer_title': &lt;django.forms.fields.CharField object&gt;, 'metadata_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;django.forms.fields.BooleanField object&gt;, 'permissions': &lt;geonode.layers.forms.JSONField object&gt;, 'prj_file': &lt;django.forms.fields.FileField object&gt;, 'shx_file': &lt;django.forms.fields.FileField object&gt;, 'sld_file': &lt;django.forms.fields.FileField object&gt;, 'style_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'xml_file': &lt;django.forms.fields.FileField object&gt;}</em><a class="headerlink" href="#geonode.layers.forms.NewLayerUploadForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.NewLayerUploadForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.layers.forms.NewLayerUploadForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.forms.NewLayerUploadForm.spatial_files">
+<code class="descname">spatial_files</code><em class="property"> = ('base_file', 'dbf_file', 'shx_file', 'prj_file', 'xml_file', 'sld_file')</em><a class="headerlink" href="#geonode.layers.forms.NewLayerUploadForm.spatial_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.layers.metadata">
+<span id="geonode-layers-metadata-module"></span><h2>geonode.layers.metadata module<a class="headerlink" href="#module-geonode.layers.metadata" title="Link permanente para este título">¶</a></h2>
+<p>Utilities for managing GeoNode resource metadata</p>
+<dl class="function">
+<dt id="geonode.layers.metadata.dc2dict">
+<code class="descclassname">geonode.layers.metadata.</code><code class="descname">dc2dict</code><span class="sig-paren">(</span><em>exml</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.metadata.dc2dict" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>generate dict of properties from csw:Record</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.metadata.fgdc2dict">
+<code class="descclassname">geonode.layers.metadata.</code><code class="descname">fgdc2dict</code><span class="sig-paren">(</span><em>exml</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.metadata.fgdc2dict" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>generate dict of properties from FGDC metadata</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.metadata.get_tagname">
+<code class="descclassname">geonode.layers.metadata.</code><code class="descname">get_tagname</code><span class="sig-paren">(</span><em>element</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.metadata.get_tagname" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>get tagname without namespace</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.metadata.iso2dict">
+<code class="descclassname">geonode.layers.metadata.</code><code class="descname">iso2dict</code><span class="sig-paren">(</span><em>exml</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.metadata.iso2dict" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>generate dict of properties from gmd:MD_Metadata</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.metadata.set_metadata">
+<code class="descclassname">geonode.layers.metadata.</code><code class="descname">set_metadata</code><span class="sig-paren">(</span><em>xml</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.metadata.set_metadata" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Generate dict of model properties based on XML metadata</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.metadata.sniff_date">
+<code class="descclassname">geonode.layers.metadata.</code><code class="descname">sniff_date</code><span class="sig-paren">(</span><em>datestr</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.metadata.sniff_date" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Attempt to parse date into datetime.datetime object</p>
+<p>Possible inputs:</p>
+<p>‘20001122’
+‘2000-11-22’
+‘2000-11-22T11:11:11Z’
+‘2000-11-22T’</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.layers.models">
+<span id="geonode-layers-models-module"></span><h2>geonode.layers.models module<a class="headerlink" href="#module-geonode.layers.models" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.layers.models.Attribute">
+<em class="property">class </em><code class="descclassname">geonode.layers.models.</code><code class="descname">Attribute</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Attribute" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<blockquote>
+<div>Auxiliary model for storing layer attributes.</div></blockquote>
+<p>This helps reduce the need for runtime lookups
+to other servers, and lets users customize attribute titles,
+sort order, and visibility.</p>
+<dl class="exception">
+<dt id="geonode.layers.models.Attribute.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.layers.models.Attribute.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.layers.models.Attribute.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.layers.models.Attribute.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Attribute.get_next_by_last_stats_updated">
+<code class="descname">get_next_by_last_stats_updated</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Attribute.get_next_by_last_stats_updated" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Attribute.get_previous_by_last_stats_updated">
+<code class="descname">get_previous_by_last_stats_updated</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Attribute.get_previous_by_last_stats_updated" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Attribute.layer">
+<code class="descname">layer</code><a class="headerlink" href="#geonode.layers.models.Attribute.layer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Attribute.objects">
+<code class="descname">objects</code><em class="property"> = &lt;geonode.layers.models.AttributeManager object&gt;</em><a class="headerlink" href="#geonode.layers.models.Attribute.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Attribute.unique_values_as_list">
+<code class="descname">unique_values_as_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Attribute.unique_values_as_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.models.AttributeManager">
+<em class="property">class </em><code class="descclassname">geonode.layers.models.</code><code class="descname">AttributeManager</code><a class="headerlink" href="#geonode.layers.models.AttributeManager" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.manager.Manager</span></code></p>
+<p>Helper class to access filtered attributes</p>
+<dl class="method">
+<dt id="geonode.layers.models.AttributeManager.visible">
+<code class="descname">visible</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.AttributeManager.visible" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.models.Layer">
+<em class="property">class </em><code class="descclassname">geonode.layers.models.</code><code class="descname">Layer</code><span class="sig-paren">(</span><em>inherits ResourceBase fields</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="geonode.base.html#geonode.base.models.ResourceBase" title="geonode.base.models.ResourceBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.ResourceBase</span></code></a></p>
+<dl class="exception">
+<dt id="geonode.layers.models.Layer.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.layers.models.Layer.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.DoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.LEVEL_ADMIN">
+<code class="descname">LEVEL_ADMIN</code><em class="property"> = 'layer_admin'</em><a class="headerlink" href="#geonode.layers.models.Layer.LEVEL_ADMIN" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.LEVEL_READ">
+<code class="descname">LEVEL_READ</code><em class="property"> = 'layer_readonly'</em><a class="headerlink" href="#geonode.layers.models.Layer.LEVEL_READ" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.LEVEL_WRITE">
+<code class="descname">LEVEL_WRITE</code><em class="property"> = 'layer_readwrite'</em><a class="headerlink" href="#geonode.layers.models.Layer.LEVEL_WRITE" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="geonode.layers.models.Layer.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.layers.models.Layer.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.abstract">
+<code class="descname">abstract</code><a class="headerlink" href="#geonode.layers.models.Layer.abstract" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>A descriptor used for the original translated field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.action_object_actions">
+<code class="descname">action_object_actions</code><a class="headerlink" href="#geonode.layers.models.Layer.action_object_actions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple “remote” values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+“article.publications”, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.actor_actions">
+<code class="descname">actor_actions</code><a class="headerlink" href="#geonode.layers.models.Layer.actor_actions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple “remote” values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+“article.publications”, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Layer.attribute_config">
+<code class="descname">attribute_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer.attribute_config" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.attribute_set">
+<code class="descname">attribute_set</code><a class="headerlink" href="#geonode.layers.models.Layer.attribute_set" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.attributes">
+<code class="descname">attributes</code><a class="headerlink" href="#geonode.layers.models.Layer.attributes" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.base_objects">
+<code class="descname">base_objects</code><em class="property"> = &lt;modeltranslation.manager.MultilingualManager object&gt;</em><a class="headerlink" href="#geonode.layers.models.Layer.base_objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.class_name">
+<code class="descname">class_name</code><a class="headerlink" href="#geonode.layers.models.Layer.class_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Layer.clean_fields">
+<code class="descname">clean_fields</code><span class="sig-paren">(</span><em>exclude=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer.clean_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.constraints_other">
+<code class="descname">constraints_other</code><a class="headerlink" href="#geonode.layers.models.Layer.constraints_other" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>A descriptor used for the original translated field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.data_model">
+<code class="descname">data_model</code><a class="headerlink" href="#geonode.layers.models.Layer.data_model" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.data_objects">
+<code class="descname">data_objects</code><a class="headerlink" href="#geonode.layers.models.Layer.data_objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.data_quality_statement">
+<code class="descname">data_quality_statement</code><a class="headerlink" href="#geonode.layers.models.Layer.data_quality_statement" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>A descriptor used for the original translated field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.default_style">
+<code class="descname">default_style</code><a class="headerlink" href="#geonode.layers.models.Layer.default_style" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.display_type">
+<code class="descname">display_type</code><a class="headerlink" href="#geonode.layers.models.Layer.display_type" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.geogig_enabled">
+<code class="descname">geogig_enabled</code><a class="headerlink" href="#geonode.layers.models.Layer.geogig_enabled" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.geogig_link">
+<code class="descname">geogig_link</code><a class="headerlink" href="#geonode.layers.models.Layer.geogig_link" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Layer.get_absolute_url">
+<code class="descname">get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer.get_absolute_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Layer.get_base_file">
+<code class="descname">get_base_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer.get_base_file" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get the shp or geotiff file for this layer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Layer.get_deferred_fields">
+<code class="descname">get_deferred_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer.get_deferred_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Layer.get_time_regex_display">
+<code class="descname">get_time_regex_display</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer.get_time_regex_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Layer.is_vector">
+<code class="descname">is_vector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer.is_vector" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Layer.maps">
+<code class="descname">maps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer.maps" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.modeldescription_set">
+<code class="descname">modeldescription_set</code><a class="headerlink" href="#geonode.layers.models.Layer.modeldescription_set" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.objects">
+<code class="descname">objects</code><em class="property"> = &lt;modeltranslation.translator.NewMultilingualManager object&gt;</em><a class="headerlink" href="#geonode.layers.models.Layer.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.ows_url">
+<code class="descname">ows_url</code><a class="headerlink" href="#geonode.layers.models.Layer.ows_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.polymorphic_primary_key_name">
+<code class="descname">polymorphic_primary_key_name</code><em class="property"> = u'id'</em><a class="headerlink" href="#geonode.layers.models.Layer.polymorphic_primary_key_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.polymorphic_super_sub_accessors_replaced">
+<code class="descname">polymorphic_super_sub_accessors_replaced</code><em class="property"> = False</em><a class="headerlink" href="#geonode.layers.models.Layer.polymorphic_super_sub_accessors_replaced" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.ptype">
+<code class="descname">ptype</code><a class="headerlink" href="#geonode.layers.models.Layer.ptype" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.purpose">
+<code class="descname">purpose</code><a class="headerlink" href="#geonode.layers.models.Layer.purpose" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>A descriptor used for the original translated field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.qgis_layer">
+<code class="descname">qgis_layer</code><a class="headerlink" href="#geonode.layers.models.Layer.qgis_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Layer.refresh_from_db">
+<code class="descname">refresh_from_db</code><span class="sig-paren">(</span><em>using=None</em>, <em>fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer.refresh_from_db" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.remote_service">
+<code class="descname">remote_service</code><a class="headerlink" href="#geonode.layers.models.Layer.remote_service" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.resourcebase_ptr">
+<code class="descname">resourcebase_ptr</code><a class="headerlink" href="#geonode.layers.models.Layer.resourcebase_ptr" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.service_typename">
+<code class="descname">service_typename</code><a class="headerlink" href="#geonode.layers.models.Layer.service_typename" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.styles">
+<code class="descname">styles</code><a class="headerlink" href="#geonode.layers.models.Layer.styles" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.supplemental_information">
+<code class="descname">supplemental_information</code><a class="headerlink" href="#geonode.layers.models.Layer.supplemental_information" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>A descriptor used for the original translated field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.target_actions">
+<code class="descname">target_actions</code><a class="headerlink" href="#geonode.layers.models.Layer.target_actions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple “remote” values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+“article.publications”, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.title">
+<code class="descname">title</code><a class="headerlink" href="#geonode.layers.models.Layer.title" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>A descriptor used for the original translated field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.upload_session">
+<code class="descname">upload_session</code><a class="headerlink" href="#geonode.layers.models.Layer.upload_session" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Layer.upload_set">
+<code class="descname">upload_set</code><a class="headerlink" href="#geonode.layers.models.Layer.upload_set" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Layer.view_count_up">
+<code class="descname">view_count_up</code><span class="sig-paren">(</span><em>user</em>, <em>do_local=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Layer.view_count_up" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>increase view counter, if user is not owner and not super</p>
+<p>&#64;param user which views layer
+&#64;type User model</p>
+<p>&#64;param do_local - do local counter update even if pubsub is enabled
+&#64;type bool</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.models.LayerFile">
+<em class="property">class </em><code class="descclassname">geonode.layers.models.</code><code class="descname">LayerFile</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.LayerFile" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Helper class to store original files.</p>
+<dl class="exception">
+<dt id="geonode.layers.models.LayerFile.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.layers.models.LayerFile.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.layers.models.LayerFile.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.layers.models.LayerFile.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.LayerFile.file">
+<code class="descname">file</code><a class="headerlink" href="#geonode.layers.models.LayerFile.file" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>The descriptor for the file attribute on the model instance. Returns a
+FieldFile when accessed so you can do stuff like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="k">import</span> <span class="n">MyModel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+<p>Assigns a file object on assignment so you can do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/path/to/hello.world&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">instance</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.LayerFile.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#geonode.layers.models.LayerFile.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.LayerFile.upload_session">
+<code class="descname">upload_session</code><a class="headerlink" href="#geonode.layers.models.LayerFile.upload_session" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.models.LayerManager">
+<em class="property">class </em><code class="descclassname">geonode.layers.models.</code><code class="descname">LayerManager</code><a class="headerlink" href="#geonode.layers.models.LayerManager" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="geonode.base.html#geonode.base.models.ResourceBaseManager" title="geonode.base.models.ResourceBaseManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.ResourceBaseManager</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.models.Style">
+<em class="property">class </em><code class="descclassname">geonode.layers.models.</code><code class="descname">Style</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Style" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code>, <a class="reference internal" href="geonode.security.html#geonode.security.models.PermissionLevelMixin" title="geonode.security.models.PermissionLevelMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.security.models.PermissionLevelMixin</span></code></a></p>
+<p>Model for storing styles.</p>
+<dl class="exception">
+<dt id="geonode.layers.models.Style.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.layers.models.Style.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.layers.models.Style.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.layers.models.Style.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Style.absolute_url">
+<code class="descname">absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Style.absolute_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.Style.get_self_resource">
+<code class="descname">get_self_resource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.Style.get_self_resource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get associated resource base.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Style.layer_default_style">
+<code class="descname">layer_default_style</code><a class="headerlink" href="#geonode.layers.models.Style.layer_default_style" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Style.layer_styles">
+<code class="descname">layer_styles</code><a class="headerlink" href="#geonode.layers.models.Style.layer_styles" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.Style.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#geonode.layers.models.Style.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.models.UploadSession">
+<em class="property">class </em><code class="descclassname">geonode.layers.models.</code><code class="descname">UploadSession</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.UploadSession" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Helper class to keep track of uploads.</p>
+<dl class="exception">
+<dt id="geonode.layers.models.UploadSession.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.layers.models.UploadSession.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.layers.models.UploadSession.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.layers.models.UploadSession.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.UploadSession.get_next_by_date">
+<code class="descname">get_next_by_date</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.UploadSession.get_next_by_date" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.UploadSession.get_previous_by_date">
+<code class="descname">get_previous_by_date</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.UploadSession.get_previous_by_date" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.UploadSession.layer_set">
+<code class="descname">layer_set</code><a class="headerlink" href="#geonode.layers.models.UploadSession.layer_set" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.UploadSession.layerfile_set">
+<code class="descname">layerfile_set</code><a class="headerlink" href="#geonode.layers.models.UploadSession.layerfile_set" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.UploadSession.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#geonode.layers.models.UploadSession.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.models.UploadSession.successful">
+<code class="descname">successful</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.UploadSession.successful" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.models.UploadSession.user">
+<code class="descname">user</code><a class="headerlink" href="#geonode.layers.models.UploadSession.user" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.models.post_delete_layer">
+<code class="descclassname">geonode.layers.models.</code><code class="descname">post_delete_layer</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.post_delete_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Removed the layer from any associated map, if any.
+Remove the layer default style.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.models.post_delete_layer_file">
+<code class="descclassname">geonode.layers.models.</code><code class="descname">post_delete_layer_file</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.post_delete_layer_file" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Delete associated file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>instance</strong> (<a class="reference internal" href="#geonode.layers.models.LayerFile" title="geonode.layers.models.LayerFile"><em>LayerFile</em></a>) – LayerFile instance</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.models.pre_delete_layer">
+<code class="descclassname">geonode.layers.models.</code><code class="descname">pre_delete_layer</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.pre_delete_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Remove any associated style to the layer, if it is not used by other layers.
+Default style will be deleted in post_delete_layer</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.models.pre_save_layer">
+<code class="descclassname">geonode.layers.models.</code><code class="descname">pre_save_layer</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.models.pre_save_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.layers.populate_layers_data">
+<span id="geonode-layers-populate-layers-data-module"></span><h2>geonode.layers.populate_layers_data module<a class="headerlink" href="#module-geonode.layers.populate_layers_data" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.layers.populate_layers_data.create_layer_data">
+<code class="descclassname">geonode.layers.populate_layers_data.</code><code class="descname">create_layer_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.populate_layers_data.create_layer_data" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="geonode-layers-search-indexes-module">
+<h2>geonode.layers.search_indexes module<a class="headerlink" href="#geonode-layers-search-indexes-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.layers.tasks">
+<span id="geonode-layers-tasks-module"></span><h2>geonode.layers.tasks module<a class="headerlink" href="#module-geonode.layers.tasks" title="Link permanente para este título">¶</a></h2>
+<p>celery tasks for geonode.layers.</p>
+</div>
+<div class="section" id="module-geonode.layers.tests">
+<span id="geonode-layers-tests-module"></span><h2>geonode.layers.tests module<a class="headerlink" href="#module-geonode.layers.tests" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.layers.tests.LayerModerationTestCase">
+<em class="property">class </em><code class="descclassname">geonode.layers.tests.</code><code class="descname">LayerModerationTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayerModerationTestCase" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.tests.LayerModerationTestCase.fixtures">
+<code class="descname">fixtures</code><em class="property"> = ['initial_data.json', 'bobby']</em><a class="headerlink" href="#geonode.layers.tests.LayerModerationTestCase.fixtures" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayerModerationTestCase.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayerModerationTestCase.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayerModerationTestCase.test_moderated_upload">
+<code class="descname">test_moderated_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayerModerationTestCase.test_moderated_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test if moderation flag works</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.tests.LayerNotificationsTestCase">
+<em class="property">class </em><code class="descclassname">geonode.layers.tests.</code><code class="descname">LayerNotificationsTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayerNotificationsTestCase" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="geonode.tests.html#geonode.tests.utils.NotificationsTestsHelper" title="geonode.tests.utils.NotificationsTestsHelper"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.tests.utils.NotificationsTestsHelper</span></code></a></p>
+<dl class="attribute">
+<dt id="geonode.layers.tests.LayerNotificationsTestCase.fixtures">
+<code class="descname">fixtures</code><em class="property"> = ['initial_data.json', 'bobby']</em><a class="headerlink" href="#geonode.layers.tests.LayerNotificationsTestCase.fixtures" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayerNotificationsTestCase.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayerNotificationsTestCase.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayerNotificationsTestCase.testLayerNotifications">
+<code class="descname">testLayerNotifications</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayerNotificationsTestCase.testLayerNotifications" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.tests.LayersTest">
+<em class="property">class </em><code class="descclassname">geonode.layers.tests.</code><code class="descname">LayersTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests geonode.layers app/module</p>
+<dl class="attribute">
+<dt id="geonode.layers.tests.LayersTest.fixtures">
+<code class="descname">fixtures</code><em class="property"> = ['initial_data.json', 'bobby']</em><a class="headerlink" href="#geonode.layers.tests.LayersTest.fixtures" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.testASCIIValidation">
+<code class="descname">testASCIIValidation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.testASCIIValidation" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.testGeoTiffValidation">
+<code class="descname">testGeoTiffValidation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.testGeoTiffValidation" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.testJSONField">
+<code class="descname">testJSONField</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.testJSONField" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.testShapefileValidation">
+<code class="descname">testShapefileValidation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.testShapefileValidation" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.testWriteFiles">
+<code class="descname">testWriteFiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.testWriteFiles" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.testZipValidation">
+<code class="descname">testZipValidation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.testZipValidation" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_assign_change_layer_data_perm">
+<code class="descname">test_assign_change_layer_data_perm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_assign_change_layer_data_perm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Ensure set_permissions supports the change_layer_data permission.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_batch_edit">
+<code class="descname">test_batch_edit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_batch_edit" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_category_counts">
+<code class="descname">test_category_counts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_category_counts" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_data">
+<code class="descname">test_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_data" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>/data/ -&gt; Test accessing the data page</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_describe_data">
+<code class="descname">test_describe_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_describe_data" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>/data/geonode:CA/metadata -&gt; Test accessing the description of a layer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_describe_data_2">
+<code class="descname">test_describe_data_2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_describe_data_2" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>/data/geonode:CA/metadata -&gt; Test accessing the description of a layer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_describe_data_3">
+<code class="descname">test_describe_data_3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_describe_data_3" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>/data/geonode:CA/metadata_detail -&gt; Test accessing the description of a layer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_get_files">
+<code class="descname">test_get_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_get_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_get_valid_layer_name">
+<code class="descname">test_get_valid_layer_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_get_valid_layer_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_get_valid_name">
+<code class="descname">test_get_valid_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_get_valid_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_get_valid_user">
+<code class="descname">test_get_valid_user</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_get_valid_user" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_layer_attribute_config">
+<code class="descname">test_layer_attribute_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_layer_attribute_config" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_layer_attributes">
+<code class="descname">test_layer_attributes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_layer_attributes" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_layer_attributes_feature_catalogue">
+<code class="descname">test_layer_attributes_feature_catalogue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_layer_attributes_feature_catalogue" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test layer feature catalogue functionality</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_layer_remove">
+<code class="descname">test_layer_remove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_layer_remove" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test layer remove functionality</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_layer_save">
+<code class="descname">test_layer_save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_layer_save" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_layer_styles">
+<code class="descname">test_layer_styles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_layer_styles" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_layer_type">
+<code class="descname">test_layer_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_layer_type" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_non_cascading">
+<code class="descname">test_non_cascading</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_non_cascading" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Tests that deleting a layer with a shared default style will not cascade and
+delete multiple layers.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_rating_layer_remove">
+<code class="descname">test_rating_layer_remove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_rating_layer_remove" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test layer rating is removed on layer remove</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.LayersTest.test_upload_layer">
+<code class="descname">test_upload_layer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.LayersTest.test_upload_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.layers.tests.UnpublishedObjectTests">
+<em class="property">class </em><code class="descclassname">geonode.layers.tests.</code><code class="descname">UnpublishedObjectTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.UnpublishedObjectTests" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Test the is_published base attribute</p>
+<dl class="attribute">
+<dt id="geonode.layers.tests.UnpublishedObjectTests.fixtures">
+<code class="descname">fixtures</code><em class="property"> = ['initial_data.json', 'bobby']</em><a class="headerlink" href="#geonode.layers.tests.UnpublishedObjectTests.fixtures" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.UnpublishedObjectTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.UnpublishedObjectTests.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.layers.tests.UnpublishedObjectTests.test_unpublished_layer">
+<code class="descname">test_unpublished_layer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.tests.UnpublishedObjectTests.test_unpublished_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test unpublished layer behaviour</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.layers.translation">
+<span id="geonode-layers-translation-module"></span><h2>geonode.layers.translation module<a class="headerlink" href="#module-geonode.layers.translation" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.layers.translation.LayerTranslationOptions">
+<em class="property">class </em><code class="descclassname">geonode.layers.translation.</code><code class="descname">LayerTranslationOptions</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.translation.LayerTranslationOptions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">modeltranslation.translator.TranslationOptions</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.translation.LayerTranslationOptions.fields">
+<code class="descname">fields</code><em class="property"> = ('constraints_other', 'data_quality_statement', 'title', 'abstract', 'supplemental_information', 'purpose')</em><a class="headerlink" href="#geonode.layers.translation.LayerTranslationOptions.fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.layers.urls">
+<span id="geonode-layers-urls-module"></span><h2>geonode.layers.urls module<a class="headerlink" href="#module-geonode.layers.urls" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.layers.utils">
+<span id="geonode-layers-utils-module"></span><h2>geonode.layers.utils module<a class="headerlink" href="#module-geonode.layers.utils" title="Link permanente para este título">¶</a></h2>
+<p>Utilities for managing GeoNode layers</p>
+<dl class="function">
+<dt id="geonode.layers.utils.create_gs_thumbnail_geonode">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">create_gs_thumbnail_geonode</code><span class="sig-paren">(</span><em>instance</em>, <em>overwrite=False</em>, <em>check_bbox=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.create_gs_thumbnail_geonode" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Create a thumbnail with a GeoServer request.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.create_thumbnail">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">create_thumbnail</code><span class="sig-paren">(</span><em>instance</em>, <em>thumbnail_remote_url</em>, <em>thumbnail_create_url=None</em>, <em>check_bbox=False</em>, <em>ogc_client=None</em>, <em>overwrite=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.create_thumbnail" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.delete_orphaned_layers">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">delete_orphaned_layers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.delete_orphaned_layers" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Delete orphaned layer files.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.file_upload">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">file_upload</code><span class="sig-paren">(</span><em>filename</em>, <em>name=None</em>, <em>user=None</em>, <em>title=None</em>, <em>abstract=None</em>, <em>license=None</em>, <em>category=None</em>, <em>keywords=None</em>, <em>regions=None</em>, <em>date=None</em>, <em>skip=True</em>, <em>overwrite=False</em>, <em>charset='UTF-8'</em>, <em>metadata_uploaded_preserve=False</em>, <em>metadata_upload_form=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.file_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Saves a layer in GeoNode asking as little information as possible.</dt>
+<dd>Only filename is required, user and title are optional.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Retorna:</th><td class="field-body">Uploaded layer</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><a class="reference internal" href="#geonode.layers.models.Layer" title="geonode.layers.models.Layer">Layer</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.get_bbox">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">get_bbox</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.get_bbox" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Return bbox in the format [xmin,xmax,ymin,ymax].</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.get_default_user">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">get_default_user</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.get_default_user" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Create a default user</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.get_files">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">get_files</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.get_files" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Converts the data to Shapefiles or Geotiffs and returns
+a dictionary with all the required files</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.get_resolution">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">get_resolution</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.get_resolution" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.get_valid_layer_name">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">get_valid_layer_name</code><span class="sig-paren">(</span><em>layer</em>, <em>overwrite</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.get_valid_layer_name" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Checks if the layer is a string and fetches it from the database.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.get_valid_name">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">get_valid_name</code><span class="sig-paren">(</span><em>layer_name</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.get_valid_name" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Create a brand new name</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.is_raster">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">is_raster</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.is_raster" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.is_vector">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">is_vector</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.is_vector" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.layer_type">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">layer_type</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.layer_type" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Finds out if a filename is a Feature or a Vector
+returns a gsconfig resource_type string
+that can be either ‘featureType’ or ‘coverage’</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.resolve_regions">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">resolve_regions</code><span class="sig-paren">(</span><em>regions</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.resolve_regions" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.utils.upload">
+<code class="descclassname">geonode.layers.utils.</code><code class="descname">upload</code><span class="sig-paren">(</span><em>incoming</em>, <em>user=None</em>, <em>overwrite=False</em>, <em>name=None</em>, <em>title=None</em>, <em>abstract=None</em>, <em>date=None</em>, <em>license=None</em>, <em>category=None</em>, <em>keywords=None</em>, <em>regions=None</em>, <em>skip=True</em>, <em>ignore_errors=True</em>, <em>verbosity=1</em>, <em>console=None</em>, <em>private=False</em>, <em>metadata_uploaded_preserve=False</em>, <em>charset='UTF-8'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.utils.upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Upload a directory of spatial data files to GeoNode</p>
+<p>This function also verifies that each layer is in GeoServer.</p>
+<p>Supported extensions are: .shp, .tif, .tar, .tar.gz, and .zip (of a shapefile).
+It catches GeoNodeExceptions and gives a report per file</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.layers.views">
+<span id="geonode-layers-views-module"></span><h2>geonode.layers.views module<a class="headerlink" href="#module-geonode.layers.views" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.layers.views.attribute_upload">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">attribute_upload</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.attribute_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.get_layer">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">get_layer</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.get_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get Layer object as JSON</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_batch_metadata">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_batch_metadata</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_batch_metadata" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_change_poc">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_change_poc</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_change_poc" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_detail">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_detail</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em>, <em>template='layers/layer_detail.html'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_feature_catalogue">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_feature_catalogue</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em>, <em>template='../../catalogue/templates/catalogue/feature_catalogue.xml'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_feature_catalogue" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_granule_remove">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_granule_remove</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_granule_remove" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_metadata">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_metadata</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_metadata" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_metadata_advanced">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_metadata_advanced</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_metadata_advanced" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_metadata_detail">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_metadata_detail</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em>, <em>template='layers/layer_metadata_detail.html'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_metadata_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_metadata_upload">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_metadata_upload</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em>, <em>template='layers/layer_metadata_upload.html'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_metadata_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_remove">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_remove</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_remove" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_replace">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_replace</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_replace" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_sld_upload">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_sld_upload</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em>, <em>template='layers/layer_style_upload.html'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_sld_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_thumbnail">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_thumbnail</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_thumbnail" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_upload">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_upload</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.layer_view_counter">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">layer_view_counter</code><span class="sig-paren">(</span><em>layer_id</em>, <em>viewer</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.layer_view_counter" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.load_layer_data">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">load_layer_data</code><span class="sig-paren">(</span><em>request</em>, <em>template='layers/layer_detail.html'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.load_layer_data" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.layers.views.log_snippet">
+<code class="descclassname">geonode.layers.views.</code><code class="descname">log_snippet</code><span class="sig-paren">(</span><em>log_file</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.views.log_snippet" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.layers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.layers" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.layers.LayersAppConfig">
+<em class="property">class </em><code class="descclassname">geonode.layers.</code><code class="descname">LayersAppConfig</code><span class="sig-paren">(</span><em>app_name</em>, <em>app_module</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.layers.LayersAppConfig" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.notifications_helper.NotificationsAppConfigBase</span></code></p>
+<dl class="attribute">
+<dt id="geonode.layers.LayersAppConfig.NOTIFICATIONS">
+<code class="descname">NOTIFICATIONS</code><em class="property"> = (('layer_created', 'Layer Created', 'A Layer was created'), ('layer_updated', 'Layer Updated', 'A Layer was updated'), ('layer_approved', 'Layer Approved', 'A Layer was approved by a Manager'), ('layer_published', 'Layer Published', 'A Layer was published'), ('layer_deleted', 'Layer Deleted', 'A Layer was deleted'), ('layer_comment', 'Comment on Layer', 'A layer was commented on'), ('layer_rated', 'Rating for Layer', 'A rating was given to a layer'))</em><a class="headerlink" href="#geonode.layers.LayersAppConfig.NOTIFICATIONS" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.layers.LayersAppConfig.name">
+<code class="descname">name</code><em class="property"> = 'geonode.layers'</em><a class="headerlink" href="#geonode.layers.LayersAppConfig.name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

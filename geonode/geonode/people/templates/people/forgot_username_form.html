@@ -1,0 +1,23 @@
+{% extends "geonode_base.html" %}
+{% load i18n %}
+
+{% block body_outer %}
+<div class="page-header">
+  <h2>{% trans "Esqueci o nomde de usuário" %}</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <p class="lead">{% trans "Digite seu endereço de e-mail e clique no botão enviar. <br />Seu nome de usuário será enviado para você." %}</p>
+    <form method="post" action="">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="form-actions">
+        <input class="btn btn-primary" type="submit" value="{% trans 'Submit' %}" />
+      </div>
+    </form>
+    {% if message %}
+    <div class="alert alert-danger grid-spacer">{{ message }}</div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.catalogue package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.catalogue package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.catalogue.models">geonode.catalogue.models module</a></li>
+<li><a class="reference internal" href="#module-geonode.catalogue.tests">geonode.catalogue.tests module</a></li>
+<li><a class="reference internal" href="#module-geonode.catalogue.urls">geonode.catalogue.urls module</a></li>
+<li><a class="reference internal" href="#module-geonode.catalogue.views">geonode.catalogue.views module</a></li>
+<li><a class="reference internal" href="#module-geonode.catalogue">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.catalogue package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.catalogue.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-catalogue-package">
+<h1>geonode.catalogue package<a class="headerlink" href="#geonode-catalogue-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link permanente para este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="geonode.catalogue.backends.html">geonode.catalogue.backends package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#module-geonode.catalogue.backends.base">geonode.catalogue.backends.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#module-geonode.catalogue.backends.generic">geonode.catalogue.backends.generic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#module-geonode.catalogue.backends.geonetwork">geonode.catalogue.backends.geonetwork module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#module-geonode.catalogue.backends.pycsw_http">geonode.catalogue.backends.pycsw_http module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#module-geonode.catalogue.backends.pycsw_local">geonode.catalogue.backends.pycsw_local module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#module-geonode.catalogue.backends.pycsw_local_mappings">geonode.catalogue.backends.pycsw_local_mappings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#module-geonode.catalogue.backends">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.catalogue.models">
+<span id="geonode-catalogue-models-module"></span><h2>geonode.catalogue.models module<a class="headerlink" href="#module-geonode.catalogue.models" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.catalogue.models.catalogue_post_save">
+<code class="descclassname">geonode.catalogue.models.</code><code class="descname">catalogue_post_save</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.models.catalogue_post_save" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get information from catalogue</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.models.catalogue_pre_delete">
+<code class="descclassname">geonode.catalogue.models.</code><code class="descname">catalogue_pre_delete</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.models.catalogue_pre_delete" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Removes the layer from the catalogue</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.models.catalogue_pre_save">
+<code class="descclassname">geonode.catalogue.models.</code><code class="descname">catalogue_pre_save</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.models.catalogue_pre_save" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Send information to catalogue</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.catalogue.tests">
+<span id="geonode-catalogue-tests-module"></span><h2>geonode.catalogue.tests module<a class="headerlink" href="#module-geonode.catalogue.tests" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.catalogue.tests.CatalogueTest">
+<em class="property">class </em><code class="descclassname">geonode.catalogue.tests.</code><code class="descname">CatalogueTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.tests.CatalogueTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.catalogue.tests.CatalogueTest.test_data_json">
+<code class="descname">test_data_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.tests.CatalogueTest.test_data_json" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that the data.json representation behaves correctly</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.catalogue.tests.CatalogueTest.test_get_catalog">
+<code class="descname">test_get_catalog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.tests.CatalogueTest.test_get_catalog" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Tests the get_catalogue function works.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.catalogue.urls">
+<span id="geonode-catalogue-urls-module"></span><h2>geonode.catalogue.urls module<a class="headerlink" href="#module-geonode.catalogue.urls" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.catalogue.views">
+<span id="geonode-catalogue-views-module"></span><h2>geonode.catalogue.views module<a class="headerlink" href="#module-geonode.catalogue.views" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.catalogue.views.build_md_dict">
+<code class="descclassname">geonode.catalogue.views.</code><code class="descname">build_md_dict</code><span class="sig-paren">(</span><em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.views.build_md_dict" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.views.csw_global_dispatch">
+<code class="descclassname">geonode.catalogue.views.</code><code class="descname">csw_global_dispatch</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.views.csw_global_dispatch" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>pycsw wrapper</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.views.csw_render_extra_format_html">
+<code class="descclassname">geonode.catalogue.views.</code><code class="descname">csw_render_extra_format_html</code><span class="sig-paren">(</span><em>request</em>, <em>layeruuid</em>, <em>resname</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.views.csw_render_extra_format_html" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.views.csw_render_extra_format_txt">
+<code class="descclassname">geonode.catalogue.views.</code><code class="descname">csw_render_extra_format_txt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.views.csw_render_extra_format_txt" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>pycsw wrapper</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.views.data_json">
+<code class="descclassname">geonode.catalogue.views.</code><code class="descname">data_json</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.views.data_json" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Return data.json representation of catalogue</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.views.dictfetchall">
+<code class="descclassname">geonode.catalogue.views.</code><code class="descname">dictfetchall</code><span class="sig-paren">(</span><em>cursor</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.views.dictfetchall" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returns all rows from a cursor as a dict</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.views.fst">
+<code class="descclassname">geonode.catalogue.views.</code><code class="descname">fst</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.views.fst" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.views.get_CSV_spec_char">
+<code class="descclassname">geonode.catalogue.views.</code><code class="descname">get_CSV_spec_char</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.views.get_CSV_spec_char" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.views.get_keywords">
+<code class="descclassname">geonode.catalogue.views.</code><code class="descname">get_keywords</code><span class="sig-paren">(</span><em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.views.get_keywords" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.views.opensearch_dispatch">
+<code class="descclassname">geonode.catalogue.views.</code><code class="descname">opensearch_dispatch</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.views.opensearch_dispatch" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>OpenSearch wrapper</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.catalogue">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.catalogue" title="Link permanente para este título">¶</a></h2>
+<p>Tools for managing a Catalogue Service for the Web (CSW)</p>
+<dl class="function">
+<dt id="geonode.catalogue.default_catalogue_backend">
+<code class="descclassname">geonode.catalogue.</code><code class="descname">default_catalogue_backend</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.default_catalogue_backend" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get the default backend</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.get_catalogue">
+<code class="descclassname">geonode.catalogue.</code><code class="descname">get_catalogue</code><span class="sig-paren">(</span><em>backend=None</em>, <em>skip_caps=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.get_catalogue" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returns a catalogue object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.catalogue.load_backend">
+<code class="descclassname">geonode.catalogue.</code><code class="descname">load_backend</code><span class="sig-paren">(</span><em>backend_name</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.catalogue.load_backend" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>load a Catalogue backend</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

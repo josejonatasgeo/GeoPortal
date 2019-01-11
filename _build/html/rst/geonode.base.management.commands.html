@@ -1,0 +1,724 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.base.management.commands package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.base.management.commands package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.backup">geonode.base.management.commands.backup module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.delete_orphaned_thumbs">geonode.base.management.commands.delete_orphaned_thumbs module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.fixgeofencerules">geonode.base.management.commands.fixgeofencerules module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.fixoauthuri">geonode.base.management.commands.fixoauthuri module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.fixsitename">geonode.base.management.commands.fixsitename module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.helpers">geonode.base.management.commands.helpers module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.load_thesaurus">geonode.base.management.commands.load_thesaurus module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.migrate_baseurl">geonode.base.management.commands.migrate_baseurl module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.migrate_layers">geonode.base.management.commands.migrate_layers module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.migrate_notifications">geonode.base.management.commands.migrate_notifications module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.restore">geonode.base.management.commands.restore module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.set_all_layers_alternate">geonode.base.management.commands.set_all_layers_alternate module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.set_all_layers_public">geonode.base.management.commands.set_all_layers_public module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.squashmigrations">geonode.base.management.commands.squashmigrations module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands.updategeoip">geonode.base.management.commands.updategeoip module</a></li>
+<li><a class="reference internal" href="#module-geonode.base.management.commands">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.base.management.commands package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.base.management.commands.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-base-management-commands-package">
+<h1>geonode.base.management.commands package<a class="headerlink" href="#geonode-base-management-commands-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.base.management.commands.backup">
+<span id="geonode-base-management-commands-backup-module"></span><h2>geonode.base.management.commands.backup module<a class="headerlink" href="#module-geonode.base.management.commands.backup" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.backup.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.backup.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.backup.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<dl class="method">
+<dt id="geonode.base.management.commands.backup.Command.create_geoserver_backup">
+<code class="descname">create_geoserver_backup</code><span class="sig-paren">(</span><em>settings</em>, <em>target_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.backup.Command.create_geoserver_backup" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.backup.Command.dump_geoserver_externals">
+<code class="descname">dump_geoserver_externals</code><span class="sig-paren">(</span><em>config</em>, <em>settings</em>, <em>target_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.backup.Command.dump_geoserver_externals" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Scan layers xml and see if there are external references.</p>
+<p>Find references to data outside data dir and include them in
+backup. Also, some references may point to specific url, which
+may not be available later.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.backup.Command.dump_geoserver_raster_data">
+<code class="descname">dump_geoserver_raster_data</code><span class="sig-paren">(</span><em>config</em>, <em>settings</em>, <em>target_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.backup.Command.dump_geoserver_raster_data" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.backup.Command.dump_geoserver_vector_data">
+<code class="descname">dump_geoserver_vector_data</code><span class="sig-paren">(</span><em>config</em>, <em>settings</em>, <em>target_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.backup.Command.dump_geoserver_vector_data" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.backup.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.backup.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.backup.Command.help">
+<code class="descname">help</code><em class="property"> = 'Backup the GeoNode application data'</em><a class="headerlink" href="#geonode.base.management.commands.backup.Command.help" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.backup.Command.option_list">
+<code class="descname">option_list</code><em class="property"> = (&lt;Option at 0xde83468: --geoserver-data-dir&gt;, &lt;Option at 0xde83058: --dump-geoserver-vector-data&gt;, &lt;Option at 0xde83760: --no-geoserver-vector-data&gt;, &lt;Option at 0xde832b0: --dump-geoserver-raster-data&gt;, &lt;Option at 0xde83dc8: --no-geoserver-raster-data&gt;, &lt;Option at 0xe539d78: -c/--config&gt;, &lt;Option at 0xe65d1c0: -i/--ignore-errors&gt;, &lt;Option at 0xdbaaa80: -f/--force&gt;, &lt;Option at 0xda472b0: --skip-geoserver&gt;, &lt;Option at 0xe53bd50: --backup-dir&gt;)</em><a class="headerlink" href="#geonode.base.management.commands.backup.Command.option_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.delete_orphaned_thumbs">
+<span id="geonode-base-management-commands-delete-orphaned-thumbs-module"></span><h2>geonode.base.management.commands.delete_orphaned_thumbs module<a class="headerlink" href="#module-geonode.base.management.commands.delete_orphaned_thumbs" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.delete_orphaned_thumbs.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.delete_orphaned_thumbs.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.delete_orphaned_thumbs.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<dl class="method">
+<dt id="geonode.base.management.commands.delete_orphaned_thumbs.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>*args</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.delete_orphaned_thumbs.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.delete_orphaned_thumbs.Command.help">
+<code class="descname">help</code><em class="property"> = 'Delete orphaned thumbnails.'</em><a class="headerlink" href="#geonode.base.management.commands.delete_orphaned_thumbs.Command.help" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.fixgeofencerules">
+<span id="geonode-base-management-commands-fixgeofencerules-module"></span><h2>geonode.base.management.commands.fixgeofencerules module<a class="headerlink" href="#module-geonode.base.management.commands.fixgeofencerules" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.fixgeofencerules.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.fixgeofencerules.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.fixgeofencerules.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<p>Creates Rules on GeoFence for Public and Protected Layers</p>
+<dl class="method">
+<dt id="geonode.base.management.commands.fixgeofencerules.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>*args</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.fixgeofencerules.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.fixoauthuri">
+<span id="geonode-base-management-commands-fixoauthuri-module"></span><h2>geonode.base.management.commands.fixoauthuri module<a class="headerlink" href="#module-geonode.base.management.commands.fixoauthuri" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.fixoauthuri.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.fixoauthuri.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.fixoauthuri.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<p>Creates or updates the oauth2 Application</p>
+<dl class="attribute">
+<dt id="geonode.base.management.commands.fixoauthuri.Command.can_import_settings">
+<code class="descname">can_import_settings</code><em class="property"> = True</em><a class="headerlink" href="#geonode.base.management.commands.fixoauthuri.Command.can_import_settings" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.fixoauthuri.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>*args</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.fixoauthuri.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.fixsitename">
+<span id="geonode-base-management-commands-fixsitename-module"></span><h2>geonode.base.management.commands.fixsitename module<a class="headerlink" href="#module-geonode.base.management.commands.fixsitename" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.fixsitename.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.fixsitename.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.fixsitename.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<p>Overrides the default Site object with information from
+SITENAME and SITEURL</p>
+<dl class="attribute">
+<dt id="geonode.base.management.commands.fixsitename.Command.can_import_settings">
+<code class="descname">can_import_settings</code><em class="property"> = True</em><a class="headerlink" href="#geonode.base.management.commands.fixsitename.Command.can_import_settings" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.fixsitename.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>*args</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.fixsitename.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.helpers">
+<span id="geonode-base-management-commands-helpers-module"></span><h2>geonode.base.management.commands.helpers module<a class="headerlink" href="#module-geonode.base.management.commands.helpers" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.helpers.Config">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">Config</code><span class="sig-paren">(</span><em>options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.Config" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="geonode.base.management.commands.helpers.Config.geoserver_option_list">
+<code class="descname">geoserver_option_list</code><em class="property"> = (&lt;Option at 0xde83468: --geoserver-data-dir&gt;, &lt;Option at 0xde83058: --dump-geoserver-vector-data&gt;, &lt;Option at 0xde83760: --no-geoserver-vector-data&gt;, &lt;Option at 0xde832b0: --dump-geoserver-raster-data&gt;, &lt;Option at 0xde83dc8: --no-geoserver-raster-data&gt;)</em><a class="headerlink" href="#geonode.base.management.commands.helpers.Config.geoserver_option_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.helpers.Config.load_options">
+<code class="descname">load_options</code><span class="sig-paren">(</span><em>options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.Config.load_options" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.helpers.Config.load_settings">
+<code class="descname">load_settings</code><span class="sig-paren">(</span><em>settings_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.Config.load_settings" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.helpers.Config.option">
+<code class="descname">option</code><em class="property"> = &lt;Option at 0xe539d78: -c/--config&gt;</em><a class="headerlink" href="#geonode.base.management.commands.helpers.Config.option" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.chmod_tree">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">chmod_tree</code><span class="sig-paren">(</span><em>dst</em>, <em>permissions=511</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.chmod_tree" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.cleanup_db">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">cleanup_db</code><span class="sig-paren">(</span><em>db_name</em>, <em>db_user</em>, <em>db_port</em>, <em>db_host</em>, <em>db_passwd</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.cleanup_db" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Remove spurious records from GeoNode DB</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.confirm">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">confirm</code><span class="sig-paren">(</span><em>prompt=None</em>, <em>resp=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.confirm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>prompts for yes or no response from the user. Returns True for yes and
+False for no.</p>
+<p>‘resp’ should be set to the default value assumed by the caller when
+user simply types ENTER.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">confirm</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;Create Directory?&#39;</span><span class="p">,</span> <span class="n">resp</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">Create Directory? [y]|n:</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">confirm</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;Create Directory?&#39;</span><span class="p">,</span> <span class="n">resp</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go">Create Directory? [n]|y:</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">confirm</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;Create Directory?&#39;</span><span class="p">,</span> <span class="n">resp</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go">Create Directory? [n]|y: y</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.copy_tree">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">copy_tree</code><span class="sig-paren">(</span><em>src</em>, <em>dst</em>, <em>symlinks=False</em>, <em>ignore=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.copy_tree" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.dump_db">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">dump_db</code><span class="sig-paren">(</span><em>config</em>, <em>db_name</em>, <em>db_user</em>, <em>db_port</em>, <em>db_host</em>, <em>db_passwd</em>, <em>target_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.dump_db" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Dump Full DB into target folder</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.flush_db">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">flush_db</code><span class="sig-paren">(</span><em>db_name</em>, <em>db_user</em>, <em>db_port</em>, <em>db_host</em>, <em>db_passwd</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.flush_db" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>HARD Truncate all DB Tables</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.get_db_conn">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">get_db_conn</code><span class="sig-paren">(</span><em>db_name</em>, <em>db_user</em>, <em>db_port</em>, <em>db_host</em>, <em>db_passwd</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.get_db_conn" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get db conn (GeoNode)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.get_dir_time_suffix">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">get_dir_time_suffix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.get_dir_time_suffix" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returns the name of a folder with the ‘now’ time as suffix</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.load_class">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">load_class</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.load_class" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.load_fixture">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">load_fixture</code><span class="sig-paren">(</span><em>apps</em>, <em>fixture_file</em>, <em>mangler=None</em>, <em>basepk=-1</em>, <em>owner='admin'</em>, <em>datastore=''</em>, <em>siteurl=''</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.load_fixture" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.patch_db">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">patch_db</code><span class="sig-paren">(</span><em>db_name</em>, <em>db_user</em>, <em>db_port</em>, <em>db_host</em>, <em>db_passwd</em>, <em>truncate_monitoring=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.patch_db" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Apply patch to GeoNode DB</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.restore_db">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">restore_db</code><span class="sig-paren">(</span><em>config</em>, <em>db_name</em>, <em>db_user</em>, <em>db_port</em>, <em>db_host</em>, <em>db_passwd</em>, <em>source_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.restore_db" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Restore Full DB into target folder</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.unzip_file">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">unzip_file</code><span class="sig-paren">(</span><em>zip_file</em>, <em>dst</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.unzip_file" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.base.management.commands.helpers.zip_dir">
+<code class="descclassname">geonode.base.management.commands.helpers.</code><code class="descname">zip_dir</code><span class="sig-paren">(</span><em>basedir</em>, <em>archivename</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.helpers.zip_dir" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.load_thesaurus">
+<span id="geonode-base-management-commands-load-thesaurus-module"></span><h2>geonode.base.management.commands.load_thesaurus module<a class="headerlink" href="#module-geonode.base.management.commands.load_thesaurus" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.load_thesaurus.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.load_thesaurus.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.load_thesaurus.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<dl class="method">
+<dt id="geonode.base.management.commands.load_thesaurus.Command.create_fake_thesaurus">
+<code class="descname">create_fake_thesaurus</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.load_thesaurus.Command.create_fake_thesaurus" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.load_thesaurus.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.load_thesaurus.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.load_thesaurus.Command.help">
+<code class="descname">help</code><em class="property"> = 'Load a thesaurus in RDF format into DB'</em><a class="headerlink" href="#geonode.base.management.commands.load_thesaurus.Command.help" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.load_thesaurus.Command.load_thesaurus">
+<code class="descname">load_thesaurus</code><span class="sig-paren">(</span><em>input_file</em>, <em>name</em>, <em>store</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.load_thesaurus.Command.load_thesaurus" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.load_thesaurus.Command.option_list">
+<code class="descname">option_list</code><em class="property"> = (&lt;Option at 0xe752da0: -d/--dry-run&gt;, &lt;Option at 0xe752f80: --name&gt;, &lt;Option at 0xe752940: --file&gt;)</em><a class="headerlink" href="#geonode.base.management.commands.load_thesaurus.Command.option_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.migrate_baseurl">
+<span id="geonode-base-management-commands-migrate-baseurl-module"></span><h2>geonode.base.management.commands.migrate_baseurl module<a class="headerlink" href="#module-geonode.base.management.commands.migrate_baseurl" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.migrate_baseurl.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.migrate_baseurl.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.migrate_baseurl.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<dl class="method">
+<dt id="geonode.base.management.commands.migrate_baseurl.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.migrate_baseurl.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.migrate_baseurl.Command.help">
+<code class="descname">help</code><em class="property"> = 'Migrate GeoNode VM Base URL'</em><a class="headerlink" href="#geonode.base.management.commands.migrate_baseurl.Command.help" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.migrate_baseurl.Command.option_list">
+<code class="descname">option_list</code><em class="property"> = (&lt;Option at 0xe88ada0: -i/--ignore-errors&gt;, &lt;Option at 0xddd5918: -f/--force&gt;, &lt;Option at 0xddd5620: --source-address&gt;, &lt;Option at 0xddd5490: --target-address&gt;)</em><a class="headerlink" href="#geonode.base.management.commands.migrate_baseurl.Command.option_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.migrate_layers">
+<span id="geonode-base-management-commands-migrate-layers-module"></span><h2>geonode.base.management.commands.migrate_layers module<a class="headerlink" href="#module-geonode.base.management.commands.migrate_layers" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.migrate_layers.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.migrate_layers.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.migrate_layers.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<dl class="method">
+<dt id="geonode.base.management.commands.migrate_layers.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.migrate_layers.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.migrate_layers.Command.help">
+<code class="descname">help</code><em class="property"> = 'Migrate existing Layers and Maps on GeoNode'</em><a class="headerlink" href="#geonode.base.management.commands.migrate_layers.Command.help" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.migrate_layers.Command.option_list">
+<code class="descname">option_list</code><em class="property"> = (&lt;Option at 0xe539d78: -c/--config&gt;, &lt;Option at 0xddd5260: -i/--ignore-errors&gt;, &lt;Option at 0xe768170: --backup-file&gt;, &lt;Option at 0xe7680f8: --owner&gt;)</em><a class="headerlink" href="#geonode.base.management.commands.migrate_layers.Command.option_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.migrate_notifications">
+<span id="geonode-base-management-commands-migrate-notifications-module"></span><h2>geonode.base.management.commands.migrate_notifications module<a class="headerlink" href="#module-geonode.base.management.commands.migrate_notifications" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.migrate_notifications.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.migrate_notifications.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.migrate_notifications.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<p>Migrate geonode-notifications settings to pinax-notifications</p>
+<dl class="method">
+<dt id="geonode.base.management.commands.migrate_notifications.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.migrate_notifications.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.migrate_notifications.Command.has_duplicate">
+<code class="descname">has_duplicate</code><span class="sig-paren">(</span><em>ns</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.migrate_notifications.Command.has_duplicate" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.restore">
+<span id="geonode-base-management-commands-restore-module"></span><h2>geonode.base.management.commands.restore module<a class="headerlink" href="#module-geonode.base.management.commands.restore" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.restore.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.restore.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.restore.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<dl class="method">
+<dt id="geonode.base.management.commands.restore.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.restore.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.restore.Command.help">
+<code class="descname">help</code><em class="property"> = 'Restore the GeoNode application data'</em><a class="headerlink" href="#geonode.base.management.commands.restore.Command.help" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.restore.Command.option_list">
+<code class="descname">option_list</code><em class="property"> = (&lt;Option at 0xde83468: --geoserver-data-dir&gt;, &lt;Option at 0xde83058: --dump-geoserver-vector-data&gt;, &lt;Option at 0xde83760: --no-geoserver-vector-data&gt;, &lt;Option at 0xde832b0: --dump-geoserver-raster-data&gt;, &lt;Option at 0xde83dc8: --no-geoserver-raster-data&gt;, &lt;Option at 0xe539d78: -c/--config&gt;, &lt;Option at 0xddc2738: -i/--ignore-errors&gt;, &lt;Option at 0xdbb28c8: -f/--force&gt;, &lt;Option at 0xe858aa8: --skip-geoserver&gt;, &lt;Option at 0xe858350: --backup-file&gt;, &lt;Option at 0xe858120: --backup-dir&gt;)</em><a class="headerlink" href="#geonode.base.management.commands.restore.Command.option_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.restore.Command.restore_geoserver_backup">
+<code class="descname">restore_geoserver_backup</code><span class="sig-paren">(</span><em>settings</em>, <em>target_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.restore.Command.restore_geoserver_backup" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Restore GeoServer Catalog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.restore.Command.restore_geoserver_externals">
+<code class="descname">restore_geoserver_externals</code><span class="sig-paren">(</span><em>config</em>, <em>settings</em>, <em>target_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.restore.Command.restore_geoserver_externals" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Restore external references from XML files</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.restore.Command.restore_geoserver_raster_data">
+<code class="descname">restore_geoserver_raster_data</code><span class="sig-paren">(</span><em>config</em>, <em>settings</em>, <em>target_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.restore.Command.restore_geoserver_raster_data" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.restore.Command.restore_geoserver_vector_data">
+<code class="descname">restore_geoserver_vector_data</code><span class="sig-paren">(</span><em>config</em>, <em>settings</em>, <em>target_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.restore.Command.restore_geoserver_vector_data" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Restore Vectorial Data from DB</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.set_all_layers_alternate">
+<span id="geonode-base-management-commands-set-all-layers-alternate-module"></span><h2>geonode.base.management.commands.set_all_layers_alternate module<a class="headerlink" href="#module-geonode.base.management.commands.set_all_layers_alternate" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.set_all_layers_alternate.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.set_all_layers_alternate.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.set_all_layers_alternate.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<p>Resets Permissions to Public for All Layers</p>
+<dl class="method">
+<dt id="geonode.base.management.commands.set_all_layers_alternate.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>*args</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.set_all_layers_alternate.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.set_all_layers_public">
+<span id="geonode-base-management-commands-set-all-layers-public-module"></span><h2>geonode.base.management.commands.set_all_layers_public module<a class="headerlink" href="#module-geonode.base.management.commands.set_all_layers_public" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.set_all_layers_public.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.set_all_layers_public.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.set_all_layers_public.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<p>Resets Permissions to Public for All Layers</p>
+<dl class="method">
+<dt id="geonode.base.management.commands.set_all_layers_public.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>*args</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.set_all_layers_public.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.squashmigrations">
+<span id="geonode-base-management-commands-squashmigrations-module"></span><h2>geonode.base.management.commands.squashmigrations module<a class="headerlink" href="#module-geonode.base.management.commands.squashmigrations" title="Link permanente para este título">¶</a></h2>
+<p>A squashmigrations command which does some monkeypatching on the RunPython operation
+to allow squashing migrations which use RunPython.noop, even on Python 2</p>
+<dl class="class">
+<dt id="geonode.base.management.commands.squashmigrations.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.squashmigrations.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.squashmigrations.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.commands.squashmigrations.Command</span></code></p>
+<dl class="method">
+<dt id="geonode.base.management.commands.squashmigrations.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.squashmigrations.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.base.management.commands.squashmigrations.noop">
+<code class="descclassname">geonode.base.management.commands.squashmigrations.</code><code class="descname">noop</code><a class="headerlink" href="#geonode.base.management.commands.squashmigrations.noop" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>staticmethod(function) -&gt; method</p>
+<p>Convert a function to be a static method.</p>
+<p>A static method does not receive an implicit first argument.
+To declare a static method, use this idiom:</p>
+<blockquote>
+<div>class C:
+def f(arg1, arg2, …): …
+f = staticmethod(f)</div></blockquote>
+<p>It can be called either on the class (e.g. C.f()) or on an instance
+(e.g. C().f()).  The instance is ignored except for its class.</p>
+<p>Static methods in Python are similar to those found in Java or C++.
+For a more advanced concept, see the classmethod builtin.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands.updategeoip">
+<span id="geonode-base-management-commands-updategeoip-module"></span><h2>geonode.base.management.commands.updategeoip module<a class="headerlink" href="#module-geonode.base.management.commands.updategeoip" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.base.management.commands.updategeoip.Command">
+<em class="property">class </em><code class="descclassname">geonode.base.management.commands.updategeoip.</code><code class="descname">Command</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em>, <em>no_color=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.updategeoip.Command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.management.base.BaseCommand</span></code></p>
+<p>Update GeoIP database</p>
+<dl class="method">
+<dt id="geonode.base.management.commands.updategeoip.Command.add_arguments">
+<code class="descname">add_arguments</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.updategeoip.Command.add_arguments" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.base.management.commands.updategeoip.Command.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><em>*args</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.base.management.commands.updategeoip.Command.handle" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.base.management.commands">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.base.management.commands" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

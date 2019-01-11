@@ -1,0 +1,977 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.tests package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.tests package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.tests.csw">geonode.tests.csw module</a></li>
+<li><a class="reference internal" href="#module-geonode.tests.integration">geonode.tests.integration module</a></li>
+<li><a class="reference internal" href="#module-geonode.tests.smoke">geonode.tests.smoke module</a></li>
+<li><a class="reference internal" href="#module-geonode.tests.test_user_messages">geonode.tests.test_user_messages module</a></li>
+<li><a class="reference internal" href="#module-geonode.tests.utils">geonode.tests.utils module</a></li>
+<li><a class="reference internal" href="#module-geonode.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.tests package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.tests.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-tests-package">
+<h1>geonode.tests package<a class="headerlink" href="#geonode-tests-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link permanente para este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="geonode.tests.bdd.html">geonode.tests.bdd package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.tests.bdd.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.tests.bdd.e2e.html">geonode.tests.bdd.e2e package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tests.bdd.e2e.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="geonode.tests.bdd.e2e.fixtures.html">geonode.tests.bdd.e2e.fixtures package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="geonode.tests.bdd.e2e.fixtures.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geonode.tests.bdd.e2e.fixtures.html#module-geonode.tests.bdd.e2e.fixtures.auth">geonode.tests.bdd.e2e.fixtures.auth module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geonode.tests.bdd.e2e.fixtures.html#module-geonode.tests.bdd.e2e.fixtures.browser">geonode.tests.bdd.e2e.fixtures.browser module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="geonode.tests.bdd.e2e.fixtures.html#module-geonode.tests.bdd.e2e.fixtures">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tests.bdd.e2e.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tests.bdd.e2e.html#module-geonode.tests.bdd.e2e.conftest">geonode.tests.bdd.e2e.conftest module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tests.bdd.e2e.html#geonode-tests-bdd-e2e-test-login-module">geonode.tests.bdd.e2e.test_login module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tests.bdd.e2e.html#module-geonode.tests.bdd.e2e">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.tests.bdd.features.html">geonode.tests.bdd.features package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tests.bdd.features.html#module-geonode.tests.bdd.features">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.tests.bdd.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.tests.bdd.html#module-geonode.tests.bdd.conftest">geonode.tests.bdd.conftest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.tests.bdd.html#module-geonode.tests.bdd">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.tests.csw">
+<span id="geonode-tests-csw-module"></span><h2>geonode.tests.csw module<a class="headerlink" href="#module-geonode.tests.csw" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.tests.csw.GeoNodeCSWTest">
+<em class="property">class </em><code class="descclassname">geonode.tests.csw.</code><code class="descname">GeoNodeCSWTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<p>Tests geonode.catalogue app/module</p>
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.test_csw_base">
+<code class="descname">test_csw_base</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.test_csw_base" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that GeoNode works against any CSW</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.test_csw_bulk_upload">
+<code class="descname">test_csw_bulk_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.test_csw_bulk_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that GeoNode CSW can handle bulk upload of ISO and FGDC metadata</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.test_csw_outputschema_dc">
+<code class="descname">test_csw_outputschema_dc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.test_csw_outputschema_dc" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that GeoNode CSW can handle ISO metadata with Dublin Core outputSchema</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.test_csw_outputschema_dc_bbox">
+<code class="descname">test_csw_outputschema_dc_bbox</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.test_csw_outputschema_dc_bbox" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that GeoNode CSW can handle ISO metadata BBOX model with Dublin Core outputSchema</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.test_csw_outputschema_fgdc">
+<code class="descname">test_csw_outputschema_fgdc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.test_csw_outputschema_fgdc" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that GeoNode CSW can handle ISO metadata with FGDC outputSchema</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.test_csw_outputschema_iso">
+<code class="descname">test_csw_outputschema_iso</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.test_csw_outputschema_iso" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that GeoNode CSW can handle ISO metadata with ISO outputSchema</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.test_csw_query_bbox">
+<code class="descname">test_csw_query_bbox</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.test_csw_query_bbox" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that GeoNode CSW can handle bbox queries</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.test_csw_search_count">
+<code class="descname">test_csw_search_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.test_csw_search_count" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that GeoNode CSW can handle search counting</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.csw.GeoNodeCSWTest.test_csw_upload_fgdc">
+<code class="descname">test_csw_upload_fgdc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.csw.GeoNodeCSWTest.test_csw_upload_fgdc" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that GeoNode CSW can handle FGDC metadata upload</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.tests.integration">
+<span id="geonode-tests-integration-module"></span><h2>geonode.tests.integration module<a class="headerlink" href="#module-geonode.tests.integration" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.tests.integration.GeoNodeCoreTest">
+<em class="property">class </em><code class="descclassname">geonode.tests.integration.</code><code class="descname">GeoNodeCoreTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeCoreTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<p>Tests geonode.security app/module</p>
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeCoreTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeCoreTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeCoreTest.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeCoreTest.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.integration.GeoNodeGeoServerCapabilities">
+<em class="property">class </em><code class="descclassname">geonode.tests.integration.</code><code class="descname">GeoNodeGeoServerCapabilities</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeGeoServerCapabilities" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<p>Tests GeoNode/GeoServer GetCapabilities per layer, user, category and map</p>
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeGeoServerCapabilities.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeGeoServerCapabilities.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeGeoServerCapabilities.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeGeoServerCapabilities.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeGeoServerCapabilities.test_capabilities">
+<code class="descname">test_capabilities</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeGeoServerCapabilities.test_capabilities" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test capabilities</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.integration.GeoNodeGeoServerSync">
+<em class="property">class </em><code class="descclassname">geonode.tests.integration.</code><code class="descname">GeoNodeGeoServerSync</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeGeoServerSync" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<p>Tests GeoNode/GeoServer syncronization</p>
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeGeoServerSync.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeGeoServerSync.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeGeoServerSync.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeGeoServerSync.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeGeoServerSync.test_set_attributes_from_geoserver">
+<code class="descname">test_set_attributes_from_geoserver</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeGeoServerSync.test_set_attributes_from_geoserver" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test attributes syncronization</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.integration.GeoNodeMapPrintTest">
+<em class="property">class </em><code class="descclassname">geonode.tests.integration.</code><code class="descname">GeoNodeMapPrintTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapPrintTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<p>Tests geonode.maps print</p>
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapPrintTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapPrintTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapPrintTest.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapPrintTest.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapPrintTest.testPrintProxy">
+<code class="descname">testPrintProxy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapPrintTest.testPrintProxy" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test the PrintProxyMiddleware if activated.
+It should respect the permissions on private layers.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.integration.GeoNodeMapTest">
+<em class="property">class </em><code class="descclassname">geonode.tests.integration.</code><code class="descname">GeoNodeMapTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<p>Tests geonode.maps app/module</p>
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_bad_shapefile">
+<code class="descname">test_bad_shapefile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_bad_shapefile" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verifying GeoNode complains about a shapefile without .prj</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_delete_layer">
+<code class="descname">test_delete_layer</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_delete_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that the ‘delete_layer’ pre_delete hook is functioning</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_empty_bbox">
+<code class="descname">test_empty_bbox</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_empty_bbox" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Regression-test for failures caused by zero-width bounding boxes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_extension_not_implemented">
+<code class="descname">test_extension_not_implemented</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_extension_not_implemented" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify a GeoNodeException is returned for not compatible extensions</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_geoserver_cascading_delete">
+<code class="descname">test_geoserver_cascading_delete</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_geoserver_cascading_delete" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that the helpers.cascading_delete() method is working properly</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_importlayer_mgmt_command">
+<code class="descname">test_importlayer_mgmt_command</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_importlayer_mgmt_command" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test layer import management command</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_keywords_upload">
+<code class="descname">test_keywords_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_keywords_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Check that keywords can be passed to file_upload</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_layer_delete_from_geoserver">
+<code class="descname">test_layer_delete_from_geoserver</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_layer_delete_from_geoserver" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that layer is correctly deleted from GeoServer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_layer_replace">
+<code class="descname">test_layer_replace</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_layer_replace" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test layer replace functionality</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_layer_upload">
+<code class="descname">test_layer_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_layer_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that layers can be uploaded to running GeoNode/GeoServer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_layer_upload_bbox">
+<code class="descname">test_layer_upload_bbox</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_layer_upload_bbox" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that the bbox format is correct</p>
+<p>Test that it is correctly saved in` database and represented in the
+properties correctly.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_layer_upload_metadata">
+<code class="descname">test_layer_upload_metadata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_layer_upload_metadata" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test uploading a layer with XML metadata</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_layer_zip_upload_metadata">
+<code class="descname">test_layer_zip_upload_metadata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_layer_zip_upload_metadata" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test uploading a layer with XML metadata</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_qgis_server_cascading_delete">
+<code class="descname">test_qgis_server_cascading_delete</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_qgis_server_cascading_delete" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that QGIS Server layer deleted and cascaded.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_raster_upload">
+<code class="descname">test_raster_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_raster_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that the wcs links are correctly created for a raster</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_repeated_upload">
+<code class="descname">test_repeated_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_repeated_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Upload the same file more than once</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_shapefile">
+<code class="descname">test_shapefile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_shapefile" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test Uploading a good shapefile</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_tiff">
+<code class="descname">test_tiff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_tiff" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Uploading a good .tiff</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeMapTest.test_zipped_files">
+<code class="descname">test_zipped_files</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeMapTest.test_zipped_files" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that the zipped files is created for raster.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.integration.GeoNodePermissionsTest">
+<em class="property">class </em><code class="descclassname">geonode.tests.integration.</code><code class="descname">GeoNodePermissionsTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodePermissionsTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<p>Tests GeoNode permissions and its integration with GeoServer</p>
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodePermissionsTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodePermissionsTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodePermissionsTest.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodePermissionsTest.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodePermissionsTest.test_unpublished">
+<code class="descname">test_unpublished</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodePermissionsTest.test_unpublished" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test permissions on an unpublished layer</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.integration.GeoNodeProxyTest">
+<em class="property">class </em><code class="descclassname">geonode.tests.integration.</code><code class="descname">GeoNodeProxyTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeProxyTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<p>Tests geonode.proxy app/module</p>
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeProxyTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeProxyTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeProxyTest.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeProxyTest.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.integration.GeoNodeThumbnailTest">
+<em class="property">class </em><code class="descclassname">geonode.tests.integration.</code><code class="descname">GeoNodeThumbnailTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeThumbnailTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<p>Tests thumbnails behavior for layers and maps.</p>
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeThumbnailTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeThumbnailTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeThumbnailTest.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeThumbnailTest.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeThumbnailTest.test_layer_thumbnail">
+<code class="descname">test_layer_thumbnail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeThumbnailTest.test_layer_thumbnail" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test the layer save method generates a thumbnail link</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.GeoNodeThumbnailTest.test_map_thumbnail">
+<code class="descname">test_map_thumbnail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.GeoNodeThumbnailTest.test_map_thumbnail" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test the map save method generates a thumbnail link</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.integration.LayersStylesApiInteractionTests">
+<em class="property">class </em><code class="descclassname">geonode.tests.integration.</code><code class="descname">LayersStylesApiInteractionTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.LayersStylesApiInteractionTests" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.test.ResourceTestCaseMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<p>Test Layers</p>
+<dl class="attribute">
+<dt id="geonode.tests.integration.LayersStylesApiInteractionTests.fixtures">
+<code class="descname">fixtures</code><em class="property"> = ['initial_data.json', 'bobby']</em><a class="headerlink" href="#geonode.tests.integration.LayersStylesApiInteractionTests.fixtures" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.LayersStylesApiInteractionTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.LayersStylesApiInteractionTests.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.LayersStylesApiInteractionTests.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.LayersStylesApiInteractionTests.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.LayersStylesApiInteractionTests.test_add_delete_styles">
+<code class="descname">test_add_delete_styles</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.LayersStylesApiInteractionTests.test_add_delete_styles" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Style API Add/Delete interaction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.LayersStylesApiInteractionTests.test_layer_interaction">
+<code class="descname">test_layer_interaction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.LayersStylesApiInteractionTests.test_layer_interaction" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Layer API interaction check.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.LayersStylesApiInteractionTests.test_style_interaction">
+<code class="descname">test_style_interaction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.LayersStylesApiInteractionTests.test_style_interaction" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Style API interaction check.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.integration.NormalUserTest">
+<em class="property">class </em><code class="descclassname">geonode.tests.integration.</code><code class="descname">NormalUserTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.NormalUserTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<p>Tests GeoNode functionality for non-administrative users</p>
+<dl class="method">
+<dt id="geonode.tests.integration.NormalUserTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.NormalUserTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.NormalUserTest.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.NormalUserTest.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.integration.NormalUserTest.test_layer_upload">
+<code class="descname">test_layer_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.NormalUserTest.test_layer_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Try uploading a layer and verify that the user can administrate
+his own layer despite not being a site administrator.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.tests.integration.zip_dir">
+<code class="descclassname">geonode.tests.integration.</code><code class="descname">zip_dir</code><span class="sig-paren">(</span><em>basedir</em>, <em>archivename</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.integration.zip_dir" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.tests.smoke">
+<span id="geonode-tests-smoke-module"></span><h2>geonode.tests.smoke module<a class="headerlink" href="#module-geonode.tests.smoke" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests">
+<em class="property">class </em><code class="descclassname">geonode.tests.smoke.</code><code class="descname">GeoNodeSmokeTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="attribute">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.GEOSERVER">
+<code class="descname">GEOSERVER</code><em class="property"> = False</em><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.GEOSERVER" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.fixtures">
+<code class="descname">fixtures</code><em class="property"> = ['people_data.json']</em><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.fixtures" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_csw_endpoint">
+<code class="descname">test_csw_endpoint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_csw_endpoint" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that the CSW endpoint is correctly configured.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_developer_page">
+<code class="descname">test_developer_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_developer_page" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test help page renders.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_help_page">
+<code class="descname">test_help_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_help_page" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test help page renders.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_home_page">
+<code class="descname">test_home_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_home_page" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test if the homepage renders.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_layer_acls">
+<code class="descname">test_layer_acls</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_layer_acls" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test if the data/acls endpoint renders.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_layer_page">
+<code class="descname">test_layer_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_layer_page" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test if the data home page renders.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_maps_page">
+<code class="descname">test_maps_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_maps_page" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test Maps page renders.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_new_map_page">
+<code class="descname">test_new_map_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_new_map_page" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test New Map page renders.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_opensearch_description">
+<code class="descname">test_opensearch_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_opensearch_description" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that the local OpenSearch endpoint is correctly configured.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_profile_list">
+<code class="descname">test_profile_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_profile_list" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test the profiles page renders.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeSmokeTests.test_profiles">
+<code class="descname">test_profiles</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeSmokeTests.test_profiles" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that user profile pages render.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.smoke.GeoNodeUtilsTests">
+<em class="property">class </em><code class="descclassname">geonode.tests.smoke.</code><code class="descname">GeoNodeUtilsTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeUtilsTests" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeUtilsTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeUtilsTests.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeUtilsTests.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeUtilsTests.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeUtilsTests.test_forward_mercator">
+<code class="descname">test_forward_mercator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeUtilsTests.test_forward_mercator" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeUtilsTests.test_inverse_mercator">
+<code class="descname">test_inverse_mercator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeUtilsTests.test_inverse_mercator" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.smoke.GeoNodeUtilsTests.test_split_query">
+<code class="descname">test_split_query</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.GeoNodeUtilsTests.test_split_query" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.smoke.PermissionViewTests">
+<em class="property">class </em><code class="descclassname">geonode.tests.smoke.</code><code class="descname">PermissionViewTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.smoke.PermissionViewTests" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.tests.test_user_messages">
+<span id="geonode-tests-test-user-messages-module"></span><h2>geonode.tests.test_user_messages module<a class="headerlink" href="#module-geonode.tests.test_user_messages" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.tests.test_user_messages.UserMessagesTestCase">
+<em class="property">class </em><code class="descclassname">geonode.tests.test_user_messages.</code><code class="descname">UserMessagesTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.test_user_messages.UserMessagesTestCase" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.tests.test_user_messages.UserMessagesTestCase.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.test_user_messages.UserMessagesTestCase.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.test_user_messages.UserMessagesTestCase.test_inbox_redirects_when_not_logged_in">
+<code class="descname">test_inbox_redirects_when_not_logged_in</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.test_user_messages.UserMessagesTestCase.test_inbox_redirects_when_not_logged_in" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.test_user_messages.UserMessagesTestCase.test_inbox_renders">
+<code class="descname">test_inbox_renders</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.test_user_messages.UserMessagesTestCase.test_inbox_renders" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.test_user_messages.UserMessagesTestCase.test_new_message_redirects_when_not_logged_in">
+<code class="descname">test_new_message_redirects_when_not_logged_in</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.test_user_messages.UserMessagesTestCase.test_new_message_redirects_when_not_logged_in" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.test_user_messages.UserMessagesTestCase.test_new_message_renders">
+<code class="descname">test_new_message_renders</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.test_user_messages.UserMessagesTestCase.test_new_message_renders" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.test_user_messages.UserMessagesTestCase.test_thread_detail_redirects_when_not_logged_in">
+<code class="descname">test_thread_detail_redirects_when_not_logged_in</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.test_user_messages.UserMessagesTestCase.test_thread_detail_redirects_when_not_logged_in" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.test_user_messages.UserMessagesTestCase.test_thread_detail_renders">
+<code class="descname">test_thread_detail_renders</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.test_user_messages.UserMessagesTestCase.test_thread_detail_renders" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.tests.utils">
+<span id="geonode-tests-utils-module"></span><h2>geonode.tests.utils module<a class="headerlink" href="#module-geonode.tests.utils" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.tests.utils.NotificationsTestsHelper">
+<em class="property">class </em><code class="descclassname">geonode.tests.utils.</code><code class="descname">NotificationsTestsHelper</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.utils.NotificationsTestsHelper" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Helper class for notification tests
+This provides:</p>
+<blockquote>
+<div><ul class="simple">
+<li></li>
+</ul>
+</div></blockquote>
+<dl class="method">
+<dt id="geonode.tests.utils.NotificationsTestsHelper.check_notification_out">
+<code class="descname">check_notification_out</code><span class="sig-paren">(</span><em>notification_name</em>, <em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.utils.NotificationsTestsHelper.check_notification_out" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Return True if user received notification</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.utils.NotificationsTestsHelper.clear_notifications_queue">
+<code class="descname">clear_notifications_queue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.utils.NotificationsTestsHelper.clear_notifications_queue" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.utils.NotificationsTestsHelper.setup_notifications_for">
+<code class="descname">setup_notifications_for</code><span class="sig-paren">(</span><em>notifications_list</em>, <em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.utils.NotificationsTestsHelper.setup_notifications_for" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.tests.utils.TestSetAttributes">
+<em class="property">class </em><code class="descclassname">geonode.tests.utils.</code><code class="descname">TestSetAttributes</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.utils.TestSetAttributes" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.tests.utils.TestSetAttributes.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.utils.TestSetAttributes.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.tests.utils.TestSetAttributes.test_set_attributes_creates_attributes">
+<code class="descname">test_set_attributes_creates_attributes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.utils.TestSetAttributes.test_set_attributes_creates_attributes" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test utility function set_attributes() which creates Attribute instances attached
+to a Layer instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.tests.utils.check_layer">
+<code class="descclassname">geonode.tests.utils.</code><code class="descname">check_layer</code><span class="sig-paren">(</span><em>uploaded</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.utils.check_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify if an object is a valid Layer.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.tests.utils.get_web_page">
+<code class="descclassname">geonode.tests.utils.</code><code class="descname">get_web_page</code><span class="sig-paren">(</span><em>url</em>, <em>username=None</em>, <em>password=None</em>, <em>login_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.tests.utils.get_web_page" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get url page possible with username and password.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.tests" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

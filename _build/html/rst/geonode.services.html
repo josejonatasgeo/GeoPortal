@@ -1,0 +1,908 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.services package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.services package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.services.admin">geonode.services.admin module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.apps">geonode.services.apps module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.enumerations">geonode.services.enumerations module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.forms">geonode.services.forms module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.models">geonode.services.models module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.signals">geonode.services.signals module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.tasks">geonode.services.tasks module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.tests">geonode.services.tests module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.urls">geonode.services.urls module</a></li>
+<li><a class="reference internal" href="#module-geonode.services.views">geonode.services.views module</a></li>
+<li><a class="reference internal" href="#module-geonode.services">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.services package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.services.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-services-package">
+<h1>geonode.services package<a class="headerlink" href="#geonode-services-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link permanente para este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="geonode.services.management.html">geonode.services.management package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.management.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.services.management.commands.html">geonode.services.management.commands package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.services.management.commands.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.services.management.commands.html#geonode-services-management-commands-importservice-module">geonode.services.management.commands.importservice module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.services.management.commands.html#geonode-services-management-commands-testservices-module">geonode.services.management.commands.testservices module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.services.management.commands.html#module-geonode.services.management.commands">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.management.html#module-geonode.services.management">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.services.migrations.html">geonode.services.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0025_harvestjob">geonode.services.migrations.0025_harvestjob module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0026_auto_20171130_0600">geonode.services.migrations.0026_auto_20171130_0600 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0027_harvestjob_details">geonode.services.migrations.0027_harvestjob_details module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0028_auto_20171201_0640">geonode.services.migrations.0028_auto_20171201_0640 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0029_auto_20171203_1624">geonode.services.migrations.0029_auto_20171203_1624 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0030_auto_20171212_0518">geonode.services.migrations.0030_auto_20171212_0518 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0031_auto_20180301_1947">geonode.services.migrations.0031_auto_20180301_1947 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0031_service_proxy_base">geonode.services.migrations.0031_service_proxy_base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0032_auto_20180302_0430">geonode.services.migrations.0032_auto_20180302_0430 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0033_merge">geonode.services.migrations.0033_merge module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0034_auto_20180309_0917">geonode.services.migrations.0034_auto_20180309_0917 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0035_auto_20180327_0846">geonode.services.migrations.0035_auto_20180327_0846 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.0036_auto_20180331_1039">geonode.services.migrations.0036_auto_20180331_1039 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations.24_initial">geonode.services.migrations.24_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.migrations.html#module-geonode.services.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.services.serviceprocessors.html">geonode.services.serviceprocessors package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.serviceprocessors.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.serviceprocessors.html#module-geonode.services.serviceprocessors.base">geonode.services.serviceprocessors.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.serviceprocessors.html#module-geonode.services.serviceprocessors.handler">geonode.services.serviceprocessors.handler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.serviceprocessors.html#module-geonode.services.serviceprocessors.wms">geonode.services.serviceprocessors.wms module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.services.serviceprocessors.html#module-geonode.services.serviceprocessors">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.services.admin">
+<span id="geonode-services-admin-module"></span><h2>geonode.services.admin module<a class="headerlink" href="#module-geonode.services.admin" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.admin.HarvestJobAdminInline">
+<em class="property">class </em><code class="descclassname">geonode.services.admin.</code><code class="descname">HarvestJobAdminInline</code><span class="sig-paren">(</span><em>parent_model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.admin.HarvestJobAdminInline" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.StackedInline</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.admin.HarvestJobAdminInline.extra">
+<code class="descname">extra</code><em class="property"> = 0</em><a class="headerlink" href="#geonode.services.admin.HarvestJobAdminInline.extra" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.HarvestJobAdminInline.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.services.admin.HarvestJobAdminInline.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.HarvestJobAdminInline.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.services.admin.HarvestJobAdminInline.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.services.models.HarvestJob" title="geonode.services.models.HarvestJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.services.models.HarvestJob</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.services.admin.ServiceAdmin">
+<em class="property">class </em><code class="descclassname">geonode.services.admin.</code><code class="descname">ServiceAdmin</code><span class="sig-paren">(</span><em>model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.admin.ServiceAdmin" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdmin.form">
+<code class="descname">form</code><a class="headerlink" href="#geonode.services.admin.ServiceAdmin.form" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.services.admin.ServiceAdminForm" title="geonode.services.admin.ServiceAdminForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">ServiceAdminForm</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdmin.inlines">
+<code class="descname">inlines</code><em class="property"> = (&lt;class 'geonode.services.admin.HarvestJobAdminInline'&gt;,)</em><a class="headerlink" href="#geonode.services.admin.ServiceAdmin.inlines" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ('id', 'name', 'type', 'method')</em><a class="headerlink" href="#geonode.services.admin.ServiceAdmin.list_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdmin.list_display_links">
+<code class="descname">list_display_links</code><em class="property"> = ('id', 'name')</em><a class="headerlink" href="#geonode.services.admin.ServiceAdmin.list_display_links" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdmin.list_filter">
+<code class="descname">list_filter</code><em class="property"> = ('type', 'method')</em><a class="headerlink" href="#geonode.services.admin.ServiceAdmin.list_filter" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.services.admin.ServiceAdmin.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.services.admin.ServiceAdminForm">
+<em class="property">class </em><code class="descclassname">geonode.services.admin.</code><code class="descname">ServiceAdminForm</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.admin.ServiceAdminForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="geonode.base.html#geonode.base.admin.ResourceBaseAdminForm" title="geonode.base.admin.ResourceBaseAdminForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.admin.ResourceBaseAdminForm</span></code></a></p>
+<dl class="class">
+<dt id="geonode.services.admin.ServiceAdminForm.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.services.admin.ServiceAdminForm.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdminForm.Meta.autocomplete_registry">
+<code class="descname">autocomplete_registry</code><em class="property"> = {'DocumentAutocomplete': &lt;class 'autocomplete_light.registry.DocumentAutocomplete'&gt;, 'GroupProfileAutocomplete': &lt;class 'autocomplete_light.registry.GroupProfileAutocomplete'&gt;, 'HierarchicalKeywordAutocomplete': &lt;class 'autocomplete_light.registry.HierarchicalKeywordAutocomplete'&gt;, 'LayerAutocomplete': &lt;class 'autocomplete_light.registry.LayerAutocomplete'&gt;, 'MapAutocomplete': &lt;class 'autocomplete_light.registry.MapAutocomplete'&gt;, 'ProfileAutocomplete': &lt;class 'autocomplete_light.registry.ProfileAutocomplete'&gt;, 'RegionAutocomplete': &lt;class 'autocomplete_light.registry.RegionAutocomplete'&gt;, 'ResourceBaseAutocomplete': &lt;class 'autocomplete_light.registry.ResourceBaseAutocomplete'&gt;}</em><a class="headerlink" href="#geonode.services.admin.ServiceAdminForm.Meta.autocomplete_registry" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdminForm.Meta.fields">
+<code class="descname">fields</code><em class="property"> = '__all__'</em><a class="headerlink" href="#geonode.services.admin.ServiceAdminForm.Meta.fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdminForm.Meta.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.services.admin.ServiceAdminForm.Meta.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.services.models.Service" title="geonode.services.models.Service"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.services.models.Service</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdminForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'access_constraints': &lt;django.forms.fields.CharField object&gt;, 'alternate': &lt;django.forms.fields.CharField object&gt;, 'api_key': &lt;django.forms.fields.CharField object&gt;, 'base_url': &lt;django.forms.fields.URLField object&gt;, 'bbox_x0': &lt;django.forms.fields.DecimalField object&gt;, 'bbox_x1': &lt;django.forms.fields.DecimalField object&gt;, 'bbox_y0': &lt;django.forms.fields.DecimalField object&gt;, 'bbox_y1': &lt;django.forms.fields.DecimalField object&gt;, 'category': &lt;django.forms.models.ModelChoiceField object&gt;, 'connection_params': &lt;django.forms.fields.CharField object&gt;, 'constraints_other': &lt;django.forms.fields.CharField object&gt;, 'contacts': &lt;django.forms.models.ModelMultipleChoiceField object&gt;, 'csw_anytext': &lt;django.forms.fields.CharField object&gt;, 'csw_mdsource': &lt;django.forms.fields.CharField object&gt;, 'csw_schema': &lt;django.forms.fields.CharField object&gt;, 'csw_type': &lt;django.forms.fields.TypedChoiceField object&gt;, 'csw_typename': &lt;django.forms.fields.CharField object&gt;, 'csw_wkt_geometry': &lt;django.forms.fields.CharField object&gt;, 'data_quality_statement': &lt;django.forms.fields.CharField object&gt;, 'date': &lt;django.forms.fields.DateTimeField object&gt;, 'date_type': &lt;django.forms.fields.TypedChoiceField object&gt;, 'description': &lt;django.forms.fields.CharField object&gt;, 'detail_url': &lt;django.forms.fields.CharField object&gt;, 'edition': &lt;django.forms.fields.CharField object&gt;, 'external_id': &lt;django.forms.fields.IntegerField object&gt;, 'featured': &lt;django.forms.fields.BooleanField object&gt;, 'fees': &lt;django.forms.fields.CharField object&gt;, 'first_noanswer': &lt;django.forms.fields.DateTimeField object&gt;, 'group': &lt;django.forms.models.ModelChoiceField object&gt;, 'is_approved': &lt;django.forms.fields.BooleanField object&gt;, 'is_published': &lt;django.forms.fields.BooleanField object&gt;, 'keywords': &lt;autocomplete_light.contrib.taggit_field.TaggitField object&gt;, 'language': &lt;django.forms.fields.TypedChoiceField object&gt;, 'license': &lt;django.forms.models.ModelChoiceField object&gt;, 'maintenance_frequency': &lt;django.forms.fields.TypedChoiceField object&gt;, 'metadata_uploaded': &lt;django.forms.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;django.forms.fields.BooleanField object&gt;, 'metadata_xml': &lt;django.forms.fields.CharField object&gt;, 'method': &lt;django.forms.fields.TypedChoiceField object&gt;, 'name': &lt;django.forms.fields.CharField object&gt;, 'noanswer_retries': &lt;django.forms.fields.IntegerField object&gt;, 'online_resource': &lt;django.forms.fields.URLField object&gt;, 'owner': &lt;django.forms.models.ModelChoiceField object&gt;, 'parent': &lt;django.forms.models.ModelChoiceField object&gt;, 'password': &lt;django.forms.fields.CharField object&gt;, 'popular_count': &lt;django.forms.fields.IntegerField object&gt;, 'profiles': &lt;django.forms.models.ModelMultipleChoiceField object&gt;, 'proxy_base': &lt;django.forms.fields.URLField object&gt;, 'purpose': &lt;django.forms.fields.CharField object&gt;, 'rating': &lt;django.forms.fields.IntegerField object&gt;, 'regions': &lt;django.forms.models.ModelMultipleChoiceField object&gt;, 'resources_ref': &lt;django.forms.fields.URLField object&gt;, 'restriction_code_type': &lt;django.forms.models.ModelChoiceField object&gt;, 'share_count': &lt;django.forms.fields.IntegerField object&gt;, 'spatial_representation_type': &lt;django.forms.models.ModelChoiceField object&gt;, 'srid': &lt;django.forms.fields.CharField object&gt;, 'store_ref': &lt;django.forms.fields.URLField object&gt;, 'supplemental_information': &lt;django.forms.fields.CharField object&gt;, 'temporal_extent_end': &lt;django.forms.fields.DateTimeField object&gt;, 'temporal_extent_start': &lt;django.forms.fields.DateTimeField object&gt;, 'thumbnail_url': &lt;django.forms.fields.CharField object&gt;, 'title': &lt;django.forms.fields.CharField object&gt;, 'tkeywords': &lt;django.forms.models.ModelMultipleChoiceField object&gt;, 'type': &lt;django.forms.fields.TypedChoiceField object&gt;, 'username': &lt;django.forms.fields.CharField object&gt;, 'uuid': &lt;django.forms.fields.CharField object&gt;, 'version': &lt;django.forms.fields.CharField object&gt;, 'workspace_ref': &lt;django.forms.fields.URLField object&gt;}</em><a class="headerlink" href="#geonode.services.admin.ServiceAdminForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdminForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'keywords': &lt;autocomplete_light.contrib.taggit_field.TaggitField object&gt;}</em><a class="headerlink" href="#geonode.services.admin.ServiceAdminForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.admin.ServiceAdminForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.services.admin.ServiceAdminForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.apps">
+<span id="geonode-services-apps-module"></span><h2>geonode.services.apps module<a class="headerlink" href="#module-geonode.services.apps" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.apps.ServicesAppConfig">
+<em class="property">class </em><code class="descclassname">geonode.services.apps.</code><code class="descname">ServicesAppConfig</code><span class="sig-paren">(</span><em>app_name</em>, <em>app_module</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.apps.ServicesAppConfig" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.notifications_helper.NotificationsAppConfigBase</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.apps.ServicesAppConfig.name">
+<code class="descname">name</code><em class="property"> = 'geonode.services'</em><a class="headerlink" href="#geonode.services.apps.ServicesAppConfig.name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.apps.ServicesAppConfig.ready">
+<code class="descname">ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.apps.ServicesAppConfig.ready" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Connect relevant signals to their corresponding handlers</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.enumerations">
+<span id="geonode-services-enumerations-module"></span><h2>geonode.services.enumerations module<a class="headerlink" href="#module-geonode.services.enumerations" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.services.forms">
+<span id="geonode-services-forms-module"></span><h2>geonode.services.forms module<a class="headerlink" href="#module-geonode.services.forms" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.forms.CreateServiceForm">
+<em class="property">class </em><code class="descclassname">geonode.services.forms.</code><code class="descname">CreateServiceForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.forms.CreateServiceForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<dl class="attribute">
+<dt id="geonode.services.forms.CreateServiceForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'type': &lt;django.forms.fields.ChoiceField object&gt;, 'url': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.services.forms.CreateServiceForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.forms.CreateServiceForm.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.forms.CreateServiceForm.clean" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Validates form fields that depend on each other</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.forms.CreateServiceForm.clean_url">
+<code class="descname">clean_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.forms.CreateServiceForm.clean_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.forms.CreateServiceForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'type': &lt;django.forms.fields.ChoiceField object&gt;, 'url': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.services.forms.CreateServiceForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.forms.CreateServiceForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.services.forms.CreateServiceForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.services.forms.ServiceForm">
+<em class="property">class </em><code class="descclassname">geonode.services.forms.</code><code class="descname">ServiceForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.forms.ServiceForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<dl class="class">
+<dt id="geonode.services.forms.ServiceForm.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.services.forms.ServiceForm.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.services.forms.ServiceForm.Meta.fields">
+<code class="descname">fields</code><em class="property"> = ('title', 'description', 'abstract', 'keywords')</em><a class="headerlink" href="#geonode.services.forms.ServiceForm.Meta.fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.forms.ServiceForm.Meta.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.services.forms.ServiceForm.Meta.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.services.models.Service" title="geonode.services.models.Service"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.services.models.Service</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.forms.ServiceForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'description': &lt;django.forms.fields.CharField object&gt;, 'keywords': &lt;taggit.forms.TagField object&gt;, 'title': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.services.forms.ServiceForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.forms.ServiceForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'description': &lt;django.forms.fields.CharField object&gt;, 'keywords': &lt;taggit.forms.TagField object&gt;, 'title': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.services.forms.ServiceForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.forms.ServiceForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.services.forms.ServiceForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.models">
+<span id="geonode-services-models-module"></span><h2>geonode.services.models module<a class="headerlink" href="#module-geonode.services.models" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.models.HarvestJob">
+<em class="property">class </em><code class="descclassname">geonode.services.models.</code><code class="descname">HarvestJob</code><span class="sig-paren">(</span><em>id</em>, <em>service</em>, <em>resource_id</em>, <em>status</em>, <em>details</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.HarvestJob" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<dl class="exception">
+<dt id="geonode.services.models.HarvestJob.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.services.models.HarvestJob.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.services.models.HarvestJob.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.services.models.HarvestJob.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.models.HarvestJob.get_status_display">
+<code class="descname">get_status_display</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.HarvestJob.get_status_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.HarvestJob.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#geonode.services.models.HarvestJob.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.HarvestJob.service">
+<code class="descname">service</code><a class="headerlink" href="#geonode.services.models.HarvestJob.service" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.models.HarvestJob.update_status">
+<code class="descname">update_status</code><span class="sig-paren">(</span><em>status</em>, <em>details=''</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.HarvestJob.update_status" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.services.models.Service">
+<em class="property">class </em><code class="descclassname">geonode.services.models.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.Service" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="geonode.base.html#geonode.base.models.ResourceBase" title="geonode.base.models.ResourceBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.ResourceBase</span></code></a></p>
+<p>Service Class to represent remote Geo Web Services</p>
+<dl class="exception">
+<dt id="geonode.services.models.Service.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.services.models.Service.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.DoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.services.models.Service.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.services.models.Service.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.action_object_actions">
+<code class="descname">action_object_actions</code><a class="headerlink" href="#geonode.services.models.Service.action_object_actions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple “remote” values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+“article.publications”, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.actor_actions">
+<code class="descname">actor_actions</code><a class="headerlink" href="#geonode.services.models.Service.actor_actions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple “remote” values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+“article.publications”, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.base_objects">
+<code class="descname">base_objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#geonode.services.models.Service.base_objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.models.Service.get_absolute_url">
+<code class="descname">get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.Service.get_absolute_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.models.Service.get_method_display">
+<code class="descname">get_method_display</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.Service.get_method_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.models.Service.get_next_by_created">
+<code class="descname">get_next_by_created</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.Service.get_next_by_created" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.models.Service.get_next_by_last_updated">
+<code class="descname">get_next_by_last_updated</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.Service.get_next_by_last_updated" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.models.Service.get_previous_by_created">
+<code class="descname">get_previous_by_created</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.Service.get_previous_by_created" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.models.Service.get_previous_by_last_updated">
+<code class="descname">get_previous_by_last_updated</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.Service.get_previous_by_last_updated" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.models.Service.get_type_display">
+<code class="descname">get_type_display</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.Service.get_type_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.harvestjob_set">
+<code class="descname">harvestjob_set</code><a class="headerlink" href="#geonode.services.models.Service.harvestjob_set" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.layer_set">
+<code class="descname">layer_set</code><a class="headerlink" href="#geonode.services.models.Service.layer_set" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.objects">
+<code class="descname">objects</code><em class="property"> = &lt;geonode.base.models.ResourceBaseManager object&gt;</em><a class="headerlink" href="#geonode.services.models.Service.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.parent">
+<code class="descname">parent</code><a class="headerlink" href="#geonode.services.models.Service.parent" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.polymorphic_primary_key_name">
+<code class="descname">polymorphic_primary_key_name</code><em class="property"> = u'id'</em><a class="headerlink" href="#geonode.services.models.Service.polymorphic_primary_key_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.polymorphic_super_sub_accessors_replaced">
+<code class="descname">polymorphic_super_sub_accessors_replaced</code><em class="property"> = False</em><a class="headerlink" href="#geonode.services.models.Service.polymorphic_super_sub_accessors_replaced" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.probe">
+<code class="descname">probe</code><a class="headerlink" href="#geonode.services.models.Service.probe" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.profiles">
+<code class="descname">profiles</code><a class="headerlink" href="#geonode.services.models.Service.profiles" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.ptype">
+<code class="descname">ptype</code><a class="headerlink" href="#geonode.services.models.Service.ptype" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.resourcebase_ptr">
+<code class="descname">resourcebase_ptr</code><a class="headerlink" href="#geonode.services.models.Service.resourcebase_ptr" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.service_set">
+<code class="descname">service_set</code><a class="headerlink" href="#geonode.services.models.Service.service_set" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.service_type">
+<code class="descname">service_type</code><a class="headerlink" href="#geonode.services.models.Service.service_type" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.service_url">
+<code class="descname">service_url</code><a class="headerlink" href="#geonode.services.models.Service.service_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.serviceprofilerole_set">
+<code class="descname">serviceprofilerole_set</code><a class="headerlink" href="#geonode.services.models.Service.serviceprofilerole_set" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.Service.target_actions">
+<code class="descname">target_actions</code><a class="headerlink" href="#geonode.services.models.Service.target_actions" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple “remote” values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+“article.publications”, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.services.models.ServiceProfileRole">
+<em class="property">class </em><code class="descclassname">geonode.services.models.</code><code class="descname">ServiceProfileRole</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.ServiceProfileRole" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>ServiceProfileRole is an intermediate model to bind Profiles and Services and apply roles.</p>
+<dl class="exception">
+<dt id="geonode.services.models.ServiceProfileRole.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.services.models.ServiceProfileRole.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.services.models.ServiceProfileRole.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.services.models.ServiceProfileRole.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.models.ServiceProfileRole.get_role_display">
+<code class="descname">get_role_display</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.models.ServiceProfileRole.get_role_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.ServiceProfileRole.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#geonode.services.models.ServiceProfileRole.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.ServiceProfileRole.profiles">
+<code class="descname">profiles</code><a class="headerlink" href="#geonode.services.models.ServiceProfileRole.profiles" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.services.models.ServiceProfileRole.service">
+<code class="descname">service</code><a class="headerlink" href="#geonode.services.models.ServiceProfileRole.service" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.signals">
+<span id="geonode-services-signals-module"></span><h2>geonode.services.signals module<a class="headerlink" href="#module-geonode.services.signals" title="Link permanente para este título">¶</a></h2>
+<p>signal handlers for geonode.services</p>
+<dl class="function">
+<dt id="geonode.services.signals.post_save_service">
+<code class="descclassname">geonode.services.signals.</code><code class="descname">post_save_service</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>created</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.signals.post_save_service" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.services.signals.remove_harvest_job">
+<code class="descclassname">geonode.services.signals.</code><code class="descname">remove_harvest_job</code><span class="sig-paren">(</span><em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.signals.remove_harvest_job" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Remove a Layer’s harvest job so that it may be re-imported later.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.tasks">
+<span id="geonode-services-tasks-module"></span><h2>geonode.services.tasks module<a class="headerlink" href="#module-geonode.services.tasks" title="Link permanente para este título">¶</a></h2>
+<p>Celery tasks for geonode.services</p>
+</div>
+<div class="section" id="module-geonode.services.tests">
+<span id="geonode-services-tests-module"></span><h2>geonode.services.tests module<a class="headerlink" href="#module-geonode.services.tests" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.services.tests.ModuleFunctionsTestCase">
+<em class="property">class </em><code class="descclassname">geonode.services.tests.</code><code class="descname">ModuleFunctionsTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.ModuleFunctionsTestCase" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.services.tests.ModuleFunctionsTestCase.test_get_cascading_workspace_creates_new_workspace">
+<code class="descname">test_get_cascading_workspace_creates_new_workspace</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.ModuleFunctionsTestCase.test_get_cascading_workspace_creates_new_workspace" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.ModuleFunctionsTestCase.test_get_cascading_workspace_returns_existing">
+<code class="descname">test_get_cascading_workspace_returns_existing</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.ModuleFunctionsTestCase.test_get_cascading_workspace_returns_existing" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.ModuleFunctionsTestCase.test_get_service_handler_wms">
+<code class="descname">test_get_service_handler_wms</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.ModuleFunctionsTestCase.test_get_service_handler_wms" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase">
+<em class="property">class </em><code class="descclassname">geonode.services.tests.</code><code class="descname">WmsServiceHandlerTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_create_geonode_service">
+<code class="descname">test_create_geonode_service</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_create_geonode_service" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_detects_cascaded_service">
+<code class="descname">test_detects_cascaded_service</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_detects_cascaded_service" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_detects_indexed_service">
+<code class="descname">test_detects_indexed_service</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_detects_indexed_service" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_does_not_offer_geonode_projection">
+<code class="descname">test_does_not_offer_geonode_projection</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_does_not_offer_geonode_projection" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_get_keywords">
+<code class="descname">test_get_keywords</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_get_keywords" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_get_resource">
+<code class="descname">test_get_resource</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_get_resource" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_get_resources">
+<code class="descname">test_get_resources</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_get_resources" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_get_store">
+<code class="descname">test_get_store</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_get_store" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_has_correct_service_type">
+<code class="descname">test_has_correct_service_type</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_has_correct_service_type" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_has_correct_url">
+<code class="descname">test_has_correct_url</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_has_correct_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_has_valid_name_when_no_title_exists">
+<code class="descname">test_has_valid_name_when_no_title_exists</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_has_valid_name_when_no_title_exists" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_has_valid_name_when_title_exists">
+<code class="descname">test_has_valid_name_when_title_exists</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_has_valid_name_when_title_exists" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.services.tests.WmsServiceHandlerTestCase.test_offers_geonode_projection">
+<code class="descname">test_offers_geonode_projection</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.tests.WmsServiceHandlerTestCase.test_offers_geonode_projection" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services.urls">
+<span id="geonode-services-urls-module"></span><h2>geonode.services.urls module<a class="headerlink" href="#module-geonode.services.urls" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.services.views">
+<span id="geonode-services-views-module"></span><h2>geonode.services.views module<a class="headerlink" href="#module-geonode.services.views" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.services.views.edit_service">
+<code class="descclassname">geonode.services.views.</code><code class="descname">edit_service</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.views.edit_service" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Edit an existing Service</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.services.views.harvest_resources">
+<code class="descclassname">geonode.services.views.</code><code class="descname">harvest_resources</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.views.harvest_resources" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.services.views.harvest_single_resource">
+<code class="descclassname">geonode.services.views.</code><code class="descname">harvest_single_resource</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.views.harvest_single_resource" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.services.views.register_service">
+<code class="descclassname">geonode.services.views.</code><code class="descname">register_service</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.views.register_service" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.services.views.remove_service">
+<code class="descclassname">geonode.services.views.</code><code class="descname">remove_service</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.views.remove_service" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Delete a service and its constituent layers</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.services.views.rescan_service">
+<code class="descclassname">geonode.services.views.</code><code class="descname">rescan_service</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.views.rescan_service" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.services.views.service_detail">
+<code class="descclassname">geonode.services.views.</code><code class="descname">service_detail</code><span class="sig-paren">(</span><em>request</em>, <em>service_id</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.views.service_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This view shows the details of a service</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.services.views.service_proxy">
+<code class="descclassname">geonode.services.views.</code><code class="descname">service_proxy</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.views.service_proxy" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.services.views.services">
+<code class="descclassname">geonode.services.views.</code><code class="descname">services</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.services.views.services" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This view shows the list of all registered services</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.services">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.services" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

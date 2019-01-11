@@ -1,0 +1,47 @@
+<md-dialog aria-label="Zoom Controlers">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Configurações do Zoom</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <i class="material-icons">limpar</i>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <div layout="row" layout-align="center center" style="margin-bottom: 10px">{{ message }}</div>
+                <form name="myForm" role="form">
+                    <div layout-gt-xs="row">
+                        <div layout="row" layout-align="start" flex>
+                            <md-input-container flex="50">
+                                <label>duração</label>
+                                <input type="number" ng-model="zoom_config.duration"
+                                       name="duration" required/>
+                            </md-input-container>
+                            <md-input-container flex="50">
+                                <label>Aumentar Zoom</label>
+                                <input type="text" ng-model="zoom_config.zoomInTipLabel"
+                                       name="zoomInTipLabel" required/>
+                            </md-input-container>
+                            <md-input-container flex="50">
+                                <label>delta</label>
+                                <input type=number step=0.1 ng-model="zoom_config.delta"
+                                       name="delta" required/>
+                            </md-input-container>
+                            <md-input-container flex="50">
+                                <label>Diminuir Zoom</label>
+                                <input type="text" ng-model="zoom_config.zoomOutTipLabel"
+                                       name="zoomInTipLabel" required/>
+                            </md-input-container>
+                        </div>
+                    </div>
+                    <md-button ng-click="answer(zoom_config)" class="md-raised md-primary">Confirmar</md-button>
+                </form>
+            </div>
+
+        </md-dialog-content>
+    </form>
+</md-dialog>

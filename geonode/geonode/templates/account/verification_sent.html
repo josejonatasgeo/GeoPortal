@@ -1,0 +1,16 @@
+{% extends "account/base.html.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Verificar endereço de e-mail" %}{% endblock %}
+
+{% block body %}
+
+<div class="page-header">
+  <h2>{% trans "Verificar endereço de e-mail" %}</h2>
+</div>
+
+<p>{% blocktrans %}Enviamos um e-mail para verificação. Segue o
+      link fornecido para finalizar o processo de inscrição. Por favor entre em contato conosco se
+      não recebê-lo em poucos minutos{% endblocktrans %}</p>
+{% endblock %}

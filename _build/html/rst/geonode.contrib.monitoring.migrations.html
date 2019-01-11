@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.contrib.monitoring.migrations package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.contrib.monitoring.migrations package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0001_monitoring_init">geonode.contrib.monitoring.migrations.0001_monitoring_init module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0002_monitoring_update">geonode.contrib.monitoring.migrations.0002_monitoring_update module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0003_monitoring_resources">geonode.contrib.monitoring.migrations.0003_monitoring_resources module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0004_monitoring_metric_type">geonode.contrib.monitoring.migrations.0004_monitoring_metric_type module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0005_monitoring_ows_service">geonode.contrib.monitoring.migrations.0005_monitoring_ows_service module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0006_monitoring_path_text">geonode.contrib.monitoring.migrations.0006_monitoring_path_text module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0007_monitoring_exception_message">geonode.contrib.monitoring.migrations.0007_monitoring_exception_message module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check">geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0009_sample_count">geonode.contrib.monitoring.migrations.0009_sample_count module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0010_metric_unit">geonode.contrib.monitoring.migrations.0010_metric_unit module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0011_notification_def">geonode.contrib.monitoring.migrations.0011_notification_def module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0012_notifications_service">geonode.contrib.monitoring.migrations.0012_notifications_service module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0013_notifications_def_description">geonode.contrib.monitoring.migrations.0013_notifications_def_description module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0014_notifications_emails">geonode.contrib.monitoring.migrations.0014_notifications_emails module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0015_notification_grace_period">geonode.contrib.monitoring.migrations.0015_notification_grace_period module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0016_notification_severity">geonode.contrib.monitoring.migrations.0016_notification_severity module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0017_monitoring_notification_active">geonode.contrib.monitoring.migrations.0017_monitoring_notification_active module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0018_notification_check_def">geonode.contrib.monitoring.migrations.0018_notification_check_def module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0019_notification_check_def_link">geonode.contrib.monitoring.migrations.0019_notification_check_def_link module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0020_metric_description">geonode.contrib.monitoring.migrations.0020_metric_description module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations.0021_auto_20180301_0932">geonode.contrib.monitoring.migrations.0021_auto_20180301_0932 module</a></li>
+<li><a class="reference internal" href="#module-geonode.contrib.monitoring.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.contrib.monitoring.migrations package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.contrib.monitoring.migrations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-contrib-monitoring-migrations-package">
+<h1>geonode.contrib.monitoring.migrations package<a class="headerlink" href="#geonode-contrib-monitoring-migrations-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0001_monitoring_init">
+<span id="geonode-contrib-monitoring-migrations-0001-monitoring-init-module"></span><h2>geonode.contrib.monitoring.migrations.0001_monitoring_init module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0001_monitoring_init" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0001_monitoring_init.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0001_monitoring_init.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0001_monitoring_init.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0001_monitoring_init.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = []</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0001_monitoring_init.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0001_monitoring_init.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'created', &lt;django.db.models.fields.DateTimeField&gt;), (u'received', &lt;django.db.models.fields.DateTimeField&gt;), (u'error_type', &lt;django.db.models.fields.CharField&gt;), (u'error_data', &lt;django.db.models.fields.TextField&gt;)], name=u'ExceptionEvent'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'name', &lt;django.db.models.fields.CharField&gt;), (u'ip', &lt;django.db.models.fields.GenericIPAddressField&gt;), (u'active', &lt;django.db.models.fields.BooleanField&gt;)], name=u'Host'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'name', &lt;django.db.models.fields.CharField&gt;)], name=u'Metric'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'name', &lt;django.db.models.fields.TextField&gt;)], name=u'MetricLabel'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'valid_from', &lt;django.db.models.fields.DateTimeField&gt;), (u'valid_to', &lt;django.db.models.fields.DateTimeField&gt;), (u'value', &lt;django.db.models.fields.CharField&gt;), (u'value_num', &lt;django.db.models.fields.DecimalField&gt;), (u'value_raw', &lt;django.db.models.fields.TextField&gt;), (u'data', &lt;jsonfield.fields.JSONField&gt;), (u'label', &lt;django.db.models.fields.related.ForeignKey&gt;)], name=u'MetricValue'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'name', &lt;django.db.models.fields.CharField&gt;), (u'type', &lt;django.db.models.fields.CharField&gt;)], name=u'MonitoredResource'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'created', &lt;django.db.models.fields.DateTimeField&gt;), (u'received', &lt;django.db.models.fields.DateTimeField&gt;), (u'ows_type', &lt;django.db.models.fields.CharField&gt;), (u'host', &lt;django.db.models.fields.CharField&gt;), (u'request_path', &lt;django.db.models.fields.CharField&gt;), (u'resources', &lt;django.db.models.fields.TextField&gt;), (u'request_method', &lt;django.db.models.fields.CharField&gt;), (u'response_status', &lt;django.db.models.fields.PositiveIntegerField&gt;), (u'response_size', &lt;django.db.models.fields.PositiveIntegerField&gt;), (u'response_time', &lt;django.db.models.fields.PositiveIntegerField&gt;), (u'response_type', &lt;django.db.models.fields.CharField&gt;), (u'user_agent', &lt;django.db.models.fields.CharField&gt;), (u'user_agent_family', &lt;django.db.models.fields.CharField&gt;), (u'client_ip', &lt;django.db.models.fields.GenericIPAddressField&gt;), (u'client_lat', &lt;django.db.models.fields.DecimalField&gt;), (u'client_lon', &lt;django.db.models.fields.DecimalField&gt;), (u'client_country', &lt;django.db.models.fields.CharField&gt;), (u'client_region', &lt;django.db.models.fields.CharField&gt;), (u'client_city', &lt;django.db.models.fields.CharField&gt;), (u'custom_id', &lt;django.db.models.fields.CharField&gt;)], name=u'RequestEvent'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'name', &lt;django.db.models.fields.CharField&gt;), (u'check_interval', &lt;django.db.models.fields.DurationField&gt;), (u'last_check', &lt;django.db.models.fields.DateTimeField&gt;), (u'active', &lt;django.db.models.fields.BooleanField&gt;), (u'notes', &lt;django.db.models.fields.TextField&gt;), (u'url', &lt;django.db.models.fields.URLField&gt;), (u'host', &lt;django.db.models.fields.related.ForeignKey&gt;)], name=u'Service'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'name', &lt;django.db.models.fields.CharField&gt;)], name=u'ServiceType'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'metric', &lt;django.db.models.fields.related.ForeignKey&gt;), (u'service_type', &lt;django.db.models.fields.related.ForeignKey&gt;)], name=u'ServiceTypeMetric'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'service_type', model_name=u'service'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'service', model_name=u'requestevent'&gt;, &lt;AlterUniqueTogether  unique_together=set([(u'name', u'type')]), name=u'monitoredresource'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'resource', model_name=u'metricvalue'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'service', model_name=u'metricvalue'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'service_metric', model_name=u'metricvalue'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'request', model_name=u'exceptionevent'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'service', model_name=u'exceptionevent'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0001_monitoring_init.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0002_monitoring_update">
+<span id="geonode-contrib-monitoring-migrations-0002-monitoring-update-module"></span><h2>geonode.contrib.monitoring.migrations.0002_monitoring_update module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0002_monitoring_update" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0002_monitoring_update.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0002_monitoring_update.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0002_monitoring_update.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0002_monitoring_update.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0001_monitoring_init')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0002_monitoring_update.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0002_monitoring_update.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AlterUniqueTogether  unique_together=set([(u'valid_from', u'valid_to', u'service', u'service_metric', u'resource', u'label')]), name=u'metricvalue'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0002_monitoring_update.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0003_monitoring_resources">
+<span id="geonode-contrib-monitoring-migrations-0003-monitoring-resources-module"></span><h2>geonode.contrib.monitoring.migrations.0003_monitoring_resources module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0003_monitoring_resources" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0003_monitoring_resources.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0003_monitoring_resources.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0003_monitoring_resources.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0003_monitoring_resources.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0002_monitoring_update')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0003_monitoring_resources.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0003_monitoring_resources.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;RemoveField  name=u'resources', model_name=u'requestevent'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ManyToManyField&gt;, name=u'resources', model_name=u'requestevent'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0003_monitoring_resources.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0004_monitoring_metric_type">
+<span id="geonode-contrib-monitoring-migrations-0004-monitoring-metric-type-module"></span><h2>geonode.contrib.monitoring.migrations.0004_monitoring_metric_type module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0004_monitoring_metric_type" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0004_monitoring_metric_type.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0004_monitoring_metric_type.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0004_monitoring_metric_type.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0004_monitoring_metric_type.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0003_monitoring_resources')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0004_monitoring_metric_type.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0004_monitoring_metric_type.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.CharField&gt;, name=u'type', model_name=u'metric'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'request', model_name=u'exceptionevent'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'resource', model_name=u'metricvalue'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.related.ManyToManyField&gt;, name=u'resources', model_name=u'requestevent'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'metric', model_name=u'servicetypemetric'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'service_type', model_name=u'servicetypemetric'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0004_monitoring_metric_type.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0005_monitoring_ows_service">
+<span id="geonode-contrib-monitoring-migrations-0005-monitoring-ows-service-module"></span><h2>geonode.contrib.monitoring.migrations.0005_monitoring_ows_service module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0005_monitoring_ows_service" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0005_monitoring_ows_service.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0005_monitoring_ows_service.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0005_monitoring_ows_service.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0005_monitoring_ows_service.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0004_monitoring_metric_type')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0005_monitoring_ows_service.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0005_monitoring_ows_service.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'name', &lt;django.db.models.fields.CharField&gt;)], name=u'OWSService'&gt;, &lt;RemoveField  name=u'ows_type', model_name=u'requestevent'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'label', model_name=u'metricvalue'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'ows_service', model_name=u'metricvalue'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'ows_service', model_name=u'requestevent'&gt;, &lt;AlterUniqueTogether  unique_together=set([(u'valid_from', u'valid_to', u'service', u'service_metric', u'resource', u'label', u'ows_service')]), name=u'metricvalue'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0005_monitoring_ows_service.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0006_monitoring_path_text">
+<span id="geonode-contrib-monitoring-migrations-0006-monitoring-path-text-module"></span><h2>geonode.contrib.monitoring.migrations.0006_monitoring_path_text module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0006_monitoring_path_text" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0006_monitoring_path_text.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0006_monitoring_path_text.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0006_monitoring_path_text.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0006_monitoring_path_text.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0005_monitoring_ows_service')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0006_monitoring_path_text.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0006_monitoring_path_text.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AlterField  field=&lt;django.db.models.fields.TextField&gt;, name=u'request_path', model_name=u'requestevent'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0006_monitoring_path_text.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0007_monitoring_exception_message">
+<span id="geonode-contrib-monitoring-migrations-0007-monitoring-exception-message-module"></span><h2>geonode.contrib.monitoring.migrations.0007_monitoring_exception_message module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0007_monitoring_exception_message" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0007_monitoring_exception_message.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0007_monitoring_exception_message.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0007_monitoring_exception_message.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0007_monitoring_exception_message.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0006_monitoring_path_text')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0007_monitoring_exception_message.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0007_monitoring_exception_message.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.CharField&gt;, name=u'error_message', model_name=u'exceptionevent'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0007_monitoring_exception_message.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check">
+<span id="geonode-contrib-monitoring-migrations-0008-monitoring-notifications-check-module"></span><h2>geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'people', u'__first__'), (u'monitoring', u'0007_monitoring_exception_message')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'min_value', &lt;django.db.models.fields.DecimalField&gt;), (u'max_value', &lt;django.db.models.fields.DecimalField&gt;), (u'max_timeout', &lt;django.db.models.fields.DurationField&gt;), (u'active', &lt;django.db.models.fields.BooleanField&gt;), (u'label', &lt;django.db.models.fields.related.ForeignKey&gt;), (u'metric', &lt;django.db.models.fields.related.ForeignKey&gt;)], name=u'MetricNotificationCheck'&gt;, &lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'name', &lt;django.db.models.fields.CharField&gt;), (u'description', &lt;django.db.models.fields.CharField&gt;), (u'user_threshold', &lt;jsonfield.fields.JSONField&gt;)], name=u'NotificationCheck'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'notification_check', model_name=u'metricnotificationcheck'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'ows_service', model_name=u'metricnotificationcheck'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'resource', model_name=u'metricnotificationcheck'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'service', model_name=u'metricnotificationcheck'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'user', model_name=u'metricnotificationcheck'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0008_monitoring_notifications_check.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0009_sample_count">
+<span id="geonode-contrib-monitoring-migrations-0009-sample-count-module"></span><h2>geonode.contrib.monitoring.migrations.0009_sample_count module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0009_sample_count" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0009_sample_count.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0009_sample_count.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0009_sample_count.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0009_sample_count.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0008_monitoring_notifications_check')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0009_sample_count.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0009_sample_count.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.PositiveIntegerField&gt;, name=u'samples_count', model_name=u'metricvalue'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0009_sample_count.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0010_metric_unit">
+<span id="geonode-contrib-monitoring-migrations-0010-metric-unit-module"></span><h2>geonode.contrib.monitoring.migrations.0010_metric_unit module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0010_metric_unit" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0010_metric_unit.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0010_metric_unit.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0010_metric_unit.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0010_metric_unit.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0009_sample_count')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0010_metric_unit.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0010_metric_unit.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.CharField&gt;, name=u'unit', model_name=u'metric'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'ows_service', model_name=u'metricvalue'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.CharField&gt;, name=u'name', model_name=u'owsservice'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0010_metric_unit.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0011_notification_def">
+<span id="geonode-contrib-monitoring-migrations-0011-notification-def-module"></span><h2>geonode.contrib.monitoring.migrations.0011_notification_def module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0011_notification_def" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0011_notification_def.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0011_notification_def.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0011_notification_def.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0011_notification_def.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0010_metric_unit')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0011_notification_def.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0011_notification_def.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'use_service', &lt;django.db.models.fields.BooleanField&gt;), (u'use_resource', &lt;django.db.models.fields.BooleanField&gt;), (u'use_label', &lt;django.db.models.fields.BooleanField&gt;), (u'use_ows_service', &lt;django.db.models.fields.BooleanField&gt;), (u'field_option', &lt;django.db.models.fields.CharField&gt;)], name=u'NotificationMetricDefinition'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.CharField&gt;, name=u'unit', model_name=u'metric'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'user', model_name=u'metricnotificationcheck'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'metric', model_name=u'notificationmetricdefinition'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'notification_check', model_name=u'notificationmetricdefinition'&gt;, &lt;AddField  field=&lt;django.db.models.fields.related.ManyToManyField&gt;, name=u'metrics', model_name=u'notificationcheck'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0011_notification_def.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0012_notifications_service">
+<span id="geonode-contrib-monitoring-migrations-0012-notifications-service-module"></span><h2>geonode.contrib.monitoring.migrations.0012_notifications_service module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0012_notifications_service" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0012_notifications_service.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0012_notifications_service.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0012_notifications_service.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0012_notifications_service.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0011_notification_def')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0012_notifications_service.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0012_notifications_service.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AlterField  field=&lt;django.db.models.fields.CharField&gt;, name=u'type', model_name=u'metric'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'service', model_name=u'metricnotificationcheck'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0012_notifications_service.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0013_notifications_def_description">
+<span id="geonode-contrib-monitoring-migrations-0013-notifications-def-description-module"></span><h2>geonode.contrib.monitoring.migrations.0013_notifications_def_description module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0013_notifications_def_description" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0013_notifications_def_description.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0013_notifications_def_description.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0013_notifications_def_description.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0013_notifications_def_description.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0012_notifications_service')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0013_notifications_def_description.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0013_notifications_def_description.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.TextField&gt;, name=u'description', model_name=u'notificationmetricdefinition'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0013_notifications_def_description.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0014_notifications_emails">
+<span id="geonode-contrib-monitoring-migrations-0014-notifications-emails-module"></span><h2>geonode.contrib.monitoring.migrations.0014_notifications_emails module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0014_notifications_emails" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0014_notifications_emails.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0014_notifications_emails.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0014_notifications_emails.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0014_notifications_emails.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'people', u'__first__'), (u'monitoring', u'0013_notifications_def_description')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0014_notifications_emails.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0014_notifications_emails.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;CreateModel  fields=[(u'id', &lt;django.db.models.fields.AutoField&gt;), (u'email', &lt;django.db.models.fields.EmailField&gt;), (u'notification_check', &lt;django.db.models.fields.related.ForeignKey&gt;), (u'user', &lt;django.db.models.fields.related.ForeignKey&gt;)], name=u'NotificationReceiver'&gt;, &lt;RemoveField  name=u'user', model_name=u'metricnotificationcheck'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0014_notifications_emails.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0015_notification_grace_period">
+<span id="geonode-contrib-monitoring-migrations-0015-notification-grace-period-module"></span><h2>geonode.contrib.monitoring.migrations.0015_notification_grace_period module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0015_notification_grace_period" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0015_notification_grace_period.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0015_notification_grace_period.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0015_notification_grace_period.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0015_notification_grace_period.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0014_notifications_emails')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0015_notification_grace_period.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0015_notification_grace_period.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.DurationField&gt;, name=u'grace_period', model_name=u'notificationcheck'&gt;, &lt;AddField  field=&lt;django.db.models.fields.DateTimeField&gt;, name=u'last_send', model_name=u'notificationcheck'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.related.ForeignKey&gt;, name=u'metric', model_name=u'notificationmetricdefinition'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0015_notification_grace_period.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0016_notification_severity">
+<span id="geonode-contrib-monitoring-migrations-0016-notification-severity-module"></span><h2>geonode.contrib.monitoring.migrations.0016_notification_severity module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0016_notification_severity" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0016_notification_severity.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0016_notification_severity.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0016_notification_severity.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0016_notification_severity.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0015_notification_grace_period')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0016_notification_severity.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0016_notification_severity.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.CharField&gt;, name=u'severity', model_name=u'notificationcheck'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0016_notification_severity.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0017_monitoring_notification_active">
+<span id="geonode-contrib-monitoring-migrations-0017-monitoring-notification-active-module"></span><h2>geonode.contrib.monitoring.migrations.0017_monitoring_notification_active module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0017_monitoring_notification_active" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0017_monitoring_notification_active.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0017_monitoring_notification_active.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0017_monitoring_notification_active.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0017_monitoring_notification_active.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0016_notification_severity')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0017_monitoring_notification_active.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0017_monitoring_notification_active.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.BooleanField&gt;, name=u'active', model_name=u'notificationcheck'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0017_monitoring_notification_active.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0018_notification_check_def">
+<span id="geonode-contrib-monitoring-migrations-0018-notification-check-def-module"></span><h2>geonode.contrib.monitoring.migrations.0018_notification_check_def module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0018_notification_check_def" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0018_notification_check_def.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0018_notification_check_def.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0018_notification_check_def.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0018_notification_check_def.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0017_monitoring_notification_active')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0018_notification_check_def.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0018_notification_check_def.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.DecimalField&gt;, name=u'max_value', model_name=u'notificationmetricdefinition'&gt;, &lt;AddField  field=&lt;django.db.models.fields.DecimalField&gt;, name=u'min_value', model_name=u'notificationmetricdefinition'&gt;, &lt;AddField  field=&lt;django.db.models.fields.PositiveIntegerField&gt;, name=u'steps', model_name=u'notificationmetricdefinition'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0018_notification_check_def.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0019_notification_check_def_link">
+<span id="geonode-contrib-monitoring-migrations-0019-notification-check-def-link-module"></span><h2>geonode.contrib.monitoring.migrations.0019_notification_check_def_link module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0019_notification_check_def_link" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0019_notification_check_def_link.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0019_notification_check_def_link.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0019_notification_check_def_link.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0019_notification_check_def_link.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0018_notification_check_def')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0019_notification_check_def_link.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0019_notification_check_def_link.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.related.OneToOneField&gt;, name=u'definition', model_name=u'metricnotificationcheck'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.BooleanField&gt;, name=u'active', model_name=u'notificationcheck'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.CharField&gt;, name=u'description', model_name=u'notificationcheck'&gt;, &lt;AlterField  field=&lt;django.db.models.fields.CharField&gt;, name=u'severity', model_name=u'notificationcheck'&gt;, &lt;AlterField  field=&lt;jsonfield.fields.JSONField&gt;, name=u'user_threshold', model_name=u'notificationcheck'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0019_notification_check_def_link.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0020_metric_description">
+<span id="geonode-contrib-monitoring-migrations-0020-metric-description-module"></span><h2>geonode.contrib.monitoring.migrations.0020_metric_description module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0020_metric_description" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0020_metric_description.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0020_metric_description.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0020_metric_description.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0020_metric_description.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0019_notification_check_def_link')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0020_metric_description.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0020_metric_description.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AddField  field=&lt;django.db.models.fields.CharField&gt;, name=u'description', model_name=u'metric'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0020_metric_description.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations.0021_auto_20180301_0932">
+<span id="geonode-contrib-monitoring-migrations-0021-auto-20180301-0932-module"></span><h2>geonode.contrib.monitoring.migrations.0021_auto_20180301_0932 module<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations.0021_auto_20180301_0932" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.contrib.monitoring.migrations.0021_auto_20180301_0932.Migration">
+<em class="property">class </em><code class="descclassname">geonode.contrib.monitoring.migrations.0021_auto_20180301_0932.</code><code class="descname">Migration</code><span class="sig-paren">(</span><em>name</em>, <em>app_label</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0021_auto_20180301_0932.Migration" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0021_auto_20180301_0932.Migration.dependencies">
+<code class="descname">dependencies</code><em class="property"> = [(u'monitoring', u'0020_metric_description')]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0021_auto_20180301_0932.Migration.dependencies" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.contrib.monitoring.migrations.0021_auto_20180301_0932.Migration.operations">
+<code class="descname">operations</code><em class="property"> = [&lt;AlterField  field=&lt;django.db.models.fields.related.ManyToManyField&gt;, name=u'resources', model_name=u'requestevent'&gt;]</em><a class="headerlink" href="#geonode.contrib.monitoring.migrations.0021_auto_20180301_0932.Migration.operations" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.contrib.monitoring.migrations">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.contrib.monitoring.migrations" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+{% extends "geonode_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load base_tags %}
+<link href="{{ STATIC_URL }}geonode/css/Glyphter.css?v={{ VERSION }}" rel="stylesheet" />
+{% block title %} {% trans "AdecoAgro" %} {% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block middle %}
+  {{ block.super }}
+  {% block hero %}
+  <div class="jumbotron">
+  	<div class="container">
+  		<h1>{% trans "AdecoAgro" %}</h1>
+  		<p></p>
+  		<p>{% blocktrans %}{% endblocktrans %}</p>
+		<p>{% blocktrans %}<a href="http://lists.osgeo.org/cgi-bin/mailman/listinfo/geonode-users">mailing list</a>.{% endblocktrans %}</p>
+  		<a class="btn btn-default btn-lg" target="_blank" href="http://docs.geonode.org/en/master/tutorials/users/index.html" role="button">{% blocktrans %} &raquo;{% endblocktrans %}</a>
+  	</div>
+  </div>
+  {% endblock %}
+
+  {% block mainbody %}
+
+  {% block datasets %}
+  <section id="datasets">
+  	<div class="container">
+  		<div class="row">
+  			<div class="container text-center">
+				  <h1 style="color:#7A7A7A">Explore aplicativos e mapas disponíveis</h1>
+                <div class="row">
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Ambiental" data-toggle="tooltip" data-placement="auto"/>
+      						<div class="category">
+								<img src="../static/geonode/img/icons/ambiental_v1.png"/>
+								  <h4 style="color:#337966; font-weight: bold" >Ambiental</h4>
+      						</div>
+      					</a>
+      				</div>
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Parceria Agricola" data-toggle="tooltip" data-placement="auto">
+      						<div class="category" style="margin-top: 22px">
+      							<img src="../static/geonode/img/icons/parcerias-agricolas_v4.png"/>
+      							<h4 style="color:#337966; font-weight: bold" >Parceria<br>Agricola</h4>
+      						</div>
+      					</a>
+      				</div>
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Praparo Plantio" data-toggle="tooltip" data-placement="auto">
+      						<div class="category">
+      							<img src="../static/geonode/img/icons/preparo_plantio_v1.png" />
+      							<h4 style="color:#337966; font-weight: bold" >Preparo<br>Plantio</h4>
+      						</div>
+      					</a>
+					  </div>
+					  <div class="col-xs-4 col-sm-3">
+						<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Tecnologia Agricola" data-toggle="tooltip" data-placement="auto">
+							<div class="category">
+								<img src="../static/geonode/img/icons/tecnologia_agricola_v2.png" />
+								<h4 style="color:#337966; font-weight: bold" >Tecnologia<br>Agricola</h4>
+							</div>
+						</a>
+					</div>
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Tratos Culturais" data-toggle="tooltip" data-placement="auto">
+      						<div class="category">
+      							<img src="../static/geonode/img/icons/tratos_culturais_v1.png" />
+      							<h4 style="color:#337966; font-weight: bold" >Tratos<br>Culturais</h4>
+      						</div>
+      					</a>
+      				</div>
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Colheita e Transporte" data-toggle="tooltip" data-placement="auto">
+      						<div class="category">
+      							<img src="../static/geonode/img/icons/colheita-transporte_v1.png" />
+      							<h4 style="color:#337966; font-weight: bold" >Colheita e<br>Transporte</h4>
+      						</div>
+      					</a>
+      				</div>
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Energia e Comunicacao" data-toggle="tooltip" data-placement="auto">
+      						<div class="category">
+      							<img src="../static/geonode/img/icons/energia-comunicação_v1.png" />
+      							<h4 style="color:#337966; font-weight: bold" >Energia e<br>Comunicação</h4>
+      						</div>
+      					</a>
+      				</div>
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Estrutura Fundiaria" data-toggle="tooltip" data-placement="auto">
+      						<div class="category">
+      							<img src="../static/geonode/img/icons/estrutura-fundiaria_v1.png" />
+      							<h4 style="color:#337966; font-weight: bold" >Estrutura<br>Fundiaria</h4>
+      						</div>
+      					</a>
+      				</div>
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Infraestrutura Fundiaria" data-toggle="tooltip" data-placement="auto">
+      						<div class="category">
+      							<img src="../static/geonode/img/icons/infraestrutura_fundiaria_v1.png" />
+      							<h4 style="color:#337966; font-weight: bold" >Benfeitorias</h4>
+      						</div>
+      					</a>
+      				</div>
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Hidrografia" data-toggle="tooltip" data-placement="auto">
+      						<div class="category">
+      							<img src="../static/geonode/img/icons/hidrografia_v1.png" />
+      							<h4 style="color:#337966; font-weight: bold" >hidrografia</h4>
+      						</div>
+      					</a>
+      				</div>
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Limites e Localidades" data-toggle="tooltip" data-placement="auto">
+      						<div class="category">
+      							<img src="../static/geonode/img/icons/limites-localidades_v1.png" />
+      							<h4 style="color:#337966; font-weight: bold" >Limites e<br>Localidades</h4>
+      						</div>
+      					</a>
+      				</div>
+      				<div class="col-xs-4 col-sm-3">
+      					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Meteorologia" data-toggle="tooltip" data-placement="auto">
+      						<div class="category">
+      							<img src="../static/geonode/img/icons/meteorologia_v1.png" />
+      							<h4 style="color:#337966; font-weight: bold" >Meteorologia</h4>
+      						</div>
+      					</a>
+      				</div>
+                </div>
+				<div class="col-xs-4 col-sm-3">
+					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Recursos Naturais" data-toggle="tooltip" data-placement="auto">
+						<div class="category">
+							<img src="../static/geonode/img/icons/recursos-naturais_v1.png" />
+							<h4 style="color:#337966; font-weight: bold" >Recursos<br>Naturais</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-3">
+					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Relevo" data-toggle="tooltip" data-placement="auto">
+						<div class="category">
+							<img src="../static/geonode/img/icons/relevo_v1.png" />
+							<h4 style="color:#337966; font-weight: bold" >Relevo</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-3">
+					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Saude e Seguranca do Trabalho" data-toggle="tooltip" data-placement="auto">
+						<div class="category">
+							<img src="../static/geonode/img/icons/saude-trabalho_v1.png" />
+							<h4 style="color:#337966; font-weight: bold" >Saúde e Segurança do<br>Trabalho</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-3">
+					<a href="{% url "search" %}?limit=100&offset=0&category__identifier__in=Sistema de Transporte" data-toggle="tooltip" data-placement="auto">
+						<div class="category">
+							<img src="../static/geonode/img/icons/sistema-transporte_v1.png" />
+							<h4 style="color:#337966; font-weight: bold" >Sistema de<br>Transporte</h4>
+						</div>
+					</a>
+				</div>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  {% endblock %}
+
+
+
+  {% endblock %}
+
+{% endblock %}
+
+{% block extra_script %}
+{{ block.super }}
+{% if DEBUG_STATIC %}
+<script src="{{ STATIC_URL }}lib/js/angular.js"></script>
+{% endif %}
+<script type="text/javascript">
+    FEATURED_URL = '{% url 'api_dispatch_list' api_name='api' resource_name='featured' %}'
+    'use strict';
+    (function(){
+      var module = angular.module('featured', []);
+      module.run(function($http, $rootScope){
+        $http.get(FEATURED_URL).success(function(data){
+          $rootScope.featured = data.objects;
+        });
+      });
+    })();
+</script>
+<script>
+	$('[data-toggle="tooltip"]').tooltip();
+</script>
+{% endblock extra_script %}

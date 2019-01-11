@@ -1,0 +1,521 @@
+{% load i18n avatar_tags %}
+{% load account socialaccount %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta Http-Equiv="Cache-Control" Content="no-cache">
+    <meta Http-Equiv="Pragma" Content="no-cache">
+    <meta Http-Equiv="Expires" Content="0">
+    <meta Http-Equiv="Pragma-directive: no-cache">
+    <meta Http-Equiv="Cache-directive: no-cache">
+
+    <title>{% block title %}{{ SITE_NAME }}{% endblock %}</title>
+    {% block head %}
+      {% if DEBUG_STATIC %}
+          <link href="{{ STATIC_URL }}lib/css/jquery.dataTables.css?v={{ VERSION }}" rel="stylesheet" />
+          <link href="{{ STATIC_URL }}lib/css/select2.css?v={{ VERSION }}" rel="stylesheet"/>
+          <link href="{{ STATIC_URL }}lib/css/bootstrap.min.css?v={{ VERSION }}" rel="stylesheet"/>
+          <link href="{{ STATIC_URL }}lib/css/jquery-ui.css?v={{ VERSION }}" rel="stylesheet"/>
+          <link href="{{ STATIC_URL }}geonode/css/base.css?v={{ VERSION }}" rel="stylesheet" />
+      {% else %}
+        <link href="{{ STATIC_URL }}lib/css/assets.min.css?v={{ VERSION }}" rel="stylesheet"/>
+        <link href="{{ STATIC_URL }}geonode/css/base.css?v={{ VERSION }}" rel="stylesheet" />
+      {% endif %}
+
+      <link href="{{ STATIC_URL }}geonode/css/ext-compatibility.css?v={{ VERSION }}" rel="stylesheet" />
+      <link href="{{ STATIC_URL}}geonode/css/icon.css?v={{ VERSION }}"/>
+      <link href="{{ STATIC_URL }}geonode/css/ux-all.css?v={{ VERSION }}" rel="stylesheet" />
+      <link href="{{ STATIC_URL }}geonode/css/base.css?v={{ VERSION }}" rel="stylesheet" />
+      <link href="{{ STATIC_URL }}geonode/css/style.css?v={{ VERSION }}" rel="stylesheet" />
+      <link href="{{ STATIC_URL }}geonode/css/push.css?v{{ VERSION }}" rel="stylesheet" />
+      <link href="{{ STATIC_URL }}geonode/css/application.css?v{{ VERSION }}" rel="stylesheet" />
+      <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
+
+      {% block extra_head %}
+      {% endblock %}
+    {% endblock %}
+    <!--[if IE]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <style>
+        #ieflag{
+            display: block !important;
+            height: 150px;
+            text-align: center;
+        }
+      </style>
+    <![endif]-->
+    <link rel="search" type="application/opensearchdescription+xml" href="/catalogue/opensearch" title="GeoNode Search"/>
+  </head>
+
+  <body class="{% block body_class %}{% endblock %}">
+    <!-- Navbar -->
+    {% block header %}
+    <style>
+      #menu li a:hover{
+        background-color: transparent;
+        color:#ffb52f;
+      }
+    </style>
+  {% load static %}
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: white;box-shadow:1px 1px 1px #7a7a7a;">
+      <div class="container">
+          <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <i class="fa fa-navicon fa-lg"></i>
+          </button>
+          <a href="{% url "home" %}">
+            <img src="{{ STATIC_URL }}geonode/img/logo-adecoagro.png" style="width: 200px;margin-top: 15px">
+            <!--{% load static %}
+            <img src="{% static '/geonde/img/Logo_Adecoagro.jpg' %}"/>-->
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav toolbar">
+            {% block tabs %}
+            <li id="nav_layers">
+                <a style="color: black;background-color: white" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Dados" %}<i class="fa fa-angle-down fa-lg"></i></a>
+                <ul class="dropdown-menu" id="menu">
+                  <li><a href="{% url "layer_browse" %}">{% trans "Camadas" %}</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{% url "document_browse" %}">{% trans "Documentos" %}</a></li>
+                  <li role="separator" class="divider"></li>
+                  {% if user.is_authenticated %}
+                  <li><a href="{% url "services" %}">{% trans "Serviços Remotos" %}</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{% url "layer_upload" %}">Carregar Camada</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{% url "document_upload" %}">Carregar Documento</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{% url "register_service" %}">{% trans "Adicionar Serviços Remotos" %}</a></li>
+                  {% endif %}
+                </ul>
+              </li>
+            <li id="nav_maps">
+                {% if user.is_authenticated %}
+                <a style="color: black; background-color: white" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Mapas" %}<i class="fa fa-angle-down fa-lg"></i></a>
+                <ul class="dropdown-menu" id="menu" >
+                  <li><a href="{% url "maps_browse" %}">{% trans "Explorar Mapas" %}</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li> <a href="{% url "new_map" %}">{% trans "Criar Mapas" %}</a></li>
+                </ul>
+                {% else %}
+                <a style="color: black; background-color: white" href="{% url "maps_browse" %}">{% trans "Mapas" %}</a>
+                {% endif %}
+              </li>
+              <li>
+              <a style="color: black; background-color: white" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Colaboradores" %}<i class="fa fa-angle-down fa-lg"></i></a>
+                <ul class="dropdown-menu" id="menu" >
+                  <li><a href="{% url "profile_browse" %}">{% trans "Colaboradores" %}</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{% url "group_list" %}">{% trans "Grupos" %}</a></li>
+                  {% if perms.announcements.can_manage %}
+                  <!--<li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>-->
+                  {% endif %}
+                  {% if user.is_superuser %}
+                  <li role="separator" class="divider"></li>
+                  <!--<li><a href="/admin/people/profile/add/">{% trans "Adicionar Usuario" %}</a></li>
+                  <li role="separator" class="divider"></li>-->
+                  <li><a href="{% url "group_create" %}">{% trans "Criar Grupo" %}</a></li>
+                  {% endif %}
+                </ul>
+              </li>
+            {% block extra_tab %}
+              {% endblock %}
+              {% endblock %}
+            </ul>
+          <ul style="color: black; background-color: white" class="nav navbar-nav navbar-right" >
+              <li>
+                <div class="search">
+                  <!--<form id="search" action="{% url "search" %}" >
+                    <span class="fa fa-search"></span>
+                    {% if HAYSTACK_SEARCH %}
+                    <input id="search_input" type="text" placeholder="Search" name="q">
+                    {% else %}
+                    <input id="search_input" type="text" placeholder="Search" name="title__icontains">
+                    {% endif %}
+                  </form>-->
+                </div>
+            </li>
+              {% if not user.is_authenticated and REGISTRATION_OPEN %}
+              <li><a href="{% url "account_signup" %}" style="background-color:white;color:black">{% trans "Registrar" %}</a></li>
+              {% endif %}
+              {% if user.is_authenticated %}
+              <li><a style="color: black; background-color: white" href="#" class="dropdown-toggle avatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                {% autoescape off %}{% avatar user 100 %}{% endautoescape %}
+                {% with full_name=user.first_name|add:' '|add:user.last_name %}
+                {% if full_name.strip %}
+                    {{ full_name | truncatechars:20 }}
+                  {% else %}
+                    {{ user.username | truncatechars:20 }}
+                  {% endif %}
+                {% endwith %}
+                <i class="fa fa-angle-down fa-lg"></i>
+              </a>
+                <ul class="dropdown-menu" id="menu" >
+                  <li><a href="{{ user.get_absolute_url }}">{% trans "Perfil" %}</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{% url "recent-activity" %}">{% trans "Atividade Recente" %}</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{% url "messages_inbox" %}">{% trans "Caixa de Entrada" %}</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{% url "admin:index" %}">Admin</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{{ GEOSERVER_BASE_URL }}">GeoServer</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="/account/logout/">Sair</a></li>
+                  </ul>
+                </li>
+            {% else %}
+            <li><a href="{% url "account_signup" %}" style="background-color:white;color:black">{% trans "Cadastrar" %}</a></li>
+            <li><a style="color: black; background-color: white" href="#" data-toggle="modal" data-target="#SigninModal" role="button" >{% trans "Entrar" %} </a></li>
+                {% endif %}
+              </ul>
+            </div> <!--/.nav-collapse -->
+          </div>
+        </nav>
+      {% endblock header %}
+      <!-- End of Navbar -->
+
+    <div class="alert alert-danger alert-dismissible" role="alert" id="ieflag" style="display:none">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h1>You are using an outdated browser that is not supported by GeoNode.</h1>
+      <p>Please use a <strong>modern browser</strong> like Mozilla Firefox, Google Chrome or Safari.</p>
+    </div>
+
+    <div id="wrap" >
+      {% block middle %}
+    <div class="container">
+      {% include "_status_message.html" %}
+      {% include "_announcements.html" %}
+      {% include "_messages.html" %}
+      {% block body_outer %}
+      <div class="row">
+        <div class="col-md-8">
+        {% block body %}{% endblock %}
+        </div>
+        <div class="col-md-4">
+        {% block sidebar %}{% endblock %}
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+    {% endblock middle %}
+  </div>
+
+  {% block monitoring %}
+  {% endblock %}
+
+  {% block footer %}
+  <style>
+    /* Estilos del footer */
+    
+    footer {
+      background: #337966;
+      padding: 80px 0 60px;
+      margin-top: 50px;
+    }
+    
+    footer .container {
+      position: relative;
+    }
+    
+    footer .menu_footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    footer .menu_footer img {
+      width: 200px;
+    }
+    
+    footer .menu_footer ul {
+      display: flex;
+    }
+    
+    footer .menu_footer a + ul li {
+      margin: 0 20px;
+      text-align: center;
+    }
+    
+    footer .menu_footer a + ul li:last-child {
+      margin-right: 0;
+    }
+    
+    footer .menu_footer a + ul li a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 0.8em;
+    }
+    
+    footer .menu_footer ul.redes {
+      position: absolute;
+      top: -40px;
+      right: 0;
+    }
+    
+    footer .menu_footer ul.redes li {
+      margin-left: 7px;
+    }
+    
+    footer .menu_footer ul.redes li a {
+      color: #fff;
+      width: 30px;
+      height: 30px;
+        transition: all 0.5s;
+    }
+    
+    footer .menu_footer ul.redes li a img {
+      width: 20px;
+    }
+    
+    footer .datos_footer {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    footer .datos_footer article {
+        margin: 0 15px;
+    }
+    
+    footer .datos_footer article p,
+    footer .datos_footer article ul li {
+      font-size: 0.7em;
+      color: #fff;
+      line-height: 1.3em;
+    }
+    
+    footer .datos_footer article ul li a {
+      color: #fff;
+    }
+    
+    .copy {
+      padding: 15px 0;
+    }
+    
+    .copy p {
+      color: #337966;
+      font-size: 0.9em;
+    }
+    
+    /* --------------------------------------------- */
+     </style>
+  <footer>
+    <div class="container">
+      <div class="menu_footer">
+        <a href="index.html"><img src="{{ STATIC_URL }}geonode/img/logo-adecoagro.png"></a>
+
+      </div>
+
+      <div class="datos_footer">
+        <article>
+          <p>Luxemburgo</p>
+          <ul>
+            <li>Vertigo Naos Building</li>
+            <li>6, Rue Eugène Ruppert</li>
+            <li>L-2453 - Luxembourg</li>
+            <li>Grand Duchy of <br>Luxembourg</li>
+          </ul>
+        </article>
+        <article>
+          <p>Argentina</p>
+          <ul>
+            <li>(+5411) 4836 8600</li>
+            <li>info_ar@adecoagro.com</li>
+            <li>Fondo de la Legua 936</li>
+            <li>Martínez (B1640EDO) - <br>Buenos Aires, Argentina</li>
+          </ul>
+        </article>
+        <article>
+          <p>Brasil</p>
+          <ul>
+            <li>(+5511) 2678 5600</li>
+            <li>info_bra@adecoagro.com</li>
+            <li>Rua Iguatemi 192 – 12º andar</li>
+            <li>Itaim Bibi São Paulo <br>(CEP 01451-010) - SP, Brasil</li>
+          </ul>
+        </article>
+        <article>
+          <p>Uruguay</p>
+          <ul>
+            <li>(+5985) 2601 4499</li>
+            <li>info_uru@adecoagro.com</li>
+            <li>Av Italia 7519 of. 405</li>
+            <li>(CP 11500) - Montevideo</li>
+            <li>República Oriental <br>del Uruguay</li>
+          </ul>
+        </article>
+        <article>
+          <p>Para reclamos y quejas</p>
+          <ul>
+            <li><a href="mailto:consultas@adecoagro.com">consultas@adecoagro.com</a></li>
+            <li>(+5411) 4836-8600</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </footer>
+  <div class="copy">
+    <div class="container">
+      <p>Copyright 2017 - Todos los derechos reservados - Adecoagro 2017</p>
+    </div>
+  </div>
+  {% endblock footer %}
+
+
+    <!-- Modal must stay outside the navbar -->
+    {% if not user.is_authenticated %}
+    <div class="modal fade" id="SigninModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+            <h4 class="modal-title" id="myModalLabel">{% trans "Entrar" %}</h4>
+          </div>
+          <form class="form-signin" role="form" action="{% url "account_login" %}?next={{ request.path }}" method="post">
+            <div class="modal-body">
+              {% csrf_token %}
+              {% get_providers as socialaccount_providers %}
+              {% if socialaccount_providers %}
+                  {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                  {% include "socialaccount/snippets/login_extra.html" %}
+                <hr>
+              {% endif %}
+              <div class="form-group">
+                <label for="id_username" class="sr-only">{% trans "Usuário" %}:</label>
+                <input id="id_username" class="form-control" name="login" placeholder="{% trans "Usuário" %}" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="id_password" class="sr-only">{% trans "Senha" %}:</label>
+                <input id="id_password" class="form-control" name="password" placeholder="{% trans "Senha" %}" type="password" />
+              </div>
+              <label class="checkbox">
+                <input type="checkbox" /> {% trans "Lembrar" %}
+              </label>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary btn-block">{% trans "Entrar" %}</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    <!-- End of Modal -->
+
+    {% if DEBUG_STATIC %}
+    <script src="{{ STATIC_URL }}lib/js/jquery.min.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/jquery.dataTables.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/jquery.timeago.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/jquery.ajaxprogress.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/jquery.ajaxQueue.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/jquery-ui.custom.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/jquery.raty.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/bootstrap.min.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/moment-with-locales.min.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/bootstrap-datetimepicker.min.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/json2.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/select2.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}lib/js/waypoints.js?v={{ VERSION }}"></script>
+    {% else %}
+    <script src="{{ STATIC_URL }}lib/js/assets.min.js?v={{ VERSION }}"></script>
+    {% endif %}
+    <script src="{{ STATIC_URL }}geonode/js/utils/utils.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}geonode/js/base/base.js?v={{ VERSION }}"></script>
+    <script src="{{ STATIC_URL }}geonode/js/base/push.js?v={{ VERSION }}"></script>
+    {% include 'autocomplete_light/static.html' %}
+    <script type="text/javascript" src="{% url "javascript-catalog" %}"></script>
+    {% block extra_script %}{% endblock extra_script %}
+    <script type="text/javascript">
+        var autocomplete = $('#search_input').yourlabsAutocomplete({
+            url: '{% url "autocomplete_light_autocomplete" "ResourceBaseAutocomplete" %}',
+            choiceSelector: 'span',
+            hideAfter: 200,
+            minimumCharacters: 1,
+            placeholder: '{% trans 'Digite o que deseja procurar ...' %}',
+            appendAutocomplete: $('#search_input'),
+            autoHilightFirst: false
+        });
+        $('#search_input').bind('selectChoice', function(e, choice, autocomplete) {
+            if(choice[0].children[0] == undefined) {
+                $('#search_input').val($(choice[0]).text());
+                $('#search').submit();
+            }
+        });
+    </script>
+    <script>
+        // Workaround to fix the autocomplete box positions
+        yourlabs.Autocomplete.prototype.fixPosition = function(html) {
+            this.input.parents().filter(function() {
+                return $(this).css('overflow') === 'hidden';
+            }).first().css('overflow', 'visible');
+            if(this.input.attr('name') !== 'resource-keywords'){
+              this.box.insertAfter(this.input).css({top: 28, left: 0});
+            }else{
+              var pos = $.extend({}, this.input.position(), {
+                height: this.input.outerHeight()
+              });
+              this.box.insertAfter(this.input).css({top: pos.top + pos.height, left: pos.left});
+            }
+        };
+    </script>
+    <script type="text/javascript" src="{% url "lang" %}"></script>
+
+    <div class="modal fade" style="width: 100%; height: 100%;" id="_resource_uploading" data-backdrop="static" data-keyboard="false" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Enviando...</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                        Em progresso...
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" style="width: 100%; height: 100%;" id="_thumbnail_processing" data-backdrop="static" data-keyboard="false" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Processando...</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                        Carregando miniatura...
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="_thumbnail_feedbacks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Caixa de mensagem</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

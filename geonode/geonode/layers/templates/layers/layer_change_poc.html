@@ -1,0 +1,22 @@
+{% extends "admin/base_site.html" %}
+
+{% load i18n %}
+	
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="/">{% trans "Home" %}</a> &rsaquo; {% trans "Escolha um ponto de contato" %}</div>{% endblock %}
+	
+{% block title %}{% trans 'Escolha um ponto de contato' %}{% endblock %}
+
+{% block content %}
+<h3>{% trans "Atribua um novo ponto de contato às camadas abaixo:" %}</h3>
+{% for layer in layers %}
+<li>{{ layer }}</li>
+{% endfor %}
+<form method="POST">
+{% csrf_token %}	
+{{ form.as_p }}
+ <p><input type="submit" value="{% trans "Enviar" %}" /></p>
+</form>
+<ul>
+
+{% endblock %}
+</ul>

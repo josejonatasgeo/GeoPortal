@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cartoview.app_manager package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">cartoview.app_manager package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-admin-module">cartoview.app_manager.admin module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-api-module">cartoview.app_manager.api module</a></li>
+<li><a class="reference internal" href="#module-cartoview.app_manager.config">cartoview.app_manager.config module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-context-processors-module">cartoview.app_manager.context_processors module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-decorators-module">cartoview.app_manager.decorators module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-forms-module">cartoview.app_manager.forms module</a></li>
+<li><a class="reference internal" href="#module-cartoview.app_manager.helpers">cartoview.app_manager.helpers module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-installer-module">cartoview.app_manager.installer module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-models-module">cartoview.app_manager.models module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-resources-module">cartoview.app_manager.resources module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-rest-module">cartoview.app_manager.rest module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-serializers-module">cartoview.app_manager.serializers module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-settings-module">cartoview.app_manager.settings module</a></li>
+<li><a class="reference internal" href="#module-cartoview.app_manager.tests">cartoview.app_manager.tests module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-urls-module">cartoview.app_manager.urls module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-utils-module">cartoview.app_manager.utils module</a></li>
+<li><a class="reference internal" href="#cartoview-app-manager-views-module">cartoview.app_manager.views module</a></li>
+<li><a class="reference internal" href="#module-cartoview.app_manager">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>cartoview.app_manager package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/cartoview.app_manager.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cartoview-app-manager-package">
+<h1>cartoview.app_manager package<a class="headerlink" href="#cartoview-app-manager-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link permanente para este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cartoview.app_manager.management.html">cartoview.app_manager.management package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.management.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cartoview.app_manager.management.commands.html">cartoview.app_manager.management.commands package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cartoview.app_manager.management.commands.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cartoview.app_manager.management.commands.html#cartoview-app-manager-management-commands-load-current-apps-module">cartoview.app_manager.management.commands.load_current_apps module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cartoview.app_manager.management.commands.html#cartoview-app-manager-management-commands-update-current-apps-module">cartoview.app_manager.management.commands.update_current_apps module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cartoview.app_manager.management.commands.html#module-cartoview.app_manager.management.commands">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.management.html#module-cartoview.app_manager.management">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cartoview.app_manager.migrations.html">cartoview.app_manager.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.migrations.html#cartoview-app-manager-migrations-0001-initial-module">cartoview.app_manager.migrations.0001_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.migrations.html#cartoview-app-manager-migrations-0002-auto-20171001-1057-module">cartoview.app_manager.migrations.0002_auto_20171001_1057 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.migrations.html#cartoview-app-manager-migrations-0003-auto-20171002-0445-module">cartoview.app_manager.migrations.0003_auto_20171002_0445 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.migrations.html#cartoview-app-manager-migrations-0004-auto-20171002-0446-module">cartoview.app_manager.migrations.0004_auto_20171002_0446 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.migrations.html#module-cartoview.app_manager.migrations.0005_delete_apptag">cartoview.app_manager.migrations.0005_delete_apptag module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.migrations.html#cartoview-app-manager-migrations-0006-app-default-config-module">cartoview.app_manager.migrations.0006_app_default_config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.migrations.html#cartoview-app-manager-migrations-0007-auto-20180128-0116-module">cartoview.app_manager.migrations.0007_auto_20180128_0116 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.migrations.html#cartoview-app-manager-migrations-0008-appinstance-logo-module">cartoview.app_manager.migrations.0008_appinstance_logo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cartoview.app_manager.migrations.html#module-cartoview.app_manager.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-admin-module">
+<h2>cartoview.app_manager.admin module<a class="headerlink" href="#cartoview-app-manager-admin-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-api-module">
+<h2>cartoview.app_manager.api module<a class="headerlink" href="#cartoview-app-manager-api-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-cartoview.app_manager.config">
+<span id="cartoview-app-manager-config-module"></span><h2>cartoview.app_manager.config module<a class="headerlink" href="#module-cartoview.app_manager.config" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="cartoview.app_manager.config.App">
+<em class="property">class </em><code class="descclassname">cartoview.app_manager.config.</code><code class="descname">App</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.App" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#cartoview.app_manager.config.Item" title="cartoview.app_manager.config.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">cartoview.app_manager.config.Item</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cartoview.app_manager.config.AppsConfig">
+<em class="property">class </em><code class="descclassname">cartoview.app_manager.config.</code><code class="descname">AppsConfig</code><span class="sig-paren">(</span><em>file_path=None</em>, <em>items=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.AppsConfig" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#cartoview.app_manager.config.Collection" title="cartoview.app_manager.config.Collection"><code class="xref py py-class docutils literal notranslate"><span class="pre">cartoview.app_manager.config.Collection</span></code></a></p>
+<dl class="method">
+<dt id="cartoview.app_manager.config.AppsConfig.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.AppsConfig.append" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cartoview.app_manager.config.AppsConfig.default_sort">
+<code class="descname">default_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.AppsConfig.default_sort" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cartoview.app_manager.config.AppsConfig.get_by_name">
+<code class="descname">get_by_name</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.AppsConfig.get_by_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cartoview.app_manager.config.Collection">
+<em class="property">class </em><code class="descclassname">cartoview.app_manager.config.</code><code class="descname">Collection</code><span class="sig-paren">(</span><em>file_path=None</em>, <em>items=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.Collection" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">future.types.newobject.newobject</span></code></p>
+<dl class="method">
+<dt id="cartoview.app_manager.config.Collection.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.Collection.append" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cartoview.app_manager.config.Collection.default_sort">
+<code class="descname">default_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.Collection.default_sort" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cartoview.app_manager.config.Collection.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.Collection.load" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cartoview.app_manager.config.Collection.save">
+<code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.Collection.save" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cartoview.app_manager.config.Item">
+<em class="property">class </em><code class="descclassname">cartoview.app_manager.config.</code><code class="descname">Item</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.config.Item" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">yaml.YAMLObject</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="cartoview-app-manager-context-processors-module">
+<h2>cartoview.app_manager.context_processors module<a class="headerlink" href="#cartoview-app-manager-context-processors-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-decorators-module">
+<h2>cartoview.app_manager.decorators module<a class="headerlink" href="#cartoview-app-manager-decorators-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-forms-module">
+<h2>cartoview.app_manager.forms module<a class="headerlink" href="#cartoview-app-manager-forms-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-cartoview.app_manager.helpers">
+<span id="cartoview-app-manager-helpers-module"></span><h2>cartoview.app_manager.helpers module<a class="headerlink" href="#module-cartoview.app_manager.helpers" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="cartoview.app_manager.helpers.change_path_permission">
+<code class="descclassname">cartoview.app_manager.helpers.</code><code class="descname">change_path_permission</code><span class="sig-paren">(</span><em>path</em>, <em>mode=511</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.helpers.change_path_permission" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cartoview.app_manager.helpers.create_direcotry">
+<code class="descclassname">cartoview.app_manager.helpers.</code><code class="descname">create_direcotry</code><span class="sig-paren">(</span><em>path</em>, <em>mode=511</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.helpers.create_direcotry" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cartoview.app_manager.helpers.get_path_permission">
+<code class="descclassname">cartoview.app_manager.helpers.</code><code class="descname">get_path_permission</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.helpers.get_path_permission" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>on platforms that do not support symbolic links,
+lstat is an alias for stat()
+so we return a tuple of both</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoview.app_manager.helpers.get_perm">
+<code class="descclassname">cartoview.app_manager.helpers.</code><code class="descname">get_perm</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.helpers.get_perm" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cartoview.app_manager.helpers.make_writeable_recursive">
+<code class="descclassname">cartoview.app_manager.helpers.</code><code class="descname">make_writeable_recursive</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.helpers.make_writeable_recursive" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cartoview.app_manager.helpers.octal_permissions">
+<code class="descclassname">cartoview.app_manager.helpers.</code><code class="descname">octal_permissions</code><span class="sig-paren">(</span><em>protection_bits</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoview.app_manager.helpers.octal_permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="cartoview-app-manager-installer-module">
+<h2>cartoview.app_manager.installer module<a class="headerlink" href="#cartoview-app-manager-installer-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-models-module">
+<h2>cartoview.app_manager.models module<a class="headerlink" href="#cartoview-app-manager-models-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-resources-module">
+<h2>cartoview.app_manager.resources module<a class="headerlink" href="#cartoview-app-manager-resources-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-rest-module">
+<h2>cartoview.app_manager.rest module<a class="headerlink" href="#cartoview-app-manager-rest-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-serializers-module">
+<h2>cartoview.app_manager.serializers module<a class="headerlink" href="#cartoview-app-manager-serializers-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-settings-module">
+<h2>cartoview.app_manager.settings module<a class="headerlink" href="#cartoview-app-manager-settings-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-cartoview.app_manager.tests">
+<span id="cartoview-app-manager-tests-module"></span><h2>cartoview.app_manager.tests module<a class="headerlink" href="#module-cartoview.app_manager.tests" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-urls-module">
+<h2>cartoview.app_manager.urls module<a class="headerlink" href="#cartoview-app-manager-urls-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-utils-module">
+<h2>cartoview.app_manager.utils module<a class="headerlink" href="#cartoview-app-manager-utils-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="cartoview-app-manager-views-module">
+<h2>cartoview.app_manager.views module<a class="headerlink" href="#cartoview-app-manager-views-module" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-cartoview.app_manager">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cartoview.app_manager" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

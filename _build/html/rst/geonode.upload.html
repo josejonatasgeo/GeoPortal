@@ -1,0 +1,1271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.upload package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.upload package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.admin">geonode.upload.admin module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.files">geonode.upload.files module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.forms">geonode.upload.forms module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.models">geonode.upload.models module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.signals">geonode.upload.signals module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.upload">geonode.upload.upload module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.upload_preprocessing">geonode.upload.upload_preprocessing module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.upload_validators">geonode.upload.upload_validators module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.urls">geonode.upload.urls module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.utils">geonode.upload.utils module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.views">geonode.upload.views module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.upload package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.upload.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-upload-package">
+<h1>geonode.upload package<a class="headerlink" href="#geonode-upload-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link permanente para este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="geonode.upload.migrations.html">geonode.upload.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.24_initial">geonode.upload.migrations.24_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.upload.templatetags.html">geonode.upload.templatetags package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.templatetags.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.templatetags.html#module-geonode.upload.templatetags.upload_tags">geonode.upload.templatetags.upload_tags module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.templatetags.html#module-geonode.upload.templatetags">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.upload.tests.html">geonode.upload.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#module-geonode.upload.tests.integration">geonode.upload.tests.integration module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#module-geonode.upload.tests.test_files">geonode.upload.tests.test_files module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#module-geonode.upload.tests.test_settings">geonode.upload.tests.test_settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#module-geonode.upload.tests.test_upload_preprocessing">geonode.upload.tests.test_upload_preprocessing module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#module-geonode.upload.tests.test_utils">geonode.upload.tests.test_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#module-geonode.upload.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.upload.admin">
+<span id="geonode-upload-admin-module"></span><h2>geonode.upload.admin module<a class="headerlink" href="#module-geonode.upload.admin" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.upload.admin.UploadAdmin">
+<em class="property">class </em><code class="descclassname">geonode.upload.admin.</code><code class="descname">UploadAdmin</code><span class="sig-paren">(</span><em>model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.admin.UploadAdmin" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="attribute">
+<dt id="geonode.upload.admin.UploadAdmin.date_hierarchy">
+<code class="descname">date_hierarchy</code><em class="property"> = 'date'</em><a class="headerlink" href="#geonode.upload.admin.UploadAdmin.date_hierarchy" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.admin.UploadAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ('user', 'date', 'state', &lt;function import_link&gt;)</em><a class="headerlink" href="#geonode.upload.admin.UploadAdmin.list_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.admin.UploadAdmin.list_filter">
+<code class="descname">list_filter</code><em class="property"> = ('user', 'state')</em><a class="headerlink" href="#geonode.upload.admin.UploadAdmin.list_filter" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.admin.UploadAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.upload.admin.UploadAdmin.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.admin.import_link">
+<code class="descclassname">geonode.upload.admin.</code><code class="descname">import_link</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.admin.import_link" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.files">
+<span id="geonode-upload-files-module"></span><h2>geonode.upload.files module<a class="headerlink" href="#module-geonode.upload.files" title="Link permanente para este título">¶</a></h2>
+<p>An incomplete replacement for the various file support functions currently
+scattered over the codebase</p>
+<p>&#64;todo complete and use</p>
+<dl class="class">
+<dt id="geonode.upload.files.FileType">
+<em class="property">class </em><code class="descclassname">geonode.upload.files.</code><code class="descname">FileType</code><span class="sig-paren">(</span><em>name</em>, <em>code</em>, <em>layer_type</em>, <em>aliases=None</em>, <em>auxillary_file_exts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.FileType" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="geonode.upload.files.FileType.build_spatial_file">
+<code class="descname">build_spatial_file</code><span class="sig-paren">(</span><em>base</em>, <em>others</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.FileType.build_spatial_file" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.files.FileType.find_auxillary_files">
+<code class="descname">find_auxillary_files</code><span class="sig-paren">(</span><em>base</em>, <em>others</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.FileType.find_auxillary_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.files.FileType.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ext</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.FileType.matches" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.files.SpatialFile">
+<em class="property">class </em><code class="descclassname">geonode.upload.files.</code><code class="descname">SpatialFile</code><span class="sig-paren">(</span><em>base_file</em>, <em>file_type</em>, <em>auxillary_files</em>, <em>sld_files</em>, <em>xml_files</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.SpatialFile" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="geonode.upload.files.SpatialFile.all_files">
+<code class="descname">all_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.SpatialFile.all_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.files.SpatialFiles">
+<em class="property">class </em><code class="descclassname">geonode.upload.files.</code><code class="descname">SpatialFiles</code><span class="sig-paren">(</span><em>dirname</em>, <em>data</em>, <em>archive=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.SpatialFiles" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">UserList.UserList</span></code></p>
+<dl class="method">
+<dt id="geonode.upload.files.SpatialFiles.all_files">
+<code class="descname">all_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.SpatialFiles.all_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.files.clean_macosx_dir">
+<code class="descclassname">geonode.upload.files.</code><code class="descname">clean_macosx_dir</code><span class="sig-paren">(</span><em>file_names</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.clean_macosx_dir" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returns the files sans anything in a __MACOSX directory</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.files.get_scan_hint">
+<code class="descclassname">geonode.upload.files.</code><code class="descname">get_scan_hint</code><span class="sig-paren">(</span><em>valid_extensions</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.get_scan_hint" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Provide hint on the type of file being handled in the upload session.</p>
+<p>This function is useful mainly for those file types that can carry
+either vector or raster formats, like the KML type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.files.get_type">
+<code class="descclassname">geonode.upload.files.</code><code class="descname">get_type</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.get_type" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.files.scan_file">
+<code class="descclassname">geonode.upload.files.</code><code class="descname">scan_file</code><span class="sig-paren">(</span><em>file_name</em>, <em>scan_hint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.files.scan_file" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>get a list of SpatialFiles for the provided file</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.forms">
+<span id="geonode-upload-forms-module"></span><h2>geonode.upload.forms module<a class="headerlink" href="#module-geonode.upload.forms" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.upload.forms.LayerUploadForm">
+<em class="property">class </em><code class="descclassname">geonode.upload.forms.</code><code class="descname">LayerUploadForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.forms.LayerUploadForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<dl class="attribute">
+<dt id="geonode.upload.forms.LayerUploadForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'append_to_mosaic_name': &lt;django.forms.fields.CharField object&gt;, 'append_to_mosaic_opts': &lt;django.forms.fields.BooleanField object&gt;, 'base_file': &lt;django.forms.fields.FileField object&gt;, 'dbf_file': &lt;django.forms.fields.FileField object&gt;, 'geogig': &lt;django.forms.fields.BooleanField object&gt;, 'geogig_store': &lt;django.forms.fields.CharField object&gt;, 'layer_title': &lt;django.forms.fields.CharField object&gt;, 'metadata_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;django.forms.fields.BooleanField object&gt;, 'mosaic': &lt;django.forms.fields.BooleanField object&gt;, 'mosaic_time_regex': &lt;django.forms.fields.CharField object&gt;, 'mosaic_time_value': &lt;django.forms.fields.CharField object&gt;, 'permissions': &lt;geonode.layers.forms.JSONField object&gt;, 'prj_file': &lt;django.forms.fields.FileField object&gt;, 'shx_file': &lt;django.forms.fields.FileField object&gt;, 'sld_file': &lt;django.forms.fields.FileField object&gt;, 'style_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'time': &lt;django.forms.fields.BooleanField object&gt;, 'time_presentation': &lt;django.forms.fields.CharField object&gt;, 'time_presentation_default_value': &lt;django.forms.fields.CharField object&gt;, 'time_presentation_reference_value': &lt;django.forms.fields.CharField object&gt;, 'time_presentation_res': &lt;django.forms.fields.IntegerField object&gt;, 'xml_file': &lt;django.forms.fields.FileField object&gt;}</em><a class="headerlink" href="#geonode.upload.forms.LayerUploadForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.forms.LayerUploadForm.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.forms.LayerUploadForm.clean" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.LayerUploadForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'abstract': &lt;django.forms.fields.CharField object&gt;, 'append_to_mosaic_name': &lt;django.forms.fields.CharField object&gt;, 'append_to_mosaic_opts': &lt;django.forms.fields.BooleanField object&gt;, 'base_file': &lt;django.forms.fields.FileField object&gt;, 'dbf_file': &lt;django.forms.fields.FileField object&gt;, 'geogig': &lt;django.forms.fields.BooleanField object&gt;, 'geogig_store': &lt;django.forms.fields.CharField object&gt;, 'layer_title': &lt;django.forms.fields.CharField object&gt;, 'metadata_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;django.forms.fields.BooleanField object&gt;, 'mosaic': &lt;django.forms.fields.BooleanField object&gt;, 'mosaic_time_regex': &lt;django.forms.fields.CharField object&gt;, 'mosaic_time_value': &lt;django.forms.fields.CharField object&gt;, 'permissions': &lt;geonode.layers.forms.JSONField object&gt;, 'prj_file': &lt;django.forms.fields.FileField object&gt;, 'shx_file': &lt;django.forms.fields.FileField object&gt;, 'sld_file': &lt;django.forms.fields.FileField object&gt;, 'style_upload_form': &lt;django.forms.fields.BooleanField object&gt;, 'time': &lt;django.forms.fields.BooleanField object&gt;, 'time_presentation': &lt;django.forms.fields.CharField object&gt;, 'time_presentation_default_value': &lt;django.forms.fields.CharField object&gt;, 'time_presentation_reference_value': &lt;django.forms.fields.CharField object&gt;, 'time_presentation_res': &lt;django.forms.fields.IntegerField object&gt;, 'xml_file': &lt;django.forms.fields.FileField object&gt;}</em><a class="headerlink" href="#geonode.upload.forms.LayerUploadForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.LayerUploadForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.upload.forms.LayerUploadForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.LayerUploadForm.spatial_files">
+<code class="descname">spatial_files</code><em class="property"> = ('base_file', 'dbf_file', 'shx_file', 'prj_file', 'xml_file', 'sld_file')</em><a class="headerlink" href="#geonode.upload.forms.LayerUploadForm.spatial_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.forms.SRSForm">
+<em class="property">class </em><code class="descclassname">geonode.upload.forms.</code><code class="descname">SRSForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.forms.SRSForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<dl class="attribute">
+<dt id="geonode.upload.forms.SRSForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'source': &lt;django.forms.fields.CharField object&gt;, 'target': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.upload.forms.SRSForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.SRSForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'source': &lt;django.forms.fields.CharField object&gt;, 'target': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.upload.forms.SRSForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.SRSForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.upload.forms.SRSForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.forms.TimeForm">
+<em class="property">class </em><code class="descclassname">geonode.upload.forms.</code><code class="descname">TimeForm</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.forms.TimeForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<dl class="attribute">
+<dt id="geonode.upload.forms.TimeForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'precision_step': &lt;django.forms.fields.ChoiceField object&gt;, 'precision_value': &lt;django.forms.fields.IntegerField object&gt;, 'presentation_strategy': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.upload.forms.TimeForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.forms.TimeForm.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.forms.TimeForm.clean" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.TimeForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'precision_step': &lt;django.forms.fields.ChoiceField object&gt;, 'precision_value': &lt;django.forms.fields.IntegerField object&gt;, 'presentation_strategy': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.upload.forms.TimeForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.TimeForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.upload.forms.TimeForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.TimeForm.text_names">
+<code class="descname">text_names</code><a class="headerlink" href="#geonode.upload.forms.TimeForm.text_names" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.TimeForm.time_names">
+<code class="descname">time_names</code><a class="headerlink" href="#geonode.upload.forms.TimeForm.time_names" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.TimeForm.year_names">
+<code class="descname">year_names</code><a class="headerlink" href="#geonode.upload.forms.TimeForm.year_names" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.forms.UploadFileForm">
+<em class="property">class </em><code class="descclassname">geonode.upload.forms.</code><code class="descname">UploadFileForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.forms.UploadFileForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<dl class="class">
+<dt id="geonode.upload.forms.UploadFileForm.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.upload.forms.UploadFileForm.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.upload.forms.UploadFileForm.Meta.fields">
+<code class="descname">fields</code><em class="property"> = '__all__'</em><a class="headerlink" href="#geonode.upload.forms.UploadFileForm.Meta.fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.UploadFileForm.Meta.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.upload.forms.UploadFileForm.Meta.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.upload.models.UploadFile" title="geonode.upload.models.UploadFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.upload.models.UploadFile</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.UploadFileForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'file': &lt;django.forms.fields.FileField object&gt;, 'slug': &lt;django.forms.fields.SlugField object&gt;, 'upload': &lt;django.forms.models.ModelChoiceField object&gt;}</em><a class="headerlink" href="#geonode.upload.forms.UploadFileForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.UploadFileForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#geonode.upload.forms.UploadFileForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.forms.UploadFileForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.upload.forms.UploadFileForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.models">
+<span id="geonode-upload-models-module"></span><h2>geonode.upload.models module<a class="headerlink" href="#module-geonode.upload.models" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.upload.models.Upload">
+<em class="property">class </em><code class="descclassname">geonode.upload.models.</code><code class="descname">Upload</code><span class="sig-paren">(</span><em>id</em>, <em>import_id</em>, <em>user</em>, <em>state</em>, <em>date</em>, <em>layer</em>, <em>upload_dir</em>, <em>name</em>, <em>complete</em>, <em>session</em>, <em>metadata</em>, <em>mosaic_time_regex</em>, <em>mosaic_time_value</em>, <em>mosaic_elev_regex</em>, <em>mosaic_elev_value</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.Upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<dl class="exception">
+<dt id="geonode.upload.models.Upload.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.upload.models.Upload.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.upload.models.Upload.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.upload.models.Upload.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.Upload.STATE_INVALID">
+<code class="descname">STATE_INVALID</code><em class="property"> = 'INVALID'</em><a class="headerlink" href="#geonode.upload.models.Upload.STATE_INVALID" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.Upload.append_to_mosaic_name">
+<code class="descname">append_to_mosaic_name</code><em class="property"> = (&lt;django.db.models.fields.CharField&gt;,)</em><a class="headerlink" href="#geonode.upload.models.Upload.append_to_mosaic_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.Upload.append_to_mosaic_opts">
+<code class="descname">append_to_mosaic_opts</code><em class="property"> = (&lt;django.db.models.fields.BooleanField&gt;,)</em><a class="headerlink" href="#geonode.upload.models.Upload.append_to_mosaic_opts" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.Upload.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>cascade=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.Upload.delete" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.Upload.get_delete_url">
+<code class="descname">get_delete_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.Upload.get_delete_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.Upload.get_import_url">
+<code class="descname">get_import_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.Upload.get_import_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.Upload.get_next_by_date">
+<code class="descname">get_next_by_date</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.Upload.get_next_by_date" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.Upload.get_previous_by_date">
+<code class="descname">get_previous_by_date</code><span class="sig-paren">(</span><em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.Upload.get_previous_by_date" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.Upload.get_resume_url">
+<code class="descname">get_resume_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.Upload.get_resume_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.Upload.get_session">
+<code class="descname">get_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.Upload.get_session" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.Upload.layer">
+<code class="descname">layer</code><a class="headerlink" href="#geonode.upload.models.Upload.layer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.Upload.mosaic">
+<code class="descname">mosaic</code><em class="property"> = (&lt;django.db.models.fields.BooleanField&gt;,)</em><a class="headerlink" href="#geonode.upload.models.Upload.mosaic" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.Upload.objects">
+<code class="descname">objects</code><em class="property"> = &lt;geonode.upload.models.UploadManager object&gt;</em><a class="headerlink" href="#geonode.upload.models.Upload.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.Upload.update_from_session">
+<code class="descname">update_from_session</code><span class="sig-paren">(</span><em>upload_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.Upload.update_from_session" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.Upload.uploadfile_set">
+<code class="descname">uploadfile_set</code><a class="headerlink" href="#geonode.upload.models.Upload.uploadfile_set" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.Upload.user">
+<code class="descname">user</code><a class="headerlink" href="#geonode.upload.models.Upload.user" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.models.UploadFile">
+<em class="property">class </em><code class="descclassname">geonode.upload.models.</code><code class="descname">UploadFile</code><span class="sig-paren">(</span><em>id</em>, <em>upload</em>, <em>file</em>, <em>slug</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.UploadFile" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<dl class="exception">
+<dt id="geonode.upload.models.UploadFile.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.upload.models.UploadFile.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.upload.models.UploadFile.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.upload.models.UploadFile.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.UploadFile.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.UploadFile.delete" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.UploadFile.file">
+<code class="descname">file</code><a class="headerlink" href="#geonode.upload.models.UploadFile.file" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>The descriptor for the file attribute on the model instance. Returns a
+FieldFile when accessed so you can do stuff like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="k">import</span> <span class="n">MyModel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+<p>Assigns a file object on assignment so you can do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/path/to/hello.world&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">instance</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.UploadFile.get_absolute_url">
+<code class="descname">get_absolute_url</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.UploadFile.get_absolute_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.UploadFile.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#geonode.upload.models.UploadFile.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.UploadFile.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.UploadFile.save" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.models.UploadFile.upload">
+<code class="descname">upload</code><a class="headerlink" href="#geonode.upload.models.UploadFile.upload" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.models.UploadManager">
+<em class="property">class </em><code class="descclassname">geonode.upload.models.</code><code class="descname">UploadManager</code><a class="headerlink" href="#geonode.upload.models.UploadManager" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.manager.Manager</span></code></p>
+<dl class="method">
+<dt id="geonode.upload.models.UploadManager.create_from_session">
+<code class="descname">create_from_session</code><span class="sig-paren">(</span><em>user</em>, <em>import_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.UploadManager.create_from_session" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.UploadManager.get_incomplete_uploads">
+<code class="descname">get_incomplete_uploads</code><span class="sig-paren">(</span><em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.UploadManager.get_incomplete_uploads" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.models.UploadManager.update_from_session">
+<code class="descname">update_from_session</code><span class="sig-paren">(</span><em>upload_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.models.UploadManager.update_from_session" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.signals">
+<span id="geonode-upload-signals-module"></span><h2>geonode.upload.signals module<a class="headerlink" href="#module-geonode.upload.signals" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.upload.upload">
+<span id="geonode-upload-upload-module"></span><h2>geonode.upload.upload module<a class="headerlink" href="#module-geonode.upload.upload" title="Link permanente para este título">¶</a></h2>
+<p>Provide views and business logic of doing an upload.</p>
+<p>The upload process may be multi step so views are all handled internally here
+by the view function.</p>
+<p>The pattern to support separation of view/logic is each step in the upload
+process is suffixed with “_step”. The view for that step is suffixed with
+“_step_view”. The goal of separation of view/logic is to support various
+programmatic uses of this API. The logic steps should not accept request objects
+or return response objects.</p>
+<p>State is stored in a UploaderSession object stored in the user’s session.
+This needs to be made more stateful by adding a model.</p>
+<dl class="exception">
+<dt id="geonode.upload.upload.LayerNotReady">
+<em class="property">exception </em><code class="descclassname">geonode.upload.upload.</code><code class="descname">LayerNotReady</code><a class="headerlink" href="#geonode.upload.upload.LayerNotReady" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.upload.upload.UploadException">
+<em class="property">exception </em><code class="descclassname">geonode.upload.upload.</code><code class="descname">UploadException</code><a class="headerlink" href="#geonode.upload.upload.UploadException" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+<p>A handled exception meant to be presented to the user</p>
+<dl class="staticmethod">
+<dt id="geonode.upload.upload.UploadException.from_exc">
+<em class="property">static </em><code class="descname">from_exc</code><span class="sig-paren">(</span><em>msg</em>, <em>ex</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload.UploadException.from_exc" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.upload.UploaderSession">
+<em class="property">class </em><code class="descclassname">geonode.upload.upload.</code><code class="descname">UploaderSession</code><span class="sig-paren">(</span><em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload.UploaderSession" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>All objects held must be able to survive a good pickling</p>
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.append_to_mosaic_name">
+<code class="descname">append_to_mosaic_name</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.append_to_mosaic_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.append_to_mosaic_opts">
+<code class="descname">append_to_mosaic_opts</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.append_to_mosaic_opts" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.base_file">
+<code class="descname">base_file</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.base_file" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.upload.UploaderSession.cleanup">
+<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload.UploaderSession.cleanup" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>do what we should at the given state of the upload</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.completed_step">
+<code class="descname">completed_step</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.completed_step" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.error_msg">
+<code class="descname">error_msg</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.error_msg" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.geogig">
+<code class="descname">geogig</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.geogig" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.geogig_store">
+<code class="descname">geogig_store</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.geogig_store" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.import_session">
+<code class="descname">import_session</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.import_session" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.import_sld_file">
+<code class="descname">import_sld_file</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.import_sld_file" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.layer_abstract">
+<code class="descname">layer_abstract</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.layer_abstract" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.layer_title">
+<code class="descname">layer_title</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.layer_title" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.mosaic">
+<code class="descname">mosaic</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.mosaic" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.mosaic_time_regex">
+<code class="descname">mosaic_time_regex</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.mosaic_time_regex" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.mosaic_time_value">
+<code class="descname">mosaic_time_value</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.mosaic_time_value" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.permissions">
+<code class="descname">permissions</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.permissions" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.tempdir">
+<code class="descname">tempdir</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.tempdir" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.time">
+<code class="descname">time</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.time" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.time_info">
+<code class="descname">time_info</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.time_info" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.time_transforms">
+<code class="descname">time_transforms</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.time_transforms" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.update_mode">
+<code class="descname">update_mode</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.update_mode" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.upload_type">
+<code class="descname">upload_type</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.upload_type" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload.UploaderSession.user">
+<code class="descname">user</code><em class="property"> = None</em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.user" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload.csv_step">
+<code class="descclassname">geonode.upload.upload.</code><code class="descname">csv_step</code><span class="sig-paren">(</span><em>upload_session</em>, <em>lat_field</em>, <em>lng_field</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload.csv_step" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload.final_step">
+<code class="descclassname">geonode.upload.upload.</code><code class="descname">final_step</code><span class="sig-paren">(</span><em>upload_session</em>, <em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload.final_step" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload.import_imagemosaic_granules">
+<code class="descclassname">geonode.upload.upload.</code><code class="descname">import_imagemosaic_granules</code><span class="sig-paren">(</span><em>spatial_files</em>, <em>append_to_mosaic_opts</em>, <em>append_to_mosaic_name</em>, <em>mosaic_time_regex</em>, <em>mosaic_time_value</em>, <em>time_presentation</em>, <em>time_presentation_res</em>, <em>time_presentation_default_value</em>, <em>time_presentation_reference_value</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload.import_imagemosaic_granules" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload.save_step">
+<code class="descclassname">geonode.upload.upload.</code><code class="descname">save_step</code><span class="sig-paren">(</span><em>user</em>, <em>layer</em>, <em>spatial_files</em>, <em>overwrite=True</em>, <em>mosaic=False</em>, <em>append_to_mosaic_opts=None</em>, <em>append_to_mosaic_name=None</em>, <em>mosaic_time_regex=None</em>, <em>mosaic_time_value=None</em>, <em>time_presentation=None</em>, <em>time_presentation_res=None</em>, <em>time_presentation_default_value=None</em>, <em>time_presentation_reference_value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload.save_step" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload.srs_step">
+<code class="descclassname">geonode.upload.upload.</code><code class="descname">srs_step</code><span class="sig-paren">(</span><em>upload_session</em>, <em>source</em>, <em>target</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload.srs_step" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload.time_step">
+<code class="descclassname">geonode.upload.upload.</code><code class="descname">time_step</code><span class="sig-paren">(</span><em>upload_session</em>, <em>time_attribute</em>, <em>time_transform_type</em>, <em>presentation_strategy</em>, <em>precision_value</em>, <em>precision_step</em>, <em>end_time_attribute=None</em>, <em>end_time_transform_type=None</em>, <em>end_time_format=None</em>, <em>time_format=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload.time_step" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>time_attribute - name of attribute to use as time</p>
+<p>time_transform_type - name of transform. either
+DateFormatTransform or IntegerFieldToDateTransform</p>
+<p>time_format - optional string format
+end_time_attribute - optional name of attribute to use as end time</p>
+<p>end_time_transform_type - optional name of transform. either
+DateFormatTransform or IntegerFieldToDateTransform</p>
+<p>end_time_format - optional string format
+presentation_strategy - LIST, DISCRETE_INTERVAL, CONTINUOUS_INTERVAL
+precision_value - number
+precision_step - year, month, day, week, etc.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload.upload">
+<code class="descclassname">geonode.upload.upload.</code><code class="descname">upload</code><span class="sig-paren">(</span><em>name</em>, <em>base_file</em>, <em>user=None</em>, <em>time_attribute=None</em>, <em>time_transform_type=None</em>, <em>end_time_attribute=None</em>, <em>end_time_transform_type=None</em>, <em>presentation_strategy=None</em>, <em>precision_value=None</em>, <em>precision_step=None</em>, <em>use_big_date=False</em>, <em>overwrite=False</em>, <em>mosaic=False</em>, <em>append_to_mosaic_opts=None</em>, <em>append_to_mosaic_name=None</em>, <em>mosaic_time_regex=None</em>, <em>mosaic_time_value=None</em>, <em>time_presentation=None</em>, <em>time_presentation_res=None</em>, <em>time_presentation_default_value=None</em>, <em>time_presentation_reference_value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload.upload" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.upload_preprocessing">
+<span id="geonode-upload-upload-preprocessing-module"></span><h2>geonode.upload.upload_preprocessing module<a class="headerlink" href="#module-geonode.upload.upload_preprocessing" title="Link permanente para este título">¶</a></h2>
+<p>Tools for dealing with preprocessing operations in the upload process</p>
+<p>These functions are executed before the data is sent to geoserver. They’re
+main purpose is to prepare the data so that it can be ingested.</p>
+<dl class="class">
+<dt id="geonode.upload.upload_preprocessing.GdalBoundingBox">
+<em class="property">class </em><code class="descclassname">geonode.upload.upload_preprocessing.</code><code class="descname">GdalBoundingBox</code><span class="sig-paren">(</span><em>ulx</em>, <em>uly</em>, <em>lrx</em>, <em>lry</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload_preprocessing.GdalBoundingBox" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="geonode.upload.upload_preprocessing.GdalBoundingBox.lrx">
+<code class="descname">lrx</code><a class="headerlink" href="#geonode.upload.upload_preprocessing.GdalBoundingBox.lrx" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload_preprocessing.GdalBoundingBox.lry">
+<code class="descname">lry</code><a class="headerlink" href="#geonode.upload.upload_preprocessing.GdalBoundingBox.lry" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload_preprocessing.GdalBoundingBox.ulx">
+<code class="descname">ulx</code><a class="headerlink" href="#geonode.upload.upload_preprocessing.GdalBoundingBox.ulx" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload_preprocessing.GdalBoundingBox.uly">
+<code class="descname">uly</code><a class="headerlink" href="#geonode.upload.upload_preprocessing.GdalBoundingBox.uly" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload_preprocessing.convert_kml_ground_overlay_to_geotiff">
+<code class="descclassname">geonode.upload.upload_preprocessing.</code><code class="descname">convert_kml_ground_overlay_to_geotiff</code><span class="sig-paren">(</span><em>kml_path</em>, <em>other_file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload_preprocessing.convert_kml_ground_overlay_to_geotiff" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Write a geotiff file to disk from the provided kml and image</p>
+<p>KML files that specify GroundOverlay as their type are accompanied by a
+raster file. Since there is no direct support in geoserver for this type
+of KML, we extract the relevant information from the KML file and convert
+the raster file to a geotiff.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload_preprocessing.preprocess_files">
+<code class="descclassname">geonode.upload.upload_preprocessing.</code><code class="descname">preprocess_files</code><span class="sig-paren">(</span><em>spatial_files</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload_preprocessing.preprocess_files" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Pre-process the input spatial files.</p>
+<p>This function is used during the upload workflow. It is called before the
+data is sent to geoserver, thus providing a hook to perform custom
+pre-processing for specific types of files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>spatial_files</strong> (<a class="reference internal" href="#geonode.upload.files.SpatialFiles" title="geonode.upload.files.SpatialFiles"><em>geonode.upload.files.SpatialFiles</em></a>) – The files that are about to be uploaded to geoserver</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body">A list with the paths of the pre-processed files</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.upload_validators">
+<span id="geonode-upload-upload-validators-module"></span><h2>geonode.upload.upload_validators module<a class="headerlink" href="#module-geonode.upload.upload_validators" title="Link permanente para este título">¶</a></h2>
+<p>Tools for performing validation of uploaded spatial files.</p>
+<dl class="class">
+<dt id="geonode.upload.upload_validators.ShapefileAux">
+<em class="property">class </em><code class="descclassname">geonode.upload.upload_validators.</code><code class="descname">ShapefileAux</code><span class="sig-paren">(</span><em>extension</em>, <em>mandatory</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload_validators.ShapefileAux" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="geonode.upload.upload_validators.ShapefileAux.extension">
+<code class="descname">extension</code><a class="headerlink" href="#geonode.upload.upload_validators.ShapefileAux.extension" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.upload_validators.ShapefileAux.mandatory">
+<code class="descname">mandatory</code><a class="headerlink" href="#geonode.upload.upload_validators.ShapefileAux.mandatory" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload_validators.validate_kml">
+<code class="descclassname">geonode.upload.upload_validators.</code><code class="descname">validate_kml</code><span class="sig-paren">(</span><em>possible_files</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload_validators.validate_kml" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Validate uploaded KML file and a possible image companion file</p>
+<p>KML files that specify vectorial data typers are uploaded standalone.
+However, if the KML specifies a GroundOverlay type (raster) they are
+uploaded together with a raster file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload_validators.validate_kmz">
+<code class="descclassname">geonode.upload.upload_validators.</code><code class="descname">validate_kmz</code><span class="sig-paren">(</span><em>kmz_django_file</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload_validators.validate_kmz" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload_validators.validate_shapefile_components">
+<code class="descclassname">geonode.upload.upload_validators.</code><code class="descname">validate_shapefile_components</code><span class="sig-paren">(</span><em>possible_filenames</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload_validators.validate_shapefile_components" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Validates that a shapefile can be loaded from the input file paths</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>possible_files</strong> (<em>list</em>) – Remaining form upload contents</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">forms.ValidationError</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload_validators.validate_uploaded_files">
+<code class="descclassname">geonode.upload.upload_validators.</code><code class="descname">validate_uploaded_files</code><span class="sig-paren">(</span><em>cleaned</em>, <em>uploaded_files</em>, <em>field_spatial_types</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload_validators.validate_uploaded_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.upload_validators.validate_zip">
+<code class="descclassname">geonode.upload.upload_validators.</code><code class="descname">validate_zip</code><span class="sig-paren">(</span><em>zip_django_file</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.upload_validators.validate_zip" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.urls">
+<span id="geonode-upload-urls-module"></span><h2>geonode.upload.urls module<a class="headerlink" href="#module-geonode.upload.urls" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.upload.utils">
+<span id="geonode-upload-utils-module"></span><h2>geonode.upload.utils module<a class="headerlink" href="#module-geonode.upload.utils" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.upload.utils.JSONResponse">
+<em class="property">class </em><code class="descclassname">geonode.upload.utils.</code><code class="descname">JSONResponse</code><span class="sig-paren">(</span><em>obj=''</em>, <em>json_opts=None</em>, <em>content_type='application/json'</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.JSONResponse" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.http.response.HttpResponse</span></code></p>
+<p>JSON response class.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.check_import_session_is_valid">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">check_import_session_is_valid</code><span class="sig-paren">(</span><em>request</em>, <em>upload_session</em>, <em>import_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.check_import_session_is_valid" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.create_geoserver_db_featurestore">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">create_geoserver_db_featurestore</code><span class="sig-paren">(</span><em>store_type=None</em>, <em>store_name=None</em>, <em>author_name='admin'</em>, <em>author_email='admin&#64;geonode.org'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.create_geoserver_db_featurestore" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.error_response">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">error_response</code><span class="sig-paren">(</span><em>req</em>, <em>exception=None</em>, <em>errors=None</em>, <em>force_ajax=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.error_response" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.get_kml_doc">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">get_kml_doc</code><span class="sig-paren">(</span><em>kml_bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.get_kml_doc" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Parse and return an etree element with the kml file’s content</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.get_next_step">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">get_next_step</code><span class="sig-paren">(</span><em>upload_session</em>, <em>offset=1</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.get_next_step" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.get_previous_step">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">get_previous_step</code><span class="sig-paren">(</span><em>upload_session</em>, <em>post_to</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.get_previous_step" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.init_geogig_repo">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">init_geogig_repo</code><span class="sig-paren">(</span><em>payload</em>, <em>store_name</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.init_geogig_repo" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.is_async_step">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">is_async_step</code><span class="sig-paren">(</span><em>upload_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.is_async_step" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.is_latitude">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">is_latitude</code><span class="sig-paren">(</span><em>colname</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.is_latitude" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.is_longitude">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">is_longitude</code><span class="sig-paren">(</span><em>colname</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.is_longitude" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.iso8601">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">iso8601</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.iso8601" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>match(string[, pos[, endpos]]) –&gt; match object or None.
+Matches zero or more characters at the beginning of the string</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.json_load_byteified">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">json_load_byteified</code><span class="sig-paren">(</span><em>file_handle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.json_load_byteified" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.json_loads_byteified">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">json_loads_byteified</code><span class="sig-paren">(</span><em>json_text</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.json_loads_byteified" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.json_response">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">json_response</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.json_response" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.layer_eligible_for_time_dimension">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">layer_eligible_for_time_dimension</code><span class="sig-paren">(</span><em>request</em>, <em>layer</em>, <em>values=None</em>, <em>upload_session=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.layer_eligible_for_time_dimension" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.make_geogig_rest_payload">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">make_geogig_rest_payload</code><span class="sig-paren">(</span><em>author_name='admin'</em>, <em>author_email='admin&#64;geonode.org'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.make_geogig_rest_payload" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.next_step_response">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">next_step_response</code><span class="sig-paren">(</span><em>req</em>, <em>upload_session</em>, <em>force_ajax=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.next_step_response" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.progress_redirect">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">progress_redirect</code><span class="sig-paren">(</span><em>step</em>, <em>upload_id</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.progress_redirect" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.run_import">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">run_import</code><span class="sig-paren">(</span><em>upload_session</em>, <em>async=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.run_import" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Run the import, possibly asynchronously.</p>
+<p>Returns the target datastore.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.utils.run_response">
+<code class="descclassname">geonode.upload.utils.</code><code class="descname">run_response</code><span class="sig-paren">(</span><em>req</em>, <em>upload_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.utils.run_response" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.views">
+<span id="geonode-upload-views-module"></span><h2>geonode.upload.views module<a class="headerlink" href="#module-geonode.upload.views" title="Link permanente para este título">¶</a></h2>
+<p>Provide views for doing an upload.</p>
+<p>The upload process may be multi step so views are all handled internally here
+by the view function.</p>
+<p>The pattern to support separation of view/logic is each step in the upload
+process is suffixed with “_step”. The view for that step is suffixed with
+“_step_view”. The goal of separation of view/logic is to support various
+programmatic uses of this API. The logic steps should not accept request objects
+or return response objects.</p>
+<p>State is stored in a UploaderSession object stored in the user’s session.
+This needs to be made more stateful by adding a model.</p>
+<dl class="class">
+<dt id="geonode.upload.views.UploadFileCreateView">
+<em class="property">class </em><code class="descclassname">geonode.upload.views.</code><code class="descname">UploadFileCreateView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.UploadFileCreateView" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.CreateView</span></code></p>
+<dl class="attribute">
+<dt id="geonode.upload.views.UploadFileCreateView.form_class">
+<code class="descname">form_class</code><a class="headerlink" href="#geonode.upload.views.UploadFileCreateView.form_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.upload.forms.UploadFileForm" title="geonode.upload.forms.UploadFileForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.upload.forms.UploadFileForm</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.views.UploadFileCreateView.form_invalid">
+<code class="descname">form_invalid</code><span class="sig-paren">(</span><em>form</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.UploadFileCreateView.form_invalid" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>If the form is invalid, re-render the context data with the
+data-filled form and errors.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.views.UploadFileCreateView.form_valid">
+<code class="descname">form_valid</code><span class="sig-paren">(</span><em>form</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.UploadFileCreateView.form_valid" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>If the form is valid, save the associated model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.views.UploadFileCreateView.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.upload.views.UploadFileCreateView.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.upload.models.UploadFile" title="geonode.upload.models.UploadFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.upload.models.UploadFile</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.views.UploadFileDeleteView">
+<em class="property">class </em><code class="descclassname">geonode.upload.views.</code><code class="descname">UploadFileDeleteView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.UploadFileDeleteView" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<dl class="method">
+<dt id="geonode.upload.views.UploadFileDeleteView.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.UploadFileDeleteView.delete" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This does not actually delete the file, only the database record.  But
+that is easy to implement.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.views.UploadFileDeleteView.model">
+<code class="descname">model</code><a class="headerlink" href="#geonode.upload.views.UploadFileDeleteView.model" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="#geonode.upload.models.UploadFile" title="geonode.upload.models.UploadFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.upload.models.UploadFile</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.check_step_view">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">check_step_view</code><span class="sig-paren">(</span><em>request</em>, <em>upload_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.check_step_view" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.create_time_form">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">create_time_form</code><span class="sig-paren">(</span><em>request</em>, <em>upload_session</em>, <em>form_data</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.create_time_form" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.csv_step_view">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">csv_step_view</code><span class="sig-paren">(</span><em>request</em>, <em>upload_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.csv_step_view" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.data_upload_progress">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">data_upload_progress</code><span class="sig-paren">(</span><em>req</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.data_upload_progress" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This would not be needed if geoserver REST did not require admin role
+and is an inefficient way of getting this information</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.delete">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">delete</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.delete" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.final_step_view">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">final_step_view</code><span class="sig-paren">(</span><em>req</em>, <em>upload_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.final_step_view" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.response_content_type">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">response_content_type</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.response_content_type" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.save_step_view">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">save_step_view</code><span class="sig-paren">(</span><em>req</em>, <em>session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.save_step_view" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.srs_step_view">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">srs_step_view</code><span class="sig-paren">(</span><em>request</em>, <em>upload_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.srs_step_view" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.time_step_view">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">time_step_view</code><span class="sig-paren">(</span><em>request</em>, <em>upload_session</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.time_step_view" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.views.view">
+<code class="descclassname">geonode.upload.views.</code><code class="descname">view</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.views.view" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Main uploader view</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.upload" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

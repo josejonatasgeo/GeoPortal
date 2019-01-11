@@ -1,0 +1,18 @@
+- active: true
+  name: !!python/unicode 'cartoview_webapp_builder'
+  order: !!python/long '1'
+- active: true
+  name: !!python/unicode 'cartoview_swipe'
+  order: !!python/long '3'
+- active: true
+  name: !!python/unicode 'cartoview_basic_viewer'
+  order: !!python/long '4'
+- active: true
+  name: !!python/unicode 'cartoview_summary_viewer'
+  order: !!python/long '5'
+- active: true
+  name: !!python/unicode 'cartoview_charts_viewer'
+  order: !!python/long '6'
+- active: true
+  name: !!python/unicode 'cartoview_dashboard'
+  order: !!python/long '7'

@@ -1,0 +1,668 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.upload.tests package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.upload.tests package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.tests.integration">geonode.upload.tests.integration module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.tests.test_files">geonode.upload.tests.test_files module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.tests.test_settings">geonode.upload.tests.test_settings module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.tests.test_upload_preprocessing">geonode.upload.tests.test_upload_preprocessing module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.tests.test_utils">geonode.upload.tests.test_utils module</a></li>
+<li><a class="reference internal" href="#module-geonode.upload.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.upload.tests package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.upload.tests.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-upload-tests-package">
+<h1>geonode.upload.tests package<a class="headerlink" href="#geonode-upload-tests-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.upload.tests.integration">
+<span id="geonode-upload-tests-integration-module"></span><h2>geonode.upload.tests.integration module<a class="headerlink" href="#module-geonode.upload.tests.integration" title="Link permanente para este título">¶</a></h2>
+<p>See the README.rst in this directory for details on running these tests.
+&#64;todo allow using a database other than <cite>development.db</cite> - for some reason, a</p>
+<blockquote>
+<div>test db is not created when running using normal settings</div></blockquote>
+<dl class="docutils">
+<dt>&#64;todo when using database settings, a test database is used and this makes it</dt>
+<dd>difficult for cleanup to track the layers created between runs</dd>
+</dl>
+<p>&#64;todo only test_time seems to work correctly with database backend test settings</p>
+<dl class="class">
+<dt id="geonode.upload.tests.integration.Client">
+<em class="property">class </em><code class="descclassname">geonode.upload.tests.integration.</code><code class="descname">Client</code><span class="sig-paren">(</span><em>url</em>, <em>user</em>, <em>passwd</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.Client" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>client for making http requests</p>
+<dl class="method">
+<dt id="geonode.upload.tests.integration.Client.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>path</em>, <em>debug=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.Client.get" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.Client.get_csrf_token">
+<code class="descname">get_csrf_token</code><span class="sig-paren">(</span><em>last=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.Client.get_csrf_token" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get a csrf_token from the home page or read from the cookie jar
+based on the last response</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.Client.get_html">
+<code class="descname">get_html</code><span class="sig-paren">(</span><em>path</em>, <em>debug=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.Client.get_html" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Method that make a get request and passes the results to bs4
+Takes a path and returns a tuple</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.Client.get_json">
+<code class="descname">get_json</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.Client.get_json" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.Client.login">
+<code class="descname">login</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.Client.login" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Method to login the GeoNode site</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.Client.make_request">
+<code class="descname">make_request</code><span class="sig-paren">(</span><em>path</em>, <em>data=None</em>, <em>ajax=False</em>, <em>debug=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.Client.make_request" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.Client.upload_file">
+<code class="descname">upload_file</code><span class="sig-paren">(</span><em>_file</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.Client.upload_file" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>function that uploads a file, or a collection of files, to
+the GeoNode</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.tests.integration.TestUpload">
+<em class="property">class </em><code class="descclassname">geonode.upload.tests.integration.</code><code class="descname">TestUpload</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUpload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.upload.tests.integration.UploaderBase" title="geonode.upload.tests.integration.UploaderBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.upload.tests.integration.UploaderBase</span></code></a></p>
+<dl class="attribute">
+<dt id="geonode.upload.tests.integration.TestUpload.settings_overrides">
+<code class="descname">settings_overrides</code><em class="property"> = []</em><a class="headerlink" href="#geonode.upload.tests.integration.TestUpload.settings_overrides" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.TestUpload.test_coherent_importer_session">
+<code class="descname">test_coherent_importer_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUpload.test_coherent_importer_session" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Tests that the upload computes correctly next session IDs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.TestUpload.test_csv">
+<code class="descname">test_csv</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUpload.test_csv" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>make sure a csv upload fails gracefully/normally when not activated</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.TestUpload.test_extension_not_implemented">
+<code class="descname">test_extension_not_implemented</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUpload.test_extension_not_implemented" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify a error message is return when an unsupported layer is
+uploaded</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.TestUpload.test_invalid_layer_upload">
+<code class="descname">test_invalid_layer_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUpload.test_invalid_layer_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Tests the layers that are invalid and should not be uploaded</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.TestUpload.test_raster_upload">
+<code class="descname">test_raster_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUpload.test_raster_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Tests if a raster layer can be upload to a running GeoNode GeoServer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.TestUpload.test_shp_upload">
+<code class="descname">test_shp_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUpload.test_shp_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Tests if a vector layer can be upload to a running GeoNode GeoServer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.TestUpload.test_zipped_upload">
+<code class="descname">test_zipped_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUpload.test_zipped_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test uploading a zipped shapefile</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.tests.integration.TestUploadDBDataStore">
+<em class="property">class </em><code class="descclassname">geonode.upload.tests.integration.</code><code class="descname">TestUploadDBDataStore</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUploadDBDataStore" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.upload.tests.integration.UploaderBase" title="geonode.upload.tests.integration.UploaderBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.upload.tests.integration.UploaderBase</span></code></a></p>
+<dl class="attribute">
+<dt id="geonode.upload.tests.integration.TestUploadDBDataStore.settings_overrides">
+<code class="descname">settings_overrides</code><em class="property"> = []</em><a class="headerlink" href="#geonode.upload.tests.integration.TestUploadDBDataStore.settings_overrides" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.TestUploadDBDataStore.test_configure_time">
+<code class="descname">test_configure_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUploadDBDataStore.test_configure_time" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.TestUploadDBDataStore.test_csv">
+<code class="descname">test_csv</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUploadDBDataStore.test_csv" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Override the baseclass test and verify a correct CSV upload</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.TestUploadDBDataStore.test_time">
+<code class="descname">test_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.TestUploadDBDataStore.test_time" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify that uploading time based shapefile works properly</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.tests.integration.UploaderBase">
+<em class="property">class </em><code class="descclassname">geonode.upload.tests.integration.</code><code class="descname">UploaderBase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.check_and_pass_through_timestep">
+<code class="descname">check_and_pass_through_timestep</code><span class="sig-paren">(</span><em>redirect_to</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.check_and_pass_through_timestep" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.check_invalid_projection">
+<code class="descname">check_invalid_projection</code><span class="sig-paren">(</span><em>layer_name</em>, <em>resp</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.check_invalid_projection" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Makes sure that we got the correct response from an layer
+that can’t be uploaded</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.check_layer_complete">
+<code class="descname">check_layer_complete</code><span class="sig-paren">(</span><em>layer_page</em>, <em>original_name</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.check_layer_complete" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>check everything to verify the layer is complete</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.check_layer_geonode_page">
+<code class="descname">check_layer_geonode_page</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.check_layer_geonode_page" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Check that the final layer page render’s correctly after
+an layer is uploaded</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.check_layer_geoserver_caps">
+<code class="descname">check_layer_geoserver_caps</code><span class="sig-paren">(</span><em>type_name</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.check_layer_geoserver_caps" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Check that a layer shows up in GeoServer’s get
+capabilities document</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.check_layer_geoserver_rest">
+<code class="descname">check_layer_geoserver_rest</code><span class="sig-paren">(</span><em>layer_name</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.check_layer_geoserver_rest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Check that a layer shows up in GeoServer rest api after
+the uploader is done</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.check_save_step">
+<code class="descname">check_save_step</code><span class="sig-paren">(</span><em>resp</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.check_save_step" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verify the initial save step</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.check_upload_model">
+<code class="descname">check_upload_model</code><span class="sig-paren">(</span><em>original_name</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.check_upload_model" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.complete_raster_upload">
+<code class="descname">complete_raster_upload</code><span class="sig-paren">(</span><em>file_path</em>, <em>resp</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.complete_raster_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.complete_upload">
+<code class="descname">complete_upload</code><span class="sig-paren">(</span><em>file_path</em>, <em>resp</em>, <em>data</em>, <em>is_raster=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.complete_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Method to check if a layer was correctly uploaded to the
+GeoNode.</p>
+<p>arguments: file path, the django http response</p>
+<blockquote>
+<div><p>Checks to see if a layer is configured in Django
+Checks to see if a layer is configured in GeoServer</p>
+<blockquote>
+<div>checks the Rest API
+checks the get cap document</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.finish_upload">
+<code class="descname">finish_upload</code><span class="sig-paren">(</span><em>current_step</em>, <em>layer_name</em>, <em>is_raster=False</em>, <em>skip_srs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.finish_upload" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.make_csv">
+<code class="descname">make_csv</code><span class="sig-paren">(</span><em>*rows</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.make_csv" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="geonode.upload.tests.integration.UploaderBase.setUpClass">
+<em class="property">classmethod </em><code class="descname">setUpClass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.setUpClass" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up class fixture before running tests in the class.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.upload.tests.integration.UploaderBase.settings_overrides">
+<code class="descname">settings_overrides</code><em class="property"> = []</em><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.settings_overrides" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.tearDown" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="geonode.upload.tests.integration.UploaderBase.tearDownClass">
+<em class="property">classmethod </em><code class="descname">tearDownClass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.tearDownClass" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for deconstructing the class fixture after running all tests in the class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.temp_file">
+<code class="descname">temp_file</code><span class="sig-paren">(</span><em>ext</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.temp_file" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.upload_file">
+<code class="descname">upload_file</code><span class="sig-paren">(</span><em>fname</em>, <em>final_check</em>, <em>check_name=None</em>, <em>session_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.upload_file" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.upload_folder_of_files">
+<code class="descname">upload_folder_of_files</code><span class="sig-paren">(</span><em>folder</em>, <em>final_check</em>, <em>session_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.upload_folder_of_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.integration.UploaderBase.wait_for_progress">
+<code class="descname">wait_for_progress</code><span class="sig-paren">(</span><em>progress_url</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.UploaderBase.wait_for_progress" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.tests.integration.get_wms">
+<code class="descclassname">geonode.upload.tests.integration.</code><code class="descname">get_wms</code><span class="sig-paren">(</span><em>version='1.1.1'</em>, <em>type_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.get_wms" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Function to return an OWSLib WMS object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.tests.integration.upload_step">
+<code class="descclassname">geonode.upload.tests.integration.</code><code class="descname">upload_step</code><span class="sig-paren">(</span><em>step=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.integration.upload_step" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.tests.test_files">
+<span id="geonode-upload-tests-test-files-module"></span><h2>geonode.upload.tests.test_files module<a class="headerlink" href="#module-geonode.upload.tests.test_files" title="Link permanente para este título">¶</a></h2>
+<p>unit tests for geonode.upload.files module</p>
+<dl class="class">
+<dt id="geonode.upload.tests.test_files.FilesTestCase">
+<em class="property">class </em><code class="descclassname">geonode.upload.tests.test_files.</code><code class="descname">FilesTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_files.FilesTestCase" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.upload.tests.test_files.FilesTestCase.test_get_type_kml_ground_overlay">
+<code class="descname">test_get_type_kml_ground_overlay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_files.FilesTestCase.test_get_type_kml_ground_overlay" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.test_files.FilesTestCase.test_get_type_non_existing_type">
+<code class="descname">test_get_type_non_existing_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_files.FilesTestCase.test_get_type_non_existing_type" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.test_files.FilesTestCase.test_scan_hint_kml_ground_overlay">
+<code class="descname">test_scan_hint_kml_ground_overlay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_files.FilesTestCase.test_scan_hint_kml_ground_overlay" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.test_files.FilesTestCase.test_scan_hint_kmz_ground_overlay">
+<code class="descname">test_scan_hint_kmz_ground_overlay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_files.FilesTestCase.test_scan_hint_kmz_ground_overlay" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.tests.test_settings">
+<span id="geonode-upload-tests-test-settings-module"></span><h2>geonode.upload.tests.test_settings module<a class="headerlink" href="#module-geonode.upload.tests.test_settings" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.upload.tests.test_upload_preprocessing">
+<span id="geonode-upload-tests-test-upload-preprocessing-module"></span><h2>geonode.upload.tests.test_upload_preprocessing module<a class="headerlink" href="#module-geonode.upload.tests.test_upload_preprocessing" title="Link permanente para este título">¶</a></h2>
+<p>unit tests for geonode.upload.upload_preprocessing module</p>
+<dl class="class">
+<dt id="geonode.upload.tests.test_upload_preprocessing.UploadPreprocessingTestCase">
+<em class="property">class </em><code class="descclassname">geonode.upload.tests.test_upload_preprocessing.</code><code class="descname">UploadPreprocessingTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_upload_preprocessing.UploadPreprocessingTestCase" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="attribute">
+<dt id="geonode.upload.tests.test_upload_preprocessing.UploadPreprocessingTestCase.MOCK_PREFIX">
+<code class="descname">MOCK_PREFIX</code><em class="property"> = 'geonode.upload.upload_preprocessing'</em><a class="headerlink" href="#geonode.upload.tests.test_upload_preprocessing.UploadPreprocessingTestCase.MOCK_PREFIX" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.test_upload_preprocessing.UploadPreprocessingTestCase.test_convert_kml_ground_overlay_to_geotiff">
+<code class="descname">test_convert_kml_ground_overlay_to_geotiff</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_upload_preprocessing.UploadPreprocessingTestCase.test_convert_kml_ground_overlay_to_geotiff" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.test_upload_preprocessing.UploadPreprocessingTestCase.test_extract_bbox_param">
+<code class="descname">test_extract_bbox_param</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_upload_preprocessing.UploadPreprocessingTestCase.test_extract_bbox_param" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.test_upload_preprocessing.UploadPreprocessingTestCase.test_preprocess_files_kml_ground_overlay">
+<code class="descname">test_preprocess_files_kml_ground_overlay</code><span class="sig-paren">(</span><em>**keywargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_upload_preprocessing.UploadPreprocessingTestCase.test_preprocess_files_kml_ground_overlay" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.tests.test_utils">
+<span id="geonode-upload-tests-test-utils-module"></span><h2>geonode.upload.tests.test_utils module<a class="headerlink" href="#module-geonode.upload.tests.test_utils" title="Link permanente para este título">¶</a></h2>
+<p>unit tests for geonode.upload.utils module</p>
+<dl class="class">
+<dt id="geonode.upload.tests.test_utils.UtilsTestCase">
+<em class="property">class </em><code class="descclassname">geonode.upload.tests.test_utils.</code><code class="descname">UtilsTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_utils.UtilsTestCase" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.upload.tests.test_utils.UtilsTestCase.test_get_kml_doc">
+<code class="descname">test_get_kml_doc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_utils.UtilsTestCase.test_get_kml_doc" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.test_utils.UtilsTestCase.test_pages">
+<code class="descname">test_pages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.test_utils.UtilsTestCase.test_pages" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.upload.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.upload.tests" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.upload.tests.FilesTests">
+<em class="property">class </em><code class="descclassname">geonode.upload.tests.</code><code class="descname">FilesTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.FilesTests" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.upload.tests.FilesTests.test_contains_bad_names">
+<code class="descname">test_contains_bad_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.FilesTests.test_contains_bad_names" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.FilesTests.test_rename_and_prepare">
+<code class="descname">test_rename_and_prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.FilesTests.test_rename_and_prepare" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.FilesTests.test_rename_files">
+<code class="descname">test_rename_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.FilesTests.test_rename_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.FilesTests.test_scan_file">
+<code class="descname">test_scan_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.FilesTests.test_scan_file" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Tests the scan_file function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.FilesTests.test_types">
+<code class="descname">test_types</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.FilesTests.test_types" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.upload.tests.TimeFormFormTest">
+<em class="property">class </em><code class="descclassname">geonode.upload.tests.</code><code class="descname">TimeFormFormTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.TimeFormFormTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.upload.tests.TimeFormFormTest.assert_start_end">
+<code class="descname">assert_start_end</code><span class="sig-paren">(</span><em>data</em>, <em>start</em>, <em>end=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.TimeFormFormTest.assert_start_end" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.TimeFormFormTest.test_invalid_form">
+<code class="descname">test_invalid_form</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.TimeFormFormTest.test_invalid_form" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.upload.tests.TimeFormFormTest.test_start_end_attribute_and_type">
+<code class="descname">test_start_end_attribute_and_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.TimeFormFormTest.test_start_end_attribute_and_type" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.upload.tests.create_files">
+<code class="descclassname">geonode.upload.tests.</code><code class="descname">create_files</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwds</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.upload.tests.create_files" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

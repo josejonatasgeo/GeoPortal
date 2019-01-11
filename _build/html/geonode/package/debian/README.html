@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Debian packaging scripts for GeoNode &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Buscar" href="../../../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Debian packaging scripts for GeoNode</a><ul>
+<li><a class="reference internal" href="#building">Building</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Debian packaging scripts for GeoNode</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/geonode/package/debian/README.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="debian-packaging-scripts-for-geonode">
+<h1>Debian packaging scripts for GeoNode<a class="headerlink" href="#debian-packaging-scripts-for-geonode" title="Link permanente para este título">¶</a></h1>
+<p>This repository contains the scripts used to build the .deb (Ubuntu) package
+for GeoNode.  If you are interested in modifying GeoNode itself you may find
+<a class="reference external" href="http://github.com/GeoNode/geonode">http://github.com/GeoNode/geonode</a> more relevant.</p>
+<div class="section" id="building">
+<h2>Building<a class="headerlink" href="#building" title="Link permanente para este título">¶</a></h2>
+<p>To produce a .deb package which can be redistributed:</p>
+<ul>
+<li><p class="first">Install the debian packaging tools:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">debhelper</span> <span class="n">devscripts</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Acquire a GeoNode tar.gz archive (by either building it from sources, or from
+<a class="reference external" href="http://dev.geonode.org/release/">http://dev.geonode.org/release/</a> ) and unpack it, so that you have a
+directory structure like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geonode</span><span class="o">-</span><span class="n">deb</span><span class="o">/</span>
+   <span class="o">+</span> <span class="n">debian</span><span class="o">/</span>
+   <span class="o">+</span> <span class="n">GeoNode</span><span class="o">-</span><span class="p">{</span><span class="n">version</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run the debuild tool to build the package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">debuild</span> <span class="o">-</span><span class="n">uc</span> <span class="o">-</span><span class="n">us</span> <span class="o">-</span><span class="n">A</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">geonode-{version}.deb will be produced in the parent directory (one level
+above the directory where you cloned this project).</p>
+</li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link permanente para este título">¶</a></h2>
+<p>As described in the GeoNode manual, you can access OpenGeo’s APT repository to
+get pre-built GeoNode packages.  However, if you want to build a package and
+install that instead, you can avoid the need for a repository of your own by
+using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dpkg</span> <span class="o">-</span><span class="n">i</span> <span class="n">geonode</span><span class="o">-</span><span class="p">{</span><span class="n">version</span><span class="p">}</span><span class="o">.</span><span class="n">deb</span>
+</pre></div>
+</div>
+<p>If dpkg reports an error about unmet dependencies, you can issue the following
+command to fetch dependencies and re-attempt the installation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">f</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

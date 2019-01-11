@@ -1,0 +1,43 @@
+{% load i18n %}
+<ul class="nav nav-tabs gd-style-tabs">
+    <li class="active">
+        <a href="#info" data-toggle="tab">
+            <i class="fa fa-info-circle"></i>
+            {% trans "Informações" %}
+        </a>
+    </li>
+    {% if resource.polymorphic_ctype.name == 'layer' %}
+        <li>
+            <a href="#attributes" data-toggle="tab">
+                <i class="fa fa-bars"></i>
+                {% trans "Atributos" %}
+            </a>
+        </li>
+        <div class="tab-content">
+        </div>
+    {% endif %}
+
+
+    <li>
+        <a href="#comments" data-toggle="tab">
+            <i class="fa fa-comment-o"></i>
+            {% trans "Comentarios" %}
+        </a>
+    </li>
+    {% if GEOGIG_ENABLED and resource.link_set.geogig %}
+        <li>
+            <a href="#geogig" data-toggle="tab">
+                <i class="fa fa-code-fork"></i>
+                {% trans "GeoGig" %}
+            </a>
+        </li>
+    {% endif %}
+    {% if EXIF_ENABLED and resource.polymorphic_ctype.name == 'document' and exif_data %}
+        <li>
+            <a href="#exif" data-toggle="tab">
+                <i class="fa fa-photo"></i>
+                {% trans "Exif" %}
+            </a>
+        </li>
+    {% endif %}
+</ul>

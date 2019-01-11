@@ -1,0 +1,12 @@
+HP1 0 50
+ Mon, 17 Dec 2018 19:48:11 GMT
+Server: Apache/2.4.37 (Win32) OpenSSL/1.0.2q mod_jk/1.2.35
+Set-Cookie: JSESSIONID=AABE962A18C13A1971691F7D252A40FD; Path=/geoserver; HttpOnly
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: image/png
+
+58
+Handler dispatch failed; nested exception is java.lang.OutOfMemoryError: Java heap space
+
+

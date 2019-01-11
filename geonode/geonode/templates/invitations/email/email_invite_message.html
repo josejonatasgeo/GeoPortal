@@ -1,0 +1,15 @@
+{% load i18n %}
+<p>Caro Sr/Sra,</p>
+<p><strong>{{ inviter_name }}</strong>  você foi convidado a participar ({{ site_name }}).</p>
+<p>
+    Para fazer isso, por favor registre-se em <a href="{{ invite_url }}">{{ site_name }} Registrar</a>.
+</p>
+<p>
+    Depois de receber a confirmação de que sua conta está ativada, você pode notificar <strong>{{ inviter_name }}</strong> que você deseja se juntar ao (s) seu (s) grupo (s) através de <a href="{{ SITEURL }}{% url 'message_create' inviter_id %}?subject=Request%20to%20join%20your%20group&content=Dear%20group%20manager%2C%0A%0AI%20am%20now%20a%20member%20of%20{{ site_name }}%2C%20and%20I%20would%20like%20to%20join%20the%20group%20that%20you%20are%20managing.%0APlease%20add%20me%20to%20your%20group.%0A%0AThank%20you.">deste link</a>.
+</p>
+<p><strong>{{ inviter_name }}</strong> é membro do(s) seguinte(s) grupo(s):</p>
+<ul>
+    {% for group in groups %}
+        <li><a href="{{ SITEURL }}{% url "group_detail" group.slug %}">{{ group }}</a></li>
+    {% endfor %}
+</ul>

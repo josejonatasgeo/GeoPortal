@@ -1,0 +1,23 @@
+{% load i18n %}
+<li class="list-group-item">
+  <h4>{% trans "Sobre" %}</h4>
+  {% if resource.owner == resource.poc and resource.owner == resource.metadata_author %}
+  <p>{% trans "Colaborador,Ponto de Contato,Autor do metadado" %}</p>
+    {% with resource.owner as profile %}
+      {% include "people/_profile_about_item.html" %}
+    {% endwith %}
+  {% else %}
+  <p>{% trans "Colaborador" %}</p>
+    {% with resource.owner as profile %}
+      {% include "people/_profile_about_item.html" %}
+    {% endwith %}
+  <p>{% trans "Ponto de contato" %}</p>
+    {% with resource.poc as profile %}
+      {% include "people/_profile_about_item.html" %}
+    {% endwith %}
+  <p>{% trans "Autor do Metadado" %}</p>
+    {% with resource.metadata_author as profile %}
+      {% include "people/_profile_about_item.html" %}
+    {% endwith %}
+  {% endif %}
+</li>  

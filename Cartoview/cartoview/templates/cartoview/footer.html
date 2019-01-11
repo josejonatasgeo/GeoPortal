@@ -1,0 +1,159 @@
+{% load i18n avatar_tags cartoview_tags %}
+<style>
+/* Estilos del footer */
+
+footer {
+	background: #337966;
+	padding: 80px 0 60px;
+	margin-top: 0px;
+}
+
+footer .container {
+	position: relative;
+}
+
+footer .menu_footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer .menu_footer img {
+	width: 200px;
+}
+
+footer .menu_footer ul {
+	display: flex;
+}
+
+footer .menu_footer a + ul li {
+	margin: 0 20px;
+	text-align: center;
+}
+
+footer .menu_footer a + ul li:last-child {
+	margin-right: 0;
+}
+
+footer .menu_footer a + ul li a {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+
+footer .menu_footer ul.redes {
+	position: absolute;
+	top: -40px;
+	right: 0;
+}
+
+footer .menu_footer ul.redes li {
+	margin-left: 7px;
+}
+
+footer .menu_footer ul.redes li a {
+	color: #fff;
+	width: 30px;
+	height: 30px;
+    transition: all 0.5s;
+}
+
+footer .menu_footer ul.redes li a img {
+	width: 20px;
+}
+
+footer .datos_footer {
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .datos_footer article {
+    margin: 0 15px;
+}
+
+footer .datos_footer article p,
+footer .datos_footer article ul li {
+	font-size: 0.7em;
+	color: #fff;
+	line-height: 1.3em;
+}
+
+footer .datos_footer article ul li a {
+	color: #fff;
+}
+
+.copy {
+  background-color: white;
+	padding: 15px 0;
+}
+
+.copy p {
+	color: #337966;
+	font-size: 0.9em;
+}
+
+/* --------------------------------------------- */
+
+/* Estilos de la sección Azúcar */
+ </style>
+{% load static %}
+<footer>
+		<div class="container">
+			<div class="menu_footer">
+				<a href="{% url "home" %}"><img src="{{ STATIC_URL }}cartoview/img/logo_blanco.png"></a>
+			</div>
+
+			<div class="datos_footer">
+				<article>
+					<p>Luxemburgo</p>
+					<ul>
+						<li>Vertigo Naos Building</li>
+						<li>6, Rue Eugène Ruppert</li>
+						<li>L-2453 - Luxembourg</li>
+						<li>Grand Duchy of <br>Luxembourg</li>
+					</ul>
+				</article>
+				<article>
+					<p>Argentina</p>
+					<ul>
+						<li>(+5411) 4836 8600</li>
+						<li>info_ar@adecoagro.com</li>
+						<li>Fondo de la Legua 936</li>
+						<li>Martínez (B1640EDO) - <br>Buenos Aires, Argentina</li>
+					</ul>
+				</article>
+				<article>
+					<p>Brasil</p>
+					<ul>
+						<li>(+5511) 2678 5600</li>
+						<li>info_bra@adecoagro.com</li>
+						<li>Rua Iguatemi 192 – 12º andar</li>
+						<li>Itaim Bibi São Paulo <br>(CEP 01451-010) - SP, Brasil</li>
+					</ul>
+				</article>
+				<article>
+					<p>Uruguay</p>
+					<ul>
+						<li>(+5985) 2601 4499</li>
+						<li>info_uru@adecoagro.com</li>
+						<li>Av Italia 7519 of. 405</li>
+						<li>(CP 11500) - Montevideo</li>
+						<li>República Oriental <br>del Uruguay</li>
+					</ul>
+				</article>
+				<article>
+					<p>Para reclamos y quejas</p>
+					<ul>
+						<li><a href="mailto:consultas@adecoagro.com">consultas@adecoagro.com</a></li>
+						<li>(+5411) 4836-8600</li>
+					</ul>
+				</article>
+			</div>
+		</div>
+	</footer>
+	<div class="copy">
+		<div class="container">
+			<p>Copyright 2018 - Todos os direitos reservados - Adecoagro 2018
+		</div>
+	</div>

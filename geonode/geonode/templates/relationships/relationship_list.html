@@ -1,0 +1,31 @@
+{% extends "geonode_base.html" %}
+
+{% load i18n avatar_tags relationship_tags %}
+
+{% block body %}
+
+<div class="twocol">
+    <div id="confirmation" style="display: none;">
+    </div>
+    <ul id="relationship_list" style="list-style-type: none;">
+    {% for user in relationship_list %}
+        <div style="height: 90px;" class="user_info" id="user_info_{{ user.id }}">
+        <div style="float: left">{% avatar user 70 %}</div>
+        <li style="margin-left: 75px;"><p>{{ user.username }} -
+        {% if status.name == "Following" %}
+            <a href="{{ user|remove_relationship_url:"following"}}" id="{{ user.id }}" class="btn btn-primary" type="button">{% trans "Para de seguir" %}</a>
+        {% endif %}
+
+        {% if status.name == "Blocking" %}
+            <a href="{{ user|remove_relationship_url:"blocking"}}" id="{{ user.id }}" class="btn btn-primary" type="button">{% trans "Desbloquear" %}</a>
+        {% endif %}
+
+        </p></li>
+        </div>
+        {% empty %}
+            <li>{% blocktrans %}Você não tem {{ status_slug }} ninguem!{% endblocktrans %}</li>
+    {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

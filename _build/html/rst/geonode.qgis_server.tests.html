@@ -1,0 +1,488 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.qgis_server.tests package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.qgis_server.tests package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.tests.test_helpers">geonode.qgis_server.tests.test_helpers module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.tests.test_management">geonode.qgis_server.tests.test_management module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.tests.test_qgis_settings">geonode.qgis_server.tests.test_qgis_settings module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.tests.test_views">geonode.qgis_server.tests.test_views module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.tests.test_xml_utilities">geonode.qgis_server.tests.test_xml_utilities module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.qgis_server.tests package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.qgis_server.tests.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-qgis-server-tests-package">
+<h1>geonode.qgis_server.tests package<a class="headerlink" href="#geonode-qgis-server-tests-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.qgis_server.tests.test_helpers">
+<span id="geonode-qgis-server-tests-test-helpers-module"></span><h2>geonode.qgis_server.tests.test_helpers module<a class="headerlink" href="#module-geonode.qgis_server.tests.test_helpers" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.qgis_server.tests.test_helpers.HelperTest">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.tests.test_helpers.</code><code class="descname">HelperTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_helpers.HelperTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_helpers.HelperTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_helpers.HelperTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_helpers.HelperTest.test_delete_orphan">
+<code class="descname">test_delete_orphan</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_helpers.HelperTest.test_delete_orphan" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test orphan deletions.</p>
+<p>This test only started in travis to avoid accidentally deleting owners
+data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_helpers.HelperTest.test_qgis_server_endpoint">
+<code class="descname">test_qgis_server_endpoint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_helpers.HelperTest.test_qgis_server_endpoint" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test QGIS Server endpoint url.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_helpers.HelperTest.test_style_management_url">
+<code class="descname">test_style_management_url</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_helpers.HelperTest.test_style_management_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test QGIS Server style management url construction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_helpers.HelperTest.test_tile_url">
+<code class="descname">test_tile_url</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_helpers.HelperTest.test_tile_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test to return tile format.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_helpers.HelperTest.test_transform_layer_bbox">
+<code class="descname">test_transform_layer_bbox</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_helpers.HelperTest.test_transform_layer_bbox" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test bbox CRS conversion</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_helpers.HelperTest.test_validate_settings">
+<code class="descname">test_validate_settings</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_helpers.HelperTest.test_validate_settings" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test settings validation</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.tests.test_management">
+<span id="geonode-qgis-server-tests-test-management-module"></span><h2>geonode.qgis_server.tests.test_management module<a class="headerlink" href="#module-geonode.qgis_server.tests.test_management" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.qgis_server.tests.test_management.TestManagementCommands">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.tests.test_management.</code><code class="descname">TestManagementCommands</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_management.TestManagementCommands" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_management.TestManagementCommands.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_management.TestManagementCommands.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_management.TestManagementCommands.test_import_layers">
+<code class="descname">test_import_layers</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_management.TestManagementCommands.test_import_layers" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Importlayers management command should properly overwrite.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_management.TestManagementCommands.test_import_qgis_styles">
+<code class="descname">test_import_qgis_styles</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_management.TestManagementCommands.test_import_qgis_styles" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>import_qgis_styles management commands should run properly.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.tests.test_qgis_settings">
+<span id="geonode-qgis-server-tests-test-qgis-settings-module"></span><h2>geonode.qgis_server.tests.test_qgis_settings module<a class="headerlink" href="#module-geonode.qgis_server.tests.test_qgis_settings" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.qgis_server.tests.test_qgis_settings.QGISSettingsTest">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.tests.test_qgis_settings.</code><code class="descname">QGISSettingsTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_qgis_settings.QGISSettingsTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_qgis_settings.QGISSettingsTest.test_ogc_server_wrapper">
+<code class="descname">test_ogc_server_wrapper</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_qgis_settings.QGISSettingsTest.test_ogc_server_wrapper" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that OGC_Server settings were properly wrapped.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_qgis_settings.QGISSettingsTest.test_qgis_server_connection">
+<code class="descname">test_qgis_server_connection</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_qgis_settings.QGISSettingsTest.test_qgis_server_connection" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that QGIS Server url is reachable.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_qgis_settings.QGISSettingsTest.test_settings">
+<code class="descname">test_settings</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_qgis_settings.QGISSettingsTest.test_settings" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Check that applied settings configured correctly.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_qgis_settings.QGISSettingsTest.test_siteurl_connection">
+<code class="descname">test_siteurl_connection</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_qgis_settings.QGISSettingsTest.test_siteurl_connection" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that SITEURL is properly configured and reachable.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.tests.test_views">
+<span id="geonode-qgis-server-tests-test-views-module"></span><h2>geonode.qgis_server.tests.test_views module<a class="headerlink" href="#module-geonode.qgis_server.tests.test_views" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.qgis_server.tests.test_views.DefaultViewsTest">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.tests.test_views.</code><code class="descname">DefaultViewsTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.DefaultViewsTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.DefaultViewsTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.DefaultViewsTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.DefaultViewsTest.test_default_context">
+<code class="descname">test_default_context</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.DefaultViewsTest.test_default_context" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test default context provided by qgis_server.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.qgis_server.tests.test_views.InitialSetup">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.tests.test_views.</code><code class="descname">InitialSetup</code><a class="headerlink" href="#geonode.qgis_server.tests.test_views.InitialSetup" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="classmethod">
+<dt id="geonode.qgis_server.tests.test_views.InitialSetup.generate_initial_map">
+<em class="property">classmethod </em><code class="descname">generate_initial_map</code><span class="sig-paren">(</span><em>layer1</em>, <em>layer2</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.InitialSetup.generate_initial_map" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.qgis_server.tests.test_views.QGISServerStyleManagerTest">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.tests.test_views.</code><code class="descname">QGISServerStyleManagerTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.QGISServerStyleManagerTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.QGISServerStyleManagerTest.data_path">
+<code class="descname">data_path</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.QGISServerStyleManagerTest.data_path" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.QGISServerStyleManagerTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.QGISServerStyleManagerTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.QGISServerStyleManagerTest.test_add_delete_style">
+<code class="descname">test_add_delete_style</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.QGISServerStyleManagerTest.test_add_delete_style" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test add new style using qgis_server views.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.QGISServerStyleManagerTest.test_list_style">
+<code class="descname">test_list_style</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.QGISServerStyleManagerTest.test_list_style" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test querying list of styles from QGIS Server.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.qgis_server.tests.test_views.QGISServerViewsTest">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.tests.test_views.</code><code class="descname">QGISServerViewsTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.QGISServerViewsTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.QGISServerViewsTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.QGISServerViewsTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.QGISServerViewsTest.test_download_map_qlr">
+<code class="descname">test_download_map_qlr</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.QGISServerViewsTest.test_download_map_qlr" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test download QLR file for a map</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.QGISServerViewsTest.test_map_json">
+<code class="descname">test_map_json</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.QGISServerViewsTest.test_map_json" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.QGISServerViewsTest.test_ogc_specific_layer">
+<code class="descname">test_ogc_specific_layer</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.QGISServerViewsTest.test_ogc_specific_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test we can use QGIS Server API for a layer.</p>
+<p>For now, we are just checking we can call these views without any
+exceptions. We should improve this test by checking the result.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.qgis_server.tests.test_views.ThumbnailGenerationTest">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.tests.test_views.</code><code class="descname">ThumbnailGenerationTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.ThumbnailGenerationTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.LiveServerTestCase</span></code></p>
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.ThumbnailGenerationTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.ThumbnailGenerationTest.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.ThumbnailGenerationTest.test_map_thumbnail">
+<code class="descname">test_map_thumbnail</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.ThumbnailGenerationTest.test_map_thumbnail" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Creating map will create thumbnail.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_views.ThumbnailGenerationTest.test_thumbnail_links">
+<code class="descname">test_thumbnail_links</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_views.ThumbnailGenerationTest.test_thumbnail_links" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that thumbnail links were created after upload.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.tests.test_xml_utilities">
+<span id="geonode-qgis-server-tests-test-xml-utilities-module"></span><h2>geonode.qgis_server.tests.test_xml_utilities module<a class="headerlink" href="#module-geonode.qgis_server.tests.test_xml_utilities" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.qgis_server.tests.test_xml_utilities.XMLUtilitiesTest">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.tests.test_xml_utilities.</code><code class="descname">XMLUtilitiesTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_xml_utilities.XMLUtilitiesTest" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<p>Test for xml utilities module.</p>
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_xml_utilities.XMLUtilitiesTest.test_insert_xml_element">
+<code class="descname">test_insert_xml_element</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_xml_utilities.XMLUtilitiesTest.test_insert_xml_element" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Check we can’t insert custom nested elements</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.tests.test_xml_utilities.XMLUtilitiesTest.test_update_xml">
+<code class="descname">test_update_xml</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.tests.test_xml_utilities.XMLUtilitiesTest.test_update_xml" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test inserting xml element.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.qgis_server.tests" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

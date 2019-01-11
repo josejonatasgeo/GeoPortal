@@ -1,0 +1,1824 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.api package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.api package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.api.api">geonode.api.api module</a></li>
+<li><a class="reference internal" href="#module-geonode.api.authorization">geonode.api.authorization module</a></li>
+<li><a class="reference internal" href="#module-geonode.api.resourcebase_api">geonode.api.resourcebase_api module</a></li>
+<li><a class="reference internal" href="#module-geonode.api.tests">geonode.api.tests module</a></li>
+<li><a class="reference internal" href="#module-geonode.api.urls">geonode.api.urls module</a></li>
+<li><a class="reference internal" href="#module-geonode.api.views">geonode.api.views module</a></li>
+<li><a class="reference internal" href="#module-geonode.api">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.api package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-api-package">
+<h1>geonode.api package<a class="headerlink" href="#geonode-api-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.api.api">
+<span id="geonode-api-api-module"></span><h2>geonode.api.api module<a class="headerlink" href="#module-geonode.api.api" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.api.api.CountJSONSerializer">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">CountJSONSerializer</code><span class="sig-paren">(</span><em>formats=None</em>, <em>content_types=None</em>, <em>datetime_formatting=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.CountJSONSerializer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.serializers.Serializer</span></code></p>
+<p>Custom serializer to post process the api and add counts</p>
+<dl class="method">
+<dt id="geonode.api.api.CountJSONSerializer.get_resources_counts">
+<code class="descname">get_resources_counts</code><span class="sig-paren">(</span><em>options</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.CountJSONSerializer.get_resources_counts" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.CountJSONSerializer.to_json">
+<code class="descname">to_json</code><span class="sig-paren">(</span><em>data</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.CountJSONSerializer.to_json" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.GeoserverStyleResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">GeoserverStyleResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.resources.ModelResource</span></code></p>
+<p>Styles API for Geoserver backend.</p>
+<dl class="class">
+<dt id="geonode.api.api.GeoserverStyleResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.api.GeoserverStyleResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get']</em><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GeoserverStyleResource.Meta.authorization">
+<code class="descname">authorization</code><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.Meta.authorization" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Object level API authorization based on GeoNode granular
+permission system</p>
+<p>Style object permissions should follow it’s layer permissions</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GeoserverStyleResource.Meta.detail_uri_name">
+<code class="descname">detail_uri_name</code><em class="property"> = 'id'</em><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.Meta.detail_uri_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GeoserverStyleResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'id': 1, 'layer': 2, 'name': 1, 'title': 1}</em><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GeoserverStyleResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.layers.html#geonode.layers.models.Style" title="geonode.layers.models.Style"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.models.Style</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GeoserverStyleResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GeoserverStyleResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'styles'</em><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GeoserverStyleResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'body': &lt;tastypie.fields.CharField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'layer': &lt;tastypie.fields.ManyToManyField object&gt;, 'name': &lt;tastypie.fields.CharField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'sld_body': &lt;tastypie.fields.CharField object&gt;, 'sld_title': &lt;tastypie.fields.CharField object&gt;, 'sld_url': &lt;tastypie.fields.CharField object&gt;, 'sld_version': &lt;tastypie.fields.CharField object&gt;, 'style_url': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'type': &lt;tastypie.fields.CharField object&gt;, 'version': &lt;tastypie.fields.CharField object&gt;, 'workspace': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.GeoserverStyleResource.build_bundle">
+<code class="descname">build_bundle</code><span class="sig-paren">(</span><em>obj=None</em>, <em>data=None</em>, <em>request=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.build_bundle" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Override build_bundle method to add additional info.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.GeoserverStyleResource.build_filters">
+<code class="descname">build_filters</code><span class="sig-paren">(</span><em>filters=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.build_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Apply custom filters for layer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GeoserverStyleResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'body': &lt;tastypie.fields.CharField object&gt;, 'layer': &lt;tastypie.fields.ManyToManyField object&gt;, 'name': &lt;tastypie.fields.CharField object&gt;, 'style_url': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'type': &lt;tastypie.fields.CharField object&gt;, 'version': &lt;tastypie.fields.CharField object&gt;, 'workspace': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.GeoserverStyleResource.populate_object">
+<code class="descname">populate_object</code><span class="sig-paren">(</span><em>style</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GeoserverStyleResource.populate_object" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Populate results with necessary fields</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>style</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Style" title="geonode.layers.models.Style"><em>Style</em></a>) – Style objects</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.GroupCategoryResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">GroupCategoryResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GroupCategoryResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.api.TypeFilteredResource" title="geonode.api.api.TypeFilteredResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.api.TypeFilteredResource</span></code></a></p>
+<dl class="class">
+<dt id="geonode.api.api.GroupCategoryResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.api.GroupCategoryResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get']</em><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupCategoryResource.Meta.fields">
+<code class="descname">fields</code><em class="property"> = ['name', 'slug']</em><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.Meta.fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupCategoryResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'name': 1, 'slug': 1}</em><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupCategoryResource.Meta.include_resource_uri">
+<code class="descname">include_resource_uri</code><em class="property"> = False</em><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.Meta.include_resource_uri" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupCategoryResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.groups.html#geonode.groups.models.GroupCategory" title="geonode.groups.models.GroupCategory"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.groups.models.GroupCategory</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupCategoryResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupCategoryResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'detail_url': &lt;tastypie.fields.CharField object&gt;, 'member_count': &lt;tastypie.fields.IntegerField object&gt;, 'name': &lt;tastypie.fields.CharField object&gt;, 'slug': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupCategoryResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'detail_url': &lt;tastypie.fields.CharField object&gt;, 'member_count': &lt;tastypie.fields.IntegerField object&gt;}</em><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.GroupCategoryResource.dehydrate_detail_url">
+<code class="descname">dehydrate_detail_url</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.dehydrate_detail_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.GroupCategoryResource.dehydrate_member_count">
+<code class="descname">dehydrate_member_count</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GroupCategoryResource.dehydrate_member_count" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.GroupResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">GroupResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GroupResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.api.TypeFilteredResource" title="geonode.api.api.TypeFilteredResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.api.TypeFilteredResource</span></code></a></p>
+<p>Groups api</p>
+<dl class="class">
+<dt id="geonode.api.api.GroupResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.api.GroupResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.api.GroupResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get']</em><a class="headerlink" href="#geonode.api.api.GroupResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'categories': 2, 'title': 1}</em><a class="headerlink" href="#geonode.api.api.GroupResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.api.GroupResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.groups.html#geonode.groups.models.GroupProfile" title="geonode.groups.models.GroupProfile"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.groups.models.GroupProfile</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupResource.Meta.ordering">
+<code class="descname">ordering</code><em class="property"> = ['title', 'last_modified']</em><a class="headerlink" href="#geonode.api.api.GroupResource.Meta.ordering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.api.GroupResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'groups'</em><a class="headerlink" href="#geonode.api.api.GroupResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.GroupResource.apply_filters">
+<code class="descname">apply_filters</code><span class="sig-paren">(</span><em>request</em>, <em>applicable_filters</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GroupResource.apply_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>filter by group if applicable by group functionality</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'access': &lt;tastypie.fields.CharField object&gt;, 'categories': &lt;tastypie.fields.ToManyField object&gt;, 'count': &lt;tastypie.fields.IntegerField object&gt;, 'created': &lt;tastypie.fields.DateTimeField object&gt;, 'description': &lt;tastypie.fields.CharField object&gt;, 'description_en': &lt;tastypie.fields.CharField object&gt;, 'detail_url': &lt;tastypie.fields.CharField object&gt;, 'email': &lt;tastypie.fields.CharField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'last_modified': &lt;tastypie.fields.DateTimeField object&gt;, 'logo': &lt;tastypie.fields.FileField object&gt;, 'manager_count': &lt;tastypie.fields.IntegerField object&gt;, 'member_count': &lt;tastypie.fields.IntegerField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'slug': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'title_en': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.GroupResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.GroupResource.build_filters">
+<code class="descname">build_filters</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ignore_bad_filters=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GroupResource.build_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>adds filtering by group functionality</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.GroupResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'categories': &lt;tastypie.fields.ToManyField object&gt;, 'detail_url': &lt;tastypie.fields.CharField object&gt;, 'manager_count': &lt;tastypie.fields.IntegerField object&gt;, 'member_count': &lt;tastypie.fields.IntegerField object&gt;}</em><a class="headerlink" href="#geonode.api.api.GroupResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.GroupResource.dehydrate_detail_url">
+<code class="descname">dehydrate_detail_url</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GroupResource.dehydrate_detail_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.GroupResource.dehydrate_manager_count">
+<code class="descname">dehydrate_manager_count</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GroupResource.dehydrate_manager_count" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.GroupResource.dehydrate_member_count">
+<code class="descname">dehydrate_member_count</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.GroupResource.dehydrate_member_count" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.OwnersResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">OwnersResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.OwnersResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.api.TypeFilteredResource" title="geonode.api.api.TypeFilteredResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.api.TypeFilteredResource</span></code></a></p>
+<p>Owners api, lighter and faster version of the profiles api</p>
+<dl class="class">
+<dt id="geonode.api.api.OwnersResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.api.OwnersResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.api.OwnersResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get']</em><a class="headerlink" href="#geonode.api.api.OwnersResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.OwnersResource.Meta.excludes">
+<code class="descname">excludes</code><em class="property"> = ['is_staff', 'password', 'is_superuser', 'is_active', 'last_login']</em><a class="headerlink" href="#geonode.api.api.OwnersResource.Meta.excludes" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.OwnersResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'username': 1}</em><a class="headerlink" href="#geonode.api.api.OwnersResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.OwnersResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.api.OwnersResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.people.html#geonode.people.models.Profile" title="geonode.people.models.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.people.models.Profile</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.OwnersResource.Meta.ordering">
+<code class="descname">ordering</code><em class="property"> = ['username', 'date_joined']</em><a class="headerlink" href="#geonode.api.api.OwnersResource.Meta.ordering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.OwnersResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = [&lt;Profile: admin&gt;]</em><a class="headerlink" href="#geonode.api.api.OwnersResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.OwnersResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'owners'</em><a class="headerlink" href="#geonode.api.api.OwnersResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.OwnersResource.Meta.serializer">
+<code class="descname">serializer</code><em class="property"> = &lt;geonode.api.api.CountJSONSerializer object&gt;</em><a class="headerlink" href="#geonode.api.api.OwnersResource.Meta.serializer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.OwnersResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'area': &lt;tastypie.fields.CharField object&gt;, 'city': &lt;tastypie.fields.CharField object&gt;, 'count': &lt;tastypie.fields.IntegerField object&gt;, 'country': &lt;tastypie.fields.CharField object&gt;, 'date_joined': &lt;tastypie.fields.DateTimeField object&gt;, 'delivery': &lt;tastypie.fields.CharField object&gt;, 'email': &lt;tastypie.fields.CharField object&gt;, 'first_name': &lt;tastypie.fields.CharField object&gt;, 'full_name': &lt;tastypie.fields.CharField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'language': &lt;tastypie.fields.CharField object&gt;, 'last_name': &lt;tastypie.fields.CharField object&gt;, 'organization': &lt;tastypie.fields.CharField object&gt;, 'position': &lt;tastypie.fields.CharField object&gt;, 'profile': &lt;tastypie.fields.CharField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'timezone': &lt;tastypie.fields.CharField object&gt;, 'username': &lt;tastypie.fields.CharField object&gt;, 'voice': &lt;tastypie.fields.CharField object&gt;, 'zipcode': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.OwnersResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.OwnersResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'full_name': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.OwnersResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.OwnersResource.dehydrate_full_name">
+<code class="descname">dehydrate_full_name</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.OwnersResource.dehydrate_full_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.OwnersResource.serialize">
+<code class="descname">serialize</code><span class="sig-paren">(</span><em>request</em>, <em>data</em>, <em>format</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.OwnersResource.serialize" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.ProfileResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">ProfileResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.api.TypeFilteredResource" title="geonode.api.api.TypeFilteredResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.api.TypeFilteredResource</span></code></a></p>
+<p>Profile api</p>
+<dl class="class">
+<dt id="geonode.api.api.ProfileResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.api.ProfileResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.api.ProfileResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get']</em><a class="headerlink" href="#geonode.api.api.ProfileResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ProfileResource.Meta.excludes">
+<code class="descname">excludes</code><em class="property"> = ['is_staff', 'password', 'is_superuser', 'is_active', 'last_login']</em><a class="headerlink" href="#geonode.api.api.ProfileResource.Meta.excludes" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ProfileResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'username': 1}</em><a class="headerlink" href="#geonode.api.api.ProfileResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ProfileResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.api.ProfileResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.people.html#geonode.people.models.Profile" title="geonode.people.models.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.people.models.Profile</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ProfileResource.Meta.ordering">
+<code class="descname">ordering</code><em class="property"> = ['username', 'date_joined']</em><a class="headerlink" href="#geonode.api.api.ProfileResource.Meta.ordering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ProfileResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = [&lt;Profile: admin&gt;]</em><a class="headerlink" href="#geonode.api.api.ProfileResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ProfileResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'profiles'</em><a class="headerlink" href="#geonode.api.api.ProfileResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ProfileResource.Meta.serializer">
+<code class="descname">serializer</code><em class="property"> = &lt;geonode.api.api.CountJSONSerializer object&gt;</em><a class="headerlink" href="#geonode.api.api.ProfileResource.Meta.serializer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.apply_filters">
+<code class="descname">apply_filters</code><span class="sig-paren">(</span><em>request</em>, <em>applicable_filters</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.apply_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>filter by group if applicable by group functionality</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ProfileResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'activity_stream_url': &lt;tastypie.fields.CharField object&gt;, 'area': &lt;tastypie.fields.CharField object&gt;, 'avatar_100': &lt;tastypie.fields.CharField object&gt;, 'city': &lt;tastypie.fields.CharField object&gt;, 'count': &lt;tastypie.fields.IntegerField object&gt;, 'country': &lt;tastypie.fields.CharField object&gt;, 'current_user': &lt;tastypie.fields.BooleanField object&gt;, 'date_joined': &lt;tastypie.fields.DateTimeField object&gt;, 'delivery': &lt;tastypie.fields.CharField object&gt;, 'documents_count': &lt;tastypie.fields.IntegerField object&gt;, 'email': &lt;tastypie.fields.CharField object&gt;, 'first_name': &lt;tastypie.fields.CharField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'language': &lt;tastypie.fields.CharField object&gt;, 'last_name': &lt;tastypie.fields.CharField object&gt;, 'layers_count': &lt;tastypie.fields.IntegerField object&gt;, 'maps_count': &lt;tastypie.fields.IntegerField object&gt;, 'organization': &lt;tastypie.fields.CharField object&gt;, 'position': &lt;tastypie.fields.CharField object&gt;, 'profile': &lt;tastypie.fields.CharField object&gt;, 'profile_detail_url': &lt;tastypie.fields.CharField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'timezone': &lt;tastypie.fields.CharField object&gt;, 'username': &lt;tastypie.fields.CharField object&gt;, 'voice': &lt;tastypie.fields.CharField object&gt;, 'zipcode': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.ProfileResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.build_filters">
+<code class="descname">build_filters</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ignore_bad_filters=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.build_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>adds filtering by group functionality</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ProfileResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'activity_stream_url': &lt;tastypie.fields.CharField object&gt;, 'avatar_100': &lt;tastypie.fields.CharField object&gt;, 'current_user': &lt;tastypie.fields.BooleanField object&gt;, 'documents_count': &lt;tastypie.fields.IntegerField object&gt;, 'email': &lt;tastypie.fields.CharField object&gt;, 'layers_count': &lt;tastypie.fields.IntegerField object&gt;, 'maps_count': &lt;tastypie.fields.IntegerField object&gt;, 'profile_detail_url': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.ProfileResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.dehydrate_activity_stream_url">
+<code class="descname">dehydrate_activity_stream_url</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.dehydrate_activity_stream_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.dehydrate_avatar_100">
+<code class="descname">dehydrate_avatar_100</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.dehydrate_avatar_100" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.dehydrate_current_user">
+<code class="descname">dehydrate_current_user</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.dehydrate_current_user" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.dehydrate_documents_count">
+<code class="descname">dehydrate_documents_count</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.dehydrate_documents_count" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.dehydrate_email">
+<code class="descname">dehydrate_email</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.dehydrate_email" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.dehydrate_layers_count">
+<code class="descname">dehydrate_layers_count</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.dehydrate_layers_count" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.dehydrate_maps_count">
+<code class="descname">dehydrate_maps_count</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.dehydrate_maps_count" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.dehydrate_profile_detail_url">
+<code class="descname">dehydrate_profile_detail_url</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.dehydrate_profile_detail_url" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.prepend_urls">
+<code class="descname">prepend_urls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.prepend_urls" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ProfileResource.serialize">
+<code class="descname">serialize</code><span class="sig-paren">(</span><em>request</em>, <em>data</em>, <em>format</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ProfileResource.serialize" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.QGISStyleResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">QGISStyleResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.QGISStyleResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.resources.ModelResource</span></code></p>
+<p>Styles API for QGIS Server backend.</p>
+<dl class="class">
+<dt id="geonode.api.api.QGISStyleResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.api.QGISStyleResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.api.QGISStyleResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get', 'post', 'delete']</em><a class="headerlink" href="#geonode.api.api.QGISStyleResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.QGISStyleResource.Meta.authorization">
+<code class="descname">authorization</code><a class="headerlink" href="#geonode.api.api.QGISStyleResource.Meta.authorization" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Object level API authorization based on GeoNode granular
+permission system</p>
+<p>Style object permissions should follow it’s layer permissions</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.QGISStyleResource.Meta.detail_uri_name">
+<code class="descname">detail_uri_name</code><em class="property"> = 'id'</em><a class="headerlink" href="#geonode.api.api.QGISStyleResource.Meta.detail_uri_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.QGISStyleResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'id': 1, 'layer': 2, 'name': 1, 'title': 1}</em><a class="headerlink" href="#geonode.api.api.QGISStyleResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.QGISStyleResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.api.QGISStyleResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.qgis_server.html#geonode.qgis_server.models.QGISServerStyle" title="geonode.qgis_server.models.QGISServerStyle"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.qgis_server.models.QGISServerStyle</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.QGISStyleResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.api.QGISStyleResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.QGISStyleResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'styles'</em><a class="headerlink" href="#geonode.api.api.QGISStyleResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.QGISStyleResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'body': &lt;tastypie.fields.CharField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'layer': &lt;tastypie.fields.ForeignKey object&gt;, 'name': &lt;tastypie.fields.CharField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'style_legend_url': &lt;tastypie.fields.CharField object&gt;, 'style_url': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'type': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.QGISStyleResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.QGISStyleResource.build_bundle">
+<code class="descname">build_bundle</code><span class="sig-paren">(</span><em>obj=None</em>, <em>data=None</em>, <em>request=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.QGISStyleResource.build_bundle" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Override build_bundle method to add additional info.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.QGISStyleResource.build_filters">
+<code class="descname">build_filters</code><span class="sig-paren">(</span><em>filters=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.QGISStyleResource.build_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Apply custom filters for layer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.QGISStyleResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'body': &lt;tastypie.fields.CharField object&gt;, 'layer': &lt;tastypie.fields.ForeignKey object&gt;, 'name': &lt;tastypie.fields.CharField object&gt;, 'style_url': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'type': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.QGISStyleResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.QGISStyleResource.delete_detail">
+<code class="descname">delete_detail</code><span class="sig-paren">(</span><em>request</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.QGISStyleResource.delete_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Attempt to redirect to QGIS Server Style management.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.QGISStyleResource.delete_list">
+<code class="descname">delete_list</code><span class="sig-paren">(</span><em>request</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.QGISStyleResource.delete_list" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Do not allow delete list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.QGISStyleResource.populate_object">
+<code class="descname">populate_object</code><span class="sig-paren">(</span><em>style</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.QGISStyleResource.populate_object" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Populate results with necessary fields</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>style</strong> (<a class="reference internal" href="geonode.qgis_server.html#geonode.qgis_server.models.QGISServerStyle" title="geonode.qgis_server.models.QGISServerStyle"><em>QGISServerStyle</em></a>) – Style objects</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.QGISStyleResource.post_list">
+<code class="descname">post_list</code><span class="sig-paren">(</span><em>request</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.QGISStyleResource.post_list" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Attempt to redirect to QGIS Server Style management.</p>
+<p>A post method should have the following field:</p>
+<p>name: Slug name of style
+title: Title of style
+style: the style file uploaded</p>
+<p>Also, should have kwargs:</p>
+<p>layername or layer__name: The layer name associated with the style</p>
+<p>or</p>
+<p>layer__id: The layer id associated with the style</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.RegionResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">RegionResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.RegionResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.api.TypeFilteredResource" title="geonode.api.api.TypeFilteredResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.api.TypeFilteredResource</span></code></a></p>
+<p>Regions api</p>
+<dl class="class">
+<dt id="geonode.api.api.RegionResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.api.RegionResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.api.RegionResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get']</em><a class="headerlink" href="#geonode.api.api.RegionResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.RegionResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'code': 1, 'name': 1}</em><a class="headerlink" href="#geonode.api.api.RegionResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.RegionResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.api.RegionResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.base.html#geonode.base.models.Region" title="geonode.base.models.Region"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.Region</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.RegionResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.api.RegionResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.RegionResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'regions'</em><a class="headerlink" href="#geonode.api.api.RegionResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.RegionResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'bbox_x0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_x1': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y1': &lt;tastypie.fields.DecimalField object&gt;, 'code': &lt;tastypie.fields.CharField object&gt;, 'count': &lt;tastypie.fields.IntegerField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, u'level': &lt;tastypie.fields.IntegerField object&gt;, u'lft': &lt;tastypie.fields.IntegerField object&gt;, 'name': &lt;tastypie.fields.CharField object&gt;, 'name_en': &lt;tastypie.fields.CharField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, u'rght': &lt;tastypie.fields.IntegerField object&gt;, 'srid': &lt;tastypie.fields.CharField object&gt;, u'tree_id': &lt;tastypie.fields.IntegerField object&gt;}</em><a class="headerlink" href="#geonode.api.api.RegionResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.RegionResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#geonode.api.api.RegionResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.RegionResource.serialize">
+<code class="descname">serialize</code><span class="sig-paren">(</span><em>request</em>, <em>data</em>, <em>format</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.RegionResource.serialize" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.StyleResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">StyleResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.StyleResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.api.GeoserverStyleResource" title="geonode.api.api.GeoserverStyleResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.api.GeoserverStyleResource</span></code></a></p>
+<p>Wrapper for Generic Style Resource</p>
+<dl class="attribute">
+<dt id="geonode.api.api.StyleResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'body': &lt;tastypie.fields.CharField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'layer': &lt;tastypie.fields.ManyToManyField object&gt;, 'name': &lt;tastypie.fields.CharField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'sld_body': &lt;tastypie.fields.CharField object&gt;, 'sld_title': &lt;tastypie.fields.CharField object&gt;, 'sld_url': &lt;tastypie.fields.CharField object&gt;, 'sld_version': &lt;tastypie.fields.CharField object&gt;, 'style_url': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'type': &lt;tastypie.fields.CharField object&gt;, 'version': &lt;tastypie.fields.CharField object&gt;, 'workspace': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.StyleResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.StyleResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#geonode.api.api.StyleResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.TagResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">TagResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.TagResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.api.TypeFilteredResource" title="geonode.api.api.TypeFilteredResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.api.TypeFilteredResource</span></code></a></p>
+<p>Tags api</p>
+<dl class="class">
+<dt id="geonode.api.api.TagResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.api.TagResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.api.TagResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get']</em><a class="headerlink" href="#geonode.api.api.TagResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TagResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'slug': 1}</em><a class="headerlink" href="#geonode.api.api.TagResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TagResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.api.TagResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.base.html#geonode.base.models.HierarchicalKeyword" title="geonode.base.models.HierarchicalKeyword"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.HierarchicalKeyword</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TagResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.api.TagResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TagResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'keywords'</em><a class="headerlink" href="#geonode.api.api.TagResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TagResource.Meta.serializer">
+<code class="descname">serializer</code><em class="property"> = &lt;geonode.api.api.CountJSONSerializer object&gt;</em><a class="headerlink" href="#geonode.api.api.TagResource.Meta.serializer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TagResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'count': &lt;tastypie.fields.IntegerField object&gt;, 'depth': &lt;tastypie.fields.IntegerField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'name': &lt;tastypie.fields.CharField object&gt;, 'numchild': &lt;tastypie.fields.IntegerField object&gt;, 'path': &lt;tastypie.fields.CharField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'slug': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.TagResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TagResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#geonode.api.api.TagResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.TagResource.serialize">
+<code class="descname">serialize</code><span class="sig-paren">(</span><em>request</em>, <em>data</em>, <em>format</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.TagResource.serialize" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.ThesaurusKeywordResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">ThesaurusKeywordResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.api.TypeFilteredResource" title="geonode.api.api.TypeFilteredResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.api.TypeFilteredResource</span></code></a></p>
+<p>ThesaurusKeyword api</p>
+<dl class="class">
+<dt id="geonode.api.api.ThesaurusKeywordResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.api.ThesaurusKeywordResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get']</em><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ThesaurusKeywordResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'id': 1, 'label': 1, 'lang': 1, 'thesaurus': 1}</em><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ThesaurusKeywordResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.base.html#geonode.base.models.ThesaurusKeywordLabel" title="geonode.base.models.ThesaurusKeywordLabel"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.ThesaurusKeywordLabel</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ThesaurusKeywordResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ThesaurusKeywordResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'thesaurus/keywords'</em><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ThesaurusKeywordResource.Meta.serializer">
+<code class="descname">serializer</code><em class="property"> = &lt;geonode.api.api.CountJSONSerializer object&gt;</em><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.Meta.serializer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ThesaurusKeywordResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'count': &lt;tastypie.fields.IntegerField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'label': &lt;tastypie.fields.CharField object&gt;, 'label_id': &lt;tastypie.fields.CharField object&gt;, 'lang': &lt;tastypie.fields.CharField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'thesaurus_identifier': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ThesaurusKeywordResource.build_filters">
+<code class="descname">build_filters</code><span class="sig-paren">(</span><em>filters={}</em>, <em>ignore_bad_filters=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.build_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>adds filtering by current language</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.ThesaurusKeywordResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'label_id': &lt;tastypie.fields.CharField object&gt;, 'thesaurus_identifier': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ThesaurusKeywordResource.dehydrate_id">
+<code class="descname">dehydrate_id</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.dehydrate_id" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ThesaurusKeywordResource.dehydrate_label_id">
+<code class="descname">dehydrate_label_id</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.dehydrate_label_id" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ThesaurusKeywordResource.dehydrate_thesaurus_identifier">
+<code class="descname">dehydrate_thesaurus_identifier</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.dehydrate_thesaurus_identifier" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.ThesaurusKeywordResource.serialize">
+<code class="descname">serialize</code><span class="sig-paren">(</span><em>request</em>, <em>data</em>, <em>format</em>, <em>options={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.ThesaurusKeywordResource.serialize" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.TopicCategoryResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">TopicCategoryResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.TopicCategoryResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.api.TypeFilteredResource" title="geonode.api.api.TypeFilteredResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.api.TypeFilteredResource</span></code></a></p>
+<p>Category api</p>
+<dl class="class">
+<dt id="geonode.api.api.TopicCategoryResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.api.TopicCategoryResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get']</em><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TopicCategoryResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'identifier': 1}</em><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TopicCategoryResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.base.html#geonode.base.models.TopicCategory" title="geonode.base.models.TopicCategory"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.TopicCategory</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TopicCategoryResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TopicCategoryResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'categories'</em><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TopicCategoryResource.Meta.serializer">
+<code class="descname">serializer</code><em class="property"> = &lt;geonode.api.api.CountJSONSerializer object&gt;</em><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.Meta.serializer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TopicCategoryResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'count': &lt;tastypie.fields.IntegerField object&gt;, 'description': &lt;tastypie.fields.CharField object&gt;, 'description_en': &lt;tastypie.fields.CharField object&gt;, 'fa_class': &lt;tastypie.fields.CharField object&gt;, 'gn_description': &lt;tastypie.fields.CharField object&gt;, 'gn_description_en': &lt;tastypie.fields.CharField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'identifier': &lt;tastypie.fields.CharField object&gt;, 'is_choice': &lt;tastypie.fields.BooleanField object&gt;, 'layers_count': &lt;tastypie.fields.IntegerField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TopicCategoryResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'layers_count': &lt;tastypie.fields.IntegerField object&gt;}</em><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.TopicCategoryResource.dehydrate_layers_count">
+<code class="descname">dehydrate_layers_count</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.dehydrate_layers_count" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.TopicCategoryResource.serialize">
+<code class="descname">serialize</code><span class="sig-paren">(</span><em>request</em>, <em>data</em>, <em>format</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.TopicCategoryResource.serialize" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.api.TypeFilteredResource">
+<em class="property">class </em><code class="descclassname">geonode.api.api.</code><code class="descname">TypeFilteredResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.TypeFilteredResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.resources.ModelResource</span></code></p>
+<p>Common resource used to apply faceting to categories, keywords, and
+regions based on the type passed as query parameter in the form
+type:layer/map/document</p>
+<dl class="attribute">
+<dt id="geonode.api.api.TypeFilteredResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'count': &lt;tastypie.fields.IntegerField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.api.TypeFilteredResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.TypeFilteredResource.build_filters">
+<code class="descname">build_filters</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ignore_bad_filters=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.TypeFilteredResource.build_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.api.TypeFilteredResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'count': &lt;tastypie.fields.IntegerField object&gt;}</em><a class="headerlink" href="#geonode.api.api.TypeFilteredResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.api.TypeFilteredResource.serialize">
+<code class="descname">serialize</code><span class="sig-paren">(</span><em>request</em>, <em>data</em>, <em>format</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.api.TypeFilteredResource.serialize" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.api.authorization">
+<span id="geonode-api-authorization-module"></span><h2>geonode.api.authorization module<a class="headerlink" href="#module-geonode.api.authorization" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.api.authorization.GeoNodeAuthorization">
+<em class="property">class </em><code class="descclassname">geonode.api.authorization.</code><code class="descname">GeoNodeAuthorization</code><a class="headerlink" href="#geonode.api.authorization.GeoNodeAuthorization" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.authorization.DjangoAuthorization</span></code></p>
+<p>Object level API authorization based on GeoNode granular
+permission system</p>
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeAuthorization.create_detail">
+<code class="descname">create_detail</code><span class="sig-paren">(</span><em>object_list</em>, <em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeAuthorization.create_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeAuthorization.create_list">
+<code class="descname">create_list</code><span class="sig-paren">(</span><em>object_list</em>, <em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeAuthorization.create_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeAuthorization.delete_detail">
+<code class="descname">delete_detail</code><span class="sig-paren">(</span><em>object_list</em>, <em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeAuthorization.delete_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeAuthorization.delete_list">
+<code class="descname">delete_list</code><span class="sig-paren">(</span><em>object_list</em>, <em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeAuthorization.delete_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeAuthorization.read_detail">
+<code class="descname">read_detail</code><span class="sig-paren">(</span><em>object_list</em>, <em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeAuthorization.read_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeAuthorization.read_list">
+<code class="descname">read_list</code><span class="sig-paren">(</span><em>object_list</em>, <em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeAuthorization.read_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeAuthorization.update_detail">
+<code class="descname">update_detail</code><span class="sig-paren">(</span><em>object_list</em>, <em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeAuthorization.update_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeAuthorization.update_list">
+<code class="descname">update_list</code><span class="sig-paren">(</span><em>object_list</em>, <em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeAuthorization.update_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.authorization.GeoNodeStyleAuthorization">
+<em class="property">class </em><code class="descclassname">geonode.api.authorization.</code><code class="descname">GeoNodeStyleAuthorization</code><a class="headerlink" href="#geonode.api.authorization.GeoNodeStyleAuthorization" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.authorization.GeoNodeAuthorization" title="geonode.api.authorization.GeoNodeAuthorization"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.authorization.GeoNodeAuthorization</span></code></a></p>
+<p>Object level API authorization based on GeoNode granular
+permission system</p>
+<p>Style object permissions should follow it’s layer permissions</p>
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeStyleAuthorization.delete_detail">
+<code class="descname">delete_detail</code><span class="sig-paren">(</span><em>object_list</em>, <em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeStyleAuthorization.delete_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeStyleAuthorization.filter_by_resource_ids">
+<code class="descname">filter_by_resource_ids</code><span class="sig-paren">(</span><em>object_list</em>, <em>permitted_ids</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeStyleAuthorization.filter_by_resource_ids" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Filter Style queryset by permitted resource ids.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.authorization.GeoNodeStyleAuthorization.read_list">
+<code class="descname">read_list</code><span class="sig-paren">(</span><em>object_list</em>, <em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeoNodeStyleAuthorization.read_list" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.authorization.GeonodeApiKeyAuthentication">
+<em class="property">class </em><code class="descclassname">geonode.api.authorization.</code><code class="descname">GeonodeApiKeyAuthentication</code><span class="sig-paren">(</span><em>require_active=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeonodeApiKeyAuthentication" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.authentication.ApiKeyAuthentication</span></code></p>
+<p>Override ApiKeyAuthentication to prevent 401 response when no api key is provided.</p>
+<dl class="method">
+<dt id="geonode.api.authorization.GeonodeApiKeyAuthentication.is_authenticated">
+<code class="descname">is_authenticated</code><span class="sig-paren">(</span><em>request</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.authorization.GeonodeApiKeyAuthentication.is_authenticated" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Finds the user and checks their API key.</p>
+<p>Should return either <code class="docutils literal notranslate"><span class="pre">True</span></code> if allowed, <code class="docutils literal notranslate"><span class="pre">False</span></code> if not or an
+<code class="docutils literal notranslate"><span class="pre">HttpResponse</span></code> if you need something custom.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.api.resourcebase_api">
+<span id="geonode-api-resourcebase-api-module"></span><h2>geonode.api.resourcebase_api module<a class="headerlink" href="#module-geonode.api.resourcebase_api" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.CommonMetaApi">
+<em class="property">class </em><code class="descclassname">geonode.api.resourcebase_api.</code><code class="descname">CommonMetaApi</code><a class="headerlink" href="#geonode.api.resourcebase_api.CommonMetaApi" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="geonode.api.resourcebase_api.CommonMetaApi.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get']</em><a class="headerlink" href="#geonode.api.resourcebase_api.CommonMetaApi.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.CommonMetaApi.authorization">
+<code class="descname">authorization</code><a class="headerlink" href="#geonode.api.resourcebase_api.CommonMetaApi.authorization" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Object level API authorization based on GeoNode granular
+permission system</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.CommonMetaApi.filtering">
+<code class="descname">filtering</code><em class="property"> = {'alternate': 1, 'category': 2, 'date': 1, 'doc_type': 1, 'group': 2, 'id': 1, 'keywords': 2, 'name': 1, 'owner': 2, 'regions': 2, 'title': 1, 'tkeywords': 2}</em><a class="headerlink" href="#geonode.api.resourcebase_api.CommonMetaApi.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.CommonMetaApi.max_limit">
+<code class="descname">max_limit</code><em class="property"> = None</em><a class="headerlink" href="#geonode.api.resourcebase_api.CommonMetaApi.max_limit" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.CommonMetaApi.ordering">
+<code class="descname">ordering</code><em class="property"> = ['date', 'title', 'popular_count']</em><a class="headerlink" href="#geonode.api.resourcebase_api.CommonMetaApi.ordering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.CommonModelApi">
+<em class="property">class </em><code class="descclassname">geonode.api.resourcebase_api.</code><code class="descname">CommonModelApi</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.resources.ModelResource</span></code></p>
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.VALUES">
+<code class="descname">VALUES</code><em class="property"> = ['id', 'uuid', 'title', 'date', 'date_type', 'edition', 'purpose', 'maintenance_frequency', 'restriction_code_type', 'constraints_other', 'license', 'language', 'spatial_representation_type', 'temporal_extent_start', 'temporal_extent_end', 'data_quality_statement', 'abstract', 'csw_wkt_geometry', 'csw_type', 'owner__username', 'share_count', 'popular_count', 'srid', 'bbox_x0', 'bbox_x1', 'bbox_y0', 'bbox_y1', 'category__gn_description', 'supplemental_information', 'thumbnail_url', 'detail_url', 'rating', 'group__name', 'has_time', 'is_approved', 'is_published']</em><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.VALUES" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.apply_filters">
+<code class="descname">apply_filters</code><span class="sig-paren">(</span><em>request</em>, <em>applicable_filters</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.apply_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'category': &lt;tastypie.fields.ToOneField object&gt;, 'group': &lt;tastypie.fields.ToOneField object&gt;, 'keywords': &lt;tastypie.fields.ToManyField object&gt;, 'owner': &lt;tastypie.fields.ToOneField object&gt;, 'regions': &lt;tastypie.fields.ToManyField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'tkeywords': &lt;tastypie.fields.ToManyField object&gt;}</em><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.build_filters">
+<code class="descname">build_filters</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ignore_bad_filters=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.build_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.build_haystack_filters">
+<code class="descname">build_haystack_filters</code><span class="sig-paren">(</span><em>parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.build_haystack_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.create_response">
+<code class="descname">create_response</code><span class="sig-paren">(</span><em>request</em>, <em>data</em>, <em>response_class=&lt;class 'django.http.response.HttpResponse'&gt;</em>, <em>response_objects=None</em>, <em>**response_kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.create_response" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Extracts the common “which-format/serialize/return-response” cycle.</p>
+<p>Mostly a useful shortcut/hook.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'category': &lt;tastypie.fields.ToOneField object&gt;, 'group': &lt;tastypie.fields.ToOneField object&gt;, 'keywords': &lt;tastypie.fields.ToManyField object&gt;, 'owner': &lt;tastypie.fields.ToOneField object&gt;, 'regions': &lt;tastypie.fields.ToManyField object&gt;, 'tkeywords': &lt;tastypie.fields.ToManyField object&gt;}</em><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.filter_bbox">
+<code class="descname">filter_bbox</code><span class="sig-paren">(</span><em>queryset</em>, <em>bbox</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.filter_bbox" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>modify the queryset q to limit to data that intersects with the
+provided bbox</p>
+<p>bbox - 4 tuple of floats representing ‘southwest_lng,southwest_lat,
+northeast_lng,northeast_lat’
+returns the modified query</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.filter_group">
+<code class="descname">filter_group</code><span class="sig-paren">(</span><em>queryset</em>, <em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.filter_group" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.filter_h_keywords">
+<code class="descname">filter_h_keywords</code><span class="sig-paren">(</span><em>queryset</em>, <em>keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.filter_h_keywords" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.filter_published">
+<code class="descname">filter_published</code><span class="sig-paren">(</span><em>queryset</em>, <em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.filter_published" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.format_objects">
+<code class="descname">format_objects</code><span class="sig-paren">(</span><em>objects</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.format_objects" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Format the objects for output in a response.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.get_haystack_api_fields">
+<code class="descname">get_haystack_api_fields</code><span class="sig-paren">(</span><em>haystack_object</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.get_haystack_api_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.get_list">
+<code class="descname">get_list</code><span class="sig-paren">(</span><em>request</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.get_list" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returns a serialized list of resources.</p>
+<p>Calls <code class="docutils literal notranslate"><span class="pre">obj_get_list</span></code> to provide the data, then handles that result
+set and serializes it.</p>
+<p>Should return a HttpResponse (200 OK).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.get_search">
+<code class="descname">get_search</code><span class="sig-paren">(</span><em>request</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.get_search" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.CommonModelApi.prepend_urls">
+<code class="descname">prepend_urls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.CommonModelApi.prepend_urls" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.DocumentResource">
+<em class="property">class </em><code class="descclassname">geonode.api.resourcebase_api.</code><code class="descname">DocumentResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.DocumentResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.resourcebase_api.CommonModelApi" title="geonode.api.resourcebase_api.CommonModelApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.resourcebase_api.CommonModelApi</span></code></a></p>
+<p>Documents API</p>
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.DocumentResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.resourcebase_api.DocumentResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.resourcebase_api.CommonMetaApi" title="geonode.api.resourcebase_api.CommonMetaApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.resourcebase_api.CommonMetaApi</span></code></a></p>
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.DocumentResource.Meta.authentication">
+<code class="descname">authentication</code><em class="property"> = &lt;tastypie.authentication.MultiAuthentication object&gt;</em><a class="headerlink" href="#geonode.api.resourcebase_api.DocumentResource.Meta.authentication" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.DocumentResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'alternate': 1, 'category': 2, 'date': 1, 'doc_type': 1, 'group': 2, 'id': 1, 'keywords': 2, 'name': 1, 'owner': 2, 'regions': 2, 'title': 1, 'tkeywords': 2}</em><a class="headerlink" href="#geonode.api.resourcebase_api.DocumentResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.DocumentResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.resourcebase_api.DocumentResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.documents.html#geonode.documents.models.Document" title="geonode.documents.models.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.documents.models.Document</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.DocumentResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.resourcebase_api.DocumentResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.DocumentResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'documents'</em><a class="headerlink" href="#geonode.api.resourcebase_api.DocumentResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.DocumentResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;tastypie.fields.CharField object&gt;, 'abstract_en': &lt;tastypie.fields.CharField object&gt;, 'alternate': &lt;tastypie.fields.CharField object&gt;, 'bbox_x0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_x1': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y1': &lt;tastypie.fields.DecimalField object&gt;, 'category': &lt;tastypie.fields.ToOneField object&gt;, 'constraints_other': &lt;tastypie.fields.CharField object&gt;, 'constraints_other_en': &lt;tastypie.fields.CharField object&gt;, 'csw_anytext': &lt;tastypie.fields.CharField object&gt;, 'csw_insert_date': &lt;tastypie.fields.DateTimeField object&gt;, 'csw_mdsource': &lt;tastypie.fields.CharField object&gt;, 'csw_schema': &lt;tastypie.fields.CharField object&gt;, 'csw_type': &lt;tastypie.fields.CharField object&gt;, 'csw_typename': &lt;tastypie.fields.CharField object&gt;, 'csw_wkt_geometry': &lt;tastypie.fields.CharField object&gt;, 'data_quality_statement': &lt;tastypie.fields.CharField object&gt;, 'data_quality_statement_en': &lt;tastypie.fields.CharField object&gt;, 'date': &lt;tastypie.fields.DateTimeField object&gt;, 'date_type': &lt;tastypie.fields.CharField object&gt;, 'detail_url': &lt;tastypie.fields.CharField object&gt;, 'doc_file': &lt;tastypie.fields.FileField object&gt;, 'doc_type': &lt;tastypie.fields.CharField object&gt;, 'doc_url': &lt;tastypie.fields.CharField object&gt;, 'edition': &lt;tastypie.fields.CharField object&gt;, 'extension': &lt;tastypie.fields.CharField object&gt;, 'featured': &lt;tastypie.fields.BooleanField object&gt;, 'group': &lt;tastypie.fields.ToOneField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'is_approved': &lt;tastypie.fields.BooleanField object&gt;, 'is_published': &lt;tastypie.fields.BooleanField object&gt;, 'keywords': &lt;tastypie.fields.ToManyField object&gt;, 'language': &lt;tastypie.fields.CharField object&gt;, 'maintenance_frequency': &lt;tastypie.fields.CharField object&gt;, 'metadata_uploaded': &lt;tastypie.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;tastypie.fields.BooleanField object&gt;, 'metadata_xml': &lt;tastypie.fields.CharField object&gt;, 'owner': &lt;tastypie.fields.ToOneField object&gt;, 'popular_count': &lt;tastypie.fields.IntegerField object&gt;, 'purpose': &lt;tastypie.fields.CharField object&gt;, 'purpose_en': &lt;tastypie.fields.CharField object&gt;, 'rating': &lt;tastypie.fields.IntegerField object&gt;, 'regions': &lt;tastypie.fields.ToManyField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'share_count': &lt;tastypie.fields.IntegerField object&gt;, 'srid': &lt;tastypie.fields.CharField object&gt;, 'supplemental_information': &lt;tastypie.fields.CharField object&gt;, 'supplemental_information_en': &lt;tastypie.fields.CharField object&gt;, 'temporal_extent_end': &lt;tastypie.fields.DateTimeField object&gt;, 'temporal_extent_start': &lt;tastypie.fields.DateTimeField object&gt;, 'thumbnail_url': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'title_en': &lt;tastypie.fields.CharField object&gt;, 'tkeywords': &lt;tastypie.fields.ToManyField object&gt;, 'uuid': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.resourcebase_api.DocumentResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.DocumentResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#geonode.api.resourcebase_api.DocumentResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.DocumentResource.format_objects">
+<code class="descname">format_objects</code><span class="sig-paren">(</span><em>objects</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.DocumentResource.format_objects" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Formats the objects and provides reference to list of layers in map
+resources.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>objects</strong> – Map objects</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.FeaturedResourceBaseResource">
+<em class="property">class </em><code class="descclassname">geonode.api.resourcebase_api.</code><code class="descname">FeaturedResourceBaseResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.FeaturedResourceBaseResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.resourcebase_api.CommonModelApi" title="geonode.api.resourcebase_api.CommonModelApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.resourcebase_api.CommonModelApi</span></code></a></p>
+<p>Only the featured resourcebases</p>
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.FeaturedResourceBaseResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.resourcebase_api.FeaturedResourceBaseResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.resourcebase_api.CommonMetaApi" title="geonode.api.resourcebase_api.CommonMetaApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.resourcebase_api.CommonMetaApi</span></code></a></p>
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.FeaturedResourceBaseResource.Meta.authentication">
+<code class="descname">authentication</code><em class="property"> = &lt;tastypie.authentication.MultiAuthentication object&gt;</em><a class="headerlink" href="#geonode.api.resourcebase_api.FeaturedResourceBaseResource.Meta.authentication" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.FeaturedResourceBaseResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.resourcebase_api.FeaturedResourceBaseResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.base.html#geonode.base.models.ResourceBase" title="geonode.base.models.ResourceBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.ResourceBase</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.FeaturedResourceBaseResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.resourcebase_api.FeaturedResourceBaseResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.FeaturedResourceBaseResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'featured'</em><a class="headerlink" href="#geonode.api.resourcebase_api.FeaturedResourceBaseResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.FeaturedResourceBaseResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;tastypie.fields.CharField object&gt;, 'alternate': &lt;tastypie.fields.CharField object&gt;, 'bbox_x0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_x1': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y1': &lt;tastypie.fields.DecimalField object&gt;, 'category': &lt;tastypie.fields.ToOneField object&gt;, 'constraints_other': &lt;tastypie.fields.CharField object&gt;, 'csw_anytext': &lt;tastypie.fields.CharField object&gt;, 'csw_insert_date': &lt;tastypie.fields.DateTimeField object&gt;, 'csw_mdsource': &lt;tastypie.fields.CharField object&gt;, 'csw_schema': &lt;tastypie.fields.CharField object&gt;, 'csw_type': &lt;tastypie.fields.CharField object&gt;, 'csw_typename': &lt;tastypie.fields.CharField object&gt;, 'csw_wkt_geometry': &lt;tastypie.fields.CharField object&gt;, 'data_quality_statement': &lt;tastypie.fields.CharField object&gt;, 'date': &lt;tastypie.fields.DateTimeField object&gt;, 'date_type': &lt;tastypie.fields.CharField object&gt;, 'detail_url': &lt;tastypie.fields.CharField object&gt;, 'edition': &lt;tastypie.fields.CharField object&gt;, 'featured': &lt;tastypie.fields.BooleanField object&gt;, 'group': &lt;tastypie.fields.ToOneField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'is_approved': &lt;tastypie.fields.BooleanField object&gt;, 'is_published': &lt;tastypie.fields.BooleanField object&gt;, 'keywords': &lt;tastypie.fields.ToManyField object&gt;, 'language': &lt;tastypie.fields.CharField object&gt;, 'maintenance_frequency': &lt;tastypie.fields.CharField object&gt;, 'metadata_uploaded': &lt;tastypie.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;tastypie.fields.BooleanField object&gt;, 'metadata_xml': &lt;tastypie.fields.CharField object&gt;, 'owner': &lt;tastypie.fields.ToOneField object&gt;, 'popular_count': &lt;tastypie.fields.IntegerField object&gt;, 'purpose': &lt;tastypie.fields.CharField object&gt;, 'rating': &lt;tastypie.fields.IntegerField object&gt;, 'regions': &lt;tastypie.fields.ToManyField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'share_count': &lt;tastypie.fields.IntegerField object&gt;, 'srid': &lt;tastypie.fields.CharField object&gt;, 'supplemental_information': &lt;tastypie.fields.CharField object&gt;, 'temporal_extent_end': &lt;tastypie.fields.DateTimeField object&gt;, 'temporal_extent_start': &lt;tastypie.fields.DateTimeField object&gt;, 'thumbnail_url': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'tkeywords': &lt;tastypie.fields.ToManyField object&gt;, 'uuid': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.resourcebase_api.FeaturedResourceBaseResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.FeaturedResourceBaseResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#geonode.api.resourcebase_api.FeaturedResourceBaseResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.LayerResource">
+<em class="property">class </em><code class="descclassname">geonode.api.resourcebase_api.</code><code class="descname">LayerResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.resourcebase_api.CommonModelApi" title="geonode.api.resourcebase_api.CommonModelApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.resourcebase_api.CommonModelApi</span></code></a></p>
+<p>Layer API</p>
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.LayerResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.resourcebase_api.CommonMetaApi" title="geonode.api.resourcebase_api.CommonMetaApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.resourcebase_api.CommonMetaApi</span></code></a></p>
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.Meta.allowed_methods">
+<code class="descname">allowed_methods</code><em class="property"> = ['get', 'patch']</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.Meta.allowed_methods" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.Meta.authentication">
+<code class="descname">authentication</code><em class="property"> = &lt;tastypie.authentication.MultiAuthentication object&gt;</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.Meta.authentication" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.Meta.detail_uri_name">
+<code class="descname">detail_uri_name</code><em class="property"> = 'id'</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.Meta.detail_uri_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.Meta.excludes">
+<code class="descname">excludes</code><em class="property"> = ['csw_anytext', 'metadata_xml']</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.Meta.excludes" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.Meta.filtering">
+<code class="descname">filtering</code><em class="property"> = {'alternate': 1, 'category': 2, 'date': 1, 'doc_type': 1, 'group': 2, 'id': 1, 'keywords': 2, 'name': 1, 'owner': 2, 'regions': 2, 'title': 1, 'tkeywords': 2}</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.Meta.filtering" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.Meta.include_resource_uri">
+<code class="descname">include_resource_uri</code><em class="property"> = True</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.Meta.include_resource_uri" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.layers.models.Layer</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'layers'</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.VALUES">
+<code class="descname">VALUES</code><em class="property"> = ['id', 'uuid', 'title', 'date', 'date_type', 'edition', 'purpose', 'maintenance_frequency', 'restriction_code_type', 'constraints_other', 'license', 'language', 'spatial_representation_type', 'temporal_extent_start', 'temporal_extent_end', 'data_quality_statement', 'abstract', 'csw_wkt_geometry', 'csw_type', 'owner__username', 'share_count', 'popular_count', 'srid', 'bbox_x0', 'bbox_x1', 'bbox_y0', 'bbox_y1', 'category__gn_description', 'supplemental_information', 'thumbnail_url', 'detail_url', 'rating', 'group__name', 'has_time', 'is_approved', 'is_published', 'typename']</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.VALUES" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;tastypie.fields.CharField object&gt;, 'abstract_en': &lt;tastypie.fields.CharField object&gt;, 'alternate': &lt;tastypie.fields.CharField object&gt;, 'bbox_x0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_x1': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y1': &lt;tastypie.fields.DecimalField object&gt;, 'category': &lt;tastypie.fields.ToOneField object&gt;, 'charset': &lt;tastypie.fields.CharField object&gt;, 'constraints_other': &lt;tastypie.fields.CharField object&gt;, 'constraints_other_en': &lt;tastypie.fields.CharField object&gt;, 'csw_insert_date': &lt;tastypie.fields.DateTimeField object&gt;, 'csw_mdsource': &lt;tastypie.fields.CharField object&gt;, 'csw_schema': &lt;tastypie.fields.CharField object&gt;, 'csw_type': &lt;tastypie.fields.CharField object&gt;, 'csw_typename': &lt;tastypie.fields.CharField object&gt;, 'csw_wkt_geometry': &lt;tastypie.fields.CharField object&gt;, 'data_quality_statement': &lt;tastypie.fields.CharField object&gt;, 'data_quality_statement_en': &lt;tastypie.fields.CharField object&gt;, 'date': &lt;tastypie.fields.DateTimeField object&gt;, 'date_type': &lt;tastypie.fields.CharField object&gt;, 'default_style': &lt;tastypie.fields.ForeignKey object&gt;, 'detail_url': &lt;tastypie.fields.CharField object&gt;, 'edition': &lt;tastypie.fields.CharField object&gt;, 'elevation_regex': &lt;tastypie.fields.CharField object&gt;, 'featured': &lt;tastypie.fields.BooleanField object&gt;, 'group': &lt;tastypie.fields.ToOneField object&gt;, 'has_elevation': &lt;tastypie.fields.BooleanField object&gt;, 'has_time': &lt;tastypie.fields.BooleanField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'is_approved': &lt;tastypie.fields.BooleanField object&gt;, 'is_mosaic': &lt;tastypie.fields.BooleanField object&gt;, 'is_published': &lt;tastypie.fields.BooleanField object&gt;, 'keywords': &lt;tastypie.fields.ToManyField object&gt;, 'language': &lt;tastypie.fields.CharField object&gt;, 'links': &lt;tastypie.fields.ListField object&gt;, 'maintenance_frequency': &lt;tastypie.fields.CharField object&gt;, 'metadata_uploaded': &lt;tastypie.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;tastypie.fields.BooleanField object&gt;, 'name': &lt;tastypie.fields.CharField object&gt;, 'owner': &lt;tastypie.fields.ToOneField object&gt;, 'popular_count': &lt;tastypie.fields.IntegerField object&gt;, 'purpose': &lt;tastypie.fields.CharField object&gt;, 'purpose_en': &lt;tastypie.fields.CharField object&gt;, 'rating': &lt;tastypie.fields.IntegerField object&gt;, 'regions': &lt;tastypie.fields.ToManyField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'share_count': &lt;tastypie.fields.IntegerField object&gt;, 'srid': &lt;tastypie.fields.CharField object&gt;, 'store': &lt;tastypie.fields.CharField object&gt;, 'storeType': &lt;tastypie.fields.CharField object&gt;, 'styles': &lt;tastypie.fields.ManyToManyField object&gt;, 'supplemental_information': &lt;tastypie.fields.CharField object&gt;, 'supplemental_information_en': &lt;tastypie.fields.CharField object&gt;, 'temporal_extent_end': &lt;tastypie.fields.DateTimeField object&gt;, 'temporal_extent_start': &lt;tastypie.fields.DateTimeField object&gt;, 'thumbnail_url': &lt;tastypie.fields.CharField object&gt;, 'time_regex': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'title_en': &lt;tastypie.fields.CharField object&gt;, 'tkeywords': &lt;tastypie.fields.ToManyField object&gt;, 'typename': &lt;tastypie.fields.CharField object&gt;, 'uuid': &lt;tastypie.fields.CharField object&gt;, 'workspace': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.LayerResource.build_bundle">
+<code class="descname">build_bundle</code><span class="sig-paren">(</span><em>obj=None</em>, <em>data=None</em>, <em>request=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.build_bundle" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Override build_bundle method to add additional info.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.LayerResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'default_style': &lt;tastypie.fields.ForeignKey object&gt;, 'links': &lt;tastypie.fields.ListField object&gt;, 'styles': &lt;tastypie.fields.ManyToManyField object&gt;}</em><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.LayerResource.dehydrate_links">
+<code class="descname">dehydrate_links</code><span class="sig-paren">(</span><em>bundle</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.dehydrate_links" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Dehydrate links field.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.LayerResource.format_objects">
+<code class="descname">format_objects</code><span class="sig-paren">(</span><em>objects</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.format_objects" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Formats the object then adds a geogig_link as necessary.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.LayerResource.patch_detail">
+<code class="descname">patch_detail</code><span class="sig-paren">(</span><em>request</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.patch_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Allow patch request to update default_style.</p>
+<p>Request body must match this:</p>
+<dl class="docutils">
+<dt>{</dt>
+<dd>‘default_style’: &lt;resource_uri_to_style&gt;</dd>
+</dl>
+<p>}</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.LayerResource.populate_object">
+<code class="descname">populate_object</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.LayerResource.populate_object" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Populate results with necessary fields</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>obj</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer obj</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.MapResource">
+<em class="property">class </em><code class="descclassname">geonode.api.resourcebase_api.</code><code class="descname">MapResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.MapResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.resourcebase_api.CommonModelApi" title="geonode.api.resourcebase_api.CommonModelApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.resourcebase_api.CommonModelApi</span></code></a></p>
+<p>Maps API</p>
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.MapResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.resourcebase_api.MapResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.resourcebase_api.CommonMetaApi" title="geonode.api.resourcebase_api.CommonMetaApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.resourcebase_api.CommonMetaApi</span></code></a></p>
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.MapResource.Meta.authentication">
+<code class="descname">authentication</code><em class="property"> = &lt;tastypie.authentication.MultiAuthentication object&gt;</em><a class="headerlink" href="#geonode.api.resourcebase_api.MapResource.Meta.authentication" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.MapResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.resourcebase_api.MapResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.maps.html#geonode.maps.models.Map" title="geonode.maps.models.Map"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.maps.models.Map</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.MapResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.resourcebase_api.MapResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.MapResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'maps'</em><a class="headerlink" href="#geonode.api.resourcebase_api.MapResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.MapResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;tastypie.fields.CharField object&gt;, 'abstract_en': &lt;tastypie.fields.CharField object&gt;, 'alternate': &lt;tastypie.fields.CharField object&gt;, 'bbox_x0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_x1': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y1': &lt;tastypie.fields.DecimalField object&gt;, 'category': &lt;tastypie.fields.ToOneField object&gt;, 'center_x': &lt;tastypie.fields.FloatField object&gt;, 'center_y': &lt;tastypie.fields.FloatField object&gt;, 'constraints_other': &lt;tastypie.fields.CharField object&gt;, 'constraints_other_en': &lt;tastypie.fields.CharField object&gt;, 'csw_anytext': &lt;tastypie.fields.CharField object&gt;, 'csw_insert_date': &lt;tastypie.fields.DateTimeField object&gt;, 'csw_mdsource': &lt;tastypie.fields.CharField object&gt;, 'csw_schema': &lt;tastypie.fields.CharField object&gt;, 'csw_type': &lt;tastypie.fields.CharField object&gt;, 'csw_typename': &lt;tastypie.fields.CharField object&gt;, 'csw_wkt_geometry': &lt;tastypie.fields.CharField object&gt;, 'data_quality_statement': &lt;tastypie.fields.CharField object&gt;, 'data_quality_statement_en': &lt;tastypie.fields.CharField object&gt;, 'date': &lt;tastypie.fields.DateTimeField object&gt;, 'date_type': &lt;tastypie.fields.CharField object&gt;, 'detail_url': &lt;tastypie.fields.CharField object&gt;, 'edition': &lt;tastypie.fields.CharField object&gt;, 'featured': &lt;tastypie.fields.BooleanField object&gt;, 'featuredurl': &lt;tastypie.fields.CharField object&gt;, 'group': &lt;tastypie.fields.ToOneField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'is_approved': &lt;tastypie.fields.BooleanField object&gt;, 'is_published': &lt;tastypie.fields.BooleanField object&gt;, 'keywords': &lt;tastypie.fields.ToManyField object&gt;, 'language': &lt;tastypie.fields.CharField object&gt;, 'last_modified': &lt;tastypie.fields.DateTimeField object&gt;, 'maintenance_frequency': &lt;tastypie.fields.CharField object&gt;, 'metadata_uploaded': &lt;tastypie.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;tastypie.fields.BooleanField object&gt;, 'metadata_xml': &lt;tastypie.fields.CharField object&gt;, 'owner': &lt;tastypie.fields.ToOneField object&gt;, 'popular_count': &lt;tastypie.fields.IntegerField object&gt;, 'projection': &lt;tastypie.fields.CharField object&gt;, 'purpose': &lt;tastypie.fields.CharField object&gt;, 'purpose_en': &lt;tastypie.fields.CharField object&gt;, 'rating': &lt;tastypie.fields.IntegerField object&gt;, 'regions': &lt;tastypie.fields.ToManyField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'share_count': &lt;tastypie.fields.IntegerField object&gt;, 'srid': &lt;tastypie.fields.CharField object&gt;, 'supplemental_information': &lt;tastypie.fields.CharField object&gt;, 'supplemental_information_en': &lt;tastypie.fields.CharField object&gt;, 'temporal_extent_end': &lt;tastypie.fields.DateTimeField object&gt;, 'temporal_extent_start': &lt;tastypie.fields.DateTimeField object&gt;, 'thumbnail_url': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'title_en': &lt;tastypie.fields.CharField object&gt;, 'tkeywords': &lt;tastypie.fields.ToManyField object&gt;, 'urlsuffix': &lt;tastypie.fields.CharField object&gt;, 'uuid': &lt;tastypie.fields.CharField object&gt;, 'zoom': &lt;tastypie.fields.IntegerField object&gt;}</em><a class="headerlink" href="#geonode.api.resourcebase_api.MapResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.MapResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#geonode.api.resourcebase_api.MapResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.resourcebase_api.MapResource.format_objects">
+<code class="descname">format_objects</code><span class="sig-paren">(</span><em>objects</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.MapResource.format_objects" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Formats the objects and provides reference to list of layers in map
+resources.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>objects</strong> – Map objects</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.ResourceBaseResource">
+<em class="property">class </em><code class="descclassname">geonode.api.resourcebase_api.</code><code class="descname">ResourceBaseResource</code><span class="sig-paren">(</span><em>api_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.resourcebase_api.ResourceBaseResource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.resourcebase_api.CommonModelApi" title="geonode.api.resourcebase_api.CommonModelApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.resourcebase_api.CommonModelApi</span></code></a></p>
+<p>ResourceBase api</p>
+<dl class="class">
+<dt id="geonode.api.resourcebase_api.ResourceBaseResource.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#geonode.api.resourcebase_api.ResourceBaseResource.Meta" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <a class="reference internal" href="#geonode.api.resourcebase_api.CommonMetaApi" title="geonode.api.resourcebase_api.CommonMetaApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.api.resourcebase_api.CommonMetaApi</span></code></a></p>
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.ResourceBaseResource.Meta.authentication">
+<code class="descname">authentication</code><em class="property"> = &lt;tastypie.authentication.MultiAuthentication object&gt;</em><a class="headerlink" href="#geonode.api.resourcebase_api.ResourceBaseResource.Meta.authentication" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.ResourceBaseResource.Meta.excludes">
+<code class="descname">excludes</code><em class="property"> = ['csw_anytext', 'metadata_xml']</em><a class="headerlink" href="#geonode.api.resourcebase_api.ResourceBaseResource.Meta.excludes" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.ResourceBaseResource.Meta.object_class">
+<code class="descname">object_class</code><a class="headerlink" href="#geonode.api.resourcebase_api.ResourceBaseResource.Meta.object_class" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>apelido de <a class="reference internal" href="geonode.base.html#geonode.base.models.ResourceBase" title="geonode.base.models.ResourceBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.base.models.ResourceBase</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.ResourceBaseResource.Meta.queryset">
+<code class="descname">queryset</code><em class="property"> = []</em><a class="headerlink" href="#geonode.api.resourcebase_api.ResourceBaseResource.Meta.queryset" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.ResourceBaseResource.Meta.resource_name">
+<code class="descname">resource_name</code><em class="property"> = 'base'</em><a class="headerlink" href="#geonode.api.resourcebase_api.ResourceBaseResource.Meta.resource_name" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.ResourceBaseResource.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'abstract': &lt;tastypie.fields.CharField object&gt;, 'alternate': &lt;tastypie.fields.CharField object&gt;, 'bbox_x0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_x1': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y0': &lt;tastypie.fields.DecimalField object&gt;, 'bbox_y1': &lt;tastypie.fields.DecimalField object&gt;, 'category': &lt;tastypie.fields.ToOneField object&gt;, 'constraints_other': &lt;tastypie.fields.CharField object&gt;, 'csw_insert_date': &lt;tastypie.fields.DateTimeField object&gt;, 'csw_mdsource': &lt;tastypie.fields.CharField object&gt;, 'csw_schema': &lt;tastypie.fields.CharField object&gt;, 'csw_type': &lt;tastypie.fields.CharField object&gt;, 'csw_typename': &lt;tastypie.fields.CharField object&gt;, 'csw_wkt_geometry': &lt;tastypie.fields.CharField object&gt;, 'data_quality_statement': &lt;tastypie.fields.CharField object&gt;, 'date': &lt;tastypie.fields.DateTimeField object&gt;, 'date_type': &lt;tastypie.fields.CharField object&gt;, 'detail_url': &lt;tastypie.fields.CharField object&gt;, 'edition': &lt;tastypie.fields.CharField object&gt;, 'featured': &lt;tastypie.fields.BooleanField object&gt;, 'group': &lt;tastypie.fields.ToOneField object&gt;, u'id': &lt;tastypie.fields.IntegerField object&gt;, 'is_approved': &lt;tastypie.fields.BooleanField object&gt;, 'is_published': &lt;tastypie.fields.BooleanField object&gt;, 'keywords': &lt;tastypie.fields.ToManyField object&gt;, 'language': &lt;tastypie.fields.CharField object&gt;, 'maintenance_frequency': &lt;tastypie.fields.CharField object&gt;, 'metadata_uploaded': &lt;tastypie.fields.BooleanField object&gt;, 'metadata_uploaded_preserve': &lt;tastypie.fields.BooleanField object&gt;, 'owner': &lt;tastypie.fields.ToOneField object&gt;, 'popular_count': &lt;tastypie.fields.IntegerField object&gt;, 'purpose': &lt;tastypie.fields.CharField object&gt;, 'rating': &lt;tastypie.fields.IntegerField object&gt;, 'regions': &lt;tastypie.fields.ToManyField object&gt;, u'resource_uri': &lt;tastypie.fields.CharField object&gt;, 'share_count': &lt;tastypie.fields.IntegerField object&gt;, 'srid': &lt;tastypie.fields.CharField object&gt;, 'supplemental_information': &lt;tastypie.fields.CharField object&gt;, 'temporal_extent_end': &lt;tastypie.fields.DateTimeField object&gt;, 'temporal_extent_start': &lt;tastypie.fields.DateTimeField object&gt;, 'thumbnail_url': &lt;tastypie.fields.CharField object&gt;, 'title': &lt;tastypie.fields.CharField object&gt;, 'tkeywords': &lt;tastypie.fields.ToManyField object&gt;, 'uuid': &lt;tastypie.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.api.resourcebase_api.ResourceBaseResource.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.api.resourcebase_api.ResourceBaseResource.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#geonode.api.resourcebase_api.ResourceBaseResource.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.api.tests">
+<span id="geonode-api-tests-module"></span><h2>geonode.api.tests module<a class="headerlink" href="#module-geonode.api.tests" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.api.tests.PermissionsApiTests">
+<em class="property">class </em><code class="descclassname">geonode.api.tests.</code><code class="descname">PermissionsApiTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.PermissionsApiTests" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.test.ResourceTestCaseMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="attribute">
+<dt id="geonode.api.tests.PermissionsApiTests.fixtures">
+<code class="descname">fixtures</code><em class="property"> = ['initial_data.json', 'bobby']</em><a class="headerlink" href="#geonode.api.tests.PermissionsApiTests.fixtures" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.PermissionsApiTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.PermissionsApiTests.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.PermissionsApiTests.test_layer_get_detail_unauth_layer_not_public">
+<code class="descname">test_layer_get_detail_unauth_layer_not_public</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.PermissionsApiTests.test_layer_get_detail_unauth_layer_not_public" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that layer detail gives 401 when not public and not logged in</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.PermissionsApiTests.test_layer_get_list_layer_private_to_one_user">
+<code class="descname">test_layer_get_list_layer_private_to_one_user</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.PermissionsApiTests.test_layer_get_list_layer_private_to_one_user" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that if a layer is only visible by admin, then does not appear
+in the unauthenticated list nor in the list when logged is as bobby</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.PermissionsApiTests.test_layer_get_list_unauth_all_public">
+<code class="descname">test_layer_get_list_unauth_all_public</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.PermissionsApiTests.test_layer_get_list_unauth_all_public" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that the correct number of layers are returned when the
+client is not logged in and all are public</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.PermissionsApiTests.test_layers_get_list_auth_some_public">
+<code class="descname">test_layers_get_list_auth_some_public</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.PermissionsApiTests.test_layers_get_list_auth_some_public" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that if a layer is not public then all are returned if the
+client is not logged in</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.PermissionsApiTests.test_layers_get_list_unauth_some_public">
+<code class="descname">test_layers_get_list_unauth_some_public</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.PermissionsApiTests.test_layers_get_list_unauth_some_public" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that if a layer is not public then not all are returned when the
+client is not logged in</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.PermissionsApiTests.test_new_user_has_access_to_old_layers">
+<code class="descname">test_new_user_has_access_to_old_layers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.PermissionsApiTests.test_new_user_has_access_to_old_layers" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test that a new user can access the public available layers</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.api.tests.SearchApiTests">
+<em class="property">class </em><code class="descclassname">geonode.api.tests.</code><code class="descname">SearchApiTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.SearchApiTests" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">tastypie.test.ResourceTestCaseMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Test the search</p>
+<dl class="attribute">
+<dt id="geonode.api.tests.SearchApiTests.fixtures">
+<code class="descname">fixtures</code><em class="property"> = ['initial_data.json', 'bobby', 'group_test_data']</em><a class="headerlink" href="#geonode.api.tests.SearchApiTests.fixtures" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.SearchApiTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.SearchApiTests.setUp" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.SearchApiTests.test_category_filters">
+<code class="descname">test_category_filters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.SearchApiTests.test_category_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test category filtering</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.SearchApiTests.test_date_filter">
+<code class="descname">test_date_filter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.SearchApiTests.test_date_filter" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test date filtering</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.SearchApiTests.test_groups_filters">
+<code class="descname">test_groups_filters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.SearchApiTests.test_groups_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test groups filtering</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.SearchApiTests.test_owner_filters">
+<code class="descname">test_owner_filters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.SearchApiTests.test_owner_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test owner filtering</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.SearchApiTests.test_profiles_filters">
+<code class="descname">test_profiles_filters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.SearchApiTests.test_profiles_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test profiles filtering</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.SearchApiTests.test_tag_filters">
+<code class="descname">test_tag_filters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.SearchApiTests.test_tag_filters" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test keywords filtering</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.api.tests.SearchApiTests.test_title_filter">
+<code class="descname">test_title_filter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.tests.SearchApiTests.test_title_filter" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Test title filtering</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.api.urls">
+<span id="geonode-api-urls-module"></span><h2>geonode.api.urls module<a class="headerlink" href="#module-geonode.api.urls" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.api.views">
+<span id="geonode-api-views-module"></span><h2>geonode.api.views module<a class="headerlink" href="#module-geonode.api.views" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.api.views.admin_role">
+<code class="descclassname">geonode.api.views.</code><code class="descname">admin_role</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.views.admin_role" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Check IP whitelist / blacklist</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.api.views.get_client_ip">
+<code class="descclassname">geonode.api.views.</code><code class="descname">get_client_ip</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.views.get_client_ip" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.api.views.roles">
+<code class="descclassname">geonode.api.views.</code><code class="descname">roles</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.views.roles" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Check IP whitelist / blacklist</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.api.views.users">
+<code class="descclassname">geonode.api.views.</code><code class="descname">users</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.views.users" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Check IP whitelist / blacklist</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.api.views.verify_access_token">
+<code class="descclassname">geonode.api.views.</code><code class="descname">verify_access_token</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.views.verify_access_token" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.api.views.verify_token">
+<code class="descclassname">geonode.api.views.</code><code class="descname">verify_token</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.api.views.verify_token" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>TODO: Check IP whitelist / blacklist
+Verifies the velidity of an OAuth2 Access Token
+and returns associated User’s details</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.api">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.api" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

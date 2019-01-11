@@ -1,0 +1,31 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account %}
+
+{% block title %}{% trans "Confirme o endereço de e-mail" %}{% endblock %}
+
+
+{% block body_outer %}
+<h1>{% trans "Confirme o endereço de e-mail" %}</h1>
+
+{% if confirmation %}
+
+{% user_display confirmation.email_address.user as user_display %}
+
+<p>{% blocktrans with confirmation.email_address.email as email %}Por favor confirme isso <a href="mailto:{{ email }}">{{ email }}</a> é um endereço de e-mail do usuario {{ user_display }}.{% endblocktrans %}</p>
+
+<form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+{% csrf_token %}
+    <button type="submit">{% trans 'Confirmar' %}</button>
+</form>
+
+{% else %}
+
+{% url 'account_email' as email_url %}
+
+<p>{% blocktrans %}Este link de confirmação por e-mail expirou ou é inválido. Por favor <a href="{{ email_url }}">emite um novo pedido de confirmação por email</a>.{% endblocktrans %}</p>
+
+{% endif %}
+
+{% endblock %}

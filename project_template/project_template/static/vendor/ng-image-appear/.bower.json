@@ -1,0 +1,34 @@
+{
+  "name": "ng-image-appear",
+  "description": "AngularJS Module to make images appear with transition as they load",
+  "main": "src/js/build/ng-image-appear.js",
+  "version": "1.11.6",
+  "authors": [
+    "Arun Michael Dsouza <amdsouza92@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angularjs",
+    "module",
+    "image",
+    "appear",
+    "transition"
+  ],
+  "homepage": "https://github.com/ArunMichaelDsouza/ng-image-appear",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.11.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.11.6",
+    "commit": "29cdb7b1fdb96358c75e155566b11ca57c11ce2a"
+  },
+  "_source": "https://github.com/ArunMichaelDsouza/ng-image-appear.git",
+  "_target": "^1.11.3",
+  "_originalSource": "ng-image-appear"
+}

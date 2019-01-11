@@ -1,0 +1,1588 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-br" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geonode.qgis_server package &mdash; documentação GeoPortal 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Buscar" href="../search.html"/>
+    <link rel="top" title="documentação GeoPortal 1.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoPortal
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">geonode.qgis_server package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.admin">geonode.qgis_server.admin module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.context_processors">geonode.qgis_server.context_processors module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.forms">geonode.qgis_server.forms module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.gis_tools">geonode.qgis_server.gis_tools module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.helpers">geonode.qgis_server.helpers module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.middleware">geonode.qgis_server.middleware module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.models">geonode.qgis_server.models module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.signals">geonode.qgis_server.signals module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.urls">geonode.qgis_server.urls module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.views">geonode.qgis_server.views module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server.xml_utilities">geonode.qgis_server.xml_utilities module</a></li>
+<li><a class="reference internal" href="#module-geonode.qgis_server">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoPortal</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>geonode.qgis_server package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rst/geonode.qgis_server.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geonode-qgis-server-package">
+<h1>geonode.qgis_server package<a class="headerlink" href="#geonode-qgis-server-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link permanente para este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="geonode.qgis_server.management.html">geonode.qgis_server.management package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.management.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.qgis_server.management.commands.html">geonode.qgis_server.management.commands package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.qgis_server.management.commands.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.qgis_server.management.commands.html#module-geonode.qgis_server.management.commands.delete_orphaned_qgis_server_layers">geonode.qgis_server.management.commands.delete_orphaned_qgis_server_layers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.qgis_server.management.commands.html#module-geonode.qgis_server.management.commands.import_qgis_styles">geonode.qgis_server.management.commands.import_qgis_styles module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.qgis_server.management.commands.html#module-geonode.qgis_server.management.commands">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.management.html#module-geonode.qgis_server.management">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.qgis_server.migrations.html">geonode.qgis_server.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.migrations.html#module-geonode.qgis_server.migrations.0001_initial">geonode.qgis_server.migrations.0001_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.migrations.html#module-geonode.qgis_server.migrations.0002_qgisservermap">geonode.qgis_server.migrations.0002_qgisservermap module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.migrations.html#module-geonode.qgis_server.migrations.0003_auto_20170727_0509">geonode.qgis_server.migrations.0003_auto_20170727_0509 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.migrations.html#module-geonode.qgis_server.migrations.0004_auto_20170805_0223">geonode.qgis_server.migrations.0004_auto_20170805_0223 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.migrations.html#module-geonode.qgis_server.migrations.0005_auto_20170823_0341">geonode.qgis_server.migrations.0005_auto_20170823_0341 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.migrations.html#module-geonode.qgis_server.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.qgis_server.tasks.html">geonode.qgis_server.tasks package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.tasks.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.tasks.html#module-geonode.qgis_server.tasks.update">geonode.qgis_server.tasks.update module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.tasks.html#module-geonode.qgis_server.tasks">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.qgis_server.tests.html">geonode.qgis_server.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.tests.html#module-geonode.qgis_server.tests.test_helpers">geonode.qgis_server.tests.test_helpers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.tests.html#module-geonode.qgis_server.tests.test_management">geonode.qgis_server.tests.test_management module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.tests.html#module-geonode.qgis_server.tests.test_qgis_settings">geonode.qgis_server.tests.test_qgis_settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.tests.html#module-geonode.qgis_server.tests.test_views">geonode.qgis_server.tests.test_views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.tests.html#module-geonode.qgis_server.tests.test_xml_utilities">geonode.qgis_server.tests.test_xml_utilities module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.qgis_server.tests.html#module-geonode.qgis_server.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.qgis_server.admin">
+<span id="geonode-qgis-server-admin-module"></span><h2>geonode.qgis_server.admin module<a class="headerlink" href="#module-geonode.qgis_server.admin" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.qgis_server.admin.QGISServerLayerAdmin">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.admin.</code><code class="descname">QGISServerLayerAdmin</code><span class="sig-paren">(</span><em>model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.admin.QGISServerLayerAdmin" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="attribute">
+<dt id="geonode.qgis_server.admin.QGISServerLayerAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ['layer', 'base_layer_path']</em><a class="headerlink" href="#geonode.qgis_server.admin.QGISServerLayerAdmin.list_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.admin.QGISServerLayerAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.qgis_server.admin.QGISServerLayerAdmin.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.qgis_server.admin.QGISServerStyleAdmin">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.admin.</code><code class="descname">QGISServerStyleAdmin</code><span class="sig-paren">(</span><em>model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.admin.QGISServerStyleAdmin" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="attribute">
+<dt id="geonode.qgis_server.admin.QGISServerStyleAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ['name', 'title', 'style_url']</em><a class="headerlink" href="#geonode.qgis_server.admin.QGISServerStyleAdmin.list_display" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.admin.QGISServerStyleAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.qgis_server.admin.QGISServerStyleAdmin.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.context_processors">
+<span id="geonode-qgis-server-context-processors-module"></span><h2>geonode.qgis_server.context_processors module<a class="headerlink" href="#module-geonode.qgis_server.context_processors" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.qgis_server.context_processors.qgis_server_urls">
+<code class="descclassname">geonode.qgis_server.context_processors.</code><code class="descname">qgis_server_urls</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.context_processors.qgis_server_urls" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Global values to pass to templates</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.forms">
+<span id="geonode-qgis-server-forms-module"></span><h2>geonode.qgis_server.forms module<a class="headerlink" href="#module-geonode.qgis_server.forms" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.qgis_server.forms.QGISLayerStyleUploadForm">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.forms.</code><code class="descname">QGISLayerStyleUploadForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id=u'id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.forms.QGISLayerStyleUploadForm" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.forms.forms.Form</span></code></p>
+<dl class="attribute">
+<dt id="geonode.qgis_server.forms.QGISLayerStyleUploadForm.alphanumeric">
+<code class="descname">alphanumeric</code><em class="property"> = &lt;django.core.validators.RegexValidator object&gt;</em><a class="headerlink" href="#geonode.qgis_server.forms.QGISLayerStyleUploadForm.alphanumeric" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.forms.QGISLayerStyleUploadForm.base_fields">
+<code class="descname">base_fields</code><em class="property"> = {'name': &lt;django.forms.fields.CharField object&gt;, 'qml': &lt;django.forms.fields.FileField object&gt;, 'title': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.qgis_server.forms.QGISLayerStyleUploadForm.base_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.forms.QGISLayerStyleUploadForm.declared_fields">
+<code class="descname">declared_fields</code><em class="property"> = {'name': &lt;django.forms.fields.CharField object&gt;, 'qml': &lt;django.forms.fields.FileField object&gt;, 'title': &lt;django.forms.fields.CharField object&gt;}</em><a class="headerlink" href="#geonode.qgis_server.forms.QGISLayerStyleUploadForm.declared_fields" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.forms.QGISLayerStyleUploadForm.media">
+<code class="descname">media</code><a class="headerlink" href="#geonode.qgis_server.forms.QGISLayerStyleUploadForm.media" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.gis_tools">
+<span id="geonode-qgis-server-gis-tools-module"></span><h2>geonode.qgis_server.gis_tools module<a class="headerlink" href="#module-geonode.qgis_server.gis_tools" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.qgis_server.gis_tools.num2deg">
+<code class="descclassname">geonode.qgis_server.gis_tools.</code><code class="descname">num2deg</code><span class="sig-paren">(</span><em>x_tile</em>, <em>y_tile</em>, <em>zoom</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.gis_tools.num2deg" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Conversion of X,Y and zoom from a TMS url to lat/lon coordinates
+See <a class="reference external" href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>x_tile</strong> (<em>integer</em>) – The X tile number.</li>
+<li><strong>y_tile</strong> (<em>integer</em>) – The Y tile number.</li>
+<li><strong>zoom</strong> (<em>integer</em>) – The zoom level, usually between 0 and 20.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">Tuple (lat,lon).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.gis_tools.set_attributes">
+<code class="descclassname">geonode.qgis_server.gis_tools.</code><code class="descname">set_attributes</code><span class="sig-paren">(</span><em>layer</em>, <em>overwrite=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.gis_tools.set_attributes" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Retrieve layer attribute names &amp; types from QGIS Server using
+the WFS/WMS/WCS, then store in GeoNode database using Attribute model.</p>
+<p>This function is copied/adapted from set_attributes in geoserver/helper.py.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>layer</strong> (<a class="reference internal" href="#geonode.qgis_server.models.QGISServerLayer" title="geonode.qgis_server.models.QGISServerLayer"><em>QGISServerLayer</em></a>) – The layer where we want to add/update the attributes.</li>
+<li><strong>overwrite</strong> (<em>bool</em>) – If we should overwrite or not in the database.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.helpers">
+<span id="geonode-qgis-server-helpers-module"></span><h2>geonode.qgis_server.helpers module<a class="headerlink" href="#module-geonode.qgis_server.helpers" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.create_qgis_project">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">create_qgis_project</code><span class="sig-paren">(</span><em>layer</em>, <em>qgis_project_path</em>, <em>overwrite=False</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.create_qgis_project" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Create a new QGS Project for a given layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>geonode.layers.models.Layer</em></a><em>,
+</em><em>list</em><em>(</em><a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>geonode.layers.models.Layer</em></a><em>)</em>) – Layer or list of layers</li>
+<li><strong>qgis_project_path</strong> (<em>str</em>) – Path to to create qgis project</li>
+<li><strong>overwrite</strong> (<em>bool</em>) – Flag to recreate QGIS Project if necessary</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.delete_orphaned_qgis_server_caches">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">delete_orphaned_qgis_server_caches</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.delete_orphaned_qgis_server_caches" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Delete orphaned QGIS Server tile caches.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.delete_orphaned_qgis_server_layers">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">delete_orphaned_qgis_server_layers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.delete_orphaned_qgis_server_layers" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Delete orphaned QGIS Server files.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.layer_thumbnail_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">layer_thumbnail_url</code><span class="sig-paren">(</span><em>instance</em>, <em>style=None</em>, <em>bbox=None</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.layer_thumbnail_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Construct QGIS Server Url to fetch remote layer thumbnail.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>instance</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>geonode.layers.models.Layer</em></a>) – Layer object</li>
+<li><strong>style</strong> (<em>str</em>) – Layer style to choose</li>
+<li><strong>bbox</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – Bounding box of thumbnail in 4 tuple format
+[xmin,ymin,xmax,ymax]</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">Thumbnail URL.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.legend_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">legend_url</code><span class="sig-paren">(</span><em>layer</em>, <em>layertitle=False</em>, <em>style=None</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.legend_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Construct QGIS Server url to fetch legend.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to use</li>
+<li><strong>layertitle</strong> (<em>bool</em>) – Layer title flag. Set to True to include layer title</li>
+<li><strong>style</strong> (<em>str</em>) – Layer style to choose</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">QGIS Server request url</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.map_thumbnail_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">map_thumbnail_url</code><span class="sig-paren">(</span><em>instance</em>, <em>bbox=None</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.map_thumbnail_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Construct QGIS Server Url to fetch remote map thumbnail.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>instance</strong> (<a class="reference internal" href="geonode.maps.html#geonode.maps.models.Map" title="geonode.maps.models.Map"><em>geonode.maps.models.Map</em></a>) – Map object</li>
+<li><strong>bbox</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – Bounding box of thumbnail in 4 tuple format
+[xmin,ymin,xmax,ymax]</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">thumbnail url</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.qgis_server_endpoint">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">qgis_server_endpoint</code><span class="sig-paren">(</span><em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.qgis_server_endpoint" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Return QGIS Server endpoint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body">Base url endpoint</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.qgs_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">qgs_url</code><span class="sig-paren">(</span><em>layer</em>, <em>style=None</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.qgs_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Construct QGIS Server url to fetch QGS.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to use</li>
+<li><strong>style</strong> (<em>str</em>) – Layer style to choose</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">QGIS Server request url for QGS</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.qlr_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">qlr_url</code><span class="sig-paren">(</span><em>layer</em>, <em>style=None</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.qlr_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Construct QGIS Server url to fetch QLR.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to use</li>
+<li><strong>style</strong> (<em>str</em>) – Layer style to choose</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">QGIS Server request url for QLR</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.style_add_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">style_add_url</code><span class="sig-paren">(</span><em>layer</em>, <em>style_name</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.style_add_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Add QGIS Server style to QGIS Project.</p>
+<p>This style file is stored on qml LayerFile in upload_session.
+After the file is uploaded, it has to be deleted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to inspect</li>
+<li><strong>style_name</strong> (<em>str</em>) – Style name as given by QGIS Server</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">QGIS Server request url</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.style_get_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">style_get_url</code><span class="sig-paren">(</span><em>layer</em>, <em>style_name</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.style_get_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get QGIS Server style as xml.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to inspect</li>
+<li><strong>style_name</strong> (<em>str</em>) – Style name as given by QGIS Server</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">QGIS Server request url</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.style_list">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">style_list</code><span class="sig-paren">(</span><em>layer</em>, <em>internal=True</em>, <em>generating_qgis_capabilities=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.style_list" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Query list of styles from QGIS Server.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to inspect</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+<li><strong>generating_qgis_capabilities</strong> (<em>bool</em>) – internal Flag for the method to tell
+that this function were executed to generate QGIS GetCapabilities
+request for querying Style list. This flag is used for recursion.
+Default to False as recursion base.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">List of QGISServerStyle</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">list(<a class="reference internal" href="#geonode.qgis_server.models.QGISServerStyle" title="geonode.qgis_server.models.QGISServerStyle">QGISServerStyle</a>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.style_remove_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">style_remove_url</code><span class="sig-paren">(</span><em>layer</em>, <em>style_name</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.style_remove_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Remove QGIS Server style from QGIS Project.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to inspect</li>
+<li><strong>style_name</strong> (<em>str</em>) – Style name as given by QGIS Server</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">QGIS Server request url</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.style_set_default_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">style_set_default_url</code><span class="sig-paren">(</span><em>layer</em>, <em>style_name</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.style_set_default_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Remove QGIS Server style from QGIS Project.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to inspect</li>
+<li><strong>style_name</strong> (<em>str</em>) – Style name as given by QGIS Server</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">QGIS Server request url</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.thumbnail_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">thumbnail_url</code><span class="sig-paren">(</span><em>bbox</em>, <em>layers</em>, <em>qgis_project</em>, <em>style=None</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.thumbnail_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Internal function to generate the URL for the thumbnail.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>bbox</strong> (<em>list</em>) – The bounding box to use in the format [left,bottom,right,top].</li>
+<li><strong>layers</strong> (<em>basestring</em>) – Name of the layer to use.</li>
+<li><strong>qgis_project</strong> (<em>basestring</em>) – The path to the QGIS project.</li>
+<li><strong>style</strong> (<em>str</em>) – Layer style to choose</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">The WMS URL to fetch the thumbnail.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">basestring</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.tile_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">tile_url</code><span class="sig-paren">(</span><em>layer</em>, <em>z</em>, <em>x</em>, <em>y</em>, <em>style=None</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.tile_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Construct actual tile request to QGIS Server.</p>
+<p>Different than tile_url_format, this method will return url for requesting
+a tile, with all parameters filled out.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to use</li>
+<li><strong>z</strong> (<em>int</em><em>, </em><em>str</em>) – TMS coordinate, zoom parameter</li>
+<li><strong>x</strong> (<em>int</em><em>, </em><em>str</em>) – TMS coordinate, longitude parameter</li>
+<li><strong>y</strong> (<em>int</em><em>, </em><em>str</em>) – TMS coordinate, latitude parameter</li>
+<li><strong>style</strong> (<em>str</em>) – Layer style to choose</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">Tile url</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.tile_url_format">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">tile_url_format</code><span class="sig-paren">(</span><em>layer_name</em>, <em>style=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.tile_url_format" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Construct proxied QGIS Server URL format for tiles.</p>
+<p>This url is not an actual request, but rather a format url
+that can be used by TMS service to generate tile request according
+to this layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>layer_name</strong> (<em>basestring</em>) – The layer name from the QGIS backend</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body">Tile url</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">basestring</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.transform_layer_bbox">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">transform_layer_bbox</code><span class="sig-paren">(</span><em>layer</em>, <em>target_crs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.transform_layer_bbox" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Transform layer bbox to a different CRS.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to take the bounding box from</li>
+<li><strong>target_crs</strong> (<em>int</em>) – Integer of EPSG crs ID</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">list converted BBox in target CRS, in the format:
+[xmin,ymin,xmax,ymax]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">list(int)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.validate_django_settings">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">validate_django_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.validate_django_settings" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Check that settings file configured correctly for qgis_server backend.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.helpers.wms_get_capabilities_url">
+<code class="descclassname">geonode.qgis_server.helpers.</code><code class="descname">wms_get_capabilities_url</code><span class="sig-paren">(</span><em>layer=None</em>, <em>internal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.helpers.wms_get_capabilities_url" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Construct WMS GetCapabilities request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layer</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – Layer to inspect</li>
+<li><strong>internal</strong> (<em>bool</em>) – Flag to switch between public url and internal url.
+Public url will be served by Django Geonode (proxified).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">QGIS Server request url</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.middleware">
+<span id="geonode-qgis-server-middleware-module"></span><h2>geonode.qgis_server.middleware module<a class="headerlink" href="#module-geonode.qgis_server.middleware" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.qgis_server.middleware.QGISServerLayerMiddleware">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.middleware.</code><code class="descname">QGISServerLayerMiddleware</code><a class="headerlink" href="#geonode.qgis_server.middleware.QGISServerLayerMiddleware" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="geonode.qgis_server.middleware.QGISServerLayerMiddleware.layer_detail">
+<code class="descname">layer_detail</code><span class="sig-paren">(</span><em>request</em>, <em>response</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.middleware.QGISServerLayerMiddleware.layer_detail" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Provide more context for layer_detail view</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.middleware.QGISServerLayerMiddleware.process_template_response">
+<code class="descname">process_template_response</code><span class="sig-paren">(</span><em>request</em>, <em>response</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.middleware.QGISServerLayerMiddleware.process_template_response" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Middleware to add more context for QGIS Server backend app.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.models">
+<span id="geonode-qgis-server-models-module"></span><h2>geonode.qgis_server.models module<a class="headerlink" href="#module-geonode.qgis_server.models" title="Link permanente para este título">¶</a></h2>
+<dl class="class">
+<dt id="geonode.qgis_server.models.QGISServerLayer">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.models.</code><code class="descname">QGISServerLayer</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code>, <a class="reference internal" href="geonode.security.html#geonode.security.models.PermissionLevelMixin" title="geonode.security.models.PermissionLevelMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.security.models.PermissionLevelMixin</span></code></a></p>
+<p>Model for Layer in QGIS Server Backend.</p>
+<dl class="exception">
+<dt id="geonode.qgis_server.models.QGISServerLayer.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.qgis_server.models.QGISServerLayer.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.accepted_format">
+<code class="descname">accepted_format</code><em class="property"> = ['tif', 'tiff', 'asc', 'shp', 'shx', 'dbf', 'prj', 'qml', 'xml', 'qgs']</em><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.accepted_format" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.ascii_format">
+<code class="descname">ascii_format</code><em class="property"> = ['asc']</em><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.ascii_format" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.cache_path">
+<code class="descname">cache_path</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.cache_path" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned the location of tile cache for this layer.</p>
+<p>Example base path: /usr/src/app/geonode/qgis_layer/jakarta_flood.shp</p>
+<p>QGIS cache path: /usr/src/app/geonode/qgis_tiles/jakarta_flood</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Retorna:</th><td class="field-body">Base path of layer cache</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.default_style">
+<code class="descname">default_style</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.default_style" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.models.QGISServerLayer.delete_qgis_layer">
+<code class="descname">delete_qgis_layer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.delete_qgis_layer" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Delete all files related to this object from disk.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.files">
+<code class="descname">files</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.files" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned all files related with this layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Retorna:</th><td class="field-body">List of related paths</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">list(str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.geotiff_format">
+<code class="descname">geotiff_format</code><em class="property"> = ['tif', 'tiff']</em><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.geotiff_format" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.models.QGISServerLayer.get_self_resource">
+<code class="descname">get_self_resource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.get_self_resource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get associated resource base.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.layer">
+<code class="descname">layer</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.layer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.qgis_layer_name">
+<code class="descname">qgis_layer_name</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.qgis_layer_name" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned QGIS Layer name associated with this layer.</p>
+<p>Example base path: /usr/src/app/geonode/qgis_layer/jakarta_flood.shp</p>
+<p>QGIS Layer name: jakarta_flood</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.qgis_layer_path_prefix">
+<code class="descname">qgis_layer_path_prefix</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.qgis_layer_path_prefix" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned QGIS layer path prefix.</p>
+<p>Example base path: /usr/src/app/geonode/qgis_layer/jakarta_flood.shp</p>
+<p>Path prefix: /usr/src/app/geonode/qgis_layer/jakarta_flood</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.qgis_project_path">
+<code class="descname">qgis_project_path</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.qgis_project_path" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned QGIS Project path related with this layer.</p>
+<p>Example base path: /usr/src/app/geonode/qgis_layer/jakarta_flood.shp</p>
+<p>QGIS Project path: /usr/src/app/geonode/qgis_layer/jakarta_flood.qgs</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.qml_path">
+<code class="descname">qml_path</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.qml_path" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned the location of QML path for this layer (if any).</p>
+<p>Example base path: /usr/src/app/geonode/qgis_layer/jakarta_flood.shp</p>
+<p>QGIS QML path: /usr/src/app/geonode/qgis_tiles/jakarta_flood.qml</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Retorna:</th><td class="field-body">Base path of qml style</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerLayer.styles">
+<code class="descname">styles</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerLayer.styles" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.qgis_server.models.QGISServerMap">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.models.</code><code class="descname">QGISServerMap</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code>, <a class="reference internal" href="geonode.security.html#geonode.security.models.PermissionLevelMixin" title="geonode.security.models.PermissionLevelMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.security.models.PermissionLevelMixin</span></code></a></p>
+<p>Model wrapper for QGIS Server Map.</p>
+<dl class="exception">
+<dt id="geonode.qgis_server.models.QGISServerMap.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.qgis_server.models.QGISServerMap.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerMap.cache_path">
+<code class="descname">cache_path</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap.cache_path" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned the location of tile cache for this layer.</p>
+<p>based on map_name_format
+QGIS cache path: /usr/src/app/geonode/qgis_tiles/map_1</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Retorna:</th><td class="field-body">Base path of layer cache</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.models.QGISServerMap.get_self_resource">
+<code class="descname">get_self_resource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap.get_self_resource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get associated resource base.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerMap.map">
+<code class="descname">map</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap.map" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerMap.map_name_format">
+<code class="descname">map_name_format</code><em class="property"> = 'map_{id}'</em><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap.map_name_format" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerMap.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerMap.qgis_map_name">
+<code class="descname">qgis_map_name</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap.qgis_map_name" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned QGIS Map name associated with this layer.</p>
+<p>based on map_name_format
+Example QGIS Map name: map_1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerMap.qgis_map_path_prefix">
+<code class="descname">qgis_map_path_prefix</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap.qgis_map_path_prefix" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned QGIS map path prefix.</p>
+<p>based on map_name_format
+Path prefix: /usr/src/app/geonode/qgis_layer/map_1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerMap.qgis_project_path">
+<code class="descname">qgis_project_path</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerMap.qgis_project_path" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned QGIS Project path related with this map.</p>
+<p>based on map_name_format
+QGIS Project path: /usr/src/app/geonode/qgis_layer/map_1.qgs</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geonode.qgis_server.models.QGISServerStyle">
+<em class="property">class </em><code class="descclassname">geonode.qgis_server.models.</code><code class="descname">QGISServerStyle</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.models.QGISServerStyle" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code>, <a class="reference internal" href="geonode.security.html#geonode.security.models.PermissionLevelMixin" title="geonode.security.models.PermissionLevelMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">geonode.security.models.PermissionLevelMixin</span></code></a></p>
+<p>Model wrapper for QGIS Server styles.</p>
+<dl class="exception">
+<dt id="geonode.qgis_server.models.QGISServerStyle.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerStyle.DoesNotExist" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="geonode.qgis_server.models.QGISServerStyle.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerStyle.MultipleObjectsReturned" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="geonode.qgis_server.models.QGISServerStyle.from_get_capabilities_style_xml">
+<em class="property">classmethod </em><code class="descname">from_get_capabilities_style_xml</code><span class="sig-paren">(</span><em>qgis_layer</em>, <em>style_xml</em>, <em>style_url=None</em>, <em>synchronize=True</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.models.QGISServerStyle.from_get_capabilities_style_xml" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Convert to this model from GetCapabilities Style tag.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>qgis_layer</strong> (<a class="reference internal" href="#geonode.qgis_server.models.QGISServerLayer" title="geonode.qgis_server.models.QGISServerLayer"><em>QGISServerLayer</em></a>) – Associated QGIS Server Layer</li>
+<li><strong>style_xml</strong> (<em>str | lxml.etree.Element |
+xml.etree.ElementTree.Element</em>) – xml string or object</li>
+<li><strong>style_url</strong> (<em>str</em>) – style information stored as xml</li>
+<li><strong>synchronize</strong> (<em>bool</em>) – Flag, if true then synchronize the new value</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first">QGISServerStyle model and boolean flag created</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last"><a class="reference internal" href="#geonode.qgis_server.models.QGISServerStyle" title="geonode.qgis_server.models.QGISServerStyle">QGISServerStyle</a>, bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="geonode.qgis_server.models.QGISServerStyle.get_self_resource">
+<code class="descname">get_self_resource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.models.QGISServerStyle.get_self_resource" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get associated resource base.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerStyle.layer_default_style">
+<code class="descname">layer_default_style</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerStyle.layer_default_style" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerStyle.layer_styles">
+<code class="descname">layer_styles</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerStyle.layer_styles" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerStyle.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#geonode.qgis_server.models.QGISServerStyle.objects" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geonode.qgis_server.models.QGISServerStyle.style_tile_cache_path">
+<code class="descname">style_tile_cache_path</code><a class="headerlink" href="#geonode.qgis_server.models.QGISServerStyle.style_tile_cache_path" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Returned the location of tile cache for this layer style.</p>
+<p>Example base path: /usr/src/app/geonode/qgis_layer/jakarta_flood.shp</p>
+<dl class="docutils">
+<dt>QGIS cache path: /usr/src/app/geonode/qgis_tiles/jakarta_flood/</dt>
+<dd>default_style</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Retorna:</th><td class="field-body">Base path of layer cache</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.signals">
+<span id="geonode-qgis-server-signals-module"></span><h2>geonode.qgis_server.signals module<a class="headerlink" href="#module-geonode.qgis_server.signals" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.qgis_server.signals.qgis_server_layer_post_delete">
+<code class="descclassname">geonode.qgis_server.signals.</code><code class="descname">qgis_server_layer_post_delete</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.signals.qgis_server_layer_post_delete" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Removes the layer from Local Storage.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.signals.qgis_server_post_save">
+<code class="descclassname">geonode.qgis_server.signals.</code><code class="descname">qgis_server_post_save</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.signals.qgis_server_post_save" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Save keywords to QGIS Server.</p>
+<p>The way keywords are implemented requires the layer to be saved to the
+database before accessing them.</p>
+<p>This hook also creates QGIS Project. Which is essentials for QGIS Server.
+There are also several Geonode Links generated, like thumbnail and legends</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>instance</strong> (<a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a>) – geonode Layer</li>
+<li><strong>sender</strong> (<em>type</em><em>(</em><a class="reference internal" href="geonode.layers.html#geonode.layers.models.Layer" title="geonode.layers.models.Layer"><em>Layer</em></a><em>)</em>) – geonode Layer type</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.signals.qgis_server_post_save_map">
+<code class="descclassname">geonode.qgis_server.signals.</code><code class="descname">qgis_server_post_save_map</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.signals.qgis_server_post_save_map" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Post Save Map Hook for QGIS Server</p>
+<p>This hook will creates QGIS Project for a given map.
+This hook also generates thumbnail link.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.signals.qgis_server_pre_delete">
+<code class="descclassname">geonode.qgis_server.signals.</code><code class="descname">qgis_server_pre_delete</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.signals.qgis_server_pre_delete" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Removes the layer from Local Storage.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.signals.qgis_server_pre_save">
+<code class="descclassname">geonode.qgis_server.signals.</code><code class="descname">qgis_server_pre_save</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.signals.qgis_server_pre_save" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Send information to QGIS Server.</p>
+<p>The attributes sent include:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Title</li>
+<li>Abstract</li>
+<li>Name</li>
+<li>Keywords</li>
+<li>Metadata Links,</li>
+<li>Point of Contact name and url</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.signals.qgis_server_pre_save_maplayer">
+<code class="descclassname">geonode.qgis_server.signals.</code><code class="descname">qgis_server_pre_save_maplayer</code><span class="sig-paren">(</span><em>instance</em>, <em>sender</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.signals.qgis_server_pre_save_maplayer" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.signals.register_qgis_server_signals">
+<code class="descclassname">geonode.qgis_server.signals.</code><code class="descname">register_qgis_server_signals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.signals.register_qgis_server_signals" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Helper function to register model signals.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.urls">
+<span id="geonode-qgis-server-urls-module"></span><h2>geonode.qgis_server.urls module<a class="headerlink" href="#module-geonode.qgis_server.urls" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-geonode.qgis_server.views">
+<span id="geonode-qgis-server-views-module"></span><h2>geonode.qgis_server.views module<a class="headerlink" href="#module-geonode.qgis_server.views" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.qgis_server.views.default_qml_style">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">default_qml_style</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em>, <em>style_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.default_qml_style" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Set default style used by layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</li>
+<li><strong>style_name</strong> (<em>str</em>) – The style name recognized by QGIS Server</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.download_map">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">download_map</code><span class="sig-paren">(</span><em>request</em>, <em>mapid</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.download_map" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Download a zip file containing every layers on a map.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>mapid</strong> (<em>basestring</em>) – The map id in Geonode.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body">The HTTPResponse with a ZIP.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.download_qgs">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">download_qgs</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.download_qgs" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Download QGS file for a layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>request</strong> (<em>HttpRequest</em>) – The request from frontend.</li>
+<li><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first last">QGS file.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.download_qlr">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">download_qlr</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.download_qlr" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Download QLR file for a layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body">QLR file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.download_zip">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">download_zip</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.download_zip" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Download a zip file containing every files we have about the layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body">The HTTPResponse with a ZIP.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.geotiff">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">geotiff</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.geotiff" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get the GeoTiff from a layer if available.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body">The HTTPResponse with a geotiff.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.layer_ogc_request">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">layer_ogc_request</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.layer_ogc_request" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Provide one OGC server per layer, with their own GetCapabilities.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body">The HTTPResponse with the response from QGIS Server.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.legend">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">legend</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em>, <em>layertitle=False</em>, <em>style=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.legend" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get the legend from a layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</li>
+<li><strong>layertitle</strong> (<em>bool</em>) – Add the layer title in the legend. Default to False.</li>
+<li><strong>style</strong> (<em>str</em>) – Layer style to choose</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first last">The HTTPResponse with a PNG.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.qgis_server_map_print">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">qgis_server_map_print</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.qgis_server_map_print" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.qgis_server_pdf">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">qgis_server_pdf</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.qgis_server_pdf" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.qgis_server_request">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">qgis_server_request</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.qgis_server_request" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>View to forward OGC request to QGIS Server.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.qml_style">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">qml_style</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em>, <em>style_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.qml_style" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Update/Retrieve QML style of a given QGIS Layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</li>
+<li><strong>style_name</strong> (<em>str</em>) – The style name recognized by QGIS Server</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.set_thumbnail">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">set_thumbnail</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.set_thumbnail" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Update thumbnail based on map extent</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.tile">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">tile</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em>, <em>z</em>, <em>x</em>, <em>y</em>, <em>style=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.tile" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Get the tile from a layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</li>
+<li><strong>z</strong> (<em>int</em><em>, </em><em>str</em>) – TMS coordinate, zoom parameter</li>
+<li><strong>x</strong> (<em>int</em><em>, </em><em>str</em>) – TMS coordinate, longitude parameter</li>
+<li><strong>y</strong> (<em>int</em><em>, </em><em>str</em>) – TMS coordinate, latitude parameter</li>
+<li><strong>style</strong> (<em>str</em>) – Layer style to choose</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retorna:</th><td class="field-body"><p class="first last">The HTTPResponse with a PNG.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.views.tile_404">
+<code class="descclassname">geonode.qgis_server.views.</code><code class="descname">tile_404</code><span class="sig-paren">(</span><em>request</em>, <em>layername</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.views.tile_404" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>This view is used when the user try to use the raw tile URL.</p>
+<p>When the URL contains {z}/{x}/{y}.png, display this page.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>layername</strong> (<em>basestring</em>) – The layer name in Geonode.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server.xml_utilities">
+<span id="geonode-qgis-server-xml-utilities-module"></span><h2>geonode.qgis_server.xml_utilities module<a class="headerlink" href="#module-geonode.qgis_server.xml_utilities" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="geonode.qgis_server.xml_utilities.insert_xml_element">
+<code class="descclassname">geonode.qgis_server.xml_utilities.</code><code class="descname">insert_xml_element</code><span class="sig-paren">(</span><em>root</em>, <em>element_path</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.xml_utilities.insert_xml_element" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>insert an XML element in an other creating the needed parents.
+:param root: The container
+:type root: ElementTree.Element
+:param element_path: The path relative to root
+:type element_path: str
+:return: ElementTree.Element
+:rtype : ElementTree.Element</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geonode.qgis_server.xml_utilities.update_xml">
+<code class="descclassname">geonode.qgis_server.xml_utilities.</code><code class="descname">update_xml</code><span class="sig-paren">(</span><em>xml_file</em>, <em>new_values</em><span class="sig-paren">)</span><a class="headerlink" href="#geonode.qgis_server.xml_utilities.update_xml" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Update xml file with new_values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>xml_file</strong> (<em>str</em>) – Path to the xml_file.</li>
+<li><strong>new_values</strong> (<em>dict</em>) – Dictionary of key and the new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geonode.qgis_server">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.qgis_server" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoflorestas.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'pt_br',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
