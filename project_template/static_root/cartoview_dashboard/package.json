@@ -73,7 +73,7 @@
     "imports-loader": "^0.7.0",
     "jest-cli": "^18.0.0",
     "jsxhint": "^0.15.1",
-    "lodash": "^4.3.0",
+    "lodash": "^4.17.19",
     "pre-commit": "^1.1.2",
     "precommit-hook": "^3.0.0",
     "raw-loader": "^0.5.1",
