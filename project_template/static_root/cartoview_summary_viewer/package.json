@@ -11,7 +11,7 @@
   "author": "cartologic",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "@boundlessgeo/sdk": "^1.0.0",
+    "@boundlessgeo/sdk": "^2.7.5",
     "jquery": "^3.2.1",
     "material-ui": "^0.18.1",
     "react": "^15.5.4",
