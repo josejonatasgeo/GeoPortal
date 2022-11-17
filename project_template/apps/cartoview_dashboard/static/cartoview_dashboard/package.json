@@ -54,7 +54,7 @@
     "babel-core": "^6.x",
     "babel-eslint": "^7.1.1",
     "babel-jest": "^18.0.0",
-    "babel-loader": "^6.x",
+    "babel-loader": "^9.x",
     "babel-plugin-react-transform": "^2.0.0",
     "babel-plugin-transform-react-constant-elements": "^6.5.0",
     "babel-plugin-transform-react-inline-elements": "^6.6.5",
@@ -83,7 +83,7 @@
     "react-transform-hmr": "^1.0.2",
     "style-loader": "^0.13.0",
     "valiquire": "^0.3.0",
-    "webpack": "2.2.1",
+    "webpack": "5.75.0",
     "webpack-dev-server": "2.3.0"
   },
   "publishConfig": {
